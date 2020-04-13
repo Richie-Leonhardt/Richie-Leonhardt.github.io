@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Richie Leonhardt</title>
+    <link>https://richie-leonhardt.github.io/</link>
+    <description>Recent content on Richie Leonhardt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Apr 2020 12:17:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://richie-leonhardt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://richie-leonhardt.github.io/2020/04/13/about/</link>
+      <pubDate>Mon, 13 Apr 2020 12:17:25 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/04/13/about/</guid>
+      <description>犹豫，就会败北 格式非常重要，在细节上领先其他人 学的不是知识，是方法与经验 #include&amp;lt;stdio.h&amp;gt;int main(){ printf(&amp;#34;Hello World!&amp;#34;); } </description>
+    </item>
+    
+  </channel>
+</rss>
