@@ -3,6 +3,86 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://richie-leonhardt.github.io/categories/</loc>
+    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/categories/cmd/</loc>
+    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/</loc>
+    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/</loc>
+    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
+    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
+    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/git/</loc>
+    <lastmod>2020-04-13T18:20:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/categories/git/</loc>
+    <lastmod>2020-04-13T18:20:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/git-bash%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-04-13T18:20:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/ssh/</loc>
+    <lastmod>2020-04-13T18:20:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/categories/blog/</loc>
+    <lastmod>2020-04-13T17:18:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/blog/</loc>
+    <lastmod>2020-04-13T17:18:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/hugo/</loc>
+    <lastmod>2020-04-13T17:18:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/reflections/</loc>
+    <lastmod>2020-04-13T17:18:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2020-04-13T17:18:57+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://richie-leonhardt.github.io/2020/04/13/about/</loc>
     <lastmod>2020-04-13T12:17:25+08:00</lastmod>
   </url>
@@ -13,20 +93,7 @@
   </url>
   
   <url>
-    <loc>https://richie-leonhardt.github.io/</loc>
-    <lastmod>2020-04-13T12:17:25+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/categories/</loc>
-  </url>
-  
-  <url>
     <loc>https://richie-leonhardt.github.io/series/</loc>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/tags/</loc>
   </url>
   
 </urlset>

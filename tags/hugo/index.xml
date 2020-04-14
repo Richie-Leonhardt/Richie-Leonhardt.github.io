@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Richie&#39;s Blog</title>
+    <link>https://richie-leonhardt.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on Richie&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Apr 2020 17:18:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://richie-leonhardt.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>基于Hugo的博客使用笔记</title>
+      <link>https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</guid>
+      <description>创建新的随笔，在content目录下 $ hugo new newNote.md 本地查看博客，这里包括草稿，然后去除HTTP缓存 $ hugo server --buildDrafts --noHTTPCache 除此之外，如果不在本地查看的话就直接编译一下就行了
+$ hugo 将所有修改从public目录提交到GitHub $ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git push origin master 如果是多台机器或者多人操作的话，在其中一台上操作提交代码之前还要pull一下来拉取最新代码
+$ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git pull $ git push origin master </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Richie Leonhardt</title>
+    <title>Tags on Richie&#39;s Blog</title>
     <link>https://richie-leonhardt.github.io/tags/</link>
-    <description>Recent content in Tags on Richie Leonhardt</description>
+    <description>Recent content in Tags on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Apr 2020 19:01:26 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>批处理</title>
+      <link>https://richie-leonhardt.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 13 Apr 2020 19:01:26 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>环境变量</title>
+      <link>https://richie-leonhardt.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Mon, 13 Apr 2020 19:01:26 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://richie-leonhardt.github.io/tags/git/</link>
+      <pubDate>Mon, 13 Apr 2020 18:20:41 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://richie-leonhardt.github.io/tags/ssh/</link>
+      <pubDate>Mon, 13 Apr 2020 18:20:41 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://richie-leonhardt.github.io/tags/blog/</link>
+      <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://richie-leonhardt.github.io/tags/hugo/</link>
+      <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reflections</title>
+      <link>https://richie-leonhardt.github.io/tags/reflections/</link>
+      <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/reflections/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

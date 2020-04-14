@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>About &middot; Richie&#39;s Blog</title>
+    <title>Git Bash笔记 &middot; Richie&#39;s Blog</title>
     <meta name="generator" content="Hugo 0.69.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Richie">
     
-      <meta name="description" content="诗意的生活，是充实而富于理性的">
+      <meta name="description" content="git-bash中设置用户名邮箱以及启动就添加ssh key">
     
     
-    <link rel="canonical" href="https://richie-leonhardt.github.io/2020/04/13/about/"/>
+    <link rel="canonical" href="https://richie-leonhardt.github.io/git-bash%E7%AC%94%E8%AE%B0/"/>
     <link rel="icon" href="https://richie-leonhardt.github.io/favicon.ico">
     <link rel="apple-touch-icon" href="https://richie-leonhardt.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
@@ -20,26 +20,26 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="About" />
-<meta property="og:description" content="犹豫，就会败北 格式非常重要，在细节上领先其他人 学的不是知识，是方法与经验 #include&lt;stdio.h&gt;int main(){ printf(&#34;Hello World!&#34;); } " />
+    <meta property="og:title" content="Git Bash笔记" />
+<meta property="og:description" content="git-bash中设置用户名邮箱以及启动就添加ssh key" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://richie-leonhardt.github.io/2020/04/13/about/" />
-<meta property="article:published_time" content="2020-04-13T12:17:25+08:00" />
-<meta property="article:modified_time" content="2020-04-13T12:17:25+08:00" />
+<meta property="og:url" content="https://richie-leonhardt.github.io/git-bash%E7%AC%94%E8%AE%B0/" />
+<meta property="article:published_time" content="2020-04-13T18:20:41+08:00" />
+<meta property="article:modified_time" content="2020-04-13T18:20:41+08:00" />
 
     
-    <meta itemprop="name" content="About">
-<meta itemprop="description" content="犹豫，就会败北 格式非常重要，在细节上领先其他人 学的不是知识，是方法与经验 #include&lt;stdio.h&gt;int main(){ printf(&#34;Hello World!&#34;); } ">
-<meta itemprop="datePublished" content="2020-04-13T12:17:25&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-13T12:17:25&#43;08:00" />
-<meta itemprop="wordCount" content="8">
+    <meta itemprop="name" content="Git Bash笔记">
+<meta itemprop="description" content="git-bash中设置用户名邮箱以及启动就添加ssh key">
+<meta itemprop="datePublished" content="2020-04-13T18:20:41&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-13T18:20:41&#43;08:00" />
+<meta itemprop="wordCount" content="141">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="ssh,git," />
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content="犹豫，就会败北 格式非常重要，在细节上领先其他人 学的不是知识，是方法与经验 #include&lt;stdio.h&gt;int main(){ printf(&#34;Hello World!&#34;); } "/>
+<meta name="twitter:title" content="Git Bash笔记"/>
+<meta name="twitter:description" content="git-bash中设置用户名邮箱以及启动就添加ssh key"/>
 
     
 
@@ -246,9 +246,9 @@
         
 
         <header class="article-header">
-    <a href="https://richie-leonhardt.github.io/2020/04/13/about/">
+    <a href="https://richie-leonhardt.github.io/git-bash%E7%AC%94%E8%AE%B0/">
     <h1 class="article-title" itemprop="name">
-        About
+        Git Bash笔记
     </h1>
     </a>
     <div class="article-meta">
@@ -256,9 +256,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2020-04-13 12:17:25 &#43;0800 CST" itemprop="datePublished">13130-17-412</time>
+            <time datetime="2020-04-13 18:20:41 &#43;0800 CST" itemprop="datePublished">13130-20-46</time>
             &middot;
-            8
+            141
             words
             &middot;
             1
@@ -266,28 +266,94 @@
         </div>
         
         
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/git">git</a>
+                
+                
+            </div>
+            
+        
 
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/ssh">ssh</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/git">git</a>
+                
+                
+            </div>
+            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="犹豫就会败北">犹豫，就会败北</h2>
-<h3 id="格式非常重要在细节上领先其他人">格式非常重要，在细节上领先其他人</h3>
-<h4 id="学的不是知识是方法与经验">学的不是知识，是方法与经验</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
-    printf(<span style="color:#e6db74">&#34;Hello World!&#34;</span>);
-}
+            <h3 id="git连接账户和邮箱的设置">git连接账户和邮箱的设置</h3>
+<p>一般默认在用户的目录下启动了git-bash，我这边是Administrator目录下，设置账户和邮箱，下面的两个参数修改成自己的账户名和邮箱</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --global user.name <span style="color:#e6db74">&#34;Richie Leonhardt&#34;</span>
+$ git config --global user.email example@163.com
+</code></pre></div><p>设置成功后这个目录下应该会有.gitconfig的文件，实际上，在转移到一台新的机器上后考研直接拷贝这个存有账户和邮箱的文件到相应的目录下</p>
+<h3 id="使用git生成ssh秘钥">使用git生成ssh秘钥</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;example@163.com&#34;</span>
+</code></pre></div><p>三次回车之后，在目录下生成一个.ssh文件夹，里面有公钥id_rsa.pub和私钥id_rsa</p>
+<p>将公钥内容添加到GitHub的账户(此处省略步骤)</p>
+<p>为了确保每次打开git-bash都加载agent并且添加了私钥，在这个目录下新建.profile的一个文件，内容为以下 :</p>
+<pre><code>env=~/.ssh/agent.env
+
+agent_load_env () { test -f &quot;$env&quot; &amp;&amp; . &quot;$env&quot; &gt;| /dev/null ; }
+
+agent_start () {
+    (umask 077; ssh-agent &gt;| &quot;$env&quot;)
+    . &quot;$env&quot; &gt;| /dev/null ; }
+
+agent_load_env
+
+# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running
+agent_run_state=$(ssh-add -l &gt;| /dev/null 2&gt;&amp;1; echo $?)
+
+if [ ! &quot;$SSH_AUTH_SOCK&quot; ] || [ $agent_run_state = 2 ]; then
+    agent_start
+    ssh-add
+elif [ &quot;$SSH_AUTH_SOCK&quot; ] &amp;&amp; [ $agent_run_state = 1 ]; then
+    ssh-add
+fi
+
+unset env
+</code></pre><p>重启一下git-bash</p>
+<p>这个时候发现已经加入了私钥，那么最后测试一下连接一下就行了，返回1表示连接成功</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -vT git@github.com
+</code></pre></div><p>输入yes确认，可以发现.ssh目录下出现了一个新文件known_hosts，连接成功。</p>
+<p>至此环境已经配置好了，之后每次git-bash启动之后都会加载ssh agent并且添加.ssh目录里的私钥了，每次提交到GitHub都不用再输入用户名和密码了</p>
+<h3 id="换机器的时候快速配置环境">换机器的时候快速配置环境</h3>
+<p>复制.ssh目录下的公钥和私钥文件，和用户目录下的.gitconfig和.profile文件，一共四个文件连带.ssh文件夹打包一下拷到U盘或者QQ里，然后解压到相应的目录，最后启动git-bash测试一下连接就行了</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -vT git@github.com
+</code></pre></div><h3 id="使用ssh-key时本地仓库与github仓库相关联">使用ssh key时本地仓库与GitHub仓库相关联</h3>
+<p>另一点需要注意的是，使用ssh连接GitHub时，应该以下面这样设置而不是https设置，否则会出现已有ssh仍然需要登录GitHub输入账号和密码的问题，因为用的是https的连接。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git remote remove origin
+$ git remote add origin git@github.com:Username/Your_Repo_Name.git
+</code></pre></div><p>除此之外，修改成ssh连接之后还需要重新设置track branch，在命令行中等号中间不要有空格，不是在写程序</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch --set-upstream-to<span style="color:#f92672">=</span>origin/master master
 </code></pre></div>
         </div>
         <footer class="article-footer">
-    <a data-url="https://richie-leonhardt.github.io/2020/04/13/about/" data-id="4f8ede94661089a2bb01b50b2080c5b0" class="article-share-link">
+    <a data-url="https://richie-leonhardt.github.io/git-bash%E7%AC%94%E8%AE%B0/" data-id="4aa1bbae6f5d1f0c3946af18cf498de9" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="https://richie-leonhardt.github.io/2020/04/13/about/#disqus_thread" class="article-comment-link">
+    <a href="https://richie-leonhardt.github.io/git-bash%E7%AC%94%E8%AE%B0/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -361,6 +427,26 @@
     </div>
 
     
+<nav id="article-nav">
+    
+    <a href="https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">基于Hugo的博客使用笔记</div>
+    </a>
+    
+
+    
+    <a href="https://richie-leonhardt.github.io/%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">使用批处理配置环境变量</div>
+    </a>
+    
+</nav>
+
 
 </article>
 

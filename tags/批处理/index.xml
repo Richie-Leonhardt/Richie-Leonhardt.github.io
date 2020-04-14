@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>批处理 on Richie&#39;s Blog</title>
+    <link>https://richie-leonhardt.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/</link>
+    <description>Recent content in 批处理 on Richie&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Apr 2020 19:01:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://richie-leonhardt.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用批处理配置环境变量</title>
+      <link>https://richie-leonhardt.github.io/%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Mon, 13 Apr 2020 19:01:26 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
+      <description>设定运行路径为system32以调用注册表编辑器，之后通过修改注册表的方法来修改环境变量，对于学校机房或者网吧每次开机重置系统的情况有奇效。
+@echo off path=c:\windows\system32;%path% ::F:\pathset替换为需要添加的路径即可，如果多个路径的话需要用分号隔开 set PATH=%PATH%;F:\pathset; reg add &amp;quot;HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment&amp;quot; /v &amp;quot;Path&amp;quot; /t REG_EXPAND_SZ /d &amp;quot;%PATH%&amp;quot; /f exit; </description>
+    </item>
+    
+  </channel>
+</rss>
