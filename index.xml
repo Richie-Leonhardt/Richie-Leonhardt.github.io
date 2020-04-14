@@ -42,8 +42,8 @@ env=~/.ssh/agent.env agent_load_env () { test -f &amp;quot;$env&amp;quot; &amp;a
       
       <guid>https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</guid>
       <description>创建新的随笔，在content目录下 $ hugo new newNote.md 本地查看博客，这里包括草稿，然后去除HTTP缓存 $ hugo server --buildDrafts --noHTTPCache 除此之外，如果不在本地查看的话就直接编译一下就行了
-$ hugo 将所有修改从public目录提交到GitHub $ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git push origin master 如果是多台机器或者多人操作的话，在其中一台上操作提交代码之前还要pull一下来拉取最新代码
-$ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git pull $ git push origin master </description>
+$ hugo 将所有修改从public目录提交到GitHub $ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git push 如果是多台机器或者多人操作的话，在其中一台上操作提交代码之前还要pull一下来拉取最新代码
+$ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git pull $ git push </description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@ $ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp
       <pubDate>Mon, 13 Apr 2020 12:17:25 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/2020/04/13/about/</guid>
-      <description>犹豫，就会败北 格式非常重要，在细节上领先其他人 学的不是知识，是方法与经验 #include&amp;lt;stdio.h&amp;gt;int main(){ printf(&amp;#34;Hello World!&amp;#34;); } </description>
+      <description>此处是李狗蛋的窝 果然还是自建博客舒服的一匹，加上使用DNS直连GitHub的CDN节点，速度也还算可以 希望通过这个博客来记录、反思自己 while( live &amp;lt; end ){ love++; } </description>
     </item>
     
   </channel>
