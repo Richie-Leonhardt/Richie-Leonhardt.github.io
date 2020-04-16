@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Apr 2020 19:01:26 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 21:47:26 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blog</title>
+      <link>https://richie-leonhardt.github.io/categories/blog/</link>
+      <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cmd</title>
@@ -26,15 +35,6 @@
       <pubDate>Mon, 13 Apr 2020 18:20:41 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/categories/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>https://richie-leonhardt.github.io/categories/blog/</link>
-      <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/categories/blog/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,25 @@
     <description>Recent content on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Apr 2020 19:01:26 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 21:47:26 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>为基于hugo的博客引入live2d</title>
+      <link>https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</link>
+      <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</guid>
+      <description>1.在themes/你的主题/static/文件夹中新建live2d文件夹并克隆GitHub的源码
+2.修改autoload.js中各个文件的路径到正确的路径，即将所有”assets“修改为“live2d”
+3.确保在themes/你的主题/layouts/partials中的head.html 中已经引入了jquery.min.js，如果想要拖拽效果的话可以再引入一个1.12.1版本以上的jquery-ui.min.js
+4.在footer.html中第一行插入以下代码
+&amp;lt;script src=&amp;#34;{{ &amp;#34;live2d/autoload.js&amp;#34; | absURL }}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 注意：自定义时live2d-tips.json中不能使用//添加注释
+参考
+[GitHub]live2d_demofghrsh大佬的博客</description>
+    </item>
     
     <item>
       <title>使用批处理配置环境变量</title>

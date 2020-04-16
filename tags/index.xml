@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Apr 2020 19:01:26 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 21:47:26 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://richie-leonhardt.github.io/tags/hugo/</link>
+      <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>live2d</title>
+      <link>https://richie-leonhardt.github.io/tags/live2d/</link>
+      <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/live2d/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>批处理</title>
@@ -53,15 +71,6 @@
       <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://richie-leonhardt.github.io/tags/hugo/</link>
-      <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

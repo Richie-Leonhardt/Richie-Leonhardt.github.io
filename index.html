@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/vs2015.css">
-    <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/waifu.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
@@ -28,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://richie-leonhardt.github.io/" />
-<meta property="og:updated_time" content="2020-04-13T19:01:26+08:00" />
+<meta property="og:updated_time" content="2020-04-16T21:47:26+08:00" />
 
     
     <meta itemprop="name" content="Richie&#39;s Blog">
@@ -40,9 +39,9 @@
     
 
     
-
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
 </head>
 <body>
 <div class="container">
@@ -147,7 +146,7 @@
       <img id="avatar" src="https://richie-leonhardt.github.io/css/images/avatar.png">
       
       <h2 id="name">Richie</h2>
-      <h3 id="title">Struggle</h3>
+      <h3 id="title">Reflection creates Excellence</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Zhoukou, Henan</span>
       
           <a id="follow" href="https://github.com/richie-leonhardt">
@@ -162,7 +161,7 @@
       </div>
       <div class="article-info-block">
         
-          7
+          8
         
         <span>
             Tags
@@ -238,6 +237,155 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/">
+    <h1 class="article-title" itemprop="name">
+        为基于hugo的博客引入live2d
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-04-16 21:47:26 &#43;0800 CST" itemprop="datePublished">2020-04-16</time>
+            &middot;
+            14
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/blog">blog</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/live2d">live2d</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/hugo">hugo</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                博客添加看板娘会活泼很多~
+            </p>
+            <p class="article-more-link">
+                <a href="https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/" data-id="c27872a03d7a43f427d94a91a2c4544d" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -743,7 +891,7 @@
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/blog">
                     blog
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -799,6 +947,14 @@
                 
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/hugo">
                     hugo
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/live2d">
+                    live2d
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -861,6 +1017,9 @@
         <a href="https://richie-leonhardt.github.io/tags/hugo" style="font-size: 12px;">hugo</a>
         
         
+        <a href="https://richie-leonhardt.github.io/tags/live2d" style="font-size: 12px;">live2d</a>
+        
+        
         <a href="https://richie-leonhardt.github.io/tags/reflections" style="font-size: 12px;">reflections</a>
         
         
@@ -886,6 +1045,7 @@
 	</div>
 </div>
 
+<script src="https://richie-leonhardt.github.io/live2d/autoload.js"></script>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
@@ -895,10 +1055,8 @@
   </div>
 </footer>
 
-
 <script src="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.pack.js"></script>
 <script src="https://richie-leonhardt.github.io/js/script.js"></script>
-<script src="https://richie-leonhardt.github.io/js/autoload.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 
@@ -912,7 +1070,6 @@ MathJax.Hub.Config({
   });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 
 
 

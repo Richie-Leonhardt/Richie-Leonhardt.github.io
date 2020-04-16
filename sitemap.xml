@@ -3,22 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://richie-leonhardt.github.io/categories/</loc>
-    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+    <loc>https://richie-leonhardt.github.io/categories/blog/</loc>
+    <lastmod>2020-04-16T21:47:26+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://richie-leonhardt.github.io/categories/cmd/</loc>
-    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+    <loc>https://richie-leonhardt.github.io/categories/</loc>
+    <lastmod>2020-04-16T21:47:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/hugo/</loc>
+    <lastmod>2020-04-16T21:47:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/live2d/</loc>
+    <lastmod>2020-04-16T21:47:26+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://richie-leonhardt.github.io/</loc>
-    <lastmod>2020-04-13T19:01:26+08:00</lastmod>
+    <lastmod>2020-04-16T21:47:26+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://richie-leonhardt.github.io/tags/</loc>
+    <lastmod>2020-04-16T21:47:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</loc>
+    <lastmod>2020-04-16T21:47:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/categories/cmd/</loc>
     <lastmod>2020-04-13T19:01:26+08:00</lastmod>
   </url>
   
@@ -58,17 +78,7 @@
   </url>
   
   <url>
-    <loc>https://richie-leonhardt.github.io/categories/blog/</loc>
-    <lastmod>2020-04-13T17:18:57+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://richie-leonhardt.github.io/tags/blog/</loc>
-    <lastmod>2020-04-13T17:18:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/tags/hugo/</loc>
     <lastmod>2020-04-13T17:18:57+08:00</lastmod>
   </url>
   
