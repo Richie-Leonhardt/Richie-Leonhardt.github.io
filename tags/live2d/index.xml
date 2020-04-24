@@ -13,10 +13,10 @@
     
     <item>
       <title>为基于hugo的博客引入live2d</title>
-      <link>https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</link>
+      <link>https://richie-leonhardt.github.io/2020/04/16/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</link>
       <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
       
-      <guid>https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</guid>
+      <guid>https://richie-leonhardt.github.io/2020/04/16/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</guid>
       <description>1.在themes/你的主题/static/文件夹中新建live2d文件夹并克隆GitHub的源码
 2.修改autoload.js中各个文件的路径到正确的路径，即将所有”assets“修改为“live2d”
 3.确保在themes/你的主题/layouts/partials中的head.html 中已经引入了jquery.min.js，如果想要拖拽效果的话可以再引入一个1.12.1版本以上的jquery-ui.min.js

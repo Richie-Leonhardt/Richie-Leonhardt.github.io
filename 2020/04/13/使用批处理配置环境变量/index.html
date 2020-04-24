@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>基于Hugo的博客使用笔记 &middot; Richie&#39;s Blog</title>
+    <title>使用批处理配置环境变量 &middot; Richie&#39;s Blog</title>
     <meta name="generator" content="Hugo 0.69.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Richie">
     
-      <meta name="description" content="hugo搭建的博客的日常使用">
+      <meta name="description" content="使用cmd命令修改注册表来配置环境变量">
     
     
-    <link rel="canonical" href="https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/"/>
+    <link rel="canonical" href="https://richie-leonhardt.github.io/2020/04/13/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     <link rel="icon" href="https://richie-leonhardt.github.io/favicon.ico">
     <link rel="apple-touch-icon" href="https://richie-leonhardt.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
@@ -20,26 +20,26 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="基于Hugo的博客使用笔记" />
-<meta property="og:description" content="hugo搭建的博客的日常使用" />
+    <meta property="og:title" content="使用批处理配置环境变量" />
+<meta property="og:description" content="使用cmd命令修改注册表来配置环境变量" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/" />
-<meta property="article:published_time" content="2020-04-13T17:18:57+08:00" />
-<meta property="article:modified_time" content="2020-04-13T17:18:57+08:00" />
+<meta property="og:url" content="https://richie-leonhardt.github.io/2020/04/13/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" />
+<meta property="article:published_time" content="2020-04-13T19:01:26+08:00" />
+<meta property="article:modified_time" content="2020-04-13T19:01:26+08:00" />
 
     
-    <meta itemprop="name" content="基于Hugo的博客使用笔记">
-<meta itemprop="description" content="hugo搭建的博客的日常使用">
-<meta itemprop="datePublished" content="2020-04-13T17:18:57&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-13T17:18:57&#43;08:00" />
-<meta itemprop="wordCount" content="55">
+    <meta itemprop="name" content="使用批处理配置环境变量">
+<meta itemprop="description" content="使用cmd命令修改注册表来配置环境变量">
+<meta itemprop="datePublished" content="2020-04-13T19:01:26&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-13T19:01:26&#43;08:00" />
+<meta itemprop="wordCount" content="19">
 
 
 
-<meta itemprop="keywords" content="reflections,blog,Hugo," />
+<meta itemprop="keywords" content="环境变量,批处理," />
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="基于Hugo的博客使用笔记"/>
-<meta name="twitter:description" content="hugo搭建的博客的日常使用"/>
+<meta name="twitter:title" content="使用批处理配置环境变量"/>
+<meta name="twitter:description" content="使用cmd命令修改注册表来配置环境变量"/>
 
     
 
@@ -161,7 +161,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        1
+        5
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -246,9 +246,9 @@
         
 
         <header class="article-header">
-    <a href="https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/">
+    <a href="https://richie-leonhardt.github.io/2020/04/13/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
     <h1 class="article-title" itemprop="name">
-        基于Hugo的博客使用笔记
+        使用批处理配置环境变量
     </h1>
     </a>
     <div class="article-meta">
@@ -256,9 +256,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2020-04-13 17:18:57 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
+            <time datetime="2020-04-13 19:01:26 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
             &middot;
-            55
+            19
             words
             &middot;
             1
@@ -272,7 +272,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/blog">Blog</a>
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/cmd">cmd</a>
                 
                 
             </div>
@@ -286,15 +286,11 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/reflections">reflections</a>
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">环境变量</a>
                 &middot;
                 
                 
-                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/blog">blog</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/hugo">Hugo</a>
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86">批处理</a>
                 
                 
             </div>
@@ -304,36 +300,25 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="创建新的随笔在content目录下">创建新的随笔，在content目录下</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new newNote.md
-</code></pre></div><h3 id="本地查看博客这里包括草稿然后去除http缓存">本地查看博客，这里包括草稿，然后去除HTTP缓存</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo server --buildDrafts --noHTTPCache
-</code></pre></div><p>除此之外，如果不在本地查看的话就直接编译一下就行了</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo
-</code></pre></div><h3 id="将所有修改从public目录提交到github">将所有修改从public目录提交到GitHub</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd public
-$ git add *
-$ git commit -m <span style="color:#e6db74">&#34;description for this commit&#34;</span>
-$ git push
-</code></pre></div><p>如果是多台机器或者多人操作的话，在其中一台上操作提交代码之前还要pull一下来拉取最新代码</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd public
-$ git add *
-$ git commit -m <span style="color:#e6db74">&#34;description for this commit&#34;</span>
-$ git pull
-$ git push
-</code></pre></div>
+            <p>设定运行路径为system32以调用注册表编辑器，之后通过修改注册表的方法来修改环境变量，对于学校机房或者网吧每次开机重置系统的情况有奇效。</p>
+<pre><code>@echo off
+path=c:\windows\system32;%path%
+
+::F:\pathset替换为需要添加的路径即可，如果多个路径的话需要用分号隔开
+set PATH=%PATH%;F:\pathset;
+
+reg add &quot;HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment&quot; /v &quot;Path&quot; /t REG_EXPAND_SZ /d &quot;%PATH%&quot; /f
+
+exit;
+</code></pre>
         </div>
         <footer class="article-footer">
-    <a data-url="https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/" data-id="74ef34f9c69155bcfa565af0e2353be5" class="article-share-link">
+    <a data-url="https://richie-leonhardt.github.io/2020/04/13/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" data-id="d09197347802f2deb904ef6b62548242" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
     <script>
     (function ($) {
         
@@ -362,9 +347,17 @@ $ git push
                     return;
                 }
             } else {
+                
+                var typeNumber = 0;
+                var errorCorrectionLevel = 'M';
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData(url);
+                qr.make();
+
                 var html = [
                     '<div id="' + id + '" class="article-share-box">',
                         '<input class="article-share-input" value="' + url + '">',
+                        '<div id="qrcode-img-' + id + '" class="article-share-qrcode-img">' + qr.createSvgTag() + '</div>',
                         '<div class="article-share-links">',
                             '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
                             '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
@@ -405,13 +398,20 @@ $ git push
     
 <nav id="article-nav">
     
+    <a href="https://richie-leonhardt.github.io/2020/04/13/git-bash%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Git Bash笔记</div>
+    </a>
+    
 
     
-    <a href="https://richie-leonhardt.github.io/git-bash%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="https://richie-leonhardt.github.io/2020/04/16/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Newer
       </strong>
-      <div class="article-nav-title">Git Bash笔记</div>
+      <div class="article-nav-title">为基于hugo的博客引入live2d</div>
     </a>
     
 </nav>
@@ -419,31 +419,6 @@ $ git push
 
 </article>
 
-
-<section id="comments">
-    <div id="disqus_thread">
-        <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "Richie" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </div>
-</section>
 
 
     </section>
@@ -457,6 +432,110 @@ $ git push
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/04/16/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/blog">
+                        blog
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/16/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/" class="title">为基于hugo的博客引入live2d</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-04-16 21:47:26 &#43;0800 CST" itemprop="datePublished">2020-04-16</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/04/13/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/cmd">
+                        cmd
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/13/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="title">使用批处理配置环境变量</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-04-13 19:01:26 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/04/13/git-bash%E7%AC%94%E8%AE%B0/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/git">
+                        git
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/13/git-bash%E7%AC%94%E8%AE%B0/" class="title">Git Bash笔记</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-04-13 18:20:41 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/04/13/%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/blog">
+                        Blog
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/13/%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="title">基于Hugo的博客使用笔记</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-04-13 17:18:57 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">

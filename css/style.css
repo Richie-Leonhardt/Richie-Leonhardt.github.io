@@ -1180,6 +1180,10 @@ a.article-title:hover {
 .article-share-links:after {
   clear: both;
 }
+.article-share-qrcode-img svg{
+  width: 100%;
+  height: 100%;
+}
 .article-share-twitter,
 .article-share-facebook,
 .article-share-pinterest,
