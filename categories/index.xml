@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Apr 2020 21:47:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 19:16:32 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,36 @@
     <item>
       <title>Blog</title>
       <link>https://richie-leonhardt.github.io/categories/blog/</link>
-      <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
+      <pubDate>Fri, 05 Jun 2020 19:16:32 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reflection</title>
+      <link>https://richie-leonhardt.github.io/categories/reflection/</link>
+      <pubDate>Sat, 30 May 2020 12:35:36 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/categories/reflection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reflections</title>
+      <link>https://richie-leonhardt.github.io/categories/reflections/</link>
+      <pubDate>Sat, 30 May 2020 12:35:36 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/categories/reflections/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://richie-leonhardt.github.io/categories/notes/</link>
+      <pubDate>Sat, 30 May 2020 09:52:25 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/categories/notes/</guid>
       <description></description>
     </item>
     

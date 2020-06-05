@@ -6,17 +6,71 @@
     <description>Recent content in Tags on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Apr 2020 21:47:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 19:16:32 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>blog</title>
+      <link>https://richie-leonhardt.github.io/tags/blog/</link>
+      <pubDate>Fri, 05 Jun 2020 19:16:32 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog maintenance</title>
+      <link>https://richie-leonhardt.github.io/tags/blog-maintenance/</link>
+      <pubDate>Fri, 05 Jun 2020 19:16:32 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/blog-maintenance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hugo</title>
       <link>https://richie-leonhardt.github.io/tags/hugo/</link>
-      <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
+      <pubDate>Fri, 05 Jun 2020 19:16:32 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reflection</title>
+      <link>https://richie-leonhardt.github.io/tags/reflection/</link>
+      <pubDate>Sat, 30 May 2020 12:35:36 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/reflection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reflections</title>
+      <link>https://richie-leonhardt.github.io/tags/reflections/</link>
+      <pubDate>Sat, 30 May 2020 12:35:36 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/reflections/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>https://richie-leonhardt.github.io/tags/html/</link>
+      <pubDate>Sat, 30 May 2020 09:52:25 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>考研政治</title>
+      <link>https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB/</link>
+      <pubDate>Sat, 02 May 2020 09:54:13 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB/</guid>
       <description></description>
     </item>
     
@@ -62,24 +116,6 @@
       <pubDate>Mon, 13 Apr 2020 18:20:41 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://richie-leonhardt.github.io/tags/blog/</link>
-      <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>reflections</title>
-      <link>https://richie-leonhardt.github.io/tags/reflections/</link>
-      <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/tags/reflections/</guid>
       <description></description>
     </item>
     

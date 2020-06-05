@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML on Richie&#39;s Blog</title>
+    <link>https://richie-leonhardt.github.io/tags/html/</link>
+    <description>Recent content in HTML on Richie&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 30 May 2020 09:52:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://richie-leonhardt.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>XHTML笔记</title>
+      <link>https://richie-leonhardt.github.io/2020/05/30/xhtml%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 30 May 2020 09:52:25 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/05/30/xhtml%E7%AC%94%E8%AE%B0/</guid>
+      <description>XHTML 是什么？   XHTML 指可扩展超文本标签语言（EXtensible HyperText Markup Language）。
+  XHTML 的目标是取代 HTML。
+  XHTML 与 HTML 4.01 几乎是相同的。
+  XHTML 是一个 W3C 标准。
+XHTML 于2000年的1月26日成为 W3C 标准。
+W3C 将 XHTML 定义为最新的HTML版本。XHTML 将逐渐取代 HTML。
+  与HTML的不同：   XHTML 元素必须被正确地嵌套。
+  XHTML 元素必须被关闭。
+  标签名必须用小写字母。
+  XHTML 文档必须拥有根元素。（从XML来）
+  属性名称必须小写
+  属性值必须加引号
+  属性不能简写，正确写法：
+&amp;lt;input checked=&amp;#34;checked&amp;#34; /&amp;gt;   用 Id 属性代替 name 属性</description>
+    </item>
+    
+  </channel>
+</rss>

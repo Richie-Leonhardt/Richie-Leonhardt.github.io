@@ -10,8 +10,8 @@
       <meta name="description" content="Richie&#39;s Blog">
     
     
-      <link href="https://richie-leonhardt.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Richie&#39;s Blog" />
-      <link href="https://richie-leonhardt.github.io/index.xml" rel="feed" type="application/rss+xml" title="Richie&#39;s Blog" />
+      <link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://richie-leonhardt.github.io/index.xml%7d" rel="alternate" type="application/rss+xml" title="Richie&#39;s Blog" />
+      <link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://richie-leonhardt.github.io/index.xml%7d" rel="feed" type="application/rss+xml" title="Richie&#39;s Blog" />
     
     <link rel="canonical" href="https://richie-leonhardt.github.io/"/>
     <link rel="icon" href="https://richie-leonhardt.github.io/favicon.ico">
@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://richie-leonhardt.github.io/" />
-<meta property="og:updated_time" content="2020-04-16T21:47:26+08:00" />
+<meta property="og:updated_time" content="2020-06-05T19:16:32+08:00" />
 
     
     <meta itemprop="name" content="Richie&#39;s Blog">
@@ -156,12 +156,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        5
+        10
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          8
+          12
         
         <span>
             Tags
@@ -237,6 +237,755 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://richie-leonhardt.github.io/2020/06/05/hugo%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%98%E9%87%8F/">
+    <h1 class="article-title" itemprop="name">
+        Hugo博客维护：更新方法与变量
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-06-05 19:16:32 &#43;0800 CST" itemprop="datePublished">2020-06-05</time>
+            &middot;
+            63
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/blog">Blog</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/hugo">Hugo</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/blog-maintenance">Blog maintenance</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                针对使用hugo命令编译博客的时候出现的warning来维护一下博客
+            </p>
+            <p class="article-more-link">
+                <a href="https://richie-leonhardt.github.io/2020/06/05/hugo%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%98%E9%87%8F/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://richie-leonhardt.github.io/2020/06/05/hugo%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%98%E9%87%8F/" data-id="f42aa1213626ef49df6795dab10fa0e8" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                
+                var typeNumber = 0;
+                var errorCorrectionLevel = 'M';
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData(url);
+                qr.make();
+
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div id="qrcode-img-' + id + '" class="article-share-qrcode-img">' + qr.createSvgTag() + '</div>',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://richie-leonhardt.github.io/2020/05/30/2020%E5%B9%B45%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/">
+    <h1 class="article-title" itemprop="name">
+        2020年5月阶段反思
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-05-30 12:35:36 &#43;0800 CST" itemprop="datePublished">2020-05-30</time>
+            &middot;
+            43
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflections">reflections</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/reflections">reflections</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                不求一日三省吾身，起码阶段反思不能少，2020-05
+            </p>
+            <p class="article-more-link">
+                <a href="https://richie-leonhardt.github.io/2020/05/30/2020%E5%B9%B45%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://richie-leonhardt.github.io/2020/05/30/2020%E5%B9%B45%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" data-id="c0c222fdfb5c44f622fcb887de356f7a" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                
+                var typeNumber = 0;
+                var errorCorrectionLevel = 'M';
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData(url);
+                qr.make();
+
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div id="qrcode-img-' + id + '" class="article-share-qrcode-img">' + qr.createSvgTag() + '</div>',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://richie-leonhardt.github.io/2020/05/30/xhtml%E7%AC%94%E8%AE%B0/">
+    <h1 class="article-title" itemprop="name">
+        XHTML笔记
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-05-30 09:52:25 &#43;0800 CST" itemprop="datePublished">2020-05-30</time>
+            &middot;
+            143
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/notes">notes</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/html">HTML</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                notes of XHTML
+            </p>
+            <p class="article-more-link">
+                <a href="https://richie-leonhardt.github.io/2020/05/30/xhtml%E7%AC%94%E8%AE%B0/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://richie-leonhardt.github.io/2020/05/30/xhtml%E7%AC%94%E8%AE%B0/" data-id="dec78c6b8f2afb09531180e804ffa6e4" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                
+                var typeNumber = 0;
+                var errorCorrectionLevel = 'M';
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData(url);
+                qr.make();
+
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div id="qrcode-img-' + id + '" class="article-share-qrcode-img">' + qr.createSvgTag() + '</div>',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://richie-leonhardt.github.io/2020/05/02/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%96%B9%E6%B3%95/">
+    <h1 class="article-title" itemprop="name">
+        考研政治记笔记的方法
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-05-02 09:54:13 &#43;0800 CST" itemprop="datePublished">2020-05-02</time>
+            &middot;
+            69
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflection">reflection</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB">考研政治</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                考研政治记笔记的方法--徐涛老师
+            </p>
+            <p class="article-more-link">
+                <a href="https://richie-leonhardt.github.io/2020/05/02/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%96%B9%E6%B3%95/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://richie-leonhardt.github.io/2020/05/02/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="dd850c3c538852086e104e0ea4e0a351" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                
+                var typeNumber = 0;
+                var errorCorrectionLevel = 'M';
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData(url);
+                qr.make();
+
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div id="qrcode-img-' + id + '" class="article-share-qrcode-img">' + qr.createSvgTag() + '</div>',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://richie-leonhardt.github.io/2020/04/28/reflection20.04/">
+    <h1 class="article-title" itemprop="name">
+        Reflection20.04
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-04-28 17:50:57 &#43;0800 CST" itemprop="datePublished">2020-04-28</time>
+            &middot;
+            27
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflection">reflection</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/reflection">reflection</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                打完闪3之后的反思
+            </p>
+            <p class="article-more-link">
+                <a href="https://richie-leonhardt.github.io/2020/04/28/reflection20.04/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://richie-leonhardt.github.io/2020/04/28/reflection20.04/" data-id="53ee0f11b454a7274fb1aecf539d1e78" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                
+                var typeNumber = 0;
+                var errorCorrectionLevel = 'M';
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData(url);
+                qr.make();
+
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div id="qrcode-img-' + id + '" class="article-share-qrcode-img">' + qr.createSvgTag() + '</div>',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -999,85 +1748,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/04/16/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/blog">
-                        blog
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/16/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/" class="title">为基于hugo的博客引入live2d</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-04-16 21:47:26 &#43;0800 CST" itemprop="datePublished">2020-04-16</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/04/13/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/cmd">
-                        cmd
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/13/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="title">使用批处理配置环境变量</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-04-13 19:01:26 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/04/13/git-bash%E7%AC%94%E8%AE%B0/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/git">
-                        git
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/13/git-bash%E7%AC%94%E8%AE%B0/" class="title">Git Bash笔记</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-04-13 18:20:41 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/04/13/%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/06/05/hugo%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%98%E9%87%8F/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -1094,16 +1765,16 @@
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/13/%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="title">基于Hugo的博客使用笔记</a></p>
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/06/05/hugo%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95%E4%B8%8E%E5%8F%98%E9%87%8F/" class="title">Hugo博客维护：更新方法与变量</a></p>
                     <p class="item-date">
-                        <time datetime="2020-04-13 17:18:57 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
+                        <time datetime="2020-06-05 19:16:32 &#43;0800 CST" itemprop="datePublished">2020-06-05</time>
                     </p>
                 </div>
             </li>
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/04/13/about/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/05/30/2020%E5%B9%B45%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -1111,9 +1782,96 @@
                 </div>
                 <div class="item-inner">
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/13/about/" class="title">About</a></p>
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflections">
+                        reflections
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/05/30/2020%E5%B9%B45%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="title">2020年5月阶段反思</a></p>
                     <p class="item-date">
-                        <time datetime="2020-04-13 12:17:25 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
+                        <time datetime="2020-05-30 12:35:36 &#43;0800 CST" itemprop="datePublished">2020-05-30</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/05/30/xhtml%E7%AC%94%E8%AE%B0/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/notes">
+                        notes
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/05/30/xhtml%E7%AC%94%E8%AE%B0/" class="title">XHTML笔记</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-05-30 09:52:25 &#43;0800 CST" itemprop="datePublished">2020-05-30</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/05/02/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%96%B9%E6%B3%95/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflection">
+                        reflection
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/05/02/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E8%AE%B0%E7%AC%94%E8%AE%B0%E7%9A%84%E6%96%B9%E6%B3%95/" class="title">考研政治记笔记的方法</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-05-02 09:54:13 &#43;0800 CST" itemprop="datePublished">2020-05-02</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/04/28/reflection20.04/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflection">
+                        reflection
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/04/28/reflection20.04/" class="title">Reflection20.04</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-04-28 17:50:57 &#43;0800 CST" itemprop="datePublished">2020-04-28</time>
                     </p>
                 </div>
             </li>
@@ -1136,7 +1894,7 @@
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/blog">
                     blog
                 </a>
-                <span class="category-list-count">2</span>
+                <span class="category-list-count">3</span>
             </li>
             
             <li class="category-list-item">
@@ -1151,6 +1909,30 @@
                 
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/git">
                     git
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/notes">
+                    notes
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/reflection">
+                    reflection
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/reflections">
+                    reflections
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -1182,8 +1964,24 @@
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/blog-maintenance">
+                    blog-maintenance
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/git">
                     git
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/html">
+                    html
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -1193,7 +1991,7 @@
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/hugo">
                     hugo
                 </a>
-                <span class="category-list-count">2</span>
+                <span class="category-list-count">3</span>
             </li>
             
             <li class="category-list-item">
@@ -1206,10 +2004,18 @@
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/reflection">
+                    reflection
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/reflections">
                     reflections
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -1236,6 +2042,14 @@
                 <span class="category-list-count">1</span>
             </li>
             
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB">
+                    考研政治
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
         </ul>
     </div>
 </div>
@@ -1256,13 +2070,22 @@
         <a href="https://richie-leonhardt.github.io/tags/blog" style="font-size: 12px;">blog</a>
         
         
+        <a href="https://richie-leonhardt.github.io/tags/blog-maintenance" style="font-size: 12px;">blog-maintenance</a>
+        
+        
         <a href="https://richie-leonhardt.github.io/tags/git" style="font-size: 12px;">git</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/html" style="font-size: 12px;">html</a>
         
         
         <a href="https://richie-leonhardt.github.io/tags/hugo" style="font-size: 12px;">hugo</a>
         
         
         <a href="https://richie-leonhardt.github.io/tags/live2d" style="font-size: 12px;">live2d</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/reflection" style="font-size: 12px;">reflection</a>
         
         
         <a href="https://richie-leonhardt.github.io/tags/reflections" style="font-size: 12px;">reflections</a>
@@ -1275,6 +2098,9 @@
         
         
         <a href="https://richie-leonhardt.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" style="font-size: 12px;">环境变量</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB" style="font-size: 12px;">考研政治</a>
         
     </div>
 </div>
