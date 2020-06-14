@@ -6,10 +6,27 @@
     <description>Recent content on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 05 Jun 2020 19:16:32 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 11:57:39 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reflection20.06.04</title>
+      <link>https://richie-leonhardt.github.io/2020/06/14/reflection20.06.04/</link>
+      <pubDate>Sun, 14 Jun 2020 11:57:39 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/06/14/reflection20.06.04/</guid>
+      <description>近半个月的复习   web大概看完，打印出真题，主要的考点是网络协议、HTML、CSS与JavaScript
+  英语看完唐迟的阅读基础班，大概看完了钟平的逻辑英语，还有总复习没看
+  实践方面：
+  web大概还没有开始实际地做题、写代码等
+  web中有一个缺口没学好：XML和XSLT
+  英语开始做完型了，完型确实是一些基础的东西，我的逻辑题错的比较少，基本都是错的词汇题和上下文理解错误的题，总结看来基础还不够扎实
+  英语初次接触阅读，阅读非常难，就像黑魂的起步一样，很不适应，被吊打
+  半个月背词背了500~600个，相当于每天2小时大约40个，有待加强
+    态度和思想上需要改进的地方  词汇的基础很重要，英语先抓基础，边做做完型，阅读先慢慢开始做，实践所学到的方法论 我的英语很菜的，现在还处于起步阶段，所以不能着急，慢慢来，慢慢进步，就像黑魂一样 有时候坚决维护自己的利益是比较重要的，不要放弃主导权，不要显得自己多么有牺牲精神，臭不要脸地活着才是真理，周围的人有些比较自私的，就会利用你的善良。微课的事情，放弃主导权的话，就是全程被自私的某人利用，然后作为工具人一样用完就丢弃，所以枪杆子里面取得政权，这句话说的实在是太对了。 不要管别人，按照自己的计划来。我有这个能力，无需怀疑自己，所有的事情，只要去做，最后都能成功，只是投入和时间问题，还有不断地反思纠正自己的错误朝正确的路去走。像只狼一样，像黑魂一样，随便你怎么难，只要我没有放弃，我会不停地站起来去刚，我会调整自己的战略，找到适合自己的打法，越来越熟练，越来越强，越来越强，到最后的时候我会将这些boss一个接着一个地碾压过来。  接下来的计划  web集中于重点，先自己画画导图，梳理一下零碎的知识点，把后面的练习题做完。 web查漏补缺，XML，XSLT，DTD等。可以结合真题看看。 JavaScript可以继续按照廖雪峰的那个学习。 英语将重心转移至词汇上，每天除了复习前一天的内容之外，还需要多背最低限度的60个词。 英语真题，多做完型，一旦做阅读理解，一定要认真对待，一两小时一篇属于正常现象。起步很难但是坚持一下，总会开窍。  </description>
+    </item>
     
     <item>
       <title>Hugo博客维护：更新方法与变量</title>
