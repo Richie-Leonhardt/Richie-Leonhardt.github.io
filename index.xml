@@ -6,10 +6,19 @@
     <description>Recent content on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 30 Jun 2020 12:35:36 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2020 13:46:02 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://richie-leonhardt.github.io/2020/07/14/</link>
+      <pubDate>Tue, 14 Jul 2020 13:46:02 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/07/14/</guid>
+      <description>快速排序 //快速排序 #include &amp;lt;stdio.h&amp;gt;#define N 8  //左右搜索，将比枢轴大的元素移到后面，比枢轴小的移到前面，可以通过交替找的方法将那个枢轴空出来的位置充分利用起来，不交换而采取移动的方式 int Partition(int sqList[], int low, int high){ int pivokey = sqList[low]; while( low &amp;lt; high ){ while ( low &amp;lt; high &amp;amp;&amp;amp; sqList[high] &amp;gt;= pivokey ) high--;	//因为一直往前移动搜索比枢轴小的数字，如果搜到头都没找到，则会出现越界，所以一定要加上low &amp;lt; high的条件不能少 	sqList[low] = sqList[high]; while ( low &amp;lt; high &amp;amp;&amp;amp; sqList[low] &amp;lt;= pivokey ) low++;	sqList[high] = sqList[low]; } /*最后枢轴返回位置的时候要考虑到，没执行while和执行了while的情况，执行了while就要找中间那个位置，发现high和low都行，但是若没执行while就必须low了，所以最后必须是low*/ sqList[low] = pivokey; return low; } //每次分割开来左右递归 void Qsort(int sqList[], int low, int high){ int pivoloc; if(low &amp;lt; high){ pivoloc = Partition(sqList,low,high); Qsort(sqList, low, pivoloc - 1); Qsort(sqList, pivoloc + 1,high); } } void printList(int sqList[]){ int i; for ( i = 0; i &amp;lt; N; ++i ) printf(&amp;#34;%d &amp;#34;,sqList[i] ); } int main(int argc, char const *argv[]) { int i; int sqList[N]; printf(&amp;#34;请输入8个数字，以空格隔开：&amp;#34;); for (i = 0; i &amp;lt; N; i++) scanf(&amp;#34;%d&amp;#34;,&amp;amp;sqList[i]); Qsort(sqList,0,N-1); printList(sqList); return 0; } /* example input: 3 5 2 9 6 8 3 1 */ 基数排序 /* 基数排序 * 基数排序是针对非负整数或是非正整数的序列进行的排序 * 基数排序是先根据个位数进行排序，再根据十位数进行排序，再百位数…… * 基数排序的基本过程： * 1.</description>
+    </item>
     
     <item>
       <title>2020年6月阶段反思</title>
