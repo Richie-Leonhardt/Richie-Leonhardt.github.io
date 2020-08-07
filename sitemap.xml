@@ -3,17 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://richie-leonhardt.github.io/2020/07/21/2020%E5%B9%B47%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/</loc>
-    <lastmod>2020-07-21T12:35:36+08:00</lastmod>
+    <loc>https://richie-leonhardt.github.io/categories/</loc>
+    <lastmod>2020-08-07T19:24:29+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://richie-leonhardt.github.io/categories/</loc>
-    <lastmod>2020-07-21T12:35:36+08:00</lastmod>
+    <loc>https://richie-leonhardt.github.io/categories/data-structure/</loc>
+    <lastmod>2020-08-07T19:24:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/ds/</loc>
+    <lastmod>2020-08-07T19:24:29+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://richie-leonhardt.github.io/post/</loc>
+    <lastmod>2020-08-07T19:24:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/</loc>
+    <lastmod>2020-08-07T19:24:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/</loc>
+    <lastmod>2020-08-07T19:24:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/2020/08/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%93%8D%E4%BD%9C%E9%9B%86/</loc>
+    <lastmod>2020-08-07T19:24:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/2020/07/21/2020%E5%B9%B47%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/</loc>
     <lastmod>2020-07-21T12:35:36+08:00</lastmod>
   </url>
   
@@ -29,16 +54,6 @@
   
   <url>
     <loc>https://richie-leonhardt.github.io/categories/reflections/</loc>
-    <lastmod>2020-07-21T12:35:36+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/</loc>
-    <lastmod>2020-07-21T12:35:36+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/tags/</loc>
     <lastmod>2020-07-21T12:35:36+08:00</lastmod>
   </url>
   
@@ -130,6 +145,16 @@
   <url>
     <loc>https://richie-leonhardt.github.io/2020/04/28/reflection20.04/</loc>
     <lastmod>2020-04-28T17:50:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/graph/</loc>
+    <lastmod>2020-04-26T10:05:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/2020/04/26/%E5%9B%BE%E7%9A%84%E6%93%8D%E4%BD%9C%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2020-04-26T10:05:15+08:00</lastmod>
   </url>
   
   <url>

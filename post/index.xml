@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Jul 2020 12:35:36 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2020 19:24:29 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>二叉树操作集</title>
+      <link>https://richie-leonhardt.github.io/2020/08/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%93%8D%E4%BD%9C%E9%9B%86/</link>
+      <pubDate>Fri, 07 Aug 2020 19:24:29 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/08/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%93%8D%E4%BD%9C%E9%9B%86/</guid>
+      <description>结点的数据结构 #define TElem int typedef struct BiTNode *BiTree; struct BiTNode{ TElem data; BiTree lchild; BiTree rchild; }; 创建二叉树 BiTree CreatBiTree(BiTree T){ char a[20]; scanf(&amp;#34;%s&amp;#34;,a); if(strcmp(a,&amp;#34;#&amp;#34;) == 0){ T = NULL; }else{ int input = 0; int i,j; for (i = 0; a[i] != &amp;#39;\0&amp;#39; &amp;amp;&amp;amp; i &amp;lt; 20; ++i);	//这边两个for循环是将字符串的数字转换成int类型的 	for (i = i-1,j = 1; i &amp;gt;= 0; --i,j *= 10){ input += ((int)a[i] - 48) * j; } T = (BiTree)malloc(sizeof(struct BiTNode));	//生成根结点 	T-&amp;gt;data = input; T-&amp;gt;lchild = CreatBiTree(T-&amp;gt;lchild); //构造左子树 	T-&amp;gt;rchild = CreatBiTree(T-&amp;gt;rchild); //构造右子树  } return T; } 前序遍历 //前序遍历 void PreorderTraversal( BiTree T ){ if ( T ){ printf(&amp;#34; %d&amp;#34;,T-&amp;gt;data); PreorderTraversal(T-&amp;gt;lchild); PreorderTraversal(T-&amp;gt;rchild); } } 中序遍历 //中序遍历 void InorderTraversal( BiTree T ){ if ( T ){ InorderTraversal(T-&amp;gt;lchild); printf(&amp;#34; %d&amp;#34;,T-&amp;gt;data); InorderTraversal(T-&amp;gt;rchild); } } 后序遍历 //后序遍历 void PostorderTraversal( BiTree T ){ if ( T ){ PostorderTraversal(T-&amp;gt;lchild); PostorderTraversal(T-&amp;gt;rchild); printf(&amp;#34; %d&amp;#34;,T-&amp;gt;data); } } 非递归中序遍历 //非递归中序遍历 void InorderTraversal_NotRecursive(BiTree T){ if ( T ){ BiTree stack_arr[100]; int top = -1; while( top !</description>
+    </item>
     
     <item>
       <title>2020年7月阶段反思</title>
@@ -201,6 +210,18 @@ Tip：在第2步提炼的基础上，找这几个概念之后的逻辑
   外部监督的番茄钟：番茄TODO
   更多待补充。。。
   </description>
+    </item>
+    
+    <item>
+      <title>图的操作整理</title>
+      <link>https://richie-leonhardt.github.io/2020/04/26/%E5%9B%BE%E7%9A%84%E6%93%8D%E4%BD%9C%E6%95%B4%E7%90%86/</link>
+      <pubDate>Sun, 26 Apr 2020 10:05:15 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/04/26/%E5%9B%BE%E7%9A%84%E6%93%8D%E4%BD%9C%E6%95%B4%E7%90%86/</guid>
+      <description>图的遍历   有两种存储方式：邻接矩阵和邻接表
+  在一些顶点数目比较大（一般顶点个数在1000以上）的情况下，使用邻接表而不是邻接矩阵来存储图。如果是稀疏图，用邻接表，如果是稠密图，用邻接矩阵。
+深度优先搜索dfs遍历图 按深度优先的方式访问所有未被访问的结点，在结点被访问过后标记为已访问
+dfs(u) { vis[u] = true; for(从u出发到能到达的所有顶点v) if(vis[v] == false) dfs(v); } dfsTrave(G) { for(G的所有结点u) if(vis[u] == false) dfs(u); } //邻接矩阵 void dfs(int u, int depth) { vis[u] = true; for(int v = 0; v &amp;lt; n; v++) { if(vis[v] == false &amp;amp;&amp;amp; G[u][v] != INF) dfs(v, depth + 1); } } void dfsTrave() { for(int u = 0; u &amp;lt; n; u++) if(vis[u] == false) dfs(u, 1); } //邻接表 void dfs(int u, int depth) { vis[u] = true; for(int u = 0; u &amp;lt; arr[u].</description>
     </item>
     
     <item>

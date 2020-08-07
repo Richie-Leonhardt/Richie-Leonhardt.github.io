@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graph on Richie&#39;s Blog</title>
+    <link>https://richie-leonhardt.github.io/tags/graph/</link>
+    <description>Recent content in Graph on Richie&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 26 Apr 2020 10:05:15 +0800</lastBuildDate>
+    
+	<atom:link href="https://richie-leonhardt.github.io/tags/graph/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>图的操作整理</title>
+      <link>https://richie-leonhardt.github.io/2020/04/26/%E5%9B%BE%E7%9A%84%E6%93%8D%E4%BD%9C%E6%95%B4%E7%90%86/</link>
+      <pubDate>Sun, 26 Apr 2020 10:05:15 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/04/26/%E5%9B%BE%E7%9A%84%E6%93%8D%E4%BD%9C%E6%95%B4%E7%90%86/</guid>
+      <description>图的遍历   有两种存储方式：邻接矩阵和邻接表
+  在一些顶点数目比较大（一般顶点个数在1000以上）的情况下，使用邻接表而不是邻接矩阵来存储图。如果是稀疏图，用邻接表，如果是稠密图，用邻接矩阵。
+深度优先搜索dfs遍历图 按深度优先的方式访问所有未被访问的结点，在结点被访问过后标记为已访问
+dfs(u) { vis[u] = true; for(从u出发到能到达的所有顶点v) if(vis[v] == false) dfs(v); } dfsTrave(G) { for(G的所有结点u) if(vis[u] == false) dfs(u); } //邻接矩阵 void dfs(int u, int depth) { vis[u] = true; for(int v = 0; v &amp;lt; n; v++) { if(vis[v] == false &amp;amp;&amp;amp; G[u][v] != INF) dfs(v, depth + 1); } } void dfsTrave() { for(int u = 0; u &amp;lt; n; u++) if(vis[u] == false) dfs(u, 1); } //邻接表 void dfs(int u, int depth) { vis[u] = true; for(int u = 0; u &amp;lt; arr[u].</description>
+    </item>
+    
+  </channel>
+</rss>
