@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://richie-leonhardt.github.io/" />
-<meta property="og:updated_time" content="2020-08-07T19:24:29+08:00" />
+<meta property="og:updated_time" content="2020-08-10T17:10:52+08:00" />
 
     
     <meta itemprop="name" content="Richie&#39;s Blog">
@@ -156,7 +156,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        16
+        17
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -237,6 +237,155 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://richie-leonhardt.github.io/2020/04/28/reflection20.04/">
+    <h1 class="article-title" itemprop="name">
+        Reflection20.04
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-04-28 17:50:57 &#43;0800 CST" itemprop="datePublished">2020-04-28</time>
+            &middot;
+            27
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflections">reflections</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/reflections">reflections</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                打完闪3之后的反思
+            </p>
+            <p class="article-more-link">
+                <a href="https://richie-leonhardt.github.io/2020/04/28/reflection20.04/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://richie-leonhardt.github.io/2020/04/28/reflection20.04/" data-id="53ee0f11b454a7274fb1aecf539d1e78" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                
+                var typeNumber = 0;
+                var errorCorrectionLevel = 'M';
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData(url);
+                qr.make();
+
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div id="qrcode-img-' + id + '" class="article-share-qrcode-img">' + qr.createSvgTag() + '</div>',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1155,6 +1304,32 @@
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/08/10/%E8%80%83%E7%A0%94%E4%B8%AD%E5%AD%A6%E4%B9%A0%E7%8A%B6%E6%80%81%E7%9A%84%E8%B0%83%E6%95%B4%E7%AD%96%E7%95%A5/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflections">
+                        reflections
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/08/10/%E8%80%83%E7%A0%94%E4%B8%AD%E5%AD%A6%E4%B9%A0%E7%8A%B6%E6%80%81%E7%9A%84%E8%B0%83%E6%95%B4%E7%AD%96%E7%95%A5/" class="title">考研中学习状态的调整策略</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-08-10 17:10:52 &#43;0800 CST" itemprop="datePublished">2020-08-10</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="https://richie-leonhardt.github.io/2020/08/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%93%8D%E4%BD%9C%E9%9B%86/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -1257,32 +1432,6 @@
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/06/14/reflection20.06.04/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflections">
-                        reflections
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/06/14/reflection20.06.04/" class="title">Reflection20.06.04</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-06-14 11:57:39 &#43;0800 CST" itemprop="datePublished">2020-06-14</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1346,18 +1495,10 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/reflection">
-                    reflection
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/reflections">
                     reflections
                 </a>
-                <span class="category-list-count">5</span>
+                <span class="category-list-count">7</span>
             </li>
             
         </ul>
@@ -1491,10 +1632,10 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB">
-                    考研政治
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94">
+                    考研
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
         </ul>
@@ -1556,7 +1697,7 @@
         <a href="https://richie-leonhardt.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" style="font-size: 12px;">环境变量</a>
         
         
-        <a href="https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB" style="font-size: 12px;">考研政治</a>
+        <a href="https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94" style="font-size: 12px;">考研</a>
         
     </div>
 </div>
