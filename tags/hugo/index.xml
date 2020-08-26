@@ -52,6 +52,31 @@ Hugo英文文档</description>
     </item>
     
     <item>
+      <title>为基于hugo的博客引入live2d</title>
+      <link>https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</link>
+      <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</guid>
+      <description>在themes/你的主题/static文件夹中新建live2d文件夹并克隆GitHub的源码
+修改autoload.js中各个文件的路径到正确的路径
+确保在themes/你的主题/layouts/partials中的head.html 中已经引入了jquery.min.js
+在foot.html中第一行插入以下代码
+&amp;lt;script src=&amp;#34;{{ &amp;#34;live2d/autoload.js&amp;#34; | absURL }}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 参考
+[GitHub]live2d_demofghrsh大佬的博客</description>
+    </item>
+    
+    <item>
+      <title>基于Hugo的博客使用笔记</title>
+      <link>https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/hugo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</guid>
+      <description>创建新的随笔，在content目录下 $ hugo new newNote.md 本地查看博客，这里包括草稿，然后去除HTTP缓存 $ hugo server --buildDrafts --noHTTPCache 除此之外，如果不在本地查看的话就直接编译一下就行了
+$ hugo 将所有修改从public目录提交到GitHub $ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git push 如果是多台机器或者多人操作的话，在其中一台上操作提交代码之前还要pull一下来拉取最新代码
+$ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git pull $ git push </description>
+    </item>
+    
+    <item>
       <title>基于Hugo的博客使用笔记</title>
       <link>https://richie-leonhardt.github.io/2020/04/13/%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 13 Apr 2020 17:18:57 +0800</pubDate>
@@ -59,7 +84,8 @@ Hugo英文文档</description>
       <guid>https://richie-leonhardt.github.io/2020/04/13/%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</guid>
       <description>创建新的随笔，在content目录下 $ hugo new newNote.md 本地查看博客，这里包括草稿，然后去除HTTP缓存 $ hugo server --buildDrafts --noHTTPCache 除此之外，如果不在本地查看的话就直接编译一下就行了
 $ hugo 将所有修改从public目录提交到GitHub $ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git push 如果是多台机器或者多人操作的话，在其中一台上操作提交代码之前还要pull一下来拉取最新代码
-$ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git pull $ git push </description>
+$ cd public $ git add * $ git commit -m &amp;#34;description for this commit&amp;#34; $ git pull $ git push 其他 生成SSH（当前目录下，默认创建.ssh文件夹）：
+sudo ssh-keygen -t rsa -C &amp;#34;17513502850@gmail.com&amp;#34; </description>
     </item>
     
   </channel>

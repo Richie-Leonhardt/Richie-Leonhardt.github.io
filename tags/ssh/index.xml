@@ -13,6 +13,20 @@
     
     <item>
       <title>Git Bash笔记</title>
+      <link>https://richie-leonhardt.github.io/git-bash%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 13 Apr 2020 18:20:41 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/git-bash%E7%AC%94%E8%AE%B0/</guid>
+      <description>git连接账户和邮箱的设置 一般默认在用户的目录下启动了git-bash，我这边是Administrator目录下，设置账户和邮箱，下面的两个参数修改成自己的账户名和邮箱
+$ git config --global user.name &amp;#34;Richie Leonhardt&amp;#34; $ git config --global user.email example@163.com 设置成功后这个目录下应该会有.gitconfig的文件，实际上，在转移到一台新的机器上后考研直接拷贝这个存有账户和邮箱的文件到相应的目录下
+使用git生成ssh秘钥 $ ssh-keygen -t rsa -C &amp;#34;example@163.com&amp;#34; 三次回车之后，在目录下生成一个.ssh文件夹，里面有公钥id_rsa.pub和私钥id_rsa
+将公钥内容添加到GitHub的账户(此处省略步骤)
+为了确保每次打开git-bash都加载agent并且添加了私钥，在这个目录下新建.profile的一个文件，内容为以下 :
+env=~/.ssh/agent.env agent_load_env () { test -f &amp;quot;$env&amp;quot; &amp;amp;&amp;amp; . &amp;quot;$env&amp;quot; &amp;gt;| /dev/null ; } agent_start () { (umask 077; ssh-agent &amp;gt;| &amp;quot;$env&amp;quot;) . &amp;quot;$env&amp;quot; &amp;gt;| /dev/null ; } agent_load_env # agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running agent_run_state=$(ssh-add -l &amp;gt;| /dev/null 2&amp;gt;&amp;amp;1; echo $?</description>
+    </item>
+    
+    <item>
+      <title>Git Bash笔记</title>
       <link>https://richie-leonhardt.github.io/2020/04/13/git-bash%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 13 Apr 2020 18:20:41 +0800</pubDate>
       
