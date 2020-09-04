@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>Web整理_JS和HTML初步 &middot; Richie&#39;s Blog</title>
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Richie">
+    
+      <meta name="description" content="Web练习与知识点整理">
+    
+    
+    <link rel="canonical" href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%92%8Chtml%E5%88%9D%E6%AD%A5/"/>
+    <link rel="icon" href="https://richie-leonhardt.github.io/favicon.ico">
+    <link rel="apple-touch-icon" href="https://richie-leonhardt.github.io/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
+    <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/vs2015.css">
+    <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Web整理_JS和HTML初步" />
+<meta property="og:description" content="Web练习与知识点整理" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%92%8Chtml%E5%88%9D%E6%AD%A5/" />
+<meta property="article:published_time" content="2020-09-04T16:47:14+08:00" />
+<meta property="article:modified_time" content="2020-09-04T16:47:14+08:00" />
+
+    
+    <meta itemprop="name" content="Web整理_JS和HTML初步">
+<meta itemprop="description" content="Web练习与知识点整理">
+<meta itemprop="datePublished" content="2020-09-04T16:47:14+08:00" />
+<meta itemprop="dateModified" content="2020-09-04T16:47:14+08:00" />
+<meta itemprop="wordCount" content="680">
+
+
+
+<meta itemprop="keywords" content="web,js," />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Web整理_JS和HTML初步"/>
+<meta name="twitter:description" content="Web练习与知识点整理"/>
+
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://richie-leonhardt.github.io" id="logo">
+          
+          <i class="logo" style="background-image: url('https://richie-leonhardt.github.io/css/images/logo.png')"></i>
+          
+          <span class="site-title">Richie&#39;s Blog</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://richie-leonhardt.github.io/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="https://richie-leonhardt.github.io/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://richie-leonhardt.github.io/categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://richie-leonhardt.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://richie-leonhardt.github.io" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://richie-leonhardt.github.io/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="https://richie-leonhardt.github.io/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://richie-leonhardt.github.io/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://richie-leonhardt.github.io" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://richie-leonhardt.github.io/css/images/avatar.png">
+      
+      <h2 id="name">Richie</h2>
+      <h3 id="title">Reflection creates Excellence</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Zhoukou, Henan</span>
+      
+          <a id="follow" href="https://richie-leonhardt.github.io/2020/04/13/about/">
+              About
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        23
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          17
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/richie-leonhardt" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <td><a href="https://richie-leonhardt.github.io/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%92%8Chtml%E5%88%9D%E6%AD%A5/">
+    <h1 class="article-title" itemprop="name">
+        Web整理_JS和HTML初步
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-09-04 16:47:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
+            &middot;
+            680
+            words
+            &middot;
+            4
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/web">web</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/web">web</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/js">js</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="p1">P1</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;js test&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+	&lt;<span style="color:#f92672">h4</span>&gt;Cessna single_egnine&lt;/<span style="color:#f92672">h4</span>&gt;
+	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">auction</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
+		<span style="color:#75715e">&lt;!-- 直接将处理的代码或者函数赋值给onclick特性 --&gt;</span>
+		<span style="color:#75715e">&lt;!-- 两种方式： --&gt;</span>
+		<span style="color:#75715e">&lt;!-- &#34;func(parameter)&#34; --&gt;</span>
+		<span style="color:#75715e">&lt;!-- &#34;js代码&#34; --&gt;</span>
+		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice(value)&#34;</span> /&gt;
+		red&lt;/<span style="color:#f92672">label</span>&gt;
+		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice(value)&#34;</span> /&gt;
+		blue&lt;/<span style="color:#f92672">label</span>&gt;
+		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice(value)&#34;</span> /&gt;
+		green&lt;/<span style="color:#f92672">label</span>&gt;
+		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;orange&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice(value)&#34;</span> /&gt;
+		orange&lt;/<span style="color:#f92672">label</span>&gt;
+	&lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h4 id="p1-js">P1 JS</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">colorChoice</span>(<span style="color:#a6e22e">color</span>){
+	<span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">color</span>){
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;red&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;red&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;orange&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;orange&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;green&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;green&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;blue&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
+	}
+}
+</code></pre></div><h3 id="p2">P2</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;js test&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+	&lt;<span style="color:#f92672">h4</span>&gt;Color Select&lt;/<span style="color:#f92672">h4</span>&gt;
+	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">auction</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
+		&lt;<span style="color:#f92672">p</span>&gt;
+			&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span> &gt;
+			red&lt;/<span style="color:#f92672">label</span>&gt;
+			&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span> &gt;
+			blue&lt;/<span style="color:#f92672">label</span>&gt;
+			&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> &gt;
+			green&lt;/<span style="color:#f92672">label</span>&gt;
+			&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;orange&#34;</span> &gt;
+			orange&lt;/<span style="color:#f92672">label</span>&gt;
+		&lt;/<span style="color:#f92672">p</span>&gt;
+	&lt;/<span style="color:#f92672">form</span>&gt;
+    
+	<span style="color:#75715e">&lt;!-- 注意：注册语句一定要在body中存在，因为在head中不一定执行，Chrome测试 --&gt;</span>
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h4 id="p2-js">P2 JS</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">colorChoice</span>(){
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">color</span>;
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dom</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>);
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">--</span>) {
+		<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">colorButton</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">checked</span>){
+			<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">colorButton</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span>;
+		}
+	}
+
+	<span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">color</span>){
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;red&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;red&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;orange&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;orange&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;green&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;green&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;blue&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
+	}
+}
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dom</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>);
+<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">elements</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">colorChoice</span>;
+<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">elements</span>[<span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">colorChoice</span>;
+<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">elements</span>[<span style="color:#ae81ff">2</span>].<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">colorChoice</span>;
+<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">elements</span>[<span style="color:#ae81ff">3</span>].<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">colorChoice</span>;
+</code></pre></div><h3 id="p3">P3</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+	&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+	&lt;<span style="color:#f92672">title</span>&gt;Fruits Sale&lt;/<span style="color:#f92672">title</span>&gt;
+	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span>&gt;
+			&lt;<span style="color:#f92672">p</span>&gt;select fruits&lt;/<span style="color:#f92672">p</span>&gt;
+			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsCheck&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.59&#34;</span> /&gt;apple 0.59
+			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsCheck&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.49&#34;</span> /&gt;orange 0.49
+			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsCheck&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.39&#34;</span> /&gt;banana 0.39
+			&lt;<span style="color:#f92672">br</span> /&gt;
+			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitButton&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;calculate&#34;</span> /&gt;
+	&lt;/<span style="color:#f92672">form</span>&gt;
+
+	<span style="color:#75715e">&lt;!-- 一定记住在这里要导入一下js文件 --&gt;</span>
+	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h4 id="p3-js">P3 JS</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">注意多选的checkbox实际上是一个数组</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">数组名即为标签的name</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">countPrice</span>(){
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dom</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>);
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsCheck</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {	<span style="color:#75715e">//这边是dom.fruitsCheck.length而不是dom.fruitsCheck.elements.length	
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsCheck</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">checked</span>){
+			<span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> Number(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsCheck</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span>);	<span style="color:#75715e">//默认+都是转换成字符串的，所以需要转成Number	
+</span><span style="color:#75715e"></span>		}
+	}
+	<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Your total cost is:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sum</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+}
+
+document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;submitButton&#34;</span>).<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">countPrice</span>;	<span style="color:#75715e">//注意！这里是不同加括号直接函数名注册的
+</span></code></pre></div><h3 id="p4_5_6">P4_5_6</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+	&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+	&lt;<span style="color:#f92672">title</span>&gt;Fruits Sale&lt;/<span style="color:#f92672">title</span>&gt;
+	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span>&gt;
+			&lt;<span style="color:#f92672">p</span>&gt;select fruits&lt;/<span style="color:#f92672">p</span>&gt;
+			<span style="color:#75715e">&lt;!-- 这边多个name都相同且处于同一级别，就自动构成了一个数组length为3的fruitsNumber[]数组 --&gt;</span>
+			<span style="color:#75715e">&lt;!-- 可以使用document.myForm.fruitsNumber[2]访问第三个文本框 --&gt;</span>
+			<span style="color:#75715e">&lt;!-- 但是实际上用id更稳妥一些 --&gt;</span>
+			apple 0.59 *&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsNumber&#34;</span> <span style="color:#a6e22e">max</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;99&#34;</span> <span style="color:#a6e22e">min</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> /&gt;
+			&lt;<span style="color:#f92672">br</span> /&gt;
+			orange 0.49 *&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsNumber&#34;</span> <span style="color:#a6e22e">max</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;99&#34;</span> <span style="color:#a6e22e">min</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> /&gt;
+			&lt;<span style="color:#f92672">br</span> /&gt;
+			banana 0.39 *&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsNumber&#34;</span> <span style="color:#a6e22e">max</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;99&#34;</span> <span style="color:#a6e22e">min</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> /&gt;
+			&lt;<span style="color:#f92672">br</span> /&gt;
+			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitButton&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;calculate&#34;</span> /&gt;
+	&lt;/<span style="color:#f92672">form</span>&gt;
+	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h4 id="p4_5_6-js">P4_5_6 JS</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">countPrice</span>(){
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dom</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>);
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.59</span>, <span style="color:#ae81ff">0.49</span>, <span style="color:#ae81ff">0.39</span>];
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">errorTag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+	<span style="color:#75715e">//多个name都相同且处于同一级别，构成了一个数组length为3的fruitsNumber[]数组，可以这样使用
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span>;
+		<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">str</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span>){
+			<span style="color:#75715e">//if(str.search(/^[0-9]{1,2}$/) != -1){		//注意，正则表达式这里是不加引号的，否则岂不是成字符串了
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> (Number(<span style="color:#a6e22e">str</span>) <span style="color:#f92672">&gt;=</span> Number(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;min&#34;</span>)) <span style="color:#f92672">&amp;&amp;</span> Number(<span style="color:#a6e22e">str</span>) <span style="color:#f92672">&lt;=</span> Number(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;max&#34;</span>))){
+				<span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">price</span>[<span style="color:#a6e22e">i</span>];		
+			}<span style="color:#66d9ef">else</span>{
+				<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+				<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">focus</span>();	<span style="color:#75715e">//书中并不推荐，并不是所有浏览器普遍适用
+</span><span style="color:#75715e"></span>				<span style="color:#a6e22e">errorTag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+			}
+			<span style="color:#75715e">//}
+</span><span style="color:#75715e"></span>		}
+	}
+	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">errorTag</span>) {
+		<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;input error, please input number between &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;min&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;max&#34;</span>));
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+	}
+	<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Your total cost is:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sum</span>);
+	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+}
+document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;submitButton&#34;</span>).<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">countPrice</span>;
+</code></pre></div><h3 id="p7">P7</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+	&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+	&lt;<span style="color:#f92672">title</span>&gt;user_information&lt;/<span style="color:#f92672">title</span>&gt;
+	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myForm&#34;</span>&gt;
+		Name:  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userName&#34;</span> <span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span> /&gt;
+		&lt;<span style="color:#f92672">br</span> /&gt;
+		Age:   &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userAge&#34;</span> /&gt;
+		&lt;<span style="color:#f92672">br</span> /&gt;
+		Weight:&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userWeight&#34;</span> /&gt;
+		&lt;<span style="color:#f92672">br</span> /&gt;
+		&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sBtn&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sBtn&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> /&gt;
+	&lt;/<span style="color:#f92672">form</span>&gt;
+	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h4 id="p7-js">P7 JS</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkName</span>(){
+	<span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">search</span>(<span style="color:#e6db74">/^[A-Z][a-z]* +[A-Z][a-z]* +[A-Z][a-z]*$/</span>) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>){
+		<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;incorrect name, please input again&#34;</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">focus</span>(); <span style="color:#75715e">//不推荐用
+</span><span style="color:#75715e"></span>	}
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkAge</span>(){
+	<span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">&amp;&amp;</span> Number(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">18</span>){
+		<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;age should greater than 17&#34;</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">focus</span>(); <span style="color:#75715e">//不推荐用
+</span><span style="color:#75715e"></span>	}
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkWeight</span>(){
+	<span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">&amp;&amp;</span> Number(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span> <span style="color:#f92672">||</span> Number(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">300</span>){
+		<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;incorrect Weight, please input again&#34;</span>);
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">focus</span>(); <span style="color:#75715e">//不推荐用
+</span><span style="color:#75715e"></span>	}
+}
+
+document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;userName&#34;</span>).<span style="color:#a6e22e">onblur</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">checkName</span>;
+document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;userAge&#34;</span>).<span style="color:#a6e22e">onblur</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">checkAge</span>;
+document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;userWeight&#34;</span>).<span style="color:#a6e22e">onblur</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">checkWeight</span>;
+</code></pre></div><h3 id="p8_9">P8_9</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;P8_9&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+	&lt;<span style="color:#f92672">h4</span>&gt;Cessna single_egnine&lt;/<span style="color:#f92672">h4</span>&gt;
+	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">auction</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
+		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span> /&gt;
+		red&lt;/<span style="color:#f92672">label</span>&gt;
+		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span> /&gt;
+		blue&lt;/<span style="color:#f92672">label</span>&gt;
+		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> /&gt;
+		green&lt;/<span style="color:#f92672">label</span>&gt;
+		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;orange&#34;</span> /&gt;
+		orange&lt;/<span style="color:#f92672">label</span>&gt;
+	&lt;/<span style="color:#f92672">form</span>&gt;
+	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h4 id="p8_9-js">P8_9 JS</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">colorChoice</span>(<span style="color:#a6e22e">event</span>){
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">color</span>  <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">currentTarget</span>;
+	<span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">value</span>){
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;red&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;red&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;orange&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;orange&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;green&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;green&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;blue&#34;</span>);<span style="color:#66d9ef">break</span>;
+		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
+	}
+}
+<span style="color:#75715e">//因为colorChoice是一个数组，所以在加监听器的时候也使用数组的形式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">choice</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>).<span style="color:#a6e22e">colorChoice</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">choice</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+	<span style="color:#a6e22e">choice</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#a6e22e">colorChoice</span>, <span style="color:#66d9ef">false</span>);
+}
+</code></pre></div>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%92%8Chtml%E5%88%9D%E6%AD%A5/" data-id="e425a22079ef77ecb901e10381f31f12" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                
+                var typeNumber = 0;
+                var errorCorrectionLevel = 'M';
+                var qr = qrcode(typeNumber, errorCorrectionLevel);
+                qr.addData(url);
+                qr.make();
+
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div id="qrcode-img-' + id + '" class="article-share-qrcode-img">' + qr.createSvgTag() + '</div>',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%9F%BA%E7%A1%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Web整理_JS基础</div>
+    </a>
+    
+
+    
+    <a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%BC%80%E5%8F%91%E5%8A%A8%E6%80%81%E6%96%87%E6%A1%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Web整理_JS开发动态文档</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%BC%80%E5%8F%91%E5%8A%A8%E6%80%81%E6%96%87%E6%A1%A3/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/web">
+                        web
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%BC%80%E5%8F%91%E5%8A%A8%E6%80%81%E6%96%87%E6%A1%A3/" class="title">Web整理_JS开发动态文档</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-09-04 16:48:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%92%8Chtml%E5%88%9D%E6%AD%A5/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/web">
+                        web
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%92%8Chtml%E5%88%9D%E6%AD%A5/" class="title">Web整理_JS和HTML初步</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-09-04 16:47:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%9F%BA%E7%A1%80/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/web">
+                        web
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%9F%BA%E7%A1%80/" class="title">Web整理_JS基础</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-09-04 16:46:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_css/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/web">
+                        web
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_css/" class="title">Web整理_CSS</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-09-04 16:45:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_html%E5%9F%BA%E7%A1%80/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/web">
+                        web
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_html%E5%9F%BA%E7%A1%80/" class="title">Web整理_HTML基础</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-09-04 16:44:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/algorithm">
+                    algorithm
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/blog">
+                    blog
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/cmd">
+                    cmd
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/data-structure">
+                    data-structure
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/git">
+                    git
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/js">
+                    js
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/notes">
+                    notes
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/reflections">
+                    reflections
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/web">
+                    web
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/algorithm" style="font-size: 12px;">algorithm</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/blog" style="font-size: 12px;">blog</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/blog-maintenance" style="font-size: 12px;">blog-maintenance</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/ds" style="font-size: 12px;">ds</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/git" style="font-size: 12px;">git</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/graph" style="font-size: 12px;">graph</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/html" style="font-size: 12px;">html</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/hugo" style="font-size: 12px;">hugo</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/js" style="font-size: 12px;">js</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/live2d" style="font-size: 12px;">live2d</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/reflections" style="font-size: 12px;">reflections</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/sort" style="font-size: 12px;">sort</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/ssh" style="font-size: 12px;">ssh</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/web" style="font-size: 12px;">web</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86" style="font-size: 12px;">批处理</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" style="font-size: 12px;">环境变量</a>
+        
+        
+        <a href="https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94" style="font-size: 12px;">考研</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<script src="https://richie-leonhardt.github.io/live2d/autoload.js"></script>
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">icarus</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://richie-leonhardt.github.io/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+</body>
+</html>

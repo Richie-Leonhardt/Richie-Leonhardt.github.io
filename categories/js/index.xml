@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on Richie&#39;s Blog</title>
+    <link>https://richie-leonhardt.github.io/categories/js/</link>
+    <description>Recent content in js on Richie&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 04 Sep 2020 16:48:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://richie-leonhardt.github.io/categories/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web整理_JS开发动态文档</title>
+      <link>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%BC%80%E5%8F%91%E5%8A%A8%E6%80%81%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Fri, 04 Sep 2020 16:48:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%BC%80%E5%8F%91%E5%8A%A8%E6%80%81%E6%96%87%E6%A1%A3/</guid>
+      <description>P1_2 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;cheaper6 p1&amp;lt;/title&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34; /&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; .regtext{ text-align: center; z-index: 10; } .pic{ position:absolute; left:10px; top:10px; z-index:-1; } &amp;lt;/style&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;js/1.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div class=&amp;#34;regtext&amp;#34;&amp;gt; &amp;lt;pre&amp;gt; gggggggggggggggggggggggggggggggggggggggggggggg hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa &amp;lt;!-- img标签是单个的标签 --&amp;gt; &amp;lt;span id=&amp;#34;pic&amp;#34; class=&amp;#34;pic&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;image/css3.jpg&amp;#34; /&amp;gt;&amp;lt;/span&amp;gt;	&amp;lt;/pre&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; name=&amp;#34;Northwest&amp;#34; onclick=&amp;#34;move(10,10)&amp;#34; value=&amp;#34;Northwest&amp;#34; /&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; name=&amp;#34;Southwest&amp;#34; onclick=&amp;#34;move(10,1000)&amp;#34; value=&amp;#34;Southwest&amp;#34; /&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; name=&amp;#34;Northeast&amp;#34; onclick=&amp;#34;move(1000,1000)&amp;#34; value=&amp;#34;Northeast&amp;#34; /&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; name=&amp;#34;Southeast&amp;#34; onclick=&amp;#34;move(1000,10)&amp;#34; value=&amp;#34;Southeast&amp;#34; /&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;js/1.</description>
+    </item>
+    
+  </channel>
+</rss>

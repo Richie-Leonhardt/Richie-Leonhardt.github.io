@@ -6,10 +6,55 @@
     <description>Recent content in Posts on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 24 Aug 2020 17:56:31 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2020 16:48:14 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Web整理_JS开发动态文档</title>
+      <link>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%BC%80%E5%8F%91%E5%8A%A8%E6%80%81%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Fri, 04 Sep 2020 16:48:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%BC%80%E5%8F%91%E5%8A%A8%E6%80%81%E6%96%87%E6%A1%A3/</guid>
+      <description>P1_2 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;cheaper6 p1&amp;lt;/title&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34; /&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; .regtext{ text-align: center; z-index: 10; } .pic{ position:absolute; left:10px; top:10px; z-index:-1; } &amp;lt;/style&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;js/1.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div class=&amp;#34;regtext&amp;#34;&amp;gt; &amp;lt;pre&amp;gt; gggggggggggggggggggggggggggggggggggggggggggggg hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa &amp;lt;!-- img标签是单个的标签 --&amp;gt; &amp;lt;span id=&amp;#34;pic&amp;#34; class=&amp;#34;pic&amp;#34;&amp;gt;&amp;lt;img src=&amp;#34;image/css3.jpg&amp;#34; /&amp;gt;&amp;lt;/span&amp;gt;	&amp;lt;/pre&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; name=&amp;#34;Northwest&amp;#34; onclick=&amp;#34;move(10,10)&amp;#34; value=&amp;#34;Northwest&amp;#34; /&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; name=&amp;#34;Southwest&amp;#34; onclick=&amp;#34;move(10,1000)&amp;#34; value=&amp;#34;Southwest&amp;#34; /&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; name=&amp;#34;Northeast&amp;#34; onclick=&amp;#34;move(1000,1000)&amp;#34; value=&amp;#34;Northeast&amp;#34; /&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; name=&amp;#34;Southeast&amp;#34; onclick=&amp;#34;move(1000,10)&amp;#34; value=&amp;#34;Southeast&amp;#34; /&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;js/1.</description>
+    </item>
+    
+    <item>
+      <title>Web整理_JS和HTML初步</title>
+      <link>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%92%8Chtml%E5%88%9D%E6%AD%A5/</link>
+      <pubDate>Fri, 04 Sep 2020 16:47:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%92%8Chtml%E5%88%9D%E6%AD%A5/</guid>
+      <description>P1 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;js test&amp;lt;/title&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;js/1.js&amp;#34;&amp;gt; &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h4&amp;gt;Cessna single_egnine&amp;lt;/h4&amp;gt; &amp;lt;form id=&amp;#34;myForm&amp;#34; auction=&amp;#34;&amp;#34;&amp;gt; &amp;lt;!-- 直接将处理的代码或者函数赋值给onclick特性 --&amp;gt; &amp;lt;!-- 两种方式： --&amp;gt; &amp;lt;!-- &amp;#34;func(parameter)&amp;#34; --&amp;gt; &amp;lt;!-- &amp;#34;js代码&amp;#34; --&amp;gt; &amp;lt;label&amp;gt;&amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;colorButton&amp;#34; value=&amp;#34;red&amp;#34; onclick=&amp;#34;colorChoice(value)&amp;#34; /&amp;gt; red&amp;lt;/label&amp;gt; &amp;lt;label&amp;gt;&amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;colorButton&amp;#34; value=&amp;#34;blue&amp;#34; onclick=&amp;#34;colorChoice(value)&amp;#34; /&amp;gt; blue&amp;lt;/label&amp;gt; &amp;lt;label&amp;gt;&amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;colorButton&amp;#34; value=&amp;#34;green&amp;#34; onclick=&amp;#34;colorChoice(value)&amp;#34; /&amp;gt; green&amp;lt;/label&amp;gt; &amp;lt;label&amp;gt;&amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;colorButton&amp;#34; value=&amp;#34;orange&amp;#34; onclick=&amp;#34;colorChoice(value)&amp;#34; /&amp;gt; orange&amp;lt;/label&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; P1 JS function colorChoice(color){ switch(color){ case &amp;#34;red&amp;#34;:alert(&amp;#34;red&amp;#34;);break; case &amp;#34;orange&amp;#34;:alert(&amp;#34;orange&amp;#34;);break; case &amp;#34;green&amp;#34;:alert(&amp;#34;green&amp;#34;);break; case &amp;#34;blue&amp;#34;:alert(&amp;#34;blue&amp;#34;);break; default:alert(&amp;#34;error&amp;#34;); } } P2 &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>Web整理_JS基础</title>
+      <link>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Fri, 04 Sep 2020 16:46:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%9F%BA%E7%A1%80/</guid>
+      <description>// practice1 // // for (var i = 5; i &amp;lt; 16; i++) // alert(i + &amp;#34; suqare is: &amp;#34; + i** 2);  // p2 // Fibonacci // javascript中函数形参不需要类型声明var，只需要一个简单的名字就够了 function fib(/*var*/ a){ if (a === 1 || a === 2) { return 1;} else return fib(a - 1) + fib(a - 2); } // p3 // // 由于prompt返回的是字符串，所以需要 - 0来转换为数字 var p1 = prompt(&amp;#34;parameter1:&amp;#34;,&amp;#34;&amp;#34;) - 0; var p2 = prompt(&amp;#34;parameter2:&amp;#34;,&amp;#34;&amp;#34;) - 0; var p3 = prompt(&amp;#34;parameter3:&amp;#34;,&amp;#34;&amp;#34;) - 0; alert(&amp;#34;Maxium is: &amp;#34; + Math.</description>
+    </item>
+    
+    <item>
+      <title>Web整理_CSS</title>
+      <link>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_css/</link>
+      <pubDate>Fri, 04 Sep 2020 16:45:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_css/</guid>
+      <description>CSS代码 /*注意：CSS不能使用双斜杠//注释,无论单行多行只能像这样注释*/ /*通配选择器*/ * { } /*简单选择器*/ h3{ font-family:&amp;#34;Arial, Helvetica, Futura&amp;#34;; font-size: 36px; font-style: italic; /*normal oblique(无用)*/ text-align:center; height:auto; } /*类选择器,通过已有的标签创建不同的类*/ p.normal{ font-variant: small-caps; /*normal 小型大写字母*/ } p.warning{ font-weight: bold; /*normal bolder lighter或100，200，……，900*/ } /*通用选择器*/ .emphasize{ /*最后一个是字体族，倒数第二是大小，前面俩随便*/ font:bold italic 1.1em &amp;#39;Times New Roman&amp;#39; Palatino; color: #FF0000; } .container{ width: 800px; height: 600px; background-color: #FFFFFF; margin-left: 300px; padding: 50px; } /*id选择器*/ #ggg{ text-decoration: line-through; /*overline, underline 上划线中划线下划线*/ letter-spacing: 1px; /*-1px nromal 字母间距(tracking)*/ word-spacing: 5px; /*-1px normal 词间距*/ line-height:2; /*24px 0.</description>
+    </item>
+    
+    <item>
+      <title>Web整理_HTML基础</title>
+      <link>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_html%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Fri, 04 Sep 2020 16:44:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_html%E5%9F%BA%E7%A1%80/</guid>
+      <description>HTML基本   form   input   textarea   select   footer   audio and video   &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;A form simple&amp;lt;/title&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34; /&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- 页眉 --&amp;gt; &amp;lt;hgroup&amp;gt; &amp;lt;header&amp;gt; &amp;lt;h1&amp;gt;Practice2&amp;lt;/h1&amp;gt; &amp;lt;h3&amp;gt;form、input、textarea、select、audio and video&amp;lt;/h3&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;/hgroup&amp;gt; &amp;lt;!-- 主要表单 --&amp;gt; &amp;lt;form action=&amp;#34;&amp;#34; method=&amp;#34;post&amp;#34;&amp;gt; &amp;lt;!-- if no method, default get --&amp;gt; &amp;lt;!-- 两个输入框，输入用户名和密码 --&amp;gt; &amp;lt;p&amp;gt;&amp;lt;!-- input tag need container --&amp;gt; &amp;lt;!-- pre使能够保留连续的多个空格和使用等距字体 --&amp;gt; &amp;lt;!</description>
+    </item>
     
     <item>
       <title>2020年8月阶段反思</title>
