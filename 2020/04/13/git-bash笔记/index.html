@@ -32,7 +32,7 @@
 <meta itemprop="description" content="git-bash中设置用户名邮箱以及启动就添加ssh key">
 <meta itemprop="datePublished" content="2020-04-13T18:20:41+08:00" />
 <meta itemprop="dateModified" content="2020-04-13T18:20:41+08:00" />
-<meta itemprop="wordCount" content="141">
+<meta itemprop="wordCount" content="145">
 
 
 
@@ -259,7 +259,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-04-13 18:20:41 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
             &middot;
-            141
+            145
             words
             &middot;
             1
@@ -310,7 +310,9 @@ $ git config --global user.email example@163.com
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;example@163.com&#34;</span>
 </code></pre></div><p>三次回车之后，在目录下生成一个.ssh文件夹，里面有公钥id_rsa.pub和私钥id_rsa</p>
 <p>将公钥内容添加到GitHub的账户(此处省略步骤)</p>
-<p>为了确保每次打开git-bash都加载agent并且添加了私钥，在这个目录下新建.profile的一个文件，内容为以下 :</p>
+<p>添加key到agent</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-add ~/.ssh/id_rsa
+</code></pre></div><p>为了确保每次打开git-bash都加载agent并且添加了私钥，在这个目录下新建.profile的一个文件，内容为以下 :</p>
 <pre><code>env=~/.ssh/agent.env
 
 agent_load_env () { test -f &quot;$env&quot; &amp;&amp; . &quot;$env&quot; &gt;| /dev/null ; }
