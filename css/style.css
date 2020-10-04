@@ -2190,7 +2190,7 @@ ol.toc {
 }
 .highlight {
   color: #ddd;
-  background: #FFF;
+  background: #272822;
   border-radius: 8px;
 }
 .highlight .code .tag,
@@ -2228,7 +2228,7 @@ ol.toc {
 .highlight .code .variable,
 .highlight .code .template-tag,
 .highlight .code .template-variable {
-  color: #a6e22e;
+  color: #d7ba7d;
 }
 .highlight .code .comment,
 .highlight .code .quote,
