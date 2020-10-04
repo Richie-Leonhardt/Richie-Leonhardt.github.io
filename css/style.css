@@ -186,7 +186,7 @@ code {
   #main {
     display: inline;
     float: left;
-    width: 52.307692307692314%;
+    width: 75%;
     margin: 0 0.769230769230769%;
   }
 }
@@ -194,7 +194,7 @@ code {
   #main {
     display: inline;
     float: left;
-    width: 67.6923076923077%;
+    width: 99%;
     margin: 0 0.769230769230769%;
   }
 }
@@ -1817,10 +1817,12 @@ ol.toc {
 }
 .widget-wrap {
   margin: 40px 10px;
+  padding-top: 20px;
 }
 @media screen and (max-width: 559px) {
   .widget-wrap {
     margin: 40px 20px;
+    padding-top: 20px;
   }
 }
 .widget-title {
