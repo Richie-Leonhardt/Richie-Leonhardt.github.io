@@ -6,10 +6,19 @@
     <description>Recent content on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 26 Sep 2020 17:56:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2020 09:52:25 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>XHTML笔记</title>
+      <link>https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 04 Oct 2020 09:52:25 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/</guid>
+      <description>javascript变与不变   只有数组的几个函数会在原基础上操作直接修改：一个reverse，一个sort，四个头尾操作 其他的字符串、数字、Number或者Math等，都是通过返回值来保存修改后的结果，原来的都没有变  arr = [1,2,3]; str = &amp;#39;123&amp;#39;; num = 123.45; /*变：主要是对数组的操作*/ arr.reverse(); arr.sort();	//数字和数组都是在原基础上操作  arr.push([1,2,3]);	//这里入栈/入队的是一个数组元素，入栈后是[1,2,3,[1,2,3]]或[1,2,3,Array(3)] arr.pop();	//出栈 arr.shift();	//出队 arr.unshift(1,2,3);	//队头插入，一般用不到，这样三个参数是顺序插入3个元素  /*不变,一定要通过赋值来引用或者直接嵌套着用*/ sa = arr.join(&amp;#39; | &amp;#39;); ca = arr.concat([4,5,6]); ca = arr.slice(2); sa = arr.toString(); /*Number and number all unchanged*/ ns = Number(str) sn = num.toString(); n = num.toFixed(1); /*Math all unchanged*/ fn = Math.floor(num); cn = Math.ceil(num); rn = Math.round(num); expn = Math.</description>
+    </item>
     
     <item>
       <title>2020年8月阶段反思</title>
@@ -299,20 +308,6 @@ Tip：在第2步提炼的基础上，找这几个概念之后的逻辑
   在一些顶点数目比较大（一般顶点个数在1000以上）的情况下，使用邻接表而不是邻接矩阵来存储图。如果是稀疏图，用邻接表，如果是稠密图，用邻接矩阵。
 深度优先搜索dfs遍历图 按深度优先的方式访问所有未被访问的结点，在结点被访问过后标记为已访问
 dfs(u) { vis[u] = true; for(从u出发到能到达的所有顶点v) if(vis[v] == false) dfs(v); } dfsTrave(G) { for(G的所有结点u) if(vis[u] == false) dfs(u); } //邻接矩阵 void dfs(int u, int depth) { vis[u] = true; for(int v = 0; v &amp;lt; n; v++) { if(vis[v] == false &amp;amp;&amp;amp; G[u][v] != INF) dfs(v, depth + 1); } } void dfsTrave() { for(int u = 0; u &amp;lt; n; u++) if(vis[u] == false) dfs(u, 1); } //邻接表 void dfs(int u, int depth) { vis[u] = true; for(int u = 0; u &amp;lt; arr[u].</description>
-    </item>
-    
-    <item>
-      <title>为基于hugo的博客引入live2d</title>
-      <link>https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</link>
-      <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/%E4%B8%BA%E5%9F%BA%E4%BA%8Ehugo%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BC%95%E5%85%A5live2d/</guid>
-      <description>在themes/你的主题/static文件夹中新建live2d文件夹并克隆GitHub的源码
-修改autoload.js中各个文件的路径到正确的路径
-确保在themes/你的主题/layouts/partials中的head.html 中已经引入了jquery.min.js
-在foot.html中第一行插入以下代码
-&amp;lt;script src=&amp;#34;{{ &amp;#34;live2d/autoload.js&amp;#34; | absURL }}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 参考
-[GitHub]live2d_demofghrsh大佬的博客</description>
     </item>
     
     <item>

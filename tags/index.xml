@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 26 Sep 2020 17:56:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2020 09:52:25 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Js</title>
+      <link>https://richie-leonhardt.github.io/tags/js/</link>
+      <pubDate>Sun, 04 Oct 2020 09:52:25 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/js/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>reflections</title>
@@ -35,15 +44,6 @@
       <pubDate>Fri, 04 Sep 2020 16:48:14 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>js</title>
-      <link>https://richie-leonhardt.github.io/tags/js/</link>
-      <pubDate>Fri, 04 Sep 2020 16:47:14 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/tags/js/</guid>
       <description></description>
     </item>
     
@@ -84,7 +84,7 @@
     </item>
     
     <item>
-      <title>hugo</title>
+      <title>Hugo</title>
       <link>https://richie-leonhardt.github.io/tags/hugo/</link>
       <pubDate>Fri, 05 Jun 2020 19:16:32 +0800</pubDate>
       
@@ -107,15 +107,6 @@
       <pubDate>Sun, 26 Apr 2020 10:05:15 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/tags/graph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>live2d</title>
-      <link>https://richie-leonhardt.github.io/tags/live2d/</link>
-      <pubDate>Thu, 16 Apr 2020 21:47:26 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/tags/live2d/</guid>
       <description></description>
     </item>
     

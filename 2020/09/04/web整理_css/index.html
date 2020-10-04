@@ -162,12 +162,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        24
+        25
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          17
+          16
         
         <span>
             Tags
@@ -298,173 +298,173 @@
 
         <div class="article-entry" itemprop="articleBody">
             <h4 id="css代码">CSS代码</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/*注意：CSS不能使用双斜杠//注释,无论单行多行只能像这样注释*/</span>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#007f7f">/*注意：CSS不能使用双斜杠//注释,无论单行多行只能像这样注释*/</span>
 
-<span style="color:#75715e">/*通配选择器*/</span>
- <span style="color:#f92672">*</span> {
+<span style="color:#007f7f">/*通配选择器*/</span>
+ * {
 
 }
 
-<span style="color:#75715e">/*简单选择器*/</span>
-<span style="color:#f92672">h3</span>{
-	<span style="color:#66d9ef">font-family</span>:<span style="color:#e6db74">&#34;Arial, Helvetica, Futura&#34;</span>;
-	<span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">36</span><span style="color:#66d9ef">px</span>;
-	<span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>; <span style="color:#75715e">/*normal oblique(无用)*/</span>
-	<span style="color:#66d9ef">text-align</span>:<span style="color:#66d9ef">center</span>;
-	<span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
+<span style="color:#007f7f">/*简单选择器*/</span>
+<span style="font-weight:bold">h3</span>{
+	<span style="color:#fff;font-weight:bold">font-family</span>:<span style="color:#0ff;font-weight:bold">&#34;Arial, Helvetica, Futura&#34;</span>;
+	<span style="color:#fff;font-weight:bold">font-size</span>: <span style="color:#ff0;font-weight:bold">36</span><span style="color:#fff;font-weight:bold">px</span>;
+	<span style="color:#fff;font-weight:bold">font-style</span>: <span style="color:#fff;font-weight:bold">italic</span>; <span style="color:#007f7f">/*normal oblique(无用)*/</span>
+	<span style="color:#fff;font-weight:bold">text-align</span>:<span style="color:#fff;font-weight:bold">center</span>;
+	<span style="color:#fff;font-weight:bold">height</span>:<span style="color:#fff;font-weight:bold">auto</span>;
 }
 
-<span style="color:#75715e">/*类选择器,通过已有的标签创建不同的类*/</span>
-<span style="color:#f92672">p</span>.<span style="color:#a6e22e">normal</span>{
-	<span style="color:#66d9ef">font-variant</span>: <span style="color:#66d9ef">small</span><span style="color:#f92672">-</span>caps; <span style="color:#75715e">/*normal 小型大写字母*/</span>
+<span style="color:#007f7f">/*类选择器,通过已有的标签创建不同的类*/</span>
+<span style="font-weight:bold">p</span>.normal{
+	<span style="color:#fff;font-weight:bold">font-variant</span>: <span style="color:#fff;font-weight:bold">small</span>-caps; <span style="color:#007f7f">/*normal 小型大写字母*/</span>
 }
-<span style="color:#f92672">p</span>.<span style="color:#a6e22e">warning</span>{
-	<span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>; <span style="color:#75715e">/*normal bolder lighter或100，200，……，900*/</span>
-}
-
-<span style="color:#75715e">/*通用选择器*/</span>
-.<span style="color:#a6e22e">emphasize</span>{
-	<span style="color:#75715e">/*最后一个是字体族，倒数第二是大小，前面俩随便*/</span>
-	<span style="color:#66d9ef">font</span>:<span style="color:#66d9ef">bold</span> <span style="color:#66d9ef">italic</span> <span style="color:#ae81ff">1.1</span><span style="color:#66d9ef">em</span> <span style="color:#e6db74">&#39;Times New Roman&#39;</span> Palatino;
-	<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#FF0000</span>;
+<span style="font-weight:bold">p</span>.warning{
+	<span style="color:#fff;font-weight:bold">font-weight</span>: <span style="color:#fff;font-weight:bold">bold</span>; <span style="color:#007f7f">/*normal bolder lighter或100，200，……，900*/</span>
 }
 
-.<span style="color:#a6e22e">container</span>{
-	<span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">800</span><span style="color:#66d9ef">px</span>;
-	<span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">600</span><span style="color:#66d9ef">px</span>;
-	<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#FFFFFF</span>;
-	<span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>;
-	<span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>;
+<span style="color:#007f7f">/*通用选择器*/</span>
+.emphasize{
+	<span style="color:#007f7f">/*最后一个是字体族，倒数第二是大小，前面俩随便*/</span>
+	<span style="color:#fff;font-weight:bold">font</span>:<span style="color:#fff;font-weight:bold">bold</span> <span style="color:#fff;font-weight:bold">italic</span> <span style="color:#ff0;font-weight:bold">1.1</span><span style="color:#fff;font-weight:bold">em</span> <span style="color:#0ff;font-weight:bold">&#39;Times New Roman&#39;</span> Palatino;
+	<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#FF0000</span>;
 }
 
-<span style="color:#75715e">/*id选择器*/</span>
+.container{
+	<span style="color:#fff;font-weight:bold">width</span>: <span style="color:#ff0;font-weight:bold">800</span><span style="color:#fff;font-weight:bold">px</span>;
+	<span style="color:#fff;font-weight:bold">height</span>: <span style="color:#ff0;font-weight:bold">600</span><span style="color:#fff;font-weight:bold">px</span>;
+	<span style="color:#fff;font-weight:bold">background-color</span>: <span style="color:#ff0;font-weight:bold">#FFFFFF</span>;
+	<span style="color:#fff;font-weight:bold">margin-left</span>: <span style="color:#ff0;font-weight:bold">300</span><span style="color:#fff;font-weight:bold">px</span>;
+	<span style="color:#fff;font-weight:bold">padding</span>: <span style="color:#ff0;font-weight:bold">50</span><span style="color:#fff;font-weight:bold">px</span>;
+}
+
+<span style="color:#007f7f">/*id选择器*/</span>
 #ggg{
-	<span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">line-through</span>;  <span style="color:#75715e">/*overline, underline 上划线中划线下划线*/</span>
+	<span style="color:#fff;font-weight:bold">text-decoration</span>: <span style="color:#fff;font-weight:bold">line-through</span>;  <span style="color:#007f7f">/*overline, underline 上划线中划线下划线*/</span>
 
-	<span style="color:#66d9ef">letter-spacing</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/*-1px nromal 字母间距(tracking)*/</span>
+	<span style="color:#fff;font-weight:bold">letter-spacing</span>: <span style="color:#ff0;font-weight:bold">1</span><span style="color:#fff;font-weight:bold">px</span>; <span style="color:#007f7f">/*-1px nromal 字母间距(tracking)*/</span>
 
-	<span style="color:#66d9ef">word-spacing</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/*-1px normal 词间距*/</span>
+	<span style="color:#fff;font-weight:bold">word-spacing</span>: <span style="color:#ff0;font-weight:bold">5</span><span style="color:#fff;font-weight:bold">px</span>; <span style="color:#007f7f">/*-1px normal 词间距*/</span>
 
-	<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">2</span>; <span style="color:#75715e">/*24px 0.8em normal 行间距(leading)，数字代表倍数*/</span>
+	<span style="color:#fff;font-weight:bold">line-height</span>:<span style="color:#ff0;font-weight:bold">2</span>; <span style="color:#007f7f">/*24px 0.8em normal 行间距(leading)，数字代表倍数*/</span>
 }
 
 
-<span style="color:#75715e">/*上下文选择器：后代选择器，只要是后代就符合*/</span>
-<span style="color:#f92672">ol</span> <span style="color:#f92672">ol</span>{
-	<span style="color:#66d9ef">list-style-type</span>: <span style="color:#66d9ef">upper-alpha</span>; <span style="color:#75715e">/*=upper-latin lower-roman */</span>
+<span style="color:#007f7f">/*上下文选择器：后代选择器，只要是后代就符合*/</span>
+<span style="font-weight:bold">ol</span> <span style="font-weight:bold">ol</span>{
+	<span style="color:#fff;font-weight:bold">list-style-type</span>: <span style="color:#fff;font-weight:bold">upper-alpha</span>; <span style="color:#007f7f">/*=upper-latin lower-roman */</span>
 }
-<span style="color:#f92672">ol</span> <span style="color:#f92672">ol</span> <span style="color:#f92672">ol</span>{
-	<span style="color:#66d9ef">list-style-type</span>: <span style="color:#66d9ef">decimal</span>;
-}
-
-
-<span style="color:#75715e">/*上下文选择器：子元素选择器，严格按照dom树结构*/</span>
-<span style="color:#f92672">ul</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span> {
-	<span style="color:#66d9ef">list-style-type</span>: <span style="color:#66d9ef">square</span>; <span style="color:#75715e">/*circle空心圆 disc默认实心圆*/</span>
+<span style="font-weight:bold">ol</span> <span style="font-weight:bold">ol</span> <span style="font-weight:bold">ol</span>{
+	<span style="color:#fff;font-weight:bold">list-style-type</span>: <span style="color:#fff;font-weight:bold">decimal</span>;
 }
 
 
-<span style="color:#75715e">/*选择第一个子元素*/</span>
-<span style="color:#f92672">p</span>:<span style="color:#a6e22e">first-child</span>{
-	<span style="color:#66d9ef">text-indent</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/*2em 首行缩进*/</span>
-}
-
-<span style="color:#75715e">/*选择最后一个子元素*/</span>
-<span style="color:#f92672">p</span>:<span style="color:#a6e22e">last-child</span>{
-
-}
-
-<span style="color:#75715e">/*选择子元素，且仅存在着这一个子元素*/</span>
-<span style="color:#f92672">p</span>:<span style="color:#a6e22e">only-child</span>{
-	<span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>; <span style="color:#75715e">/*justify left(default) right 文本水平方向排列*/</span>
-}
-
-<span style="color:#75715e">/*选择自己：且自己没有子元素*/</span>
-<span style="color:#f92672">p</span>:<span style="color:#a6e22e">empty</span>{
-	<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#777777</span>;
-	<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#FFFFFF</span>;
-}
-
-<span style="color:#75715e">/*伪类：link和visited，hover，focus*/</span>
-
-
-#ggg:<span style="color:#a6e22e">hover</span>{
-	<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#FFFFFF</span>;
-}
-
-<span style="color:#f92672">a</span>:<span style="color:#a6e22e">link</span> {<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#FF0000</span>}     <span style="color:#75715e">/* 未访问的链接 */</span>
-<span style="color:#f92672">a</span>:<span style="color:#a6e22e">visited</span> {<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#00FF00</span>}  <span style="color:#75715e">/* 已访问的链接 */</span>
-<span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#FF00FF</span>}    <span style="color:#75715e">/* 当有鼠标悬停在链接上 */</span>
-<span style="color:#f92672">a</span>:<span style="color:#a6e22e">active</span> {<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#0000FF</span>}   <span style="color:#75715e">/* 被选择的链接 */</span>
-
-<span style="color:#75715e">/*图片悬浮*/</span>
-<span style="color:#f92672">img</span> {
-	<span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">right</span>;	<span style="color:#75715e">/*图片悬浮位置，图片周围围绕文字的text-align要与float的相反才行*/</span>
-}
-
-<span style="color:#75715e">/*盒模型相关参数*/</span>
-<span style="color:#f92672">td</span><span style="color:#f92672">,</span> <span style="color:#f92672">th</span>{
-	<span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">thin</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">black</span>;  
-	<span style="color:#75715e">/*宽度(border-width) px
-</span><span style="color:#75715e">	  样式(border-style) solid dotted dashed double 
-</span><span style="color:#75715e">	  颜色(border-color)*/</span>
-}
-
-<span style="color:#f92672">table</span>{
-	<span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">thin</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">black</span>;
-	<span style="color:#66d9ef">border-collapse</span>: <span style="color:#66d9ef">collapse</span>;
-	<span style="color:#66d9ef">border-top-width</span>: <span style="color:#66d9ef">medium</span>;
-	<span style="color:#66d9ef">border-bottom-style</span>: <span style="color:#66d9ef">dashed</span>; 
-}
-
-<span style="color:#f92672">p</span>.<span style="color:#a6e22e">box</span>{
-	<span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>; 	<span style="color:#75715e">/*外边距*/</span>
-	<span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>; 	<span style="color:#75715e">/*内边距，注意是pad不是ped*/</span>
-	<span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">solid</span>;
-	<span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#C0C0C0</span>;
+<span style="color:#007f7f">/*上下文选择器：子元素选择器，严格按照dom树结构*/</span>
+<span style="font-weight:bold">ul</span> &gt; <span style="font-weight:bold">li</span> &gt; <span style="font-weight:bold">li</span> {
+	<span style="color:#fff;font-weight:bold">list-style-type</span>: <span style="color:#fff;font-weight:bold">square</span>; <span style="color:#007f7f">/*circle空心圆 disc默认实心圆*/</span>
 }
 
 
-<span style="color:#75715e">/*背景图片*/</span>
-<span style="color:#f92672">body</span>{
-	<span style="color:#66d9ef">background-image</span>: url(<span style="color:#e6db74">&#34;../image/background.jpg&#34;</span>);
-	<span style="color:#66d9ef">background-size</span>: <span style="color:#ae81ff">1280</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">720</span><span style="color:#66d9ef">px</span>; 
-	<span style="color:#66d9ef">background-position</span>: <span style="color:#66d9ef">top</span> <span style="color:#66d9ef">center</span>;
-	<span style="color:#66d9ef">background-repeat</span>: <span style="color:#66d9ef">no-repeat</span>; <span style="color:#75715e">/*repeat(default) repeat-x repeat-y*/</span>
+<span style="color:#007f7f">/*选择第一个子元素*/</span>
+<span style="font-weight:bold">p</span>:first-child{
+	<span style="color:#fff;font-weight:bold">text-indent</span>: <span style="color:#ff0;font-weight:bold">10</span><span style="color:#fff;font-weight:bold">px</span>; <span style="color:#007f7f">/*2em 首行缩进*/</span>
+}
+
+<span style="color:#007f7f">/*选择最后一个子元素*/</span>
+<span style="font-weight:bold">p</span>:last-child{
+
+}
+
+<span style="color:#007f7f">/*选择子元素，且仅存在着这一个子元素*/</span>
+<span style="font-weight:bold">p</span>:only-child{
+	<span style="color:#fff;font-weight:bold">text-align</span>: <span style="color:#fff;font-weight:bold">center</span>; <span style="color:#007f7f">/*justify left(default) right 文本水平方向排列*/</span>
+}
+
+<span style="color:#007f7f">/*选择自己：且自己没有子元素*/</span>
+<span style="font-weight:bold">p</span>:empty{
+	<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#777777</span>;
+	<span style="color:#fff;font-weight:bold">background-color</span>: <span style="color:#ff0;font-weight:bold">#FFFFFF</span>;
+}
+
+<span style="color:#007f7f">/*伪类：link和visited，hover，focus*/</span>
+
+
+#ggg:hover{
+	<span style="color:#fff;font-weight:bold">background-color</span>: <span style="color:#ff0;font-weight:bold">#FFFFFF</span>;
+}
+
+<span style="font-weight:bold">a</span>:link {<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#FF0000</span>}     <span style="color:#007f7f">/* 未访问的链接 */</span>
+<span style="font-weight:bold">a</span>:visited {<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#00FF00</span>}  <span style="color:#007f7f">/* 已访问的链接 */</span>
+<span style="font-weight:bold">a</span>:hover {<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#FF00FF</span>}    <span style="color:#007f7f">/* 当有鼠标悬停在链接上 */</span>
+<span style="font-weight:bold">a</span>:active {<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#0000FF</span>}   <span style="color:#007f7f">/* 被选择的链接 */</span>
+
+<span style="color:#007f7f">/*图片悬浮*/</span>
+<span style="font-weight:bold">img</span> {
+	<span style="color:#fff;font-weight:bold">float</span>: <span style="color:#fff;font-weight:bold">right</span>;	<span style="color:#007f7f">/*图片悬浮位置，图片周围围绕文字的text-align要与float的相反才行*/</span>
+}
+
+<span style="color:#007f7f">/*盒模型相关参数*/</span>
+<span style="font-weight:bold">td</span>, <span style="font-weight:bold">th</span>{
+	<span style="color:#fff;font-weight:bold">border</span>: <span style="color:#fff;font-weight:bold">thin</span> <span style="color:#fff;font-weight:bold">solid</span> <span style="color:#fff;font-weight:bold">black</span>;  
+	<span style="color:#007f7f">/*宽度(border-width) px
+</span><span style="color:#007f7f">	  样式(border-style) solid dotted dashed double 
+</span><span style="color:#007f7f">	  颜色(border-color)*/</span>
+}
+
+<span style="font-weight:bold">table</span>{
+	<span style="color:#fff;font-weight:bold">border</span>: <span style="color:#fff;font-weight:bold">thin</span> <span style="color:#fff;font-weight:bold">solid</span> <span style="color:#fff;font-weight:bold">black</span>;
+	<span style="color:#fff;font-weight:bold">border-collapse</span>: <span style="color:#fff;font-weight:bold">collapse</span>;
+	<span style="color:#fff;font-weight:bold">border-top-width</span>: <span style="color:#fff;font-weight:bold">medium</span>;
+	<span style="color:#fff;font-weight:bold">border-bottom-style</span>: <span style="color:#fff;font-weight:bold">dashed</span>; 
+}
+
+<span style="font-weight:bold">p</span>.box{
+	<span style="color:#fff;font-weight:bold">margin</span>: <span style="color:#ff0;font-weight:bold">15</span><span style="color:#fff;font-weight:bold">px</span>; 	<span style="color:#007f7f">/*外边距*/</span>
+	<span style="color:#fff;font-weight:bold">padding</span>: <span style="color:#ff0;font-weight:bold">15</span><span style="color:#fff;font-weight:bold">px</span>; 	<span style="color:#007f7f">/*内边距，注意是pad不是ped*/</span>
+	<span style="color:#fff;font-weight:bold">border-style</span>: <span style="color:#fff;font-weight:bold">solid</span>;
+	<span style="color:#fff;font-weight:bold">background</span>: <span style="color:#ff0;font-weight:bold">#C0C0C0</span>;
+}
+
+
+<span style="color:#007f7f">/*背景图片*/</span>
+<span style="font-weight:bold">body</span>{
+	<span style="color:#fff;font-weight:bold">background-image</span>: <span style="color:#fff;font-weight:bold">url</span>(<span style="color:#0ff;font-weight:bold">&#34;../image/background.jpg&#34;</span>);
+	<span style="color:#fff;font-weight:bold">background-size</span>: <span style="color:#ff0;font-weight:bold">1280</span><span style="color:#fff;font-weight:bold">px</span> <span style="color:#ff0;font-weight:bold">720</span><span style="color:#fff;font-weight:bold">px</span>; 
+	<span style="color:#fff;font-weight:bold">background-position</span>: <span style="color:#fff;font-weight:bold">top</span> <span style="color:#fff;font-weight:bold">center</span>;
+	<span style="color:#fff;font-weight:bold">background-repeat</span>: <span style="color:#fff;font-weight:bold">no-repeat</span>; <span style="color:#007f7f">/*repeat(default) repeat-x repeat-y*/</span>
 }
 </code></pre></div><h4 id="css-对应的-html">CSS 对应的 HTML</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">title</span>&gt;css test&lt;/<span style="color:#f92672">title</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
-    <span style="color:#75715e">&lt;!-- 外部样式表 --&gt;</span>
-    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;css/1.css&#34;</span> /&gt;
-    <span style="color:#75715e">&lt;!-- 文档样式表 --&gt;</span>
-    &lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="font-weight:bold">html</span>&gt;
+&lt;<span style="font-weight:bold">head</span>&gt;
+    &lt;<span style="font-weight:bold">title</span>&gt;css test&lt;/<span style="font-weight:bold">title</span>&gt;
+    &lt;<span style="font-weight:bold">meta</span> <span style="color:#007f7f">charset</span>=<span style="color:#0ff;font-weight:bold">&#34;utf-8&#34;</span>&gt;
+    <span style="color:#007f7f">&lt;!-- 外部样式表 --&gt;</span>
+    &lt;<span style="font-weight:bold">link</span> <span style="color:#007f7f">rel</span>=<span style="color:#0ff;font-weight:bold">&#34;stylesheet&#34;</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;text/css&#34;</span> <span style="color:#007f7f">href</span>=<span style="color:#0ff;font-weight:bold">&#34;css/1.css&#34;</span> /&gt;
+    <span style="color:#007f7f">&lt;!-- 文档样式表 --&gt;</span>
+    &lt;<span style="font-weight:bold">style</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;text/css&#34;</span>&gt;
         
-    &lt;/<span style="color:#f92672">style</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
-&lt;<span style="color:#f92672">body</span>&gt;
-    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
-        &lt;<span style="color:#f92672">p</span>&gt;
-            &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ggg&#34;</span>&gt;ggg&lt;/<span style="color:#f92672">span</span>&gt;
-            &lt;<span style="color:#f92672">br</span> /&gt;
+    &lt;/<span style="font-weight:bold">style</span>&gt;
+&lt;/<span style="font-weight:bold">head</span>&gt;
+&lt;<span style="font-weight:bold">body</span>&gt;
+    &lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">class</span>=<span style="color:#0ff;font-weight:bold">&#34;container&#34;</span>&gt;
+        &lt;<span style="font-weight:bold">p</span>&gt;
+            &lt;<span style="font-weight:bold">span</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#34;ggg&#34;</span>&gt;ggg&lt;/<span style="font-weight:bold">span</span>&gt;
+            &lt;<span style="font-weight:bold">br</span> /&gt;
             ggg
-        &lt;<span style="color:#f92672">p</span>&gt;
+        &lt;<span style="font-weight:bold">p</span>&gt;
 
-        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;emphasize&#34;</span>&gt;
-            &lt;<span style="color:#f92672">p</span>&gt;emphasize!&lt;/<span style="color:#f92672">p</span>&gt;
-        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">class</span>=<span style="color:#0ff;font-weight:bold">&#34;emphasize&#34;</span>&gt;
+            &lt;<span style="font-weight:bold">p</span>&gt;emphasize!&lt;/<span style="font-weight:bold">p</span>&gt;
+        &lt;/<span style="font-weight:bold">div</span>&gt;
 
 
-        &lt;<span style="color:#f92672">h3</span>&gt;this is doc css&lt;/<span style="color:#f92672">h3</span>&gt;
-        <span style="color:#75715e">&lt;!-- 内联样式表 --&gt;</span>
-        &lt;<span style="color:#f92672">h3</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font-family: Arial, Helvetica, Futura&#34;</span>&gt;this is in connect css&lt;/<span style="color:#f92672">h3</span>&gt;
-        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://richie-leonhardt.github.io&#34;</span>&gt;&amp;gt;&amp;gt;blog&amp;lt;&amp;lt;&lt;/<span style="color:#f92672">a</span>&gt;
-    &lt;/<span style="color:#f92672">div</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
+        &lt;<span style="font-weight:bold">h3</span>&gt;this is doc css&lt;/<span style="font-weight:bold">h3</span>&gt;
+        <span style="color:#007f7f">&lt;!-- 内联样式表 --&gt;</span>
+        &lt;<span style="font-weight:bold">h3</span> <span style="color:#007f7f">style</span>=<span style="color:#0ff;font-weight:bold">&#34;font-family: Arial, Helvetica, Futura&#34;</span>&gt;this is in connect css&lt;/<span style="font-weight:bold">h3</span>&gt;
+        &lt;<span style="font-weight:bold">a</span> <span style="color:#007f7f">href</span>=<span style="color:#0ff;font-weight:bold">&#34;https://richie-leonhardt.github.io&#34;</span>&gt;&amp;gt;&amp;gt;blog&amp;lt;&amp;lt;&lt;/<span style="font-weight:bold">a</span>&gt;
+    &lt;/<span style="font-weight:bold">div</span>&gt;
+&lt;/<span style="font-weight:bold">body</span>&gt;
+&lt;/<span style="font-weight:bold">html</span>&gt;
 </code></pre></div>
         </div>
         <footer class="article-footer">
@@ -590,6 +590,32 @@
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/notes">
+                        notes
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="title">XHTML笔记</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-10-04 09:52:25 &#43;0800 CST" itemprop="datePublished">2020-10-04</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -692,32 +718,6 @@
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%9F%BA%E7%A1%80/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/web">
-                        web
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%9F%BA%E7%A1%80/" class="title">Web整理_JS基础</a></p>
-                    <p class="item-date">
-                        <time datetime="2020-09-04 16:46:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -744,7 +744,7 @@
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/blog">
                     blog
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -784,7 +784,7 @@
                 <a class="category-list-link" href="https://richie-leonhardt.github.io/categories/notes">
                     notes
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -846,9 +846,6 @@
         
         
         <a href="https://richie-leonhardt.github.io/tags/js" style="font-size: 12px;">js</a>
-        
-        
-        <a href="https://richie-leonhardt.github.io/tags/live2d" style="font-size: 12px;">live2d</a>
         
         
         <a href="https://richie-leonhardt.github.io/tags/reflections" style="font-size: 12px;">reflections</a>
