@@ -15,8 +15,60 @@
     <link rel="apple-touch-icon" href="https://richie-leonhardt.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/vs2015.css">
+    
+    <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
+    <style type="text/css">
+         .mui-switch {
+            width: 52px;
+            height: 31px;
+            position: relative;
+            float: right;
+            top:15px;
+            border: 1px solid #dfdfdf;
+            background-color: #fdfdfd;
+            box-shadow: #dfdfdf 0 0 0 0 inset;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-clip: content-box;
+            display: inline-block;
+            -webkit-appearance: none;
+            user-select: none;
+            outline: none; }
+        .mui-switch:before {
+            content: '';
+            width: 29px;
+            height: 29px;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+        .mui-switch:checked {
+            border-color: #64bd63;
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63; }
+        .mui-switch:checked:before {
+            left: 21px; }
+        .mui-switch.mui-switch-anim {
+            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
+        .mui-switch.mui-switch-anim:before {
+            transition: left 0.3s; }
+        .mui-switch.mui-switch-anim:checked {
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63;
+            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
+        .mui-switch.mui-switch-anim:checked:before {
+            transition: left 0.3s;}
+    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -48,6 +100,24 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
+    <script type="text/javascript">
+          function switchCss(){
+            var css0 = "vs2015.css";
+            var css1 = "vs.css";
+            var codecss = document.getElementById('codecss');
+            var s = codecss.getAttribute("href");
+            if (s.search(css0) > 0) {
+              s = s.replace(css0, css1);
+              codecss.setAttribute("href", s);
+            }else{
+              s = s.replace(css1, css0);
+              codecss.setAttribute("href", s);
+            }
+            event.stopPropagation();
+            event.preventDefault();
+          }
+          document.addEventListener("onmousedown", switchCss, false);
+    </script>
 </head>
 <body>
 <div class="container">
@@ -93,6 +163,26 @@
             <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://richie-leonhardt.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
+        <script type="text/javascript">
+          function switchCss(){
+            var css0 = "vs2015.css";
+            var css1 = "vs.css";
+            var codecss = document.getElementById('codecss');
+            var s = codecss.getAttribute("href");
+            if (s.search(css0) > 0) {
+              s = s.replace(css0, css1);
+              codecss.setAttribute("href", s);
+            }else{
+              s = s.replace(css1, css0);
+              codecss.setAttribute("href", s);
+            }
+            event.stopPropagation();
+            event.preventDefault();
+          }
+          document.addEventListener("onmousedown", switchCss, false);
+        </script>
+        <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
+
         <div id="search-form-wrap">
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
               <input type="search" name="q" class="search-form-input" placeholder="Search">
@@ -303,15 +393,15 @@
         <div class="article-entry" itemprop="articleBody">
             <h3 id="git连接账户和邮箱的设置">git连接账户和邮箱的设置</h3>
 <p>一般默认在用户的目录下启动了git-bash，我这边是Administrator目录下，设置账户和邮箱，下面的两个参数修改成自己的账户名和邮箱</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --global user.name <span style="color:#a31515">&#34;Richie Leonhardt&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --global user.name <span style="color:#e6db74">&#34;Richie Leonhardt&#34;</span>
 $ git config --global user.email example@163.com
 </code></pre></div><p>设置成功后这个目录下应该会有.gitconfig的文件，实际上，在转移到一台新的机器上后考研直接拷贝这个存有账户和邮箱的文件到相应的目录下</p>
 <h3 id="使用git生成ssh秘钥">使用git生成ssh秘钥</h3>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa -C <span style="color:#a31515">&#34;example@163.com&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;example@163.com&#34;</span>
 </code></pre></div><p>三次回车之后，在目录下生成一个.ssh文件夹，里面有公钥id_rsa.pub和私钥id_rsa</p>
 <p>将公钥内容添加到GitHub的账户(此处省略步骤)</p>
 <p>添加key到agent</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-add ~/.ssh/id_rsa
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-add ~/.ssh/id_rsa
 </code></pre></div><p>为了确保每次打开git-bash都加载agent并且添加了私钥，在这个目录下新建.profile的一个文件，内容为以下 :</p>
 <pre><code>env=~/.ssh/agent.env
 
@@ -336,18 +426,18 @@ fi
 unset env
 </code></pre><p>重启一下git-bash</p>
 <p>这个时候发现已经加入了私钥，那么最后测试一下连接一下就行了，返回1表示连接成功</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -vT git@github.com
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -vT git@github.com
 </code></pre></div><p>输入yes确认，可以发现.ssh目录下出现了一个新文件known_hosts，连接成功。</p>
 <p>至此环境已经配置好了，之后每次git-bash启动之后都会加载ssh agent并且添加.ssh目录里的私钥了，每次提交到GitHub都不用再输入用户名和密码了</p>
 <h3 id="换机器的时候快速配置环境">换机器的时候快速配置环境</h3>
 <p>复制.ssh目录下的公钥和私钥文件，和用户目录下的.gitconfig和.profile文件，一共四个文件连带.ssh文件夹打包一下拷到U盘或者QQ里，然后解压到相应的目录，最后启动git-bash测试一下连接就行了</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -vT git@github.com
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -vT git@github.com
 </code></pre></div><h3 id="使用ssh-key时本地仓库与github仓库相关联">使用ssh key时本地仓库与GitHub仓库相关联</h3>
 <p>另一点需要注意的是，使用ssh连接GitHub时，应该以下面这样设置而不是https设置，否则会出现已有ssh仍然需要登录GitHub输入账号和密码的问题，因为用的是https的连接。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git remote remove origin
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git remote remove origin
 $ git remote add origin git@github.com:Username/Your_Repo_Name.git
 </code></pre></div><p>除此之外，修改成ssh连接之后还需要重新设置track branch，在命令行中等号中间不要有空格，不是在写程序</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch --set-upstream-to=origin/master master
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch --set-upstream-to<span style="color:#f92672">=</span>origin/master master
 </code></pre></div>
         </div>
         <footer class="article-footer">
@@ -473,7 +563,7 @@ $ git remote add origin git@github.com:Username/Your_Repo_Name.git
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -490,7 +580,7 @@ $ git remote add origin git@github.com:Username/Your_Repo_Name.git
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="title">XHTML笔记</a></p>
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="title">JS语法笔记</a></p>
                     <p class="item-date">
                         <time datetime="2020-10-04 09:52:25 &#43;0800 CST" itemprop="datePublished">2020-10-04</time>
                     </p>
@@ -499,7 +589,7 @@ $ git remote add origin git@github.com:Username/Your_Repo_Name.git
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -516,7 +606,7 @@ $ git remote add origin git@github.com:Username/Your_Repo_Name.git
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="title">2020年8月阶段反思</a></p>
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="title">2020年9月阶段反思</a></p>
                     <p class="item-date">
                         <time datetime="2020-09-26 17:56:31 &#43;0800 CST" itemprop="datePublished">2020-09-26</time>
                     </p>

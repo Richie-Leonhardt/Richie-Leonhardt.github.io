@@ -15,8 +15,60 @@
     <link rel="apple-touch-icon" href="https://richie-leonhardt.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/vs2015.css">
+    
+    <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
+    <style type="text/css">
+         .mui-switch {
+            width: 52px;
+            height: 31px;
+            position: relative;
+            float: right;
+            top:15px;
+            border: 1px solid #dfdfdf;
+            background-color: #fdfdfd;
+            box-shadow: #dfdfdf 0 0 0 0 inset;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-clip: content-box;
+            display: inline-block;
+            -webkit-appearance: none;
+            user-select: none;
+            outline: none; }
+        .mui-switch:before {
+            content: '';
+            width: 29px;
+            height: 29px;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+        .mui-switch:checked {
+            border-color: #64bd63;
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63; }
+        .mui-switch:checked:before {
+            left: 21px; }
+        .mui-switch.mui-switch-anim {
+            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
+        .mui-switch.mui-switch-anim:before {
+            transition: left 0.3s; }
+        .mui-switch.mui-switch-anim:checked {
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63;
+            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
+        .mui-switch.mui-switch-anim:checked:before {
+            transition: left 0.3s;}
+    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -48,6 +100,24 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
+    <script type="text/javascript">
+          function switchCss(){
+            var css0 = "vs2015.css";
+            var css1 = "vs.css";
+            var codecss = document.getElementById('codecss');
+            var s = codecss.getAttribute("href");
+            if (s.search(css0) > 0) {
+              s = s.replace(css0, css1);
+              codecss.setAttribute("href", s);
+            }else{
+              s = s.replace(css1, css0);
+              codecss.setAttribute("href", s);
+            }
+            event.stopPropagation();
+            event.preventDefault();
+          }
+          document.addEventListener("onmousedown", switchCss, false);
+    </script>
 </head>
 <body>
 <div class="container">
@@ -93,6 +163,26 @@
             <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://richie-leonhardt.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
+        <script type="text/javascript">
+          function switchCss(){
+            var css0 = "vs2015.css";
+            var css1 = "vs.css";
+            var codecss = document.getElementById('codecss');
+            var s = codecss.getAttribute("href");
+            if (s.search(css0) > 0) {
+              s = s.replace(css0, css1);
+              codecss.setAttribute("href", s);
+            }else{
+              s = s.replace(css1, css0);
+              codecss.setAttribute("href", s);
+            }
+            event.stopPropagation();
+            event.preventDefault();
+          }
+          document.addEventListener("onmousedown", switchCss, false);
+        </script>
+        <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
+
         <div id="search-form-wrap">
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
               <input type="search" name="q" class="search-form-input" placeholder="Search">
@@ -336,28 +426,28 @@
 </li>
 <li>
 <p>属性不能简写，正确写法：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;input checked=<span style="color:#a31515">&#34;checked&#34;</span> /&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checked&#34;</span> /&gt;
 </code></pre></div></li>
 <li>
 <p>用 Id 属性代替 name 属性</p>
 </li>
 <li>
 <p>语言属性，在后面加上xml:lang</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;div lang=<span style="color:#a31515">&#34;no&#34;</span> xml:lang=<span style="color:#a31515">&#34;no&#34;</span>&gt;Heia Norge!&lt;/div&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no&#34;</span> <span style="color:#a6e22e">xml:lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no&#34;</span>&gt;Heia Norge!&lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div></li>
 </ul>
 <h3 id="文档类型声明">文档类型声明</h3>
 <p>文档声明模板：</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE Doctype goes here&gt;</span>
-&lt;html xmlns=<span style="color:#a31515">&#34;http://www.w3.org/1999/xhtml&#34;</span>&gt;
-&lt;head&gt;
-&lt;title&gt;Title goes here&lt;/title&gt;
-&lt;/head&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE Doctype goes here&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">xmlns</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">title</span>&gt;Title goes here&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
 
-&lt;body&gt;
-&lt;/body&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
 
-&lt;/html&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><ul>
 <li>**提示：**在 XHTML 文档中必须存在html、head、body元素，而 title 元素必须位于在 head 元素中。</li>
 <li>**提示：**文件类型声明并非 XHTML 文档自身的组成部分。它并不是 XHTML 元素，也没有关闭标签。</li>
@@ -376,19 +466,19 @@
 <p><strong>FRAMESET（框架类型）</strong></p>
 <h4 id="xhtml三种文档类型定义">XHTML三种文档类型定义</h4>
 <h5 id="xhtml-10-strict">XHTML 1.0 Strict</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html
-</span><span style="color:#00f">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
-</span><span style="color:#00f">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html
+</span><span style="color:#75715e">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
+</span><span style="color:#75715e">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
 </code></pre></div><p>在此情况下使用：需要干净的标记，避免表现上的混乱。请与层叠样式表配合使用。</p>
 <h5 id="xhtml-10-transitional">XHTML 1.0 Transitional</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html
-</span><span style="color:#00f">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34;
-</span><span style="color:#00f">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html
+</span><span style="color:#75715e">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34;
+</span><span style="color:#75715e">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt;</span>
 </code></pre></div><p>在此情况下使用：当需要利用 HTML 在表现上的特性时，并且当需要为那些不支持层叠样式表的浏览器编写 XHTML 时.</p>
 <h5 id="xhtml-10-frameset">XHTML 1.0 Frameset</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html
-</span><span style="color:#00f">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Frameset//EN&#34;
-</span><span style="color:#00f">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&#34;&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html
+</span><span style="color:#75715e">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Frameset//EN&#34;
+</span><span style="color:#75715e">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&#34;&gt;</span>
 </code></pre></div><p>在此的情况下使用：需要使用HTML框架将浏览器窗口分割为两部分或更多框架时。</p>
 </li>
 </ul>
@@ -518,7 +608,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -535,7 +625,7 @@
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="title">XHTML笔记</a></p>
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="title">JS语法笔记</a></p>
                     <p class="item-date">
                         <time datetime="2020-10-04 09:52:25 &#43;0800 CST" itemprop="datePublished">2020-10-04</time>
                     </p>
@@ -544,7 +634,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -561,7 +651,7 @@
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="title">2020年8月阶段反思</a></p>
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="title">2020年9月阶段反思</a></p>
                     <p class="item-date">
                         <time datetime="2020-09-26 17:56:31 &#43;0800 CST" itemprop="datePublished">2020-09-26</time>
                     </p>

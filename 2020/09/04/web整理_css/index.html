@@ -15,8 +15,60 @@
     <link rel="apple-touch-icon" href="https://richie-leonhardt.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/vs2015.css">
+    
+    <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
+    <style type="text/css">
+         .mui-switch {
+            width: 52px;
+            height: 31px;
+            position: relative;
+            float: right;
+            top:15px;
+            border: 1px solid #dfdfdf;
+            background-color: #fdfdfd;
+            box-shadow: #dfdfdf 0 0 0 0 inset;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-clip: content-box;
+            display: inline-block;
+            -webkit-appearance: none;
+            user-select: none;
+            outline: none; }
+        .mui-switch:before {
+            content: '';
+            width: 29px;
+            height: 29px;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+        .mui-switch:checked {
+            border-color: #64bd63;
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63; }
+        .mui-switch:checked:before {
+            left: 21px; }
+        .mui-switch.mui-switch-anim {
+            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
+        .mui-switch.mui-switch-anim:before {
+            transition: left 0.3s; }
+        .mui-switch.mui-switch-anim:checked {
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63;
+            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
+        .mui-switch.mui-switch-anim:checked:before {
+            transition: left 0.3s;}
+    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -48,6 +100,24 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
+    <script type="text/javascript">
+          function switchCss(){
+            var css0 = "vs2015.css";
+            var css1 = "vs.css";
+            var codecss = document.getElementById('codecss');
+            var s = codecss.getAttribute("href");
+            if (s.search(css0) > 0) {
+              s = s.replace(css0, css1);
+              codecss.setAttribute("href", s);
+            }else{
+              s = s.replace(css1, css0);
+              codecss.setAttribute("href", s);
+            }
+            event.stopPropagation();
+            event.preventDefault();
+          }
+          document.addEventListener("onmousedown", switchCss, false);
+    </script>
 </head>
 <body>
 <div class="container">
@@ -93,6 +163,26 @@
             <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://richie-leonhardt.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
+        <script type="text/javascript">
+          function switchCss(){
+            var css0 = "vs2015.css";
+            var css1 = "vs.css";
+            var codecss = document.getElementById('codecss');
+            var s = codecss.getAttribute("href");
+            if (s.search(css0) > 0) {
+              s = s.replace(css0, css1);
+              codecss.setAttribute("href", s);
+            }else{
+              s = s.replace(css1, css0);
+              codecss.setAttribute("href", s);
+            }
+            event.stopPropagation();
+            event.preventDefault();
+          }
+          document.addEventListener("onmousedown", switchCss, false);
+        </script>
+        <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
+
         <div id="search-form-wrap">
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
               <input type="search" name="q" class="search-form-input" placeholder="Search">
@@ -298,173 +388,173 @@
 
         <div class="article-entry" itemprop="articleBody">
             <h4 id="css代码">CSS代码</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#008000">/*注意：CSS不能使用双斜杠//注释,无论单行多行只能像这样注释*/</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/*注意：CSS不能使用双斜杠//注释,无论单行多行只能像这样注释*/</span>
 
-<span style="color:#008000">/*通配选择器*/</span>
- * {
+<span style="color:#75715e">/*通配选择器*/</span>
+ <span style="color:#f92672">*</span> {
 
 }
 
-<span style="color:#008000">/*简单选择器*/</span>
-h3{
-	<span style="color:#00f">font-family</span>:<span style="color:#a31515">&#34;Arial, Helvetica, Futura&#34;</span>;
-	<span style="color:#00f">font-size</span>: 36<span style="color:#2b91af">px</span>;
-	<span style="color:#00f">font-style</span>: <span style="color:#00f">italic</span>; <span style="color:#008000">/*normal oblique(无用)*/</span>
-	<span style="color:#00f">text-align</span>:<span style="color:#00f">center</span>;
-	<span style="color:#00f">height</span>:<span style="color:#00f">auto</span>;
+<span style="color:#75715e">/*简单选择器*/</span>
+<span style="color:#f92672">h3</span>{
+	<span style="color:#66d9ef">font-family</span>:<span style="color:#e6db74">&#34;Arial, Helvetica, Futura&#34;</span>;
+	<span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">36</span><span style="color:#66d9ef">px</span>;
+	<span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">italic</span>; <span style="color:#75715e">/*normal oblique(无用)*/</span>
+	<span style="color:#66d9ef">text-align</span>:<span style="color:#66d9ef">center</span>;
+	<span style="color:#66d9ef">height</span>:<span style="color:#66d9ef">auto</span>;
 }
 
-<span style="color:#008000">/*类选择器,通过已有的标签创建不同的类*/</span>
-p.<span style="color:#2b91af">normal</span>{
-	<span style="color:#00f">font-variant</span>: <span style="color:#00f">small</span>-caps; <span style="color:#008000">/*normal 小型大写字母*/</span>
+<span style="color:#75715e">/*类选择器,通过已有的标签创建不同的类*/</span>
+<span style="color:#f92672">p</span>.<span style="color:#a6e22e">normal</span>{
+	<span style="color:#66d9ef">font-variant</span>: <span style="color:#66d9ef">small</span><span style="color:#f92672">-</span>caps; <span style="color:#75715e">/*normal 小型大写字母*/</span>
 }
-p.<span style="color:#2b91af">warning</span>{
-	<span style="color:#00f">font-weight</span>: <span style="color:#00f">bold</span>; <span style="color:#008000">/*normal bolder lighter或100，200，……，900*/</span>
-}
-
-<span style="color:#008000">/*通用选择器*/</span>
-.<span style="color:#2b91af">emphasize</span>{
-	<span style="color:#008000">/*最后一个是字体族，倒数第二是大小，前面俩随便*/</span>
-	<span style="color:#00f">font</span>:<span style="color:#00f">bold</span> <span style="color:#00f">italic</span> 1.1<span style="color:#2b91af">em</span> <span style="color:#a31515">&#39;Times New Roman&#39;</span> Palatino;
-	<span style="color:#00f">color</span>: #FF0000;
+<span style="color:#f92672">p</span>.<span style="color:#a6e22e">warning</span>{
+	<span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>; <span style="color:#75715e">/*normal bolder lighter或100，200，……，900*/</span>
 }
 
-.<span style="color:#2b91af">container</span>{
-	<span style="color:#00f">width</span>: 800<span style="color:#2b91af">px</span>;
-	<span style="color:#00f">height</span>: 600<span style="color:#2b91af">px</span>;
-	<span style="color:#00f">background-color</span>: #FFFFFF;
-	<span style="color:#00f">margin-left</span>: 300<span style="color:#2b91af">px</span>;
-	<span style="color:#00f">padding</span>: 50<span style="color:#2b91af">px</span>;
+<span style="color:#75715e">/*通用选择器*/</span>
+.<span style="color:#a6e22e">emphasize</span>{
+	<span style="color:#75715e">/*最后一个是字体族，倒数第二是大小，前面俩随便*/</span>
+	<span style="color:#66d9ef">font</span>:<span style="color:#66d9ef">bold</span> <span style="color:#66d9ef">italic</span> <span style="color:#ae81ff">1.1</span><span style="color:#66d9ef">em</span> <span style="color:#e6db74">&#39;Times New Roman&#39;</span> Palatino;
+	<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#FF0000</span>;
 }
 
-<span style="color:#008000">/*id选择器*/</span>
+.<span style="color:#a6e22e">container</span>{
+	<span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">800</span><span style="color:#66d9ef">px</span>;
+	<span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">600</span><span style="color:#66d9ef">px</span>;
+	<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#FFFFFF</span>;
+	<span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>;
+	<span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">px</span>;
+}
+
+<span style="color:#75715e">/*id选择器*/</span>
 #ggg{
-	<span style="color:#00f">text-decoration</span>: <span style="color:#00f">line-through</span>;  <span style="color:#008000">/*overline, underline 上划线中划线下划线*/</span>
+	<span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">line-through</span>;  <span style="color:#75715e">/*overline, underline 上划线中划线下划线*/</span>
 
-	<span style="color:#00f">letter-spacing</span>: 1<span style="color:#2b91af">px</span>; <span style="color:#008000">/*-1px nromal 字母间距(tracking)*/</span>
+	<span style="color:#66d9ef">letter-spacing</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/*-1px nromal 字母间距(tracking)*/</span>
 
-	<span style="color:#00f">word-spacing</span>: 5<span style="color:#2b91af">px</span>; <span style="color:#008000">/*-1px normal 词间距*/</span>
+	<span style="color:#66d9ef">word-spacing</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/*-1px normal 词间距*/</span>
 
-	<span style="color:#00f">line-height</span>:2; <span style="color:#008000">/*24px 0.8em normal 行间距(leading)，数字代表倍数*/</span>
+	<span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">2</span>; <span style="color:#75715e">/*24px 0.8em normal 行间距(leading)，数字代表倍数*/</span>
 }
 
 
-<span style="color:#008000">/*上下文选择器：后代选择器，只要是后代就符合*/</span>
-ol ol{
-	<span style="color:#00f">list-style-type</span>: <span style="color:#00f">upper-alpha</span>; <span style="color:#008000">/*=upper-latin lower-roman */</span>
+<span style="color:#75715e">/*上下文选择器：后代选择器，只要是后代就符合*/</span>
+<span style="color:#f92672">ol</span> <span style="color:#f92672">ol</span>{
+	<span style="color:#66d9ef">list-style-type</span>: <span style="color:#66d9ef">upper-alpha</span>; <span style="color:#75715e">/*=upper-latin lower-roman */</span>
 }
-ol ol ol{
-	<span style="color:#00f">list-style-type</span>: <span style="color:#00f">decimal</span>;
-}
-
-
-<span style="color:#008000">/*上下文选择器：子元素选择器，严格按照dom树结构*/</span>
-ul &gt; li &gt; li {
-	<span style="color:#00f">list-style-type</span>: <span style="color:#00f">square</span>; <span style="color:#008000">/*circle空心圆 disc默认实心圆*/</span>
+<span style="color:#f92672">ol</span> <span style="color:#f92672">ol</span> <span style="color:#f92672">ol</span>{
+	<span style="color:#66d9ef">list-style-type</span>: <span style="color:#66d9ef">decimal</span>;
 }
 
 
-<span style="color:#008000">/*选择第一个子元素*/</span>
-p:first-child{
-	<span style="color:#00f">text-indent</span>: 10<span style="color:#2b91af">px</span>; <span style="color:#008000">/*2em 首行缩进*/</span>
-}
-
-<span style="color:#008000">/*选择最后一个子元素*/</span>
-p:last-child{
-
-}
-
-<span style="color:#008000">/*选择子元素，且仅存在着这一个子元素*/</span>
-p:only-child{
-	<span style="color:#00f">text-align</span>: <span style="color:#00f">center</span>; <span style="color:#008000">/*justify left(default) right 文本水平方向排列*/</span>
-}
-
-<span style="color:#008000">/*选择自己：且自己没有子元素*/</span>
-p:empty{
-	<span style="color:#00f">color</span>: #777777;
-	<span style="color:#00f">background-color</span>: #FFFFFF;
-}
-
-<span style="color:#008000">/*伪类：link和visited，hover，focus*/</span>
-
-
-#ggg:hover{
-	<span style="color:#00f">background-color</span>: #FFFFFF;
-}
-
-a:link {<span style="color:#00f">color</span>: #FF0000}     <span style="color:#008000">/* 未访问的链接 */</span>
-a:visited {<span style="color:#00f">color</span>: #00FF00}  <span style="color:#008000">/* 已访问的链接 */</span>
-a:hover {<span style="color:#00f">color</span>: #FF00FF}    <span style="color:#008000">/* 当有鼠标悬停在链接上 */</span>
-a:active {<span style="color:#00f">color</span>: #0000FF}   <span style="color:#008000">/* 被选择的链接 */</span>
-
-<span style="color:#008000">/*图片悬浮*/</span>
-img {
-	<span style="color:#00f">float</span>: <span style="color:#00f">right</span>;	<span style="color:#008000">/*图片悬浮位置，图片周围围绕文字的text-align要与float的相反才行*/</span>
-}
-
-<span style="color:#008000">/*盒模型相关参数*/</span>
-td, th{
-	<span style="color:#00f">border</span>: <span style="color:#00f">thin</span> <span style="color:#00f">solid</span> <span style="color:#00f">black</span>;  
-	<span style="color:#008000">/*宽度(border-width) px
-</span><span style="color:#008000">	  样式(border-style) solid dotted dashed double 
-</span><span style="color:#008000">	  颜色(border-color)*/</span>
-}
-
-table{
-	<span style="color:#00f">border</span>: <span style="color:#00f">thin</span> <span style="color:#00f">solid</span> <span style="color:#00f">black</span>;
-	<span style="color:#00f">border-collapse</span>: <span style="color:#00f">collapse</span>;
-	<span style="color:#00f">border-top-width</span>: <span style="color:#00f">medium</span>;
-	<span style="color:#00f">border-bottom-style</span>: <span style="color:#00f">dashed</span>; 
-}
-
-p.<span style="color:#2b91af">box</span>{
-	<span style="color:#00f">margin</span>: 15<span style="color:#2b91af">px</span>; 	<span style="color:#008000">/*外边距*/</span>
-	<span style="color:#00f">padding</span>: 15<span style="color:#2b91af">px</span>; 	<span style="color:#008000">/*内边距，注意是pad不是ped*/</span>
-	<span style="color:#00f">border-style</span>: <span style="color:#00f">solid</span>;
-	<span style="color:#00f">background</span>: #C0C0C0;
+<span style="color:#75715e">/*上下文选择器：子元素选择器，严格按照dom树结构*/</span>
+<span style="color:#f92672">ul</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">li</span> {
+	<span style="color:#66d9ef">list-style-type</span>: <span style="color:#66d9ef">square</span>; <span style="color:#75715e">/*circle空心圆 disc默认实心圆*/</span>
 }
 
 
-<span style="color:#008000">/*背景图片*/</span>
-body{
-	<span style="color:#00f">background-image</span>: url(<span style="color:#a31515">&#34;../image/background.jpg&#34;</span>);
-	<span style="color:#00f">background-size</span>: 1280<span style="color:#2b91af">px</span> 720<span style="color:#2b91af">px</span>; 
-	<span style="color:#00f">background-position</span>: <span style="color:#00f">top</span> <span style="color:#00f">center</span>;
-	<span style="color:#00f">background-repeat</span>: <span style="color:#00f">no-repeat</span>; <span style="color:#008000">/*repeat(default) repeat-x repeat-y*/</span>
+<span style="color:#75715e">/*选择第一个子元素*/</span>
+<span style="color:#f92672">p</span>:<span style="color:#a6e22e">first-child</span>{
+	<span style="color:#66d9ef">text-indent</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/*2em 首行缩进*/</span>
+}
+
+<span style="color:#75715e">/*选择最后一个子元素*/</span>
+<span style="color:#f92672">p</span>:<span style="color:#a6e22e">last-child</span>{
+
+}
+
+<span style="color:#75715e">/*选择子元素，且仅存在着这一个子元素*/</span>
+<span style="color:#f92672">p</span>:<span style="color:#a6e22e">only-child</span>{
+	<span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>; <span style="color:#75715e">/*justify left(default) right 文本水平方向排列*/</span>
+}
+
+<span style="color:#75715e">/*选择自己：且自己没有子元素*/</span>
+<span style="color:#f92672">p</span>:<span style="color:#a6e22e">empty</span>{
+	<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#777777</span>;
+	<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#FFFFFF</span>;
+}
+
+<span style="color:#75715e">/*伪类：link和visited，hover，focus*/</span>
+
+
+#ggg:<span style="color:#a6e22e">hover</span>{
+	<span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#FFFFFF</span>;
+}
+
+<span style="color:#f92672">a</span>:<span style="color:#a6e22e">link</span> {<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#FF0000</span>}     <span style="color:#75715e">/* 未访问的链接 */</span>
+<span style="color:#f92672">a</span>:<span style="color:#a6e22e">visited</span> {<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#00FF00</span>}  <span style="color:#75715e">/* 已访问的链接 */</span>
+<span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#FF00FF</span>}    <span style="color:#75715e">/* 当有鼠标悬停在链接上 */</span>
+<span style="color:#f92672">a</span>:<span style="color:#a6e22e">active</span> {<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#0000FF</span>}   <span style="color:#75715e">/* 被选择的链接 */</span>
+
+<span style="color:#75715e">/*图片悬浮*/</span>
+<span style="color:#f92672">img</span> {
+	<span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">right</span>;	<span style="color:#75715e">/*图片悬浮位置，图片周围围绕文字的text-align要与float的相反才行*/</span>
+}
+
+<span style="color:#75715e">/*盒模型相关参数*/</span>
+<span style="color:#f92672">td</span><span style="color:#f92672">,</span> <span style="color:#f92672">th</span>{
+	<span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">thin</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">black</span>;  
+	<span style="color:#75715e">/*宽度(border-width) px
+</span><span style="color:#75715e">	  样式(border-style) solid dotted dashed double 
+</span><span style="color:#75715e">	  颜色(border-color)*/</span>
+}
+
+<span style="color:#f92672">table</span>{
+	<span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">thin</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">black</span>;
+	<span style="color:#66d9ef">border-collapse</span>: <span style="color:#66d9ef">collapse</span>;
+	<span style="color:#66d9ef">border-top-width</span>: <span style="color:#66d9ef">medium</span>;
+	<span style="color:#66d9ef">border-bottom-style</span>: <span style="color:#66d9ef">dashed</span>; 
+}
+
+<span style="color:#f92672">p</span>.<span style="color:#a6e22e">box</span>{
+	<span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>; 	<span style="color:#75715e">/*外边距*/</span>
+	<span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>; 	<span style="color:#75715e">/*内边距，注意是pad不是ped*/</span>
+	<span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">solid</span>;
+	<span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#C0C0C0</span>;
+}
+
+
+<span style="color:#75715e">/*背景图片*/</span>
+<span style="color:#f92672">body</span>{
+	<span style="color:#66d9ef">background-image</span>: url(<span style="color:#e6db74">&#34;../image/background.jpg&#34;</span>);
+	<span style="color:#66d9ef">background-size</span>: <span style="color:#ae81ff">1280</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">720</span><span style="color:#66d9ef">px</span>; 
+	<span style="color:#66d9ef">background-position</span>: <span style="color:#66d9ef">top</span> <span style="color:#66d9ef">center</span>;
+	<span style="color:#66d9ef">background-repeat</span>: <span style="color:#66d9ef">no-repeat</span>; <span style="color:#75715e">/*repeat(default) repeat-x repeat-y*/</span>
 }
 </code></pre></div><h4 id="css-对应的-html">CSS 对应的 HTML</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html&gt;</span>
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;css test&lt;/title&gt;
-    &lt;meta charset=<span style="color:#a31515">&#34;utf-8&#34;</span>&gt;
-    <span style="color:#008000">&lt;!-- 外部样式表 --&gt;</span>
-    &lt;link rel=<span style="color:#a31515">&#34;stylesheet&#34;</span> type=<span style="color:#a31515">&#34;text/css&#34;</span> href=<span style="color:#a31515">&#34;css/1.css&#34;</span> /&gt;
-    <span style="color:#008000">&lt;!-- 文档样式表 --&gt;</span>
-    &lt;style type=<span style="color:#a31515">&#34;text/css&#34;</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;css test&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    <span style="color:#75715e">&lt;!-- 外部样式表 --&gt;</span>
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;css/1.css&#34;</span> /&gt;
+    <span style="color:#75715e">&lt;!-- 文档样式表 --&gt;</span>
+    &lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
         
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=<span style="color:#a31515">&#34;container&#34;</span>&gt;
-        &lt;p&gt;
-            &lt;span id=<span style="color:#a31515">&#34;ggg&#34;</span>&gt;ggg&lt;/span&gt;
-            &lt;br /&gt;
+    &lt;/<span style="color:#f92672">style</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;
+            &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ggg&#34;</span>&gt;ggg&lt;/<span style="color:#f92672">span</span>&gt;
+            &lt;<span style="color:#f92672">br</span> /&gt;
             ggg
-        &lt;p&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;
 
-        &lt;div class=<span style="color:#a31515">&#34;emphasize&#34;</span>&gt;
-            &lt;p&gt;emphasize!&lt;/p&gt;
-        &lt;/div&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;emphasize&#34;</span>&gt;
+            &lt;<span style="color:#f92672">p</span>&gt;emphasize!&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
 
 
-        &lt;h3&gt;this is doc css&lt;/h3&gt;
-        <span style="color:#008000">&lt;!-- 内联样式表 --&gt;</span>
-        &lt;h3 style=<span style="color:#a31515">&#34;font-family: Arial, Helvetica, Futura&#34;</span>&gt;this is in connect css&lt;/h3&gt;
-        &lt;a href=<span style="color:#a31515">&#34;https://richie-leonhardt.github.io&#34;</span>&gt;&amp;gt;&amp;gt;blog&amp;lt;&amp;lt;&lt;/a&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+        &lt;<span style="color:#f92672">h3</span>&gt;this is doc css&lt;/<span style="color:#f92672">h3</span>&gt;
+        <span style="color:#75715e">&lt;!-- 内联样式表 --&gt;</span>
+        &lt;<span style="color:#f92672">h3</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font-family: Arial, Helvetica, Futura&#34;</span>&gt;this is in connect css&lt;/<span style="color:#f92672">h3</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://richie-leonhardt.github.io&#34;</span>&gt;&amp;gt;&amp;gt;blog&amp;lt;&amp;lt;&lt;/<span style="color:#f92672">a</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div>
         </div>
         <footer class="article-footer">
@@ -590,7 +680,7 @@ body{
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -607,7 +697,7 @@ body{
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="title">XHTML笔记</a></p>
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="title">JS语法笔记</a></p>
                     <p class="item-date">
                         <time datetime="2020-10-04 09:52:25 &#43;0800 CST" itemprop="datePublished">2020-10-04</time>
                     </p>
@@ -616,7 +706,7 @@ body{
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -633,7 +723,7 @@ body{
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="title">2020年8月阶段反思</a></p>
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="title">2020年9月阶段反思</a></p>
                     <p class="item-date">
                         <time datetime="2020-09-26 17:56:31 &#43;0800 CST" itemprop="datePublished">2020-09-26</time>
                     </p>

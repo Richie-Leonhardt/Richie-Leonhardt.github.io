@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>XHTML笔记</title>
-      <link>https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/</link>
+      <title>JS语法笔记</title>
+      <link>https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 04 Oct 2020 09:52:25 +0800</pubDate>
       
-      <guid>https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</guid>
       <description>javascript变与不变   只有数组的几个函数会在原基础上操作直接修改：一个reverse，一个sort，四个头尾操作 其他的字符串、数字、Number或者Math等，都是通过返回值来保存修改后的结果，原来的都没有变  arr = [1,2,3]; str = &amp;#39;123&amp;#39;; num = 123.45; /*变：主要是对数组的操作*/ arr.reverse(); arr.sort();	//数字和数组都是在原基础上操作  arr.push([1,2,3]);	//这里入栈/入队的是一个数组元素，入栈后是[1,2,3,[1,2,3]]或[1,2,3,Array(3)] arr.pop();	//出栈 arr.shift();	//出队 arr.unshift(1,2,3);	//队头插入，一般用不到，这样三个参数是顺序插入3个元素  /*不变,一定要通过赋值来引用或者直接嵌套着用*/ sa = arr.join(&amp;#39; | &amp;#39;); ca = arr.concat([4,5,6]); ca = arr.slice(2); sa = arr.toString(); /*Number and number all unchanged*/ ns = Number(str) sn = num.toString(); n = num.toFixed(1); /*Math all unchanged*/ fn = Math.floor(num); cn = Math.ceil(num); rn = Math.round(num); expn = Math.</description>
     </item>
     
     <item>
-      <title>2020年8月阶段反思</title>
-      <link>https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/</link>
+      <title>2020年9月阶段反思</title>
+      <link>https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/</link>
       <pubDate>Sat, 26 Sep 2020 17:56:31 +0800</pubDate>
       
-      <guid>https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/</guid>
+      <guid>https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/</guid>
       <description>9月事件及反思 学习上：  时间管理  大部分情况下时间利用的还是比较充分的 有时候打游戏打过头了应该注意 控制看手机的时间   英语  单词照常，没有学新的 注意：应该每天再去接触一点长难句，翻译之类的   政治  二刷一千题，比第一遍好太多了   C语言  9月份没怎么复习，全搞数据结构了 目前C薄弱的地方是文件操作，写的代码是最少的   Web  材料比较少，复习较枯燥，能上机的尽量上机吧。 目前继续按照买的材料整理书本剩下的内容   数据结构  新编的书看到430多页了，还是学了不少的 很多时候眼高手低，一定要动手写代码    生活  白天应睡45min-60min。  存在的问题  一门科目不能一直学。如果长时间集中于一门效率会逐渐变低。替换着学，一旦发现效率变低了马上换一门。 中午不能嗜睡，太浪费时间。 应对周围情况复杂多变：背单词、刷题，等不容易分心的事情。   刷题很爽。 </description>
     </item>
     

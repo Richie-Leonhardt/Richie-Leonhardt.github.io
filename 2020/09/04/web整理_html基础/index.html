@@ -15,8 +15,60 @@
     <link rel="apple-touch-icon" href="https://richie-leonhardt.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/vs2015.css">
+    
+    <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
+    <style type="text/css">
+         .mui-switch {
+            width: 52px;
+            height: 31px;
+            position: relative;
+            float: right;
+            top:15px;
+            border: 1px solid #dfdfdf;
+            background-color: #fdfdfd;
+            box-shadow: #dfdfdf 0 0 0 0 inset;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-clip: content-box;
+            display: inline-block;
+            -webkit-appearance: none;
+            user-select: none;
+            outline: none; }
+        .mui-switch:before {
+            content: '';
+            width: 29px;
+            height: 29px;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+        .mui-switch:checked {
+            border-color: #64bd63;
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63; }
+        .mui-switch:checked:before {
+            left: 21px; }
+        .mui-switch.mui-switch-anim {
+            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
+        .mui-switch.mui-switch-anim:before {
+            transition: left 0.3s; }
+        .mui-switch.mui-switch-anim:checked {
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63;
+            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
+        .mui-switch.mui-switch-anim:checked:before {
+            transition: left 0.3s;}
+    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -48,6 +100,24 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
+    <script type="text/javascript">
+          function switchCss(){
+            var css0 = "vs2015.css";
+            var css1 = "vs.css";
+            var codecss = document.getElementById('codecss');
+            var s = codecss.getAttribute("href");
+            if (s.search(css0) > 0) {
+              s = s.replace(css0, css1);
+              codecss.setAttribute("href", s);
+            }else{
+              s = s.replace(css1, css0);
+              codecss.setAttribute("href", s);
+            }
+            event.stopPropagation();
+            event.preventDefault();
+          }
+          document.addEventListener("onmousedown", switchCss, false);
+    </script>
 </head>
 <body>
 <div class="container">
@@ -93,6 +163,26 @@
             <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://richie-leonhardt.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
+        <script type="text/javascript">
+          function switchCss(){
+            var css0 = "vs2015.css";
+            var css1 = "vs.css";
+            var codecss = document.getElementById('codecss');
+            var s = codecss.getAttribute("href");
+            if (s.search(css0) > 0) {
+              s = s.replace(css0, css1);
+              codecss.setAttribute("href", s);
+            }else{
+              s = s.replace(css1, css0);
+              codecss.setAttribute("href", s);
+            }
+            event.stopPropagation();
+            event.preventDefault();
+          }
+          document.addEventListener("onmousedown", switchCss, false);
+        </script>
+        <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
+
         <div id="search-form-wrap">
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
               <input type="search" name="q" class="search-form-input" placeholder="Search">
@@ -318,231 +408,231 @@
 <h4 id="audio-and-video">audio and video</h4>
 </li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html&gt;</span>
-&lt;html lang=<span style="color:#a31515">&#34;en&#34;</span>&gt;
-&lt;head&gt;
-    &lt;title&gt;A form simple&lt;/title&gt;
-    &lt;meta charset=<span style="color:#a31515">&#34;utf-8&#34;</span> /&gt;
-&lt;/head&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;A form simple&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
 
-&lt;body&gt;
-    <span style="color:#008000">&lt;!-- 页眉 --&gt;</span>
-    &lt;hgroup&gt;
-        &lt;header&gt;
-            &lt;h1&gt;Practice2&lt;/h1&gt;
-            &lt;h3&gt;form、input、textarea、select、audio and video&lt;/h3&gt;
-        &lt;/header&gt;
-    &lt;/hgroup&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    <span style="color:#75715e">&lt;!-- 页眉 --&gt;</span>
+    &lt;<span style="color:#f92672">hgroup</span>&gt;
+        &lt;<span style="color:#f92672">header</span>&gt;
+            &lt;<span style="color:#f92672">h1</span>&gt;Practice2&lt;/<span style="color:#f92672">h1</span>&gt;
+            &lt;<span style="color:#f92672">h3</span>&gt;form、input、textarea、select、audio and video&lt;/<span style="color:#f92672">h3</span>&gt;
+        &lt;/<span style="color:#f92672">header</span>&gt;
+    &lt;/<span style="color:#f92672">hgroup</span>&gt;
     
-    <span style="color:#008000">&lt;!-- 主要表单 --&gt;</span>
-    &lt;form action=<span style="color:#a31515">&#34;&#34;</span> method=<span style="color:#a31515">&#34;post&#34;</span>&gt;
-        <span style="color:#008000">&lt;!-- if no method, default get --&gt;</span>
-        <span style="color:#008000">&lt;!-- 两个输入框，输入用户名和密码 --&gt;</span>
-        &lt;p&gt;<span style="color:#008000">&lt;!-- input tag need container --&gt;</span>
-            <span style="color:#008000">&lt;!-- pre使能够保留连续的多个空格和使用等距字体 --&gt;</span>
-            <span style="color:#008000">&lt;!-- text和password这两个，输入的值都是在value特性里面，可以用value特性事先指定好文本框内容 --&gt;</span>
-            &lt;pre&gt;account: &lt;input type=<span style="color:#a31515">&#34;text&#34;</span> name=<span style="color:#a31515">&#34;name&#34;</span> id=<span style="color:#a31515">&#34;name&#34;</span> size=<span style="color:#a31515">&#34;20&#34;</span> maxlength=<span style="color:#a31515">&#34;25&#34;</span> /&gt;&lt;/pre&gt;
-            &lt;br /&gt;
-            &lt;pre&gt;password:&lt;input type=<span style="color:#a31515">&#34;password&#34;</span> name=<span style="color:#a31515">&#34;pw&#34;</span> id=<span style="color:#a31515">&#34;pw&#34;</span> size=<span style="color:#a31515">&#34;20&#34;</span> maxlength=<span style="color:#a31515">&#34;25&#34;</span> /&gt;&lt;/pre&gt;
-        &lt;/p&gt;
+    <span style="color:#75715e">&lt;!-- 主要表单 --&gt;</span>
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+        <span style="color:#75715e">&lt;!-- if no method, default get --&gt;</span>
+        <span style="color:#75715e">&lt;!-- 两个输入框，输入用户名和密码 --&gt;</span>
+        &lt;<span style="color:#f92672">p</span>&gt;<span style="color:#75715e">&lt;!-- input tag need container --&gt;</span>
+            <span style="color:#75715e">&lt;!-- pre使能够保留连续的多个空格和使用等距字体 --&gt;</span>
+            <span style="color:#75715e">&lt;!-- text和password这两个，输入的值都是在value特性里面，可以用value特性事先指定好文本框内容 --&gt;</span>
+            &lt;<span style="color:#f92672">pre</span>&gt;account: &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span> <span style="color:#a6e22e">maxlength</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25&#34;</span> /&gt;&lt;/<span style="color:#f92672">pre</span>&gt;
+            &lt;<span style="color:#f92672">br</span> /&gt;
+            &lt;<span style="color:#f92672">pre</span>&gt;password:&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pw&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pw&#34;</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span> <span style="color:#a6e22e">maxlength</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25&#34;</span> /&gt;&lt;/<span style="color:#f92672">pre</span>&gt;
+        &lt;/<span style="color:#f92672">p</span>&gt;
 
-        <span style="color:#008000">&lt;!-- 多选checkbox --&gt;</span>
-        &lt;div&gt;
-            &lt;p&gt;
+        <span style="color:#75715e">&lt;!-- 多选checkbox --&gt;</span>
+        &lt;<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">p</span>&gt;
                 choice(this is a checkbox)
-            &lt;/p&gt;
-            &lt;label&gt; &lt;input type=<span style="color:#a31515">&#34;checkbox&#34;</span> name=<span style="color:#a31515">&#34;bulb&#34;</span> id=<span style="color:#a31515">&#34;bulb&#34;</span> value=<span style="color:#a31515">&#34;25W * 4 $2.39&#34;</span> /&gt;25W * 4 $2.39
-            &lt;/label&gt;
-            &lt;label&gt;
-                &lt;input type=<span style="color:#a31515">&#34;checkbox&#34;</span> name=<span style="color:#a31515">&#34;bulb&#34;</span> id=<span style="color:#a31515">&#34;bulb&#34;</span> value=<span style="color:#a31515">&#34;25W * 8 $4.29&#34;</span> checked=<span style="color:#a31515">&#34;checked&#34;</span> /&gt;
+            &lt;/<span style="color:#f92672">p</span>&gt;
+            &lt;<span style="color:#f92672">label</span>&gt; &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25W * 4 $2.39&#34;</span> /&gt;25W * 4 $2.39
+            &lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25W * 8 $4.29&#34;</span> <span style="color:#a6e22e">checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checked&#34;</span> /&gt;
                 25W * 8 $4.29
-            &lt;/label&gt;
-            &lt;label&gt;
-                &lt;input type=<span style="color:#a31515">&#34;checkbox&#34;</span> name=<span style="color:#a31515">&#34;bulb&#34;</span> id=<span style="color:#a31515">&#34;bulb&#34;</span> value=<span style="color:#a31515">&#34;good 25W * 4 $3.95&#34;</span> /&gt;good 25W * 4 $3.95
-            &lt;/label&gt;
-            &lt;label&gt;
-                &lt;input type=<span style="color:#a31515">&#34;checkbox&#34;</span> name=<span style="color:#a31515">&#34;bulb&#34;</span> id=<span style="color:#a31515">&#34;bulb&#34;</span> value=<span style="color:#a31515">&#34;good 25W * 8 $7.49&#34;</span> checked=<span style="color:#a31515">&#34;checked&#34;</span> /&gt;good 25W * 8 $7.49
-            &lt;/label&gt;
-        &lt;/div&gt;
+            &lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;good 25W * 4 $3.95&#34;</span> /&gt;good 25W * 4 $3.95
+            &lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;good 25W * 8 $7.49&#34;</span> <span style="color:#a6e22e">checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checked&#34;</span> /&gt;good 25W * 8 $7.49
+            &lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
 
-        <span style="color:#008000">&lt;!-- 单选 --&gt;</span>
-        &lt;p&gt;payment(this is a radio)&lt;/p&gt;
-        &lt;label&gt;&lt;input type=<span style="color:#a31515">&#34;radio&#34;</span> name=<span style="color:#a31515">&#34;pay&#34;</span> id=<span style="color:#a31515">&#34;pay&#34;</span> value=<span style="color:#a31515">&#34;Visa&#34;</span> checked=<span style="color:#a31515">&#34;checked&#34;</span>&gt;Visa&lt;/label&gt;
-        &lt;label&gt;&lt;input type=<span style="color:#a31515">&#34;radio&#34;</span> name=<span style="color:#a31515">&#34;pay&#34;</span> id=<span style="color:#a31515">&#34;pay&#34;</span> value=<span style="color:#a31515">&#34;MasterCard&#34;</span>&gt;MasterCard&lt;/label&gt;
-        &lt;label&gt;&lt;input type=<span style="color:#a31515">&#34;radio&#34;</span> name=<span style="color:#a31515">&#34;pay&#34;</span> id=<span style="color:#a31515">&#34;pay&#34;</span> value=<span style="color:#a31515">&#34;Discover&#34;</span>&gt;Discover&lt;/label&gt;
+        <span style="color:#75715e">&lt;!-- 单选 --&gt;</span>
+        &lt;<span style="color:#f92672">p</span>&gt;payment(this is a radio)&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Visa&#34;</span> <span style="color:#a6e22e">checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checked&#34;</span>&gt;Visa&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MasterCard&#34;</span>&gt;MasterCard&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Discover&#34;</span>&gt;Discover&lt;/<span style="color:#f92672">label</span>&gt;
 
-        <span style="color:#008000">&lt;!-- 单选菜单形式 --&gt;</span>
-        &lt;p&gt;
+        <span style="color:#75715e">&lt;!-- 单选菜单形式 --&gt;</span>
+        &lt;<span style="color:#f92672">p</span>&gt;
             select one:
-            &lt;select name=<span style="color:#a31515">&#34;choice1&#34;</span>&gt;
-                &lt;option&gt;ggg&lt;/option&gt;
-                &lt;option&gt;hhh&lt;/option&gt;
-                &lt;option&gt;xxx&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/p&gt;
+            &lt;<span style="color:#f92672">select</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;choice1&#34;</span>&gt;
+                &lt;<span style="color:#f92672">option</span>&gt;ggg&lt;/<span style="color:#f92672">option</span>&gt;
+                &lt;<span style="color:#f92672">option</span>&gt;hhh&lt;/<span style="color:#f92672">option</span>&gt;
+                &lt;<span style="color:#f92672">option</span>&gt;xxx&lt;/<span style="color:#f92672">option</span>&gt;
+            &lt;/<span style="color:#f92672">select</span>&gt;
+        &lt;/<span style="color:#f92672">p</span>&gt;
 
-        <span style="color:#008000">&lt;!-- 多选菜单形式 --&gt;</span>
-        &lt;p&gt;
+        <span style="color:#75715e">&lt;!-- 多选菜单形式 --&gt;</span>
+        &lt;<span style="color:#f92672">p</span>&gt;
             select one or more:
-            &lt;select name=<span style="color:#a31515">&#34;choice2&#34;</span> multiple=<span style="color:#a31515">&#34;multiple&#34;</span>&gt;
-                <span style="color:#008000">&lt;!-- multiple choices --&gt;</span>
-                &lt;option&gt;ggg&lt;/option&gt;
-                &lt;option&gt;hhh&lt;/option&gt;
-                &lt;option&gt;xxx&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/p&gt;
+            &lt;<span style="color:#f92672">select</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;choice2&#34;</span> <span style="color:#a6e22e">multiple</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;multiple&#34;</span>&gt;
+                <span style="color:#75715e">&lt;!-- multiple choices --&gt;</span>
+                &lt;<span style="color:#f92672">option</span>&gt;ggg&lt;/<span style="color:#f92672">option</span>&gt;
+                &lt;<span style="color:#f92672">option</span>&gt;hhh&lt;/<span style="color:#f92672">option</span>&gt;
+                &lt;<span style="color:#f92672">option</span>&gt;xxx&lt;/<span style="color:#f92672">option</span>&gt;
+            &lt;/<span style="color:#f92672">select</span>&gt;
+        &lt;/<span style="color:#f92672">p</span>&gt;
 
-        <span style="color:#008000">&lt;!-- textarea输入文本 --&gt;</span>
-        <span style="color:#008000">&lt;!-- 如果要在一段文字中限制每行的字符，使用textarea是一个很好的方式 --&gt;</span>
-        &lt;p&gt;
-            &lt;textarea name=<span style="color:#a31515">&#34;ta1&#34;</span> rows=<span style="color:#a31515">&#34;3&#34;</span> cols=<span style="color:#a31515">&#34;20&#34;</span>&gt;default txt here&lt;/textarea&gt;
-        &lt;/p&gt;
+        <span style="color:#75715e">&lt;!-- textarea输入文本 --&gt;</span>
+        <span style="color:#75715e">&lt;!-- 如果要在一段文字中限制每行的字符，使用textarea是一个很好的方式 --&gt;</span>
+        &lt;<span style="color:#f92672">p</span>&gt;
+            &lt;<span style="color:#f92672">textarea</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ta1&#34;</span> <span style="color:#a6e22e">rows</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">cols</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span>&gt;default txt here&lt;/<span style="color:#f92672">textarea</span>&gt;
+        &lt;/<span style="color:#f92672">p</span>&gt;
 
-        <span style="color:#008000">&lt;!-- 提交和重置按钮 --&gt;</span>
-        &lt;p&gt;
-            &lt;input type=<span style="color:#a31515">&#34;submit&#34;</span> name=<span style="color:#a31515">&#34;sub&#34;</span> value=<span style="color:#a31515">&#34;Submit Form&#34;</span> /&gt;
-            &lt;input type=<span style="color:#a31515">&#34;reset&#34;</span> name=<span style="color:#a31515">&#34;reset&#34;</span> value=<span style="color:#a31515">&#34;Reset Form&#34;</span> /&gt;
-        &lt;/p&gt;
-    &lt;/form&gt;
+        <span style="color:#75715e">&lt;!-- 提交和重置按钮 --&gt;</span>
+        &lt;<span style="color:#f92672">p</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sub&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Submit Form&#34;</span> /&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;reset&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;reset&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Reset Form&#34;</span> /&gt;
+        &lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
 
-    <span style="color:#008000">&lt;!-- 添加音乐 --&gt;</span>
-    &lt;audio controls=<span style="color:#a31515">&#34;controls&#34;</span>&gt;
-        <span style="color:#008000">&lt;!-- no autoplay --&gt;</span>
-        &lt;source src=<span style="color:#a31515">&#34;audio/三亩地 - 寻.mp3&#34;</span> /&gt;
-        &lt;source src=<span style="color:#a31515">&#34;audio/三亩地 - 寻.wav&#34;</span> /&gt;
-        &lt;source src=<span style="color:#a31515">&#34;audio/三亩地 - 寻.ogg&#34;</span> /&gt;
+    <span style="color:#75715e">&lt;!-- 添加音乐 --&gt;</span>
+    &lt;<span style="color:#f92672">audio</span> <span style="color:#a6e22e">controls</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;controls&#34;</span>&gt;
+        <span style="color:#75715e">&lt;!-- no autoplay --&gt;</span>
+        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/三亩地 - 寻.mp3&#34;</span> /&gt;
+        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/三亩地 - 寻.wav&#34;</span> /&gt;
+        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/三亩地 - 寻.ogg&#34;</span> /&gt;
         don&#39;t support this audio element
-    &lt;/audio&gt;
+    &lt;/<span style="color:#f92672">audio</span>&gt;
 
-    <span style="color:#008000">&lt;!-- 添加视频 --&gt;</span>
-    &lt;video width=<span style="color:#a31515">&#34;1280&#34;</span> height=<span style="color:#a31515">&#34;760&#34;</span> controls=<span style="color:#a31515">&#34;controls&#34;</span> preload=<span style="color:#a31515">&#34;preload&#34;</span> autoplay=<span style="color:#a31515">&#34;autoplay&#34;</span>&gt;
-        &lt;source src=<span style="color:#a31515">&#34;video/test.mp4&#34;</span> /&gt;
-        &lt;source src=<span style="color:#a31515">&#34;video/test.ogv&#34;</span> /&gt;
-        &lt;source src=<span style="color:#a31515">&#34;video/test.webm&#34;</span> /&gt;
-    &lt;/video&gt;
+    <span style="color:#75715e">&lt;!-- 添加视频 --&gt;</span>
+    &lt;<span style="color:#f92672">video</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1280&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;760&#34;</span> <span style="color:#a6e22e">controls</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;controls&#34;</span> <span style="color:#a6e22e">preload</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preload&#34;</span> <span style="color:#a6e22e">autoplay</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;autoplay&#34;</span>&gt;
+        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video/test.mp4&#34;</span> /&gt;
+        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video/test.ogv&#34;</span> /&gt;
+        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video/test.webm&#34;</span> /&gt;
+    &lt;/<span style="color:#f92672">video</span>&gt;
 
-    <span style="color:#008000">&lt;!-- 页脚 --&gt;</span>
-    &lt;footer&gt;
+    <span style="color:#75715e">&lt;!-- 页脚 --&gt;</span>
+    &lt;<span style="color:#f92672">footer</span>&gt;
         &amp;copy; Ritchie Leonhardt
-        &lt;br /&gt;
+        &lt;<span style="color:#f92672">br</span> /&gt;
         2020
-    &lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+    &lt;/<span style="color:#f92672">footer</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><h3 id="html基本-tableimg">HTML基本-table、img</h3>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html&gt;</span>
-&lt;html lang=<span style="color:#a31515">&#34;en&#34;</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
 
-&lt;head&gt;
-    &lt;title&gt;HTML表格测试&lt;/title&gt;
-    &lt;meta charset=<span style="color:#a31515">&#34;utf-8&#34;</span>&gt;
-&lt;/head&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;HTML表格测试&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
 
-&lt;body&gt;
-    &lt;p&gt;
-    &lt;time datetime=<span style="color:#a31515">&#34;2020-08-15T17:17+8:00&#34;</span> pubdata=<span style="color:#a31515">&#34;pubdata&#34;</span>&gt;publish time&lt;/time&gt;
-    &lt;/p&gt;
-    <span style="color:#008000">&lt;!-- 文本块引用 --&gt;</span>
-    &lt;blockquote&gt;
-        &lt;p&gt;asjdighadgpihapihdsghapihsdglnxczv,mbsogurothllrngbadskvjladsnvasba
-        &lt;/p&gt;
-        &lt;p&gt;falksdhgalkshdgklhadshgkhkalsdhgklhklasdghlk&lt;/p&gt;
-    &lt;/blockquote&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2020-08-15T17:17+8:00&#34;</span> <span style="color:#a6e22e">pubdata</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pubdata&#34;</span>&gt;publish time&lt;/<span style="color:#f92672">time</span>&gt;
+    &lt;/<span style="color:#f92672">p</span>&gt;
+    <span style="color:#75715e">&lt;!-- 文本块引用 --&gt;</span>
+    &lt;<span style="color:#f92672">blockquote</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;asjdighadgpihapihdsghapihsdglnxczv,mbsogurothllrngbadskvjladsnvasba
+        &lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;falksdhgalkshdgklhadshgkhkalsdhgklhklasdghlk&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">blockquote</span>&gt;
 
-    &lt;article&gt;
-        &lt;p&gt;ajsdigohadsioghasdbzbm,chbiooafhbwnrb,mniipghasdgkhalkdsjflkahdfflcnvm,znc,mvashdflahdsjkg&lt;/p&gt;
-    &lt;/article&gt;
+    &lt;<span style="color:#f92672">article</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;ajsdigohadsioghasdbzbm,chbiooafhbwnrb,mniipghasdgkhalkdsjflkahdfflcnvm,znc,mvashdflahdsjkg&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">article</span>&gt;
 
-    &lt;p&gt;pic&lt;/p&gt;
-    &lt;img src=<span style="color:#a31515">&#34;image/h5.png&#34;</span> height=<span style="color:#a31515">&#34;150&#34;</span> width=<span style="color:#a31515">&#34;150&#34;</span> alt=<span style="color:#a31515">&#34;can&#39;tShow&#34;</span> /&gt;
-    &lt;p&gt;
-        &lt;a href=<span style="color:#a31515">&#34;career.html#textbox1&#34;</span>&gt;career&lt;/a&gt;
-    &lt;/p&gt;
-    <span style="color:#008000">&lt;!-- 一条水平分割线 --&gt;</span>
-    &lt;hr /&gt;
-    &lt;p&gt;This is a table&lt;/p&gt;
-    &lt;table&gt;
-        &lt;caption&gt;table1&lt;/caption&gt;
-        &lt;tr&gt;
-            <span style="color:#008000">&lt;!-- 左上角空白 --&gt;</span>
-            &lt;td&gt;&lt;/td&gt;
-            &lt;th&gt;pine&lt;/th&gt;
-            &lt;th&gt;maple&lt;/th&gt;
-            &lt;th&gt;oak&lt;/th&gt;
-            &lt;th&gt;fir&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Average Height&lt;/th&gt;
-            &lt;td&gt;11&lt;/td&gt;
-            &lt;td&gt;12&lt;/td&gt;
-            &lt;td&gt;13&lt;/td&gt;
-            &lt;td&gt;14&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Average Width&lt;/th&gt;
-            &lt;td&gt;21&lt;/td&gt;
-            &lt;td&gt;22&lt;/td&gt;
-            &lt;td&gt;23&lt;/td&gt;
-            &lt;td&gt;24&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Typical Life Span&lt;/th&gt;
-            &lt;td&gt;31&lt;/td&gt;
-            &lt;td&gt;32&lt;/td&gt;
-            &lt;td&gt;33&lt;/td&gt;
-            &lt;td&gt;34&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Leaf Type&lt;/th&gt;
-            &lt;td&gt;41&lt;/td&gt;
-            &lt;td&gt;42&lt;/td&gt;
-            &lt;td&gt;43&lt;/td&gt;
-            &lt;td&gt;44&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;p&gt;&lt;/p&gt;
-    &lt;/table&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;pic&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/h5.png&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;can&#39;tShow&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;career.html#textbox1&#34;</span>&gt;career&lt;/<span style="color:#f92672">a</span>&gt;
+    &lt;/<span style="color:#f92672">p</span>&gt;
+    <span style="color:#75715e">&lt;!-- 一条水平分割线 --&gt;</span>
+    &lt;<span style="color:#f92672">hr</span> /&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;This is a table&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">table</span>&gt;
+        &lt;<span style="color:#f92672">caption</span>&gt;table1&lt;/<span style="color:#f92672">caption</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            <span style="color:#75715e">&lt;!-- 左上角空白 --&gt;</span>
+            &lt;<span style="color:#f92672">td</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;pine&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;maple&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;oak&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;fir&lt;/<span style="color:#f92672">th</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;Average Height&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;11&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;12&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;13&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;14&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;Average Width&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;21&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;22&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;23&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;24&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;Typical Life Span&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;31&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;32&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;33&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;34&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;Leaf Type&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;41&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;42&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;43&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;44&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">table</span>&gt;
    
-    <span style="color:#008000">&lt;!-- 这边建立表格是按照行来的，在纸上画画就知道怎么建立了，二级表格注意rowspan和colspan不要搞错了 --&gt;</span>
-    &lt;table&gt;
-        &lt;caption&gt;2 level table&lt;/caption&gt;
-        &lt;tr&gt;
-            &lt;td colspan=<span style="color:#a31515">&#34;3&#34;</span>&gt;&lt;/td&gt;
-            &lt;th&gt;MEALS&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td colspan=<span style="color:#a31515">&#34;2&#34;</span>&gt;&lt;/td&gt;
-            &lt;th&gt;breakfast&lt;/th&gt;
-            &lt;th&gt;lanch&lt;/th&gt;
-            &lt;th&gt;dinner&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th rowspan=<span style="color:#a31515">&#34;4&#34;</span>&gt;FOODS&lt;/th&gt;
-            &lt;th&gt;bread&lt;/th&gt;
-            &lt;td&gt;11&lt;/td&gt;
-            &lt;td&gt;12&lt;/td&gt;
-            &lt;td&gt;13&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;course&lt;/th&gt;
-            &lt;td&gt;21&lt;/td&gt;
-            &lt;td&gt;22&lt;/td&gt;
-            &lt;td&gt;23&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;vegetable&lt;/th&gt;
-            &lt;td&gt;31&lt;/td&gt;
-            &lt;td&gt;32&lt;/td&gt;
-            &lt;td&gt;33&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;dessert&lt;/th&gt;
-            &lt;td&gt;41&lt;/td&gt;
-            &lt;td&gt;42&lt;/td&gt;
-            &lt;td&gt;43&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+    <span style="color:#75715e">&lt;!-- 这边建立表格是按照行来的，在纸上画画就知道怎么建立了，二级表格注意rowspan和colspan不要搞错了 --&gt;</span>
+    &lt;<span style="color:#f92672">table</span>&gt;
+        &lt;<span style="color:#f92672">caption</span>&gt;2 level table&lt;/<span style="color:#f92672">caption</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;MEALS&lt;/<span style="color:#f92672">th</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;breakfast&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;lanch&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;dinner&lt;/<span style="color:#f92672">th</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">rowspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span>&gt;FOODS&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;bread&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;11&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;12&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;13&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;course&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;21&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;22&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;23&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;vegetable&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;31&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;32&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;33&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;dessert&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;41&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;42&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;43&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;/<span style="color:#f92672">table</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div>
         </div>
         <footer class="article-footer">
@@ -668,7 +758,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -685,7 +775,7 @@
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/" class="title">XHTML笔记</a></p>
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="title">JS语法笔记</a></p>
                     <p class="item-date">
                         <time datetime="2020-10-04 09:52:25 &#43;0800 CST" itemprop="datePublished">2020-10-04</time>
                     </p>
@@ -694,7 +784,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
+                    <a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -711,7 +801,7 @@
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B48%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="title">2020年8月阶段反思</a></p>
+                    <p class="item-title"><a href="https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" class="title">2020年9月阶段反思</a></p>
                     <p class="item-date">
                         <time datetime="2020-09-26 17:56:31 &#43;0800 CST" itemprop="datePublished">2020-09-26</time>
                     </p>

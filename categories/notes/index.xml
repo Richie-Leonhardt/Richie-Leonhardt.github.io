@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>XHTML笔记</title>
-      <link>https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/</link>
+      <title>JS语法笔记</title>
+      <link>https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 04 Oct 2020 09:52:25 +0800</pubDate>
       
-      <guid>https://richie-leonhardt.github.io/2020/10/04/xhtml%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</guid>
       <description>javascript变与不变   只有数组的几个函数会在原基础上操作直接修改：一个reverse，一个sort，四个头尾操作 其他的字符串、数字、Number或者Math等，都是通过返回值来保存修改后的结果，原来的都没有变  arr = [1,2,3]; str = &amp;#39;123&amp;#39;; num = 123.45; /*变：主要是对数组的操作*/ arr.reverse(); arr.sort();	//数字和数组都是在原基础上操作  arr.push([1,2,3]);	//这里入栈/入队的是一个数组元素，入栈后是[1,2,3,[1,2,3]]或[1,2,3,Array(3)] arr.pop();	//出栈 arr.shift();	//出队 arr.unshift(1,2,3);	//队头插入，一般用不到，这样三个参数是顺序插入3个元素  /*不变,一定要通过赋值来引用或者直接嵌套着用*/ sa = arr.join(&amp;#39; | &amp;#39;); ca = arr.concat([4,5,6]); ca = arr.slice(2); sa = arr.toString(); /*Number and number all unchanged*/ ns = Number(str) sn = num.toString(); n = num.toFixed(1); /*Math all unchanged*/ fn = Math.floor(num); cn = Math.ceil(num); rn = Math.round(num); expn = Math.</description>
     </item>
     
