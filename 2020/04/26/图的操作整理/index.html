@@ -306,101 +306,101 @@
 <p>在一些顶点数目比较大（一般顶点个数在1000以上）的情况下，使用邻接表而不是邻接矩阵来存储图。如果是稀疏图，用邻接表，如果是稠密图，用邻接矩阵。</p>
 <h4 id="深度优先搜索dfs遍历图">深度优先搜索dfs遍历图</h4>
 <p>按深度优先的方式访问所有未被访问的结点，在结点被访问过后标记为已访问</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">dfs(u) {
-  vis[u] = <span style="color:#fff;font-weight:bold">true</span>;
-  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#f00">从</span>u出发到能到达的所有顶点v)
-    <span style="color:#fff;font-weight:bold">if</span>(vis[v] == <span style="color:#fff;font-weight:bold">false</span>)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">dfs(u) {
+  vis[u] = true;
+  <span style="color:#00f">for</span>(<span style="">从</span>u出发到能到达的所有顶点v)
+    <span style="color:#00f">if</span>(vis[v] == false)
       dfs(v);
 }
 dfsTrave(G) {
-  <span style="color:#fff;font-weight:bold">for</span>(G的所有结点u)
-    <span style="color:#fff;font-weight:bold">if</span>(vis[u] == <span style="color:#fff;font-weight:bold">false</span>)
+  <span style="color:#00f">for</span>(G的所有结点u)
+    <span style="color:#00f">if</span>(vis[u] == false)
       dfs(u);
 }
-</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#007f7f">//邻接矩阵
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> dfs(<span style="color:#fff;font-weight:bold">int</span> u, <span style="color:#fff;font-weight:bold">int</span> depth) {
-  vis[u] = <span style="color:#fff;font-weight:bold">true</span>;
-  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> v = <span style="color:#ff0;font-weight:bold">0</span>; v &lt; n; v++) {
-    <span style="color:#fff;font-weight:bold">if</span>(vis[v] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; G[u][v] != INF)
-      dfs(v, depth + <span style="color:#ff0;font-weight:bold">1</span>);
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#008000">//邻接矩阵
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> dfs(<span style="color:#2b91af">int</span> u, <span style="color:#2b91af">int</span> depth) {
+  vis[u] = true;
+  <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> v = 0; v &lt; n; v++) {
+    <span style="color:#00f">if</span>(vis[v] == false &amp;&amp; G[u][v] != INF)
+      dfs(v, depth + 1);
   }
 }
   
-<span style="color:#fff;font-weight:bold">void</span> dfsTrave() {
-  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> u = <span style="color:#ff0;font-weight:bold">0</span>; u &lt; n; u++)
-      <span style="color:#fff;font-weight:bold">if</span>(vis[u] == <span style="color:#fff;font-weight:bold">false</span>)
-      dfs(u, <span style="color:#ff0;font-weight:bold">1</span>);
+<span style="color:#2b91af">void</span> dfsTrave() {
+  <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> u = 0; u &lt; n; u++)
+      <span style="color:#00f">if</span>(vis[u] == false)
+      dfs(u, 1);
 }
-</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#007f7f">//邻接表
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> dfs(<span style="color:#fff;font-weight:bold">int</span> u, <span style="color:#fff;font-weight:bold">int</span> depth) {
-  vis[u] = <span style="color:#fff;font-weight:bold">true</span>;
-  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> u = <span style="color:#ff0;font-weight:bold">0</span>; u &lt; arr[u].size(); u++)
-    dfs(v, depth + <span style="color:#ff0;font-weight:bold">1</span>);
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#008000">//邻接表
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> dfs(<span style="color:#2b91af">int</span> u, <span style="color:#2b91af">int</span> depth) {
+  vis[u] = true;
+  <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> u = 0; u &lt; arr[u].size(); u++)
+    dfs(v, depth + 1);
 }
    
-<span style="color:#fff;font-weight:bold">void</span> dfsTrave() {
-  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> u = <span style="color:#ff0;font-weight:bold">0</span>; u &lt; n; u++) {
-    <span style="color:#fff;font-weight:bold">if</span>(vis[u] == <span style="color:#fff;font-weight:bold">false</span>)
-      dfs(u, <span style="color:#ff0;font-weight:bold">1</span>);
+<span style="color:#2b91af">void</span> dfsTrave() {
+  <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> u = 0; u &lt; n; u++) {
+    <span style="color:#00f">if</span>(vis[u] == false)
+      dfs(u, 1);
   }
 }
 </code></pre></div><h4 id="广度优先搜索bfs遍历图">广度优先搜索bfs遍历图</h4>
 <p>建立一个队列，把初始定点加入队列，然后每次都取出队首元素进行访问，并把该定点除法可以到达的<strong>未曾加入过队列</strong>（而不是未访问）的定点全部加入队列，直到队列为空</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">bfs(u) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">bfs(u) {
   queue q;
-  <span style="color:#f00">将</span>u入队
-  inq[u] = <span style="color:#fff;font-weight:bold">true</span>;
-  <span style="color:#fff;font-weight:bold">while</span>(q非空) {
-    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#f00">从</span>u出发到可到达的所有顶点v) {
-      <span style="color:#fff;font-weight:bold">if</span>(inq[v] == <span style="color:#fff;font-weight:bold">false</span>)
-        <span style="color:#f00">将</span>v入队
-        inq[v] = <span style="color:#fff;font-weight:bold">true</span>;
+  <span style="">将</span>u入队
+  inq[u] = true;
+  <span style="color:#00f">while</span>(q非空) {
+    <span style="color:#00f">for</span>(<span style="">从</span>u出发到可到达的所有顶点v) {
+      <span style="color:#00f">if</span>(inq[v] == false)
+        <span style="">将</span>v入队
+        inq[v] = true;
     }
   }
 }
 bfsTrave(G) {
-  <span style="color:#fff;font-weight:bold">for</span>(G的所有顶点u) {
-    <span style="color:#fff;font-weight:bold">if</span>(inq[u] == <span style="color:#fff;font-weight:bold">false</span>)
+  <span style="color:#00f">for</span>(G的所有顶点u) {
+    <span style="color:#00f">if</span>(inq[u] == false)
       bfs(u);
   }
 }
-</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#fff;font-weight:bold">void</span> bfs(<span style="color:#fff;font-weight:bold">int</span> u) {
-  queue&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; q;
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#2b91af">void</span> bfs(<span style="color:#2b91af">int</span> u) {
+  queue&lt;<span style="color:#2b91af">int</span>&gt; q;
   q.push(u);
-  inq[u] = <span style="color:#fff;font-weight:bold">true</span>;
-  <span style="color:#fff;font-weight:bold">while</span>(!q.empty()) {
-    <span style="color:#fff;font-weight:bold">int</span> u = q.front();
+  inq[u] = true;
+  <span style="color:#00f">while</span>(!q.empty()) {
+    <span style="color:#2b91af">int</span> u = q.front();
     q.pop();
-    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> v = <span style="color:#ff0;font-weight:bold">0</span>; v &lt; n; v++) {
-      <span style="color:#fff;font-weight:bold">if</span>(inq[v] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; G[u][v] != INF) {
+    <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> v = 0; v &lt; n; v++) {
+      <span style="color:#00f">if</span>(inq[v] == false &amp;&amp; G[u][v] != INF) {
         q.push(v);
-        inq[v] = <span style="color:#fff;font-weight:bold">true</span>;
+        inq[v] = true;
       }
     }
   }
 }
-<span style="color:#007f7f">/*邻接表：
-</span><span style="color:#007f7f">for(int i = 0; i &lt; arr[u].size(); i++) {
-</span><span style="color:#007f7f">  int v= arr[u][i];
-</span><span style="color:#007f7f">  if(inq[v] == false) {
-</span><span style="color:#007f7f">    q.push(v);
-</span><span style="color:#007f7f">    inq[v] = true;
-</span><span style="color:#007f7f">  }
-</span><span style="color:#007f7f">}
-</span><span style="color:#007f7f">*/</span>
+<span style="color:#008000">/*邻接表：
+</span><span style="color:#008000">for(int i = 0; i &lt; arr[u].size(); i++) {
+</span><span style="color:#008000">  int v= arr[u][i];
+</span><span style="color:#008000">  if(inq[v] == false) {
+</span><span style="color:#008000">    q.push(v);
+</span><span style="color:#008000">    inq[v] = true;
+</span><span style="color:#008000">  }
+</span><span style="color:#008000">}
+</span><span style="color:#008000">*/</span>
   
-<span style="color:#fff;font-weight:bold">void</span> bfsTrave() {
-  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> u = <span style="color:#ff0;font-weight:bold">0</span>; u &lt; n; u++) {
-    <span style="color:#fff;font-weight:bold">if</span>(inq[u] == <span style="color:#fff;font-weight:bold">false</span>)
+<span style="color:#2b91af">void</span> bfsTrave() {
+  <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> u = 0; u &lt; n; u++) {
+    <span style="color:#00f">if</span>(inq[u] == false)
       bfs(q);
   }
 }
-</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#007f7f">//带层数的
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">struct</span> node {
-  <span style="color:#fff;font-weight:bold">int</span> v;
-  <span style="color:#fff;font-weight:bold">int</span> layer;
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#008000">//带层数的
+</span><span style="color:#008000"></span><span style="color:#00f">struct</span> <span style="color:#2b91af">node</span> {
+  <span style="color:#2b91af">int</span> v;
+  <span style="color:#2b91af">int</span> layer;
 }
-next.layer = top.layer + <span style="color:#ff0;font-weight:bold">1</span>;
+next.layer = top.layer + 1;
 </code></pre></div><h2 id="最短路径">最短路径</h2>
 <ul>
 <li>
@@ -429,42 +429,42 @@ next.layer = top.layer + <span style="color:#ff0;font-weight:bold">1</span>;
 </li>
 </ul>
 <h4 id="dijkstra算法">Dijkstra算法</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">Dijkstra() {
-  <span style="color:#f00">初始化</span>;
-  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#f00">循环</span>n次) {
-    u = <span style="color:#f00">使</span>dis[u]<span style="color:#f00">最小的还未被访问的顶点的编号</span>;
-    <span style="color:#f00">记</span>u为确定值;
-    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#f00">从</span>u出发能到达的所有顶点v){
-      <span style="color:#fff;font-weight:bold">if</span>(v未被访问 &amp;&amp; <span style="color:#f00">以</span>u为中介点使s到顶点v的最短距离更优)
-        <span style="color:#f00">优化</span>dis[v];
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">Dijkstra() {
+  <span style="">初始化</span>;
+  <span style="color:#00f">for</span>(<span style="">循环</span>n次) {
+    u = <span style="">使</span>dis[u]<span style="">最小的还未被访问的顶点的编号</span>;
+    <span style="">记</span>u为确定值;
+    <span style="color:#00f">for</span>(<span style="">从</span>u出发能到达的所有顶点v){
+      <span style="color:#00f">if</span>(v未被访问 &amp;&amp; <span style="">以</span>u为中介点使s到顶点v的最短距离更优)
+        <span style="">优化</span>dis[v];
     }
   }
 }
-</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#007f7f">//邻接矩阵
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">int</span> n, e[maxv][maxv];
-<span style="color:#fff;font-weight:bold">int</span> dis[maxv], pre[maxv];<span style="color:#007f7f">// pre用来标注当前结点的前一个结点
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">bool</span> vis[maxv] = {<span style="color:#fff;font-weight:bold">false</span>};
-<span style="color:#fff;font-weight:bold">void</span> Dijkstra(<span style="color:#fff;font-weight:bold">int</span> s) {
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#008000">//邻接矩阵
+</span><span style="color:#008000"></span><span style="color:#2b91af">int</span> n, e[maxv][maxv];
+<span style="color:#2b91af">int</span> dis[maxv], pre[maxv];<span style="color:#008000">// pre用来标注当前结点的前一个结点
+</span><span style="color:#008000"></span><span style="color:#2b91af">bool</span> vis[maxv] = {false};
+<span style="color:#2b91af">void</span> Dijkstra(<span style="color:#2b91af">int</span> s) {
   fill(dis, dis + maxv, inf);
-  dis[s] = <span style="color:#ff0;font-weight:bold">0</span>;
-  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; n; i++) pre[i] = i; <span style="color:#007f7f">//初始状态设每个点的前驱为自身
-</span><span style="color:#007f7f"></span>  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; n; i++) {
-    <span style="color:#fff;font-weight:bold">int</span> u = -<span style="color:#ff0;font-weight:bold">1</span>, minn = inf;
-    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> j = <span style="color:#ff0;font-weight:bold">0</span>; j &lt; n; j++) {
-      <span style="color:#fff;font-weight:bold">if</span>(visit[j] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; dis[j] &lt; minn) {
+  dis[s] = 0;
+  <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = 0; i &lt; n; i++) pre[i] = i; <span style="color:#008000">//初始状态设每个点的前驱为自身
+</span><span style="color:#008000"></span>  <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = 0; i &lt; n; i++) {
+    <span style="color:#2b91af">int</span> u = -1, minn = inf;
+    <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> j = 0; j &lt; n; j++) {
+      <span style="color:#00f">if</span>(visit[j] == false &amp;&amp; dis[j] &lt; minn) {
         u = j;
         minn = dis[j];
       }
     }
         
         
-    <span style="color:#fff;font-weight:bold">if</span>(u == -<span style="color:#ff0;font-weight:bold">1</span>) <span style="color:#fff;font-weight:bold">return</span>;
-    visit[u] = <span style="color:#fff;font-weight:bold">true</span>;
-    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> v = <span style="color:#ff0;font-weight:bold">0</span>; v &lt; n; v++) {
-      <span style="color:#fff;font-weight:bold">if</span>(visit[v] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; e[u][v] != inf &amp;&amp; dis[u] + e[u][v] &lt; dis[v]) {
+    <span style="color:#00f">if</span>(u == -1) <span style="color:#00f">return</span>;
+    visit[u] = true;
+    <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> v = 0; v &lt; n; v++) {
+      <span style="color:#00f">if</span>(visit[v] == false &amp;&amp; e[u][v] != inf &amp;&amp; dis[u] + e[u][v] &lt; dis[v]) {
         dis[v] = dis[u] + e[u][v];
-        pre[v] = u; <span style="color:#007f7f">// pre用来标注当前结点的前一个结点
-</span><span style="color:#007f7f"></span>      }
+        pre[v] = u; <span style="color:#008000">// pre用来标注当前结点的前一个结点
+</span><span style="color:#008000"></span>      }
   }
   }
 </code></pre></div></li>
@@ -505,24 +505,24 @@ void Dijkstra(int s) {
   }
   }
 }
-</code></pre><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#fff;font-weight:bold">void</span> dfs(<span style="color:#fff;font-weight:bold">int</span> s, <span style="color:#fff;font-weight:bold">int</span> v) {
-  <span style="color:#fff;font-weight:bold">if</span>(v == s) {
-    printf(<span style="color:#0ff;font-weight:bold">&#34;%d</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#34;</span>, s);
-    <span style="color:#fff;font-weight:bold">return</span> ;
+</code></pre><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#2b91af">void</span> dfs(<span style="color:#2b91af">int</span> s, <span style="color:#2b91af">int</span> v) {
+  <span style="color:#00f">if</span>(v == s) {
+    printf(<span style="color:#a31515">&#34;%d</span><span style="color:#a31515">\n</span><span style="color:#a31515">&#34;</span>, s);
+    <span style="color:#00f">return</span> ;
   }
 dfs(s, pre[v]);
-  printf(<span style="color:#0ff;font-weight:bold">&#34;%d</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#34;</span>, v);
+  printf(<span style="color:#a31515">&#34;%d</span><span style="color:#a31515">\n</span><span style="color:#a31515">&#34;</span>, v);
 }
 </code></pre></div><h5 id="三种附加考法第一标尺是距离如果距离相等的时候新增第二标尺">三种附加考法：第一标尺是距离，如果距离相等的时候，新增第二标尺</h5>
 <ul>
 <li>新增边权（第二标尺），要求在最短路径有多条时要求路径上的花费之和最小</li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> v = <span style="color:#ff0;font-weight:bold">0</span>; v &lt; n; v++) { <span style="color:#007f7f">//重写v的for循环
-</span><span style="color:#007f7f"></span>  <span style="color:#fff;font-weight:bold">if</span>(visit[v] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; e[u][v] != inf) {
-    <span style="color:#fff;font-weight:bold">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> v = 0; v &lt; n; v++) { <span style="color:#008000">//重写v的for循环
+</span><span style="color:#008000"></span>  <span style="color:#00f">if</span>(visit[v] == false &amp;&amp; e[u][v] != inf) {
+    <span style="color:#00f">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
       dis[v] = dis[u] + e[u][v];
       c[v] = c[u] + cost[u][v];
-    }<span style="color:#fff;font-weight:bold">else</span> if(dis[u] + e[u][v] == dis[v] &amp;&amp; c[u] + cost[u][v] &lt; c[v]) {
+    }<span style="color:#00f">else</span> if(dis[u] + e[u][v] == dis[v] &amp;&amp; c[u] + cost[u][v] &lt; c[v]) {
       c[v] = c[u] + cost[u][v];
     }
   }
@@ -530,12 +530,12 @@ dfs(s, pre[v]);
 </code></pre></div><ul>
 <li>给定每个点的点权（第二标尺），要求在最短路径上有多条时要求路径上的点权之和最大</li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> v = <span style="color:#ff0;font-weight:bold">0</span>; v &lt; n; v++) {
-  <span style="color:#fff;font-weight:bold">if</span>(visit[v] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; e[u][v] != inf) {
-    <span style="color:#fff;font-weight:bold">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> v = 0; v &lt; n; v++) {
+  <span style="color:#00f">if</span>(visit[v] == false &amp;&amp; e[u][v] != inf) {
+    <span style="color:#00f">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
       dis[v] = dis[u] + e[u][v];
       w[v] = w[u] + weight[v];
-    }<span style="color:#fff;font-weight:bold">else</span> if(dis[u] + e[u][v] == dis[v] &amp;&amp; w[u] + weight[v] &gt; w[v]) {
+    }<span style="color:#00f">else</span> if(dis[u] + e[u][v] == dis[v] &amp;&amp; w[u] + weight[v] &gt; w[v]) {
       w[v] = w[u] + weight[v];
     }
   }
@@ -546,12 +546,12 @@ dfs(s, pre[v]);
 <p>增加一个数组num[]，num[s] = 1，其余num[u] = 0，表示从起点s到达顶点u的最短路径的条数为num[u]</p>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> v = <span style="color:#ff0;font-weight:bold">0</span>; v &lt; n; v++) {
-  <span style="color:#fff;font-weight:bold">if</span>(visit[v] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; e[u][v] != inf) {
-    <span style="color:#fff;font-weight:bold">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> v = 0; v &lt; n; v++) {
+  <span style="color:#00f">if</span>(visit[v] == false &amp;&amp; e[u][v] != inf) {
+    <span style="color:#00f">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
       dis[v] = dis[u] + e[u][v];
       num[v] = num[u];
-    }<span style="color:#fff;font-weight:bold">else</span> if(dis[u] + e[u][v] == dis[v]) {
+    }<span style="color:#00f">else</span> if(dis[u] + e[u][v] == dis[v]) {
     num[v] = num[v] + num[u];
     }
   }
@@ -559,16 +559,16 @@ dfs(s, pre[v]);
 </code></pre></div><ul>
 <li>例子：比如说又要路径最短，又要点权权值最大，而且还要输出个数，而且还要输出路径</li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> v = <span style="color:#ff0;font-weight:bold">0</span>; v &lt; n; v++) {
-  <span style="color:#fff;font-weight:bold">if</span>(visit[v] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; e[u][v] != inf) {
-    <span style="color:#fff;font-weight:bold">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> v = 0; v &lt; n; v++) {
+  <span style="color:#00f">if</span>(visit[v] == false &amp;&amp; e[u][v] != inf) {
+    <span style="color:#00f">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
       dis[v] = dis[u] + e[u][v];
       num[v] = num[u];
       w[v] = w[u] + weight[v];
       pre[v] = u;
-    } <span style="color:#fff;font-weight:bold">else</span> if(dis[u] + e[u][v] == dis[v]) {
+    } <span style="color:#00f">else</span> if(dis[u] + e[u][v] == dis[v]) {
       num[v] = num[v] + num[u];
-      <span style="color:#fff;font-weight:bold">if</span>(w[u] + weight[v] &gt; w[v]) {
+      <span style="color:#00f">if</span>(w[u] + weight[v] &gt; w[v]) {
         w[v] = w[u] + weight[v];
         pre[v] = u;
       }
@@ -576,44 +576,44 @@ dfs(s, pre[v]);
   }
 }
 
-<span style="color:#fff;font-weight:bold">void</span> printPath(<span style="color:#fff;font-weight:bold">int</span> v) {
-    <span style="color:#fff;font-weight:bold">if</span>(v == s) {
-        printf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>, v);
-        <span style="color:#fff;font-weight:bold">return</span> ;
+<span style="color:#2b91af">void</span> printPath(<span style="color:#2b91af">int</span> v) {
+    <span style="color:#00f">if</span>(v == s) {
+        printf(<span style="color:#a31515">&#34;%d&#34;</span>, v);
+        <span style="color:#00f">return</span> ;
     }
     printPath(pre[v]);
-    printf(<span style="color:#0ff;font-weight:bold">&#34;%d &#34;</span>, v);
+    printf(<span style="color:#a31515">&#34;%d &#34;</span>, v);
 }
 </code></pre></div><ul>
 <li>of course, 可以不用这么麻烦，用Dijkstra求最短路径和pre数组，然后用深度优先遍历来获取想知道的一切，包括点权最大，边权最大，路径个数，路径</li>
 <li>因为可能有多条路径，所以Dijkstra部分的pre数组使用<code>vector pre[maxv];</code></li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#007f7f">//Dijkstra部分
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#008000">//Dijkstra部分
+</span><span style="color:#008000"></span><span style="color:#00f">if</span>(dis[u] + e[u][v] &lt; dis[v]) {
   dis[v] = dis[u] + e[u][v];
   pre[v].clear();
   pre[v].push_back(u);
-} <span style="color:#fff;font-weight:bold">else</span> if(dis[i] + e[u] == dis[v]) {
+} <span style="color:#00f">else</span> if(dis[i] + e[u] == dis[v]) {
   pre[v].push_back(u);
 }
 </code></pre></div><ul>
 <li>既然已经求得pre数组，就知道了所有的最短路径，然后要做的就是用dfs遍历所有最短路径，找出一条使第二标尺最优的路径</li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#fff;font-weight:bold">int</span> optvalue;
-vector&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; pre[maxv];
-vector&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; path, temppath;
-<span style="color:#fff;font-weight:bold">void</span> dfs(<span style="color:#fff;font-weight:bold">int</span> v) { <span style="color:#007f7f">// v为当前访问结点
-</span><span style="color:#007f7f"></span>  temppath.push_back(v);
-  <span style="color:#fff;font-weight:bold">if</span>(v == start) {
-    <span style="color:#fff;font-weight:bold">int</span> value = <span style="color:#f00">路径</span>temppath上的value值;
-    <span style="color:#fff;font-weight:bold">if</span>(value <span style="color:#f00">优于</span> optvalue) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#2b91af">int</span> optvalue;
+vector&lt;<span style="color:#2b91af">int</span>&gt; pre[maxv];
+vector&lt;<span style="color:#2b91af">int</span>&gt; path, temppath;
+<span style="color:#2b91af">void</span> dfs(<span style="color:#2b91af">int</span> v) { <span style="color:#008000">// v为当前访问结点
+</span><span style="color:#008000"></span>  temppath.push_back(v);
+  <span style="color:#00f">if</span>(v == start) {
+    <span style="color:#2b91af">int</span> value = <span style="">路径</span>temppath上的value值;
+    <span style="color:#00f">if</span>(value <span style="">优于</span> optvalue) {
       optvalue = value;
       path = temppath;
     }
     temppath.pop_back();
-    <span style="color:#fff;font-weight:bold">return</span> ;
+    <span style="color:#00f">return</span> ;
   }
-  <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; pre[v].size(); i++)
+  <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = 0; i &lt; pre[v].size(); i++)
   dfs(pre[v][i]);
   temppath.pop_back();
 }
@@ -626,96 +626,96 @@ vector&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; path, temppat
 </li>
 <li>计算当前temppath边权或者点权之和的代码：</li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#007f7f">// 边权之和
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">int</span> value = <span style="color:#ff0;font-weight:bold">0</span>;
-<span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = tempptah.size() - <span style="color:#ff0;font-weight:bold">1</span>; i &gt; <span style="color:#ff0;font-weight:bold">0</span>; i--) {
-  <span style="color:#fff;font-weight:bold">int</span> id = temppath[i], idnext = temppath[i - <span style="color:#ff0;font-weight:bold">1</span>];
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#008000">// 边权之和
+</span><span style="color:#008000"></span><span style="color:#2b91af">int</span> value = 0;
+<span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = tempptah.size() - 1; i &gt; 0; i--) {
+  <span style="color:#2b91af">int</span> id = temppath[i], idnext = temppath[i - 1];
   value += v[id][idnext];
 }
-<span style="color:#007f7f">// 点权之和
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">int</span> value = <span style="color:#ff0;font-weight:bold">0</span>;
-<span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = temppath.size(); i &gt;= <span style="color:#ff0;font-weight:bold">0</span>; i--) {
-  <span style="color:#fff;font-weight:bold">int</span> id = temppath[i];
+<span style="color:#008000">// 点权之和
+</span><span style="color:#008000"></span><span style="color:#2b91af">int</span> value = 0;
+<span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = temppath.size(); i &gt;= 0; i--) {
+  <span style="color:#2b91af">int</span> id = temppath[i];
   value += w[id];
 }
 </code></pre></div><ul>
 <li>计算路径直接在Dijkstra部分写就可以</li>
 <li>例子：计算最短距离的路径和最小花费</li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;cstdio&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;algorithm&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;vector&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold"></span><span style="color:#fff;font-weight:bold">using</span> <span style="color:#fff;font-weight:bold">namespace</span> std;
-<span style="color:#fff;font-weight:bold">int</span> n, m, s, d;
-<span style="color:#fff;font-weight:bold">int</span> e[<span style="color:#ff0;font-weight:bold">510</span>][<span style="color:#ff0;font-weight:bold">510</span>], dis[<span style="color:#ff0;font-weight:bold">510</span>], cost[<span style="color:#ff0;font-weight:bold">510</span>][<span style="color:#ff0;font-weight:bold">510</span>];
-vector&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; pre[<span style="color:#ff0;font-weight:bold">510</span>];
-<span style="color:#fff;font-weight:bold">bool</span> visit[<span style="color:#ff0;font-weight:bold">510</span>];
-<span style="color:#fff;font-weight:bold">const</span> <span style="color:#fff;font-weight:bold">int</span> inf = <span style="color:#ff0;font-weight:bold">99999999</span>;
-vector&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; path, temppath;
-<span style="color:#fff;font-weight:bold">int</span> mincost = inf;
-<span style="color:#fff;font-weight:bold">void</span> dfs(<span style="color:#fff;font-weight:bold">int</span> v) {
-    <span style="color:#fff;font-weight:bold">if</span>(v == s) {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#00f">#include</span> <span style="color:#00f">&lt;cstdio&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;algorithm&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;vector&gt;</span><span style="color:#00f">
+</span><span style="color:#00f"></span><span style="color:#00f">using</span> <span style="color:#00f">namespace</span> std;
+<span style="color:#2b91af">int</span> n, m, s, d;
+<span style="color:#2b91af">int</span> e[510][510], dis[510], cost[510][510];
+vector&lt;<span style="color:#2b91af">int</span>&gt; pre[510];
+<span style="color:#2b91af">bool</span> visit[510];
+<span style="color:#00f">const</span> <span style="color:#2b91af">int</span> inf = 99999999;
+vector&lt;<span style="color:#2b91af">int</span>&gt; path, temppath;
+<span style="color:#2b91af">int</span> mincost = inf;
+<span style="color:#2b91af">void</span> dfs(<span style="color:#2b91af">int</span> v) {
+    <span style="color:#00f">if</span>(v == s) {
         temppath.push_back(v);
-        <span style="color:#fff;font-weight:bold">int</span> tempcost = <span style="color:#ff0;font-weight:bold">0</span>;
-        <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = temppath.size() - <span style="color:#ff0;font-weight:bold">1</span>; i &gt; <span style="color:#ff0;font-weight:bold">0</span>; i--) {
-            <span style="color:#fff;font-weight:bold">int</span> id = temppath[i], nextid = temppath[i-<span style="color:#ff0;font-weight:bold">1</span>];
+        <span style="color:#2b91af">int</span> tempcost = 0;
+        <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = temppath.size() - 1; i &gt; 0; i--) {
+            <span style="color:#2b91af">int</span> id = temppath[i], nextid = temppath[i-1];
             tempcost += cost[id][nextid];
         }
-        <span style="color:#fff;font-weight:bold">if</span>(tempcost &lt; mincost) {
+        <span style="color:#00f">if</span>(tempcost &lt; mincost) {
             mincost = tempcost;
             path = temppath;
         }
         temppath.pop_back();
-        <span style="color:#fff;font-weight:bold">return</span> ;
+        <span style="color:#00f">return</span> ;
     }
     temppath.push_back(v);
-    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; pre[v].size(); i++)
+    <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = 0; i &lt; pre[v].size(); i++)
         dfs(pre[v][i]);
     temppath.pop_back();
 }
-<span style="color:#fff;font-weight:bold">int</span> main() {
-    fill(e[<span style="color:#ff0;font-weight:bold">0</span>], e[<span style="color:#ff0;font-weight:bold">0</span>] + <span style="color:#ff0;font-weight:bold">510</span> * <span style="color:#ff0;font-weight:bold">510</span>, inf);
-    fill(dis, dis + <span style="color:#ff0;font-weight:bold">510</span>, inf);
-    scanf(<span style="color:#0ff;font-weight:bold">&#34;%d%d%d%d&#34;</span>, &amp;n, &amp;m, &amp;s, &amp;d);
-    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; m; i++) {
-        <span style="color:#fff;font-weight:bold">int</span> a, b;
-        scanf(<span style="color:#0ff;font-weight:bold">&#34;%d%d&#34;</span>, &amp;a, &amp;b);
-        scanf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>, &amp;e[a][b]);
+<span style="color:#2b91af">int</span> main() {
+    fill(e[0], e[0] + 510 * 510, inf);
+    fill(dis, dis + 510, inf);
+    scanf(<span style="color:#a31515">&#34;%d%d%d%d&#34;</span>, &amp;n, &amp;m, &amp;s, &amp;d);
+    <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = 0; i &lt; m; i++) {
+        <span style="color:#2b91af">int</span> a, b;
+        scanf(<span style="color:#a31515">&#34;%d%d&#34;</span>, &amp;a, &amp;b);
+        scanf(<span style="color:#a31515">&#34;%d&#34;</span>, &amp;e[a][b]);
         e[b][a] = e[a][b];
-        scanf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>, &amp;cost[a][b]);
+        scanf(<span style="color:#a31515">&#34;%d&#34;</span>, &amp;cost[a][b]);
         cost[b][a] = cost[a][b];
     }
     pre[s].push_back(s);
-    dis[s] = <span style="color:#ff0;font-weight:bold">0</span>;
-    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; n; i++) {
-        <span style="color:#fff;font-weight:bold">int</span> u = -<span style="color:#ff0;font-weight:bold">1</span>, minn = inf;
-        <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> j = <span style="color:#ff0;font-weight:bold">0</span>; j &lt; n; j++) {
-            <span style="color:#fff;font-weight:bold">if</span>(visit[j] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; dis[j] &lt; minn) {
+    dis[s] = 0;
+    <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = 0; i &lt; n; i++) {
+        <span style="color:#2b91af">int</span> u = -1, minn = inf;
+        <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> j = 0; j &lt; n; j++) {
+            <span style="color:#00f">if</span>(visit[j] == false &amp;&amp; dis[j] &lt; minn) {
                 u = j;
                 minn = j;
             }
         }
-        <span style="color:#fff;font-weight:bold">if</span>(u == -<span style="color:#ff0;font-weight:bold">1</span>) <span style="color:#fff;font-weight:bold">break</span>;
-        visit[u] = <span style="color:#fff;font-weight:bold">true</span>;
-        <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> v = <span style="color:#ff0;font-weight:bold">0</span>; v &lt; n; v++) {
-            <span style="color:#fff;font-weight:bold">if</span>(visit[v] == <span style="color:#fff;font-weight:bold">false</span> &amp;&amp; e[u][v] != inf) {
-                <span style="color:#fff;font-weight:bold">if</span>(dis[v] &gt; dis[u] + e[u][v]) {
+        <span style="color:#00f">if</span>(u == -1) <span style="color:#00f">break</span>;
+        visit[u] = true;
+        <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> v = 0; v &lt; n; v++) {
+            <span style="color:#00f">if</span>(visit[v] == false &amp;&amp; e[u][v] != inf) {
+                <span style="color:#00f">if</span>(dis[v] &gt; dis[u] + e[u][v]) {
                     dis[v] = dis[u] + e[u][v];
                     pre[v].clear();
                     pre[v].push_back(u);
-                } <span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">if</span>(dis[v] == dis[u] + e[u][v]) {
+                } <span style="color:#00f">else</span> <span style="color:#00f">if</span>(dis[v] == dis[u] + e[u][v]) {
                     pre[v].push_back(u);
                 }
             }
         }
     }
   dfs(d);
-    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = path.size() - <span style="color:#ff0;font-weight:bold">1</span>; i &gt;= <span style="color:#ff0;font-weight:bold">0</span>; i--)
-        printf(<span style="color:#0ff;font-weight:bold">&#34;%d &#34;</span>, path[i]);
-    printf(<span style="color:#0ff;font-weight:bold">&#34;%d %d&#34;</span>, dis[d], mincost);
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+    <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = path.size() - 1; i &gt;= 0; i--)
+        printf(<span style="color:#a31515">&#34;%d &#34;</span>, path[i]);
+    printf(<span style="color:#a31515">&#34;%d %d&#34;</span>, dis[d], mincost);
+    <span style="color:#00f">return</span> 0;
 }
-<span style="color:#007f7f">//注意路径path因为是从末端一直压入push_back到path里面的，所以要输出路径的时候倒着输出
+<span style="color:#008000">//注意路径path因为是从末端一直压入push_back到path里面的，所以要输出路径的时候倒着输出
 </span></code></pre></div><ul>
 <li>关于初始化：除了weight和cost（点权和边权）都要初始化，pre初始化为它自己本身，e和dis初始化为inf，visit因为开了全局变量，自动初始化为了false。在dijkstra循环开始之前，要把dis[start] = 0;</li>
 </ul>

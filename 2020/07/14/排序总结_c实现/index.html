@@ -302,377 +302,377 @@
 
         <div class="article-entry" itemprop="articleBody">
             <h3 id="快速排序">快速排序</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">//快速排序
-</span><span style="color:#007f7f"></span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdio.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#define N 8
-</span><span style="color:#0f0;font-weight:bold"></span>
-<span style="color:#007f7f">//左右搜索，将比枢轴大的元素移到后面，比枢轴小的移到前面，可以通过交替找的方法将那个枢轴空出来的位置充分利用起来，不交换而采取移动的方式
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">int</span> Partition(<span style="color:#fff;font-weight:bold">int</span> sqList[], <span style="color:#fff;font-weight:bold">int</span> low, <span style="color:#fff;font-weight:bold">int</span> high){
-	<span style="color:#fff;font-weight:bold">int</span> pivokey = sqList[low];
-	<span style="color:#fff;font-weight:bold">while</span>( low &lt; high ){
-		<span style="color:#fff;font-weight:bold">while</span> ( low &lt; high &amp;&amp; sqList[high] &gt;= pivokey ) high--;	<span style="color:#007f7f">//因为一直往前移动搜索比枢轴小的数字，如果搜到头都没找到，则会出现越界，所以一定要加上low &lt; high的条件不能少
-</span><span style="color:#007f7f"></span>		sqList[low] = sqList[high];
-		<span style="color:#fff;font-weight:bold">while</span> ( low &lt; high &amp;&amp; sqList[low] &lt;= pivokey ) low++;	
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">//快速排序
+</span><span style="color:#008000"></span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdio.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#define N 8
+</span><span style="color:#00f"></span>
+<span style="color:#008000">//左右搜索，将比枢轴大的元素移到后面，比枢轴小的移到前面，可以通过交替找的方法将那个枢轴空出来的位置充分利用起来，不交换而采取移动的方式
+</span><span style="color:#008000"></span><span style="color:#2b91af">int</span> Partition(<span style="color:#2b91af">int</span> sqList[], <span style="color:#2b91af">int</span> low, <span style="color:#2b91af">int</span> high){
+	<span style="color:#2b91af">int</span> pivokey = sqList[low];
+	<span style="color:#00f">while</span>( low &lt; high ){
+		<span style="color:#00f">while</span> ( low &lt; high &amp;&amp; sqList[high] &gt;= pivokey ) high--;	<span style="color:#008000">//因为一直往前移动搜索比枢轴小的数字，如果搜到头都没找到，则会出现越界，所以一定要加上low &lt; high的条件不能少
+</span><span style="color:#008000"></span>		sqList[low] = sqList[high];
+		<span style="color:#00f">while</span> ( low &lt; high &amp;&amp; sqList[low] &lt;= pivokey ) low++;	
 		sqList[high] = sqList[low];
 	}
-	<span style="color:#007f7f">/*最后枢轴返回位置的时候要考虑到，没执行while和执行了while的情况，执行了while就要找中间那个位置，发现high和low都行，但是若没执行while就必须low了，所以最后必须是low*/</span>
+	<span style="color:#008000">/*最后枢轴返回位置的时候要考虑到，没执行while和执行了while的情况，执行了while就要找中间那个位置，发现high和low都行，但是若没执行while就必须low了，所以最后必须是low*/</span>
 	sqList[low] = pivokey;
-	<span style="color:#fff;font-weight:bold">return</span> low;
+	<span style="color:#00f">return</span> low;
 }
 
-<span style="color:#007f7f">//每次分割开来左右递归
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> Qsort(<span style="color:#fff;font-weight:bold">int</span> sqList[], <span style="color:#fff;font-weight:bold">int</span> low, <span style="color:#fff;font-weight:bold">int</span> high){
-	<span style="color:#fff;font-weight:bold">int</span> pivoloc;
-	<span style="color:#fff;font-weight:bold">if</span>(low &lt; high){
+<span style="color:#008000">//每次分割开来左右递归
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> Qsort(<span style="color:#2b91af">int</span> sqList[], <span style="color:#2b91af">int</span> low, <span style="color:#2b91af">int</span> high){
+	<span style="color:#2b91af">int</span> pivoloc;
+	<span style="color:#00f">if</span>(low &lt; high){
 		pivoloc = Partition(sqList,low,high);
-		Qsort(sqList, low, pivoloc - <span style="color:#ff0;font-weight:bold">1</span>);
-		Qsort(sqList, pivoloc + <span style="color:#ff0;font-weight:bold">1</span>,high);
+		Qsort(sqList, low, pivoloc - 1);
+		Qsort(sqList, pivoloc + 1,high);
 	}
 }
 
-<span style="color:#fff;font-weight:bold">void</span> printList(<span style="color:#fff;font-weight:bold">int</span> sqList[]){
-	<span style="color:#fff;font-weight:bold">int</span> i;
-	<span style="color:#fff;font-weight:bold">for</span> ( i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; N; ++i )
-		printf(<span style="color:#0ff;font-weight:bold">&#34;%d &#34;</span>,sqList[i] );
+<span style="color:#2b91af">void</span> printList(<span style="color:#2b91af">int</span> sqList[]){
+	<span style="color:#2b91af">int</span> i;
+	<span style="color:#00f">for</span> ( i = 0; i &lt; N; ++i )
+		printf(<span style="color:#a31515">&#34;%d &#34;</span>,sqList[i] );
 }
 
-<span style="color:#fff;font-weight:bold">int</span> main(<span style="color:#fff;font-weight:bold">int</span> argc, <span style="color:#fff;font-weight:bold">char</span> <span style="color:#fff;font-weight:bold">const</span> *argv[])
+<span style="color:#2b91af">int</span> main(<span style="color:#2b91af">int</span> argc, <span style="color:#2b91af">char</span> <span style="color:#00f">const</span> *argv[])
 {
-	<span style="color:#fff;font-weight:bold">int</span> i;
-	<span style="color:#fff;font-weight:bold">int</span> sqList[N];
-	printf(<span style="color:#0ff;font-weight:bold">&#34;请输入8个数字，以空格隔开：&#34;</span>);
-	<span style="color:#fff;font-weight:bold">for</span> (i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; N; i++)
-		scanf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>,&amp;sqList[i]);
-	Qsort(sqList,<span style="color:#ff0;font-weight:bold">0</span>,N-<span style="color:#ff0;font-weight:bold">1</span>);
+	<span style="color:#2b91af">int</span> i;
+	<span style="color:#2b91af">int</span> sqList[N];
+	printf(<span style="color:#a31515">&#34;请输入8个数字，以空格隔开：&#34;</span>);
+	<span style="color:#00f">for</span> (i = 0; i &lt; N; i++)
+		scanf(<span style="color:#a31515">&#34;%d&#34;</span>,&amp;sqList[i]);
+	Qsort(sqList,0,N-1);
 	printList(sqList);
-	<span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+	<span style="color:#00f">return</span> 0;
 }
 
-<span style="color:#007f7f">/*
-</span><span style="color:#007f7f">example input:
-</span><span style="color:#007f7f">3 5 2 9 6 8 3 1
-</span><span style="color:#007f7f">
-</span><span style="color:#007f7f">*/</span>
+<span style="color:#008000">/*
+</span><span style="color:#008000">example input:
+</span><span style="color:#008000">3 5 2 9 6 8 3 1
+</span><span style="color:#008000">
+</span><span style="color:#008000">*/</span>
 </code></pre></div><h3 id="基数排序">基数排序</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">/* 基数排序
-</span><span style="color:#007f7f"> * 基数排序是针对非负整数或是非正整数的序列进行的排序
-</span><span style="color:#007f7f"> * 基数排序是先根据个位数进行排序，再根据十位数进行排序，再百位数……
-</span><span style="color:#007f7f"> * 基数排序的基本过程：
-</span><span style="color:#007f7f"> * 1.先找到最大的数有几位
-</span><span style="color:#007f7f"> * 2.根据个位数分到不同的桶子里去，按序倒出来，再跟据十位数分到不同的桶子里去，按序倒出来，再百位数……
-</span><span style="color:#007f7f"> * 3.最后一个分完之后从桶子里倒出来的时候，排序就完成了
-</span><span style="color:#007f7f"> * 这边每次扫描要算桶子的数量，用数组来表示桶子的话就是二维数组，会导致很大一部分空间浪费（如果所有元素都集中到一个桶子的话）
-</span><span style="color:#007f7f"> * 所以实现该算法的一个很好的方法是使用链表
-</span><span style="color:#007f7f"> * 所以，整体读入数据到一个数组中，为了使之成为一个稳定的排序，且建立链表的时候采用头插法，所以先将读入的所有数据放到一个数组中，然后从数组尾部到头部头插法建立链表再执行排序
-</span><span style="color:#007f7f"> */</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">/* 基数排序
+</span><span style="color:#008000"> * 基数排序是针对非负整数或是非正整数的序列进行的排序
+</span><span style="color:#008000"> * 基数排序是先根据个位数进行排序，再根据十位数进行排序，再百位数……
+</span><span style="color:#008000"> * 基数排序的基本过程：
+</span><span style="color:#008000"> * 1.先找到最大的数有几位
+</span><span style="color:#008000"> * 2.根据个位数分到不同的桶子里去，按序倒出来，再跟据十位数分到不同的桶子里去，按序倒出来，再百位数……
+</span><span style="color:#008000"> * 3.最后一个分完之后从桶子里倒出来的时候，排序就完成了
+</span><span style="color:#008000"> * 这边每次扫描要算桶子的数量，用数组来表示桶子的话就是二维数组，会导致很大一部分空间浪费（如果所有元素都集中到一个桶子的话）
+</span><span style="color:#008000"> * 所以实现该算法的一个很好的方法是使用链表
+</span><span style="color:#008000"> * 所以，整体读入数据到一个数组中，为了使之成为一个稳定的排序，且建立链表的时候采用头插法，所以先将读入的所有数据放到一个数组中，然后从数组尾部到头部头插法建立链表再执行排序
+</span><span style="color:#008000"> */</span>
 
-<span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdio.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdlib.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;math.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold"></span>
-<span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">enum</span> {<span style="color:#fff;font-weight:bold">true</span>,<span style="color:#fff;font-weight:bold">false</span>} <span style="color:#fff;font-weight:bold">bool</span>;
-<span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">struct</span> node *node_pointer;
-<span style="color:#fff;font-weight:bold">struct</span> node{
-    <span style="color:#fff;font-weight:bold">int</span> data;
+<span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdio.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdlib.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;math.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f"></span>
+<span style="color:#00f">typedef</span> <span style="color:#00f">enum</span> {true,false} <span style="color:#2b91af">bool</span>;
+<span style="color:#00f">typedef</span> <span style="color:#00f">struct</span> node *node_pointer;
+<span style="color:#00f">struct</span> node{
+    <span style="color:#2b91af">int</span> data;
     node_pointer next;
 };
 
-node_pointer listArr[<span style="color:#ff0;font-weight:bold">10</span>];   <span style="color:#007f7f">//from 0 to 9
-</span><span style="color:#007f7f"></span>
-<span style="color:#fff;font-weight:bold">void</span> insertAtTail(node_pointer list, node_pointer p){
+node_pointer listArr[10];   <span style="color:#008000">//from 0 to 9
+</span><span style="color:#008000"></span>
+<span style="color:#2b91af">void</span> insertAtTail(node_pointer list, node_pointer p){
     node_pointer q = list;
-    <span style="color:#fff;font-weight:bold">while</span>(q-&gt;next != <span style="color:#fff;font-weight:bold">NULL</span>) q = q-&gt;next;
+    <span style="color:#00f">while</span>(q-&gt;next != NULL) q = q-&gt;next;
     q-&gt;next = p;
 }
 
-<span style="color:#007f7f">/*drop into the specific bucket found through num % 10^(digit)*/</span>
-<span style="color:#fff;font-weight:bold">void</span> distribute(node_pointer masterlist, <span style="color:#fff;font-weight:bold">int</span> digit){
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt;= <span style="color:#ff0;font-weight:bold">9</span>; ++i){
-        listArr[i]-&gt;next = <span style="color:#fff;font-weight:bold">NULL</span>;
+<span style="color:#008000">/*drop into the specific bucket found through num % 10^(digit)*/</span>
+<span style="color:#2b91af">void</span> distribute(node_pointer masterlist, <span style="color:#2b91af">int</span> digit){
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt;= 9; ++i){
+        listArr[i]-&gt;next = NULL;
     }
     node_pointer p = masterlist-&gt;next;
     node_pointer q;
-    <span style="color:#fff;font-weight:bold">while</span>(p != <span style="color:#fff;font-weight:bold">NULL</span>){
+    <span style="color:#00f">while</span>(p != NULL){
         q = p;
         p = p-&gt;next;
-        insertAtTail(listArr[(<span style="color:#fff;font-weight:bold">int</span>)(floor(q-&gt;data / pow(<span style="color:#ff0;font-weight:bold">10</span>, digit))) % <span style="color:#ff0;font-weight:bold">10</span>], q);
-        q-&gt;next = <span style="color:#fff;font-weight:bold">NULL</span>;
+        insertAtTail(listArr[(<span style="color:#2b91af">int</span>)(floor(q-&gt;data / pow(10, digit))) % 10], q);
+        q-&gt;next = NULL;
     }
 }
 
-<span style="color:#fff;font-weight:bold">void</span> coalesce(node_pointer masterlist){
-    masterlist-&gt;next = <span style="color:#fff;font-weight:bold">NULL</span>;    <span style="color:#007f7f">//clear the masterlist isn&#39;t necessary
-</span><span style="color:#007f7f"></span>    node_pointer p = masterlist;
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt;= <span style="color:#ff0;font-weight:bold">9</span> ; ++i){
+<span style="color:#2b91af">void</span> coalesce(node_pointer masterlist){
+    masterlist-&gt;next = NULL;    <span style="color:#008000">//clear the masterlist isn&#39;t necessary
+</span><span style="color:#008000"></span>    node_pointer p = masterlist;
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt;= 9 ; ++i){
         p-&gt;next = listArr[i]-&gt;next;
-        <span style="color:#fff;font-weight:bold">while</span>(p-&gt;next != <span style="color:#fff;font-weight:bold">NULL</span>) p = p-&gt;next;
+        <span style="color:#00f">while</span>(p-&gt;next != NULL) p = p-&gt;next;
     }
 }
 
-<span style="color:#fff;font-weight:bold">void</span> radixSort(node_pointer masterlist, <span style="color:#fff;font-weight:bold">int</span> numdigits){
-    <span style="color:#fff;font-weight:bold">int</span> i;
-    <span style="color:#fff;font-weight:bold">for</span> (i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; numdigits; ++i){
-        distribute(masterlist, i);  <span style="color:#007f7f">//drop into bucket
-</span><span style="color:#007f7f"></span>        coalesce(masterlist);   <span style="color:#007f7f">//drop out from bucket
-</span><span style="color:#007f7f"></span>    }
+<span style="color:#2b91af">void</span> radixSort(node_pointer masterlist, <span style="color:#2b91af">int</span> numdigits){
+    <span style="color:#2b91af">int</span> i;
+    <span style="color:#00f">for</span> (i = 0; i &lt; numdigits; ++i){
+        distribute(masterlist, i);  <span style="color:#008000">//drop into bucket
+</span><span style="color:#008000"></span>        coalesce(masterlist);   <span style="color:#008000">//drop out from bucket
+</span><span style="color:#008000"></span>    }
 }
 
-<span style="color:#fff;font-weight:bold">void</span> insertAtFirst(node_pointer list, <span style="color:#fff;font-weight:bold">int</span> X){  <span style="color:#007f7f">//if there is a list with head, then we could not return because it operate the nodes after head node
-</span><span style="color:#007f7f"></span>    node_pointer p = <span style="color:#fff;font-weight:bold">NULL</span>;  <span style="color:#007f7f">//even use list doesn&#39;t matter, I should keep a good habit
-</span><span style="color:#007f7f"></span>    p = malloc(<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">struct</span> node));
+<span style="color:#2b91af">void</span> insertAtFirst(node_pointer list, <span style="color:#2b91af">int</span> X){  <span style="color:#008000">//if there is a list with head, then we could not return because it operate the nodes after head node
+</span><span style="color:#008000"></span>    node_pointer p = NULL;  <span style="color:#008000">//even use list doesn&#39;t matter, I should keep a good habit
+</span><span style="color:#008000"></span>    p = malloc(<span style="color:#00f">sizeof</span>(<span style="color:#00f">struct</span> node));
     p-&gt;data = X;
     p-&gt;next = list-&gt;next;
     list-&gt;next = p;
 }
 
-node_pointer initList(<span style="color:#fff;font-weight:bold">int</span> arr[], <span style="color:#fff;font-weight:bold">int</span> Capacity){
-    node_pointer head = malloc(<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">struct</span> node));<span style="color:#007f7f">//make a head node
-</span><span style="color:#007f7f"></span>    head-&gt;next = <span style="color:#fff;font-weight:bold">NULL</span>;
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = Capacity - <span style="color:#ff0;font-weight:bold">1</span>; i &gt;= <span style="color:#ff0;font-weight:bold">0</span>; --i){    <span style="color:#007f7f">//here easily make a bug, for the first element is the capcity - 1
-</span><span style="color:#007f7f"></span>        insertAtFirst(head, arr[i]);
+node_pointer initList(<span style="color:#2b91af">int</span> arr[], <span style="color:#2b91af">int</span> Capacity){
+    node_pointer head = malloc(<span style="color:#00f">sizeof</span>(<span style="color:#00f">struct</span> node));<span style="color:#008000">//make a head node
+</span><span style="color:#008000"></span>    head-&gt;next = NULL;
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = Capacity - 1; i &gt;= 0; --i){    <span style="color:#008000">//here easily make a bug, for the first element is the capcity - 1
+</span><span style="color:#008000"></span>        insertAtFirst(head, arr[i]);
     }
-    <span style="color:#fff;font-weight:bold">return</span> head;
+    <span style="color:#00f">return</span> head;
 }
 
-<span style="color:#fff;font-weight:bold">void</span> printList(node_pointer list){
+<span style="color:#2b91af">void</span> printList(node_pointer list){
     node_pointer p = list-&gt;next;
-    <span style="color:#fff;font-weight:bold">while</span>( p != <span style="color:#fff;font-weight:bold">NULL</span> &amp;&amp; p-&gt;next != <span style="color:#fff;font-weight:bold">NULL</span> ){
-        printf(<span style="color:#0ff;font-weight:bold">&#34;%d &#34;</span>, p-&gt;data);
+    <span style="color:#00f">while</span>( p != NULL &amp;&amp; p-&gt;next != NULL ){
+        printf(<span style="color:#a31515">&#34;%d &#34;</span>, p-&gt;data);
         p = p-&gt;next;
     }
-    <span style="color:#fff;font-weight:bold">if</span> (p != <span style="color:#fff;font-weight:bold">NULL</span>) printf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>, p-&gt;data); <span style="color:#007f7f">//there won&#39;t a space at the end of line
-</span><span style="color:#007f7f"></span>    printf(<span style="color:#0ff;font-weight:bold">&#34;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#34;</span>); <span style="color:#007f7f">//if it&#39;s an empty list, an empty line could represent it
-</span><span style="color:#007f7f"></span>}
+    <span style="color:#00f">if</span> (p != NULL) printf(<span style="color:#a31515">&#34;%d&#34;</span>, p-&gt;data); <span style="color:#008000">//there won&#39;t a space at the end of line
+</span><span style="color:#008000"></span>    printf(<span style="color:#a31515">&#34;</span><span style="color:#a31515">\n</span><span style="color:#a31515">&#34;</span>); <span style="color:#008000">//if it&#39;s an empty list, an empty line could represent it
+</span><span style="color:#008000"></span>}
 
-<span style="color:#fff;font-weight:bold">int</span> main(<span style="color:#fff;font-weight:bold">int</span> argc, <span style="color:#fff;font-weight:bold">char</span> <span style="color:#fff;font-weight:bold">const</span> *argv[]){
-    <span style="color:#fff;font-weight:bold">int</span> N,numdigits;    <span style="color:#007f7f">//N:capcity of masterlist, numdigits:the num of digits of the maxium of the list
-</span><span style="color:#007f7f"></span>    
-    <span style="color:#007f7f">//init the listArr
-</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">for</span>(<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt;= <span style="color:#ff0;font-weight:bold">9</span>; ++i){
-        listArr[i] = malloc(<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">struct</span> node));
-        listArr[i]-&gt;next = <span style="color:#fff;font-weight:bold">NULL</span>;
+<span style="color:#2b91af">int</span> main(<span style="color:#2b91af">int</span> argc, <span style="color:#2b91af">char</span> <span style="color:#00f">const</span> *argv[]){
+    <span style="color:#2b91af">int</span> N,numdigits;    <span style="color:#008000">//N:capcity of masterlist, numdigits:the num of digits of the maxium of the list
+</span><span style="color:#008000"></span>    
+    <span style="color:#008000">//init the listArr
+</span><span style="color:#008000"></span>    <span style="color:#00f">for</span>(<span style="color:#2b91af">int</span> i = 0; i &lt;= 9; ++i){
+        listArr[i] = malloc(<span style="color:#00f">sizeof</span>(<span style="color:#00f">struct</span> node));
+        listArr[i]-&gt;next = NULL;
     }
 
-    scanf(<span style="color:#0ff;font-weight:bold">&#34;%d %d</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#34;</span>, &amp;N, &amp;numdigits);
-    <span style="color:#fff;font-weight:bold">const</span> <span style="color:#fff;font-weight:bold">int</span> Capacity = N;
-    <span style="color:#fff;font-weight:bold">int</span> arr[Capacity];
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; Capacity; ++i){
-        scanf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>, &amp;arr[i]);
+    scanf(<span style="color:#a31515">&#34;%d %d</span><span style="color:#a31515">\n</span><span style="color:#a31515">&#34;</span>, &amp;N, &amp;numdigits);
+    <span style="color:#00f">const</span> <span style="color:#2b91af">int</span> Capacity = N;
+    <span style="color:#2b91af">int</span> arr[Capacity];
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt; Capacity; ++i){
+        scanf(<span style="color:#a31515">&#34;%d&#34;</span>, &amp;arr[i]);
     }
     node_pointer masterlist = initList(arr, Capacity);
     radixSort(masterlist, numdigits);
     printList(masterlist);
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+    <span style="color:#00f">return</span> 0;
 }
-<span style="color:#007f7f">/*
-</span><span style="color:#007f7f">输入：
-</span><span style="color:#007f7f">第一行：排序序列元素数量 最大位数
-</span><span style="color:#007f7f">第二行：序列元素，以空格隔开
-</span><span style="color:#007f7f">
-</span><span style="color:#007f7f">sample input:
-</span><span style="color:#007f7f">
-</span><span style="color:#007f7f">10 4
-</span><span style="color:#007f7f">512 22 2018 901 2 134 22 448 1024 4
-</span><span style="color:#007f7f">
-</span><span style="color:#007f7f">*/</span>
+<span style="color:#008000">/*
+</span><span style="color:#008000">输入：
+</span><span style="color:#008000">第一行：排序序列元素数量 最大位数
+</span><span style="color:#008000">第二行：序列元素，以空格隔开
+</span><span style="color:#008000">
+</span><span style="color:#008000">sample input:
+</span><span style="color:#008000">
+</span><span style="color:#008000">10 4
+</span><span style="color:#008000">512 22 2018 901 2 134 22 448 1024 4
+</span><span style="color:#008000">
+</span><span style="color:#008000">*/</span>
 </code></pre></div><h3 id="堆排序">堆排序</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">/* 堆排序
-</span><span style="color:#007f7f"> * 堆排序是利用小顶堆大顶堆来进行排序，学好堆就很容易排序了
-</span><span style="color:#007f7f"> * 这里使用小顶堆进行排序，首先是创建并初始化堆，然后插入元素的方法建好一个堆，最后边删除边调整堆
-</span><span style="color:#007f7f"> * 另外，堆是不稳定的排序，末尾的元素到第一个元素后会打乱相对次序，举个反例就知道了
-</span><span style="color:#007f7f"> */</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">/* 堆排序
+</span><span style="color:#008000"> * 堆排序是利用小顶堆大顶堆来进行排序，学好堆就很容易排序了
+</span><span style="color:#008000"> * 这里使用小顶堆进行排序，首先是创建并初始化堆，然后插入元素的方法建好一个堆，最后边删除边调整堆
+</span><span style="color:#008000"> * 另外，堆是不稳定的排序，末尾的元素到第一个元素后会打乱相对次序，举个反例就知道了
+</span><span style="color:#008000"> */</span>
 
-<span style="color:#0f0;font-weight:bold">#include</span><span style="color:#0f0;font-weight:bold">&lt;stdio.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdlib.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#define MINIUM -10001 </span><span style="color:#007f7f">//哨兵元素
-</span><span style="color:#007f7f"></span>
-<span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">enum</span> {<span style="color:#fff;font-weight:bold">true</span>,<span style="color:#fff;font-weight:bold">false</span>} <span style="color:#fff;font-weight:bold">bool</span>;
-<span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">int</span> ElementType;
-<span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">struct</span> HeapStuct *MinHeap; 
-<span style="color:#fff;font-weight:bold">struct</span> HeapStuct{
-    ElementType *Elements;  <span style="color:#007f7f">//存储堆元素的数组的头指针
-</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">int</span> Size;               <span style="color:#007f7f">//堆的当前元素个数
-</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">int</span> Capacity;           <span style="color:#007f7f">//堆的最大容量
-</span><span style="color:#007f7f"></span>};
+<span style="color:#00f">#include</span><span style="color:#00f">&lt;stdio.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdlib.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#define MINIUM -10001 </span><span style="color:#008000">//哨兵元素
+</span><span style="color:#008000"></span>
+<span style="color:#00f">typedef</span> <span style="color:#00f">enum</span> {true,false} <span style="color:#2b91af">bool</span>;
+<span style="color:#00f">typedef</span> <span style="color:#2b91af">int</span> ElementType;
+<span style="color:#00f">typedef</span> <span style="color:#00f">struct</span> HeapStuct *MinHeap; 
+<span style="color:#00f">struct</span> HeapStuct{
+    ElementType *Elements;  <span style="color:#008000">//存储堆元素的数组的头指针
+</span><span style="color:#008000"></span>    <span style="color:#2b91af">int</span> Size;               <span style="color:#008000">//堆的当前元素个数
+</span><span style="color:#008000"></span>    <span style="color:#2b91af">int</span> Capacity;           <span style="color:#008000">//堆的最大容量
+</span><span style="color:#008000"></span>};
 
-MinHeap Create( <span style="color:#fff;font-weight:bold">int</span> MaxSize ){
-    MinHeap H = malloc(<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">struct</span> HeapStuct));
-    H-&gt;Elements = malloc(( <span style="color:#ff0;font-weight:bold">2</span> * MaxSize + <span style="color:#ff0;font-weight:bold">1</span> ) * <span style="color:#fff;font-weight:bold">sizeof</span>(ElementType));
-    H-&gt;Size = <span style="color:#ff0;font-weight:bold">0</span>;
+MinHeap Create( <span style="color:#2b91af">int</span> MaxSize ){
+    MinHeap H = malloc(<span style="color:#00f">sizeof</span>(<span style="color:#00f">struct</span> HeapStuct));
+    H-&gt;Elements = malloc(( 2 * MaxSize + 1 ) * <span style="color:#00f">sizeof</span>(ElementType));
+    H-&gt;Size = 0;
     H-&gt;Capacity = MaxSize;
-    H-&gt;Elements[<span style="color:#ff0;font-weight:bold">0</span>] = MINIUM;
-    <span style="color:#fff;font-weight:bold">return</span> H;
+    H-&gt;Elements[0] = MINIUM;
+    <span style="color:#00f">return</span> H;
 }
 
-<span style="color:#fff;font-weight:bold">bool</span> IsFull( MinHeap H ){
-    <span style="color:#fff;font-weight:bold">if</span> ( H-&gt;Size == H-&gt;Capacity)
-        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">true</span>;
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">false</span>;
+<span style="color:#2b91af">bool</span> IsFull( MinHeap H ){
+    <span style="color:#00f">if</span> ( H-&gt;Size == H-&gt;Capacity)
+        <span style="color:#00f">return</span> true;
+    <span style="color:#00f">return</span> false;
 } 
 
-<span style="color:#fff;font-weight:bold">bool</span> IsEmpty( MinHeap H ){
-    <span style="color:#fff;font-weight:bold">if</span> (H-&gt;Size == <span style="color:#ff0;font-weight:bold">0</span>)
-        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">true</span>;
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">false</span>;
+<span style="color:#2b91af">bool</span> IsEmpty( MinHeap H ){
+    <span style="color:#00f">if</span> (H-&gt;Size == 0)
+        <span style="color:#00f">return</span> true;
+    <span style="color:#00f">return</span> false;
 }
 
-<span style="color:#007f7f">//T(N) = O(logN)
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> Insert( MinHeap H, ElementType item ){
-    <span style="color:#fff;font-weight:bold">int</span> i;
-    <span style="color:#fff;font-weight:bold">if</span> (IsFull(H) == <span style="color:#fff;font-weight:bold">true</span>){
-        <span style="color:#007f7f">//printf(&#34;MinHeap is Full!\n&#34;);
-</span><span style="color:#007f7f"></span>        <span style="color:#fff;font-weight:bold">return</span>;
+<span style="color:#008000">//T(N) = O(logN)
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> Insert( MinHeap H, ElementType item ){
+    <span style="color:#2b91af">int</span> i;
+    <span style="color:#00f">if</span> (IsFull(H) == true){
+        <span style="color:#008000">//printf(&#34;MinHeap is Full!\n&#34;);
+</span><span style="color:#008000"></span>        <span style="color:#00f">return</span>;
     }
     i = ++H-&gt;Size;
-    <span style="color:#007f7f">/*由于这边存在ELements[0]为哨兵元素是最大值的上界，所以不用担心i一直往前与Elements[0]交换的情况,否则终止条件中应加i != 1*/</span>
-    <span style="color:#fff;font-weight:bold">for</span> ( ; H-&gt;Elements[i/<span style="color:#ff0;font-weight:bold">2</span>] &gt; item; i /= <span style="color:#ff0;font-weight:bold">2</span> ){  <span style="color:#007f7f">//经检验，不管末尾是左子树还是右子树，/2都没毛病
-</span><span style="color:#007f7f"></span>        H-&gt;Elements[i] = H-&gt;Elements[i/<span style="color:#ff0;font-weight:bold">2</span>];      <span style="color:#007f7f">//将小于item的往子树移动一位
-</span><span style="color:#007f7f"></span>    }
+    <span style="color:#008000">/*由于这边存在ELements[0]为哨兵元素是最大值的上界，所以不用担心i一直往前与Elements[0]交换的情况,否则终止条件中应加i != 1*/</span>
+    <span style="color:#00f">for</span> ( ; H-&gt;Elements[i/2] &gt; item; i /= 2 ){  <span style="color:#008000">//经检验，不管末尾是左子树还是右子树，/2都没毛病
+</span><span style="color:#008000"></span>        H-&gt;Elements[i] = H-&gt;Elements[i/2];      <span style="color:#008000">//将小于item的往子树移动一位
+</span><span style="color:#008000"></span>    }
     H-&gt;Elements[i] = item;
 }
 
-<span style="color:#007f7f">//堆中的删除相当于队列中的出队列，堆中是树根的最大值删除并返回，下面的子元素补上来
-</span><span style="color:#007f7f">//子元素补上来是要左右比较上来，再调整子树吗？同时还要保证调整后的最后一个那个位置空出来才能算完全二叉树
-</span><span style="color:#007f7f">//肯定不行，要补上来，倒不如把最后一个补上来，然后跟插入一样，往下交换的移动方式弄好，注意往下交换，要保证交换的元素大于左右子树，不能像插入那样单边
-</span><span style="color:#007f7f"></span>ElementType DeleteMin( MinHeap H ){
-    <span style="color:#fff;font-weight:bold">int</span> X,tmp,i = <span style="color:#ff0;font-weight:bold">1</span>;
-    <span style="color:#fff;font-weight:bold">if</span> ( IsEmpty(H) == <span style="color:#fff;font-weight:bold">true</span> ){
-        <span style="color:#007f7f">//printf(&#34;MinHeap is Empty!\n&#34;);
-</span><span style="color:#007f7f"></span>        <span style="color:#fff;font-weight:bold">return</span> -<span style="color:#ff0;font-weight:bold">10001</span>;
+<span style="color:#008000">//堆中的删除相当于队列中的出队列，堆中是树根的最大值删除并返回，下面的子元素补上来
+</span><span style="color:#008000">//子元素补上来是要左右比较上来，再调整子树吗？同时还要保证调整后的最后一个那个位置空出来才能算完全二叉树
+</span><span style="color:#008000">//肯定不行，要补上来，倒不如把最后一个补上来，然后跟插入一样，往下交换的移动方式弄好，注意往下交换，要保证交换的元素大于左右子树，不能像插入那样单边
+</span><span style="color:#008000"></span>ElementType DeleteMin( MinHeap H ){
+    <span style="color:#2b91af">int</span> X,tmp,i = 1;
+    <span style="color:#00f">if</span> ( IsEmpty(H) == true ){
+        <span style="color:#008000">//printf(&#34;MinHeap is Empty!\n&#34;);
+</span><span style="color:#008000"></span>        <span style="color:#00f">return</span> -10001;
     }
-    X = H-&gt;Elements[<span style="color:#ff0;font-weight:bold">1</span>];
+    X = H-&gt;Elements[1];
     tmp = H-&gt;Elements[H-&gt;Size--];
 
-    <span style="color:#007f7f">/*存在左右子树的时候且左右子树有能够上位的，这个tmp要一直下沉，直到左右子树都没有或只有一个左子树的时候*/</span>
-    <span style="color:#fff;font-weight:bold">while</span> ( i*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span> &lt;= H-&gt;Size &amp;&amp; (H-&gt;Elements[i*<span style="color:#ff0;font-weight:bold">2</span>] &lt; tmp || H-&gt;Elements[i*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span>] &lt; tmp) ){
-        <span style="color:#fff;font-weight:bold">if</span> ( H-&gt;Elements[i*<span style="color:#ff0;font-weight:bold">2</span>] &lt; H-&gt;Elements[i*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span>]){
-            H-&gt;Elements[i] = H-&gt;Elements[i*<span style="color:#ff0;font-weight:bold">2</span>];
-            i *= <span style="color:#ff0;font-weight:bold">2</span>;
-        }<span style="color:#fff;font-weight:bold">else</span>{
-            H-&gt;Elements[i] = H-&gt;Elements[i*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span>];
-            i = i * <span style="color:#ff0;font-weight:bold">2</span> + <span style="color:#ff0;font-weight:bold">1</span>;
+    <span style="color:#008000">/*存在左右子树的时候且左右子树有能够上位的，这个tmp要一直下沉，直到左右子树都没有或只有一个左子树的时候*/</span>
+    <span style="color:#00f">while</span> ( i*2+1 &lt;= H-&gt;Size &amp;&amp; (H-&gt;Elements[i*2] &lt; tmp || H-&gt;Elements[i*2+1] &lt; tmp) ){
+        <span style="color:#00f">if</span> ( H-&gt;Elements[i*2] &lt; H-&gt;Elements[i*2+1]){
+            H-&gt;Elements[i] = H-&gt;Elements[i*2];
+            i *= 2;
+        }<span style="color:#00f">else</span>{
+            H-&gt;Elements[i] = H-&gt;Elements[i*2+1];
+            i = i * 2 + 1;
         }
     }
     
-    <span style="color:#007f7f">//最后没有右子树的情况单独拿出来，如果符合条件左子树与根交换位置，因为是完全二叉树不会有下一层，所以这里就是单独的循环
-</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">if</span> (i*<span style="color:#ff0;font-weight:bold">2</span> == H-&gt;Size &amp;&amp; H-&gt;Elements[i*<span style="color:#ff0;font-weight:bold">2</span>] &lt; tmp){
-        H-&gt;Elements[i] = H-&gt;Elements[i*<span style="color:#ff0;font-weight:bold">2</span>];
-        H-&gt;Elements[i*<span style="color:#ff0;font-weight:bold">2</span>] = tmp;  
-    }<span style="color:#fff;font-weight:bold">else</span>{
+    <span style="color:#008000">//最后没有右子树的情况单独拿出来，如果符合条件左子树与根交换位置，因为是完全二叉树不会有下一层，所以这里就是单独的循环
+</span><span style="color:#008000"></span>    <span style="color:#00f">if</span> (i*2 == H-&gt;Size &amp;&amp; H-&gt;Elements[i*2] &lt; tmp){
+        H-&gt;Elements[i] = H-&gt;Elements[i*2];
+        H-&gt;Elements[i*2] = tmp;  
+    }<span style="color:#00f">else</span>{
         H-&gt;Elements[i] = tmp;
     }
-    <span style="color:#fff;font-weight:bold">return</span> X;
+    <span style="color:#00f">return</span> X;
 }
 
-<span style="color:#007f7f">//之前写好的，没有用到这个函数，从index开始向下调整的函数，代码取自Delete函数,要稍微修改一些
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> adjustIndex(MinHeap H,<span style="color:#fff;font-weight:bold">int</span> index){
-    <span style="color:#fff;font-weight:bold">int</span> tmp = H-&gt;Elements[index];
-    <span style="color:#fff;font-weight:bold">while</span> ( index * <span style="color:#ff0;font-weight:bold">2</span> + <span style="color:#ff0;font-weight:bold">1</span> &lt;= H-&gt;Size ){
-        <span style="color:#fff;font-weight:bold">if</span> ( H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>] &lt; H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span>] &amp;&amp; H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>] &lt; tmp){
-            H-&gt;Elements[index] = H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>];
-            index *= <span style="color:#ff0;font-weight:bold">2</span>;
-        }<span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">if</span>( H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span>] &lt; H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>] &amp;&amp; H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span>] &lt; tmp){
-            H-&gt;Elements[index] = H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span>];
-            index = index * <span style="color:#ff0;font-weight:bold">2</span> + <span style="color:#ff0;font-weight:bold">1</span>;
-        }<span style="color:#fff;font-weight:bold">else</span> <span style="color:#fff;font-weight:bold">break</span>;
+<span style="color:#008000">//之前写好的，没有用到这个函数，从index开始向下调整的函数，代码取自Delete函数,要稍微修改一些
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> adjustIndex(MinHeap H,<span style="color:#2b91af">int</span> index){
+    <span style="color:#2b91af">int</span> tmp = H-&gt;Elements[index];
+    <span style="color:#00f">while</span> ( index * 2 + 1 &lt;= H-&gt;Size ){
+        <span style="color:#00f">if</span> ( H-&gt;Elements[index*2] &lt; H-&gt;Elements[index*2+1] &amp;&amp; H-&gt;Elements[index*2] &lt; tmp){
+            H-&gt;Elements[index] = H-&gt;Elements[index*2];
+            index *= 2;
+        }<span style="color:#00f">else</span> <span style="color:#00f">if</span>( H-&gt;Elements[index*2+1] &lt; H-&gt;Elements[index*2] &amp;&amp; H-&gt;Elements[index*2+1] &lt; tmp){
+            H-&gt;Elements[index] = H-&gt;Elements[index*2+1];
+            index = index * 2 + 1;
+        }<span style="color:#00f">else</span> <span style="color:#00f">break</span>;
     }
-    <span style="color:#fff;font-weight:bold">if</span> (index*<span style="color:#ff0;font-weight:bold">2</span> == H-&gt;Size &amp;&amp; H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>] &lt; tmp){  
-        H-&gt;Elements[index] = H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>];
-        H-&gt;Elements[index*<span style="color:#ff0;font-weight:bold">2</span>] = tmp;
-    }<span style="color:#fff;font-weight:bold">else</span>{
+    <span style="color:#00f">if</span> (index*2 == H-&gt;Size &amp;&amp; H-&gt;Elements[index*2] &lt; tmp){  
+        H-&gt;Elements[index] = H-&gt;Elements[index*2];
+        H-&gt;Elements[index*2] = tmp;
+    }<span style="color:#00f">else</span>{
         H-&gt;Elements[index] = tmp;
     }
 }
 
-<span style="color:#007f7f">//没有用到这个函数
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> adjustHeap(MinHeap H){
-    <span style="color:#fff;font-weight:bold">int</span> index = H-&gt;Size / <span style="color:#ff0;font-weight:bold">2</span>;    <span style="color:#007f7f">//定位到最后一个节点的父节点开始往前一个个整理
-</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">for</span> ( ; index &gt; <span style="color:#ff0;font-weight:bold">0</span> ; index--){
+<span style="color:#008000">//没有用到这个函数
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> adjustHeap(MinHeap H){
+    <span style="color:#2b91af">int</span> index = H-&gt;Size / 2;    <span style="color:#008000">//定位到最后一个节点的父节点开始往前一个个整理
+</span><span style="color:#008000"></span>    <span style="color:#00f">for</span> ( ; index &gt; 0 ; index--){
         adjustIndex(H,index);
     }
 }
 
-<span style="color:#007f7f">//从块创建堆，之前写好的，没有用到这个函数
-</span><span style="color:#007f7f"></span>MinHeap CreateFromBlock( <span style="color:#fff;font-weight:bold">int</span> MaxSize ){
-    <span style="color:#fff;font-weight:bold">int</span> i, item;
+<span style="color:#008000">//从块创建堆，之前写好的，没有用到这个函数
+</span><span style="color:#008000"></span>MinHeap CreateFromBlock( <span style="color:#2b91af">int</span> MaxSize ){
+    <span style="color:#2b91af">int</span> i, item;
     MinHeap H = Create(MaxSize);
     H-&gt;Size = MaxSize;
-    <span style="color:#fff;font-weight:bold">for</span> (i = <span style="color:#ff0;font-weight:bold">1</span>; i &lt;= MaxSize; ++i){
-        scanf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>,&amp;item);
+    <span style="color:#00f">for</span> (i = 1; i &lt;= MaxSize; ++i){
+        scanf(<span style="color:#a31515">&#34;%d&#34;</span>,&amp;item);
         H-&gt;Elements[i] = item;
     }
     adjustHeap(H);
-    <span style="color:#fff;font-weight:bold">return</span> H;
+    <span style="color:#00f">return</span> H;
 }
 
-<span style="color:#007f7f">//使用逐个插入元素的方法创建堆
-</span><span style="color:#007f7f"></span>MinHeap CreateByInsert( <span style="color:#fff;font-weight:bold">int</span> MaxSize ){
-    <span style="color:#fff;font-weight:bold">int</span> i, item;
+<span style="color:#008000">//使用逐个插入元素的方法创建堆
+</span><span style="color:#008000"></span>MinHeap CreateByInsert( <span style="color:#2b91af">int</span> MaxSize ){
+    <span style="color:#2b91af">int</span> i, item;
     MinHeap H = Create(MaxSize);
-    <span style="color:#fff;font-weight:bold">for</span> (i = <span style="color:#ff0;font-weight:bold">1</span>; i &lt;= MaxSize; ++i){
-        scanf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>,&amp;item);
+    <span style="color:#00f">for</span> (i = 1; i &lt;= MaxSize; ++i){
+        scanf(<span style="color:#a31515">&#34;%d&#34;</span>,&amp;item);
         Insert(H, item);
     }
-    <span style="color:#fff;font-weight:bold">return</span> H;
+    <span style="color:#00f">return</span> H;
 }
 
-<span style="color:#fff;font-weight:bold">int</span> main(<span style="color:#fff;font-weight:bold">int</span> argc, <span style="color:#fff;font-weight:bold">char</span> <span style="color:#fff;font-weight:bold">const</span> *argv[]){
-    <span style="color:#fff;font-weight:bold">int</span> N;
-    scanf(<span style="color:#0ff;font-weight:bold">&#34;%d</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#34;</span>, &amp;N);
+<span style="color:#2b91af">int</span> main(<span style="color:#2b91af">int</span> argc, <span style="color:#2b91af">char</span> <span style="color:#00f">const</span> *argv[]){
+    <span style="color:#2b91af">int</span> N;
+    scanf(<span style="color:#a31515">&#34;%d</span><span style="color:#a31515">\n</span><span style="color:#a31515">&#34;</span>, &amp;N);
     MinHeap H = CreateByInsert(N);
-    <span style="color:#fff;font-weight:bold">while</span>(N--){
-        printf(<span style="color:#0ff;font-weight:bold">&#34;%d &#34;</span>, DeleteMin(H));    
+    <span style="color:#00f">while</span>(N--){
+        printf(<span style="color:#a31515">&#34;%d &#34;</span>, DeleteMin(H));    
     }
-    system(<span style="color:#0ff;font-weight:bold">&#34;pause&#34;</span>);
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+    system(<span style="color:#a31515">&#34;pause&#34;</span>);
+    <span style="color:#00f">return</span> 0;
 }
-<span style="color:#007f7f">/*
-</span><span style="color:#007f7f">输入：
-</span><span style="color:#007f7f">第一行：堆的输入元素数量
-</span><span style="color:#007f7f">第二行：堆的元素，依次以空格隔开
-</span><span style="color:#007f7f">
-</span><span style="color:#007f7f">sample input:
-</span><span style="color:#007f7f">
-</span><span style="color:#007f7f">10
-</span><span style="color:#007f7f">5 2 8 6 10 7 9 1 3 4
-</span><span style="color:#007f7f">
-</span><span style="color:#007f7f">*/</span>
+<span style="color:#008000">/*
+</span><span style="color:#008000">输入：
+</span><span style="color:#008000">第一行：堆的输入元素数量
+</span><span style="color:#008000">第二行：堆的元素，依次以空格隔开
+</span><span style="color:#008000">
+</span><span style="color:#008000">sample input:
+</span><span style="color:#008000">
+</span><span style="color:#008000">10
+</span><span style="color:#008000">5 2 8 6 10 7 9 1 3 4
+</span><span style="color:#008000">
+</span><span style="color:#008000">*/</span>
 </code></pre></div><h3 id="表排序">表排序</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">//表排序实现，用到静态链表
-</span><span style="color:#007f7f"></span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdio.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdlib.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#define MAXINT 10001
-</span><span style="color:#0f0;font-weight:bold"></span><span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">enum</span> {ture,<span style="color:#fff;font-weight:bold">false</span>} <span style="color:#fff;font-weight:bold">bool</span>;
-<span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">int</span> ElementType;
-<span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">struct</span> Node *SList;
-<span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">struct</span> Node{
-    ElementType Key;   <span style="color:#007f7f">//数据域
-</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">int</span> Next;         <span style="color:#007f7f">//指向父节点的下标，对于根节点设置成负数，负多少意味着它底下有多少节点
-</span><span style="color:#007f7f"></span>}SListType;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">//表排序实现，用到静态链表
+</span><span style="color:#008000"></span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdio.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdlib.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#define MAXINT 10001
+</span><span style="color:#00f"></span><span style="color:#00f">typedef</span> <span style="color:#00f">enum</span> {ture,false} <span style="color:#2b91af">bool</span>;
+<span style="color:#00f">typedef</span> <span style="color:#2b91af">int</span> ElementType;
+<span style="color:#00f">typedef</span> <span style="color:#00f">struct</span> Node *SList;
+<span style="color:#00f">typedef</span> <span style="color:#00f">struct</span> Node{
+    ElementType Key;   <span style="color:#008000">//数据域
+</span><span style="color:#008000"></span>    <span style="color:#2b91af">int</span> Next;         <span style="color:#008000">//指向父节点的下标，对于根节点设置成负数，负多少意味着它底下有多少节点
+</span><span style="color:#008000"></span>}SListType;
 
-<span style="color:#fff;font-weight:bold">void</span> LinkListSort(SListType S[],<span style="color:#fff;font-weight:bold">int</span> length){
-    <span style="color:#fff;font-weight:bold">int</span> i, p, tmp;
-    S[<span style="color:#ff0;font-weight:bold">0</span>].Next = <span style="color:#ff0;font-weight:bold">1</span>;      <span style="color:#007f7f">//S[0].Key是最大值，S[0].Next 一直存储指向最小的指针
-</span><span style="color:#007f7f"></span>    S[<span style="color:#ff0;font-weight:bold">1</span>].Next = <span style="color:#ff0;font-weight:bold">0</span>;
-    <span style="color:#fff;font-weight:bold">for</span> ( i = <span style="color:#ff0;font-weight:bold">2</span>; i &lt;= length; ++i){
-        p = <span style="color:#ff0;font-weight:bold">0</span>;
-        <span style="color:#fff;font-weight:bold">if</span> (S[i].Key &lt; S[S[<span style="color:#ff0;font-weight:bold">0</span>].Next].Key){    <span style="color:#007f7f">//插入排好序的循环链表可分为三种情况：比最开始的小，比最后的大 中间的情况
-</span><span style="color:#007f7f"></span>            S[i].Next = S[<span style="color:#ff0;font-weight:bold">0</span>].Next;
-            S[<span style="color:#ff0;font-weight:bold">0</span>].Next = i;
-            <span style="color:#fff;font-weight:bold">continue</span>;
+<span style="color:#2b91af">void</span> LinkListSort(SListType S[],<span style="color:#2b91af">int</span> length){
+    <span style="color:#2b91af">int</span> i, p, tmp;
+    S[0].Next = 1;      <span style="color:#008000">//S[0].Key是最大值，S[0].Next 一直存储指向最小的指针
+</span><span style="color:#008000"></span>    S[1].Next = 0;
+    <span style="color:#00f">for</span> ( i = 2; i &lt;= length; ++i){
+        p = 0;
+        <span style="color:#00f">if</span> (S[i].Key &lt; S[S[0].Next].Key){    <span style="color:#008000">//插入排好序的循环链表可分为三种情况：比最开始的小，比最后的大 中间的情况
+</span><span style="color:#008000"></span>            S[i].Next = S[0].Next;
+            S[0].Next = i;
+            <span style="color:#00f">continue</span>;
         }
 
-        <span style="color:#007f7f">/*下面的while中加了这个等号使表排序成为稳定的排序*/</span>
-        <span style="color:#fff;font-weight:bold">while</span> (S[i].Key &gt;= S[S[p].Next].Key){    <span style="color:#007f7f">//由于安排好最大的哨兵节点，所以后两种情况合一，一直往后搜索
-</span><span style="color:#007f7f"></span>            p = S[p].Next;
+        <span style="color:#008000">/*下面的while中加了这个等号使表排序成为稳定的排序*/</span>
+        <span style="color:#00f">while</span> (S[i].Key &gt;= S[S[p].Next].Key){    <span style="color:#008000">//由于安排好最大的哨兵节点，所以后两种情况合一，一直往后搜索
+</span><span style="color:#008000"></span>            p = S[p].Next;
         }
         S[i].Next = S[p].Next;
         S[p].Next = i; 
     }
-    p = S[<span style="color:#ff0;font-weight:bold">0</span>].Next;
-    <span style="color:#fff;font-weight:bold">for</span> (i = <span style="color:#ff0;font-weight:bold">1</span>; i &lt;= length; ++i){
-        <span style="color:#fff;font-weight:bold">while</span>(p &lt; i)                <span style="color:#007f7f">//p在i前面的话说明是已经跟前面调换位置过的，这时候就要沿着指针再往后找直到p &gt;= i找到
-</span><span style="color:#007f7f"></span>            p = S[p].Next; 
+    p = S[0].Next;
+    <span style="color:#00f">for</span> (i = 1; i &lt;= length; ++i){
+        <span style="color:#00f">while</span>(p &lt; i)                <span style="color:#008000">//p在i前面的话说明是已经跟前面调换位置过的，这时候就要沿着指针再往后找直到p &gt;= i找到
+</span><span style="color:#008000"></span>            p = S[p].Next; 
 
         tmp = S[i].Key;
         S[i].Key = S[p].Key;    
@@ -685,200 +685,200 @@ MinHeap Create( <span style="color:#fff;font-weight:bold">int</span> MaxSize ){
     }
 }
 
-<span style="color:#fff;font-weight:bold">void</span> printSList(SListType S[],<span style="color:#fff;font-weight:bold">int</span> length){
-    <span style="color:#fff;font-weight:bold">int</span> i;
-    <span style="color:#fff;font-weight:bold">for</span> (i = <span style="color:#ff0;font-weight:bold">1</span>; i &lt;= length; ++i)
-        printf(<span style="color:#0ff;font-weight:bold">&#34;%d &#34;</span>, S[i].Key);
-    printf(<span style="color:#0ff;font-weight:bold">&#34;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#34;</span>);
+<span style="color:#2b91af">void</span> printSList(SListType S[],<span style="color:#2b91af">int</span> length){
+    <span style="color:#2b91af">int</span> i;
+    <span style="color:#00f">for</span> (i = 1; i &lt;= length; ++i)
+        printf(<span style="color:#a31515">&#34;%d &#34;</span>, S[i].Key);
+    printf(<span style="color:#a31515">&#34;</span><span style="color:#a31515">\n</span><span style="color:#a31515">&#34;</span>);
 }
 
-<span style="color:#fff;font-weight:bold">int</span> main(<span style="color:#fff;font-weight:bold">int</span> argc, <span style="color:#fff;font-weight:bold">char</span> <span style="color:#fff;font-weight:bold">const</span> *argv[]){
-    <span style="color:#fff;font-weight:bold">int</span> N,i;
+<span style="color:#2b91af">int</span> main(<span style="color:#2b91af">int</span> argc, <span style="color:#2b91af">char</span> <span style="color:#00f">const</span> *argv[]){
+    <span style="color:#2b91af">int</span> N,i;
     ElementType X;
-    scanf(<span style="color:#0ff;font-weight:bold">&#34;%d</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#34;</span>,&amp;N);     <span style="color:#007f7f">//读入要排序的数目 题目要求8个整数
-</span><span style="color:#007f7f"></span>    SList S = malloc(( N + <span style="color:#ff0;font-weight:bold">1</span> )*<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">struct</span> Node));
-    S[<span style="color:#ff0;font-weight:bold">0</span>].Key = MAXINT;
-    <span style="color:#fff;font-weight:bold">for</span>(i = <span style="color:#ff0;font-weight:bold">1</span>; i &lt;= N;i++){
-        scanf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>,&amp;X);
+    scanf(<span style="color:#a31515">&#34;%d</span><span style="color:#a31515">\n</span><span style="color:#a31515">&#34;</span>,&amp;N);     <span style="color:#008000">//读入要排序的数目 题目要求8个整数
+</span><span style="color:#008000"></span>    SList S = malloc(( N + 1 )*<span style="color:#00f">sizeof</span>(<span style="color:#00f">struct</span> Node));
+    S[0].Key = MAXINT;
+    <span style="color:#00f">for</span>(i = 1; i &lt;= N;i++){
+        scanf(<span style="color:#a31515">&#34;%d&#34;</span>,&amp;X);
         S[i].Key = X;
     }
     LinkListSort(S,N);
-    printf(<span style="color:#0ff;font-weight:bold">&#34;The sorted static link list is : &#34;</span>);
+    printf(<span style="color:#a31515">&#34;The sorted static link list is : &#34;</span>);
     printSList(S,N);
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+    <span style="color:#00f">return</span> 0;
 }
 
-<span style="color:#007f7f">//Example input
-</span><span style="color:#007f7f">//8
-</span><span style="color:#007f7f">//9 8 7 4 5 6 10 11 
+<span style="color:#008000">//Example input
+</span><span style="color:#008000">//8
+</span><span style="color:#008000">//9 8 7 4 5 6 10 11 
 </span></code></pre></div><h3 id="归并排序">归并排序</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">/* 归并排序
-</span><span style="color:#007f7f"> * 归并排序是一种采用分而治之思想的排序
-</span><span style="color:#007f7f"> * 基本步骤为：
-</span><span style="color:#007f7f"> * 1.将数组划分为两个各包含n/2个项目的子数组
-</span><span style="color:#007f7f"> * 2.除非数组比较小，否则再分为两份递归方式完成任务
-</span><span style="color:#007f7f"> * 3.最后到最小单位之后，将子数组合并为单个有序的数组
-</span><span style="color:#007f7f"> */</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">/* 归并排序
+</span><span style="color:#008000"> * 归并排序是一种采用分而治之思想的排序
+</span><span style="color:#008000"> * 基本步骤为：
+</span><span style="color:#008000"> * 1.将数组划分为两个各包含n/2个项目的子数组
+</span><span style="color:#008000"> * 2.除非数组比较小，否则再分为两份递归方式完成任务
+</span><span style="color:#008000"> * 3.最后到最小单位之后，将子数组合并为单个有序的数组
+</span><span style="color:#008000"> */</span>
 
-<span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdio.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;string.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#define MAX_SIZE 100
-</span><span style="color:#0f0;font-weight:bold"></span>
-<span style="color:#fff;font-weight:bold">void</span> concatArr(<span style="color:#fff;font-weight:bold">int</span> arr[], <span style="color:#fff;font-weight:bold">int</span> leftArr[], <span style="color:#fff;font-weight:bold">int</span> rightArr[], <span style="color:#fff;font-weight:bold">int</span> leftLen, <span style="color:#fff;font-weight:bold">int</span> rightLen){
-    <span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>, j = <span style="color:#ff0;font-weight:bold">0</span>, k = <span style="color:#ff0;font-weight:bold">0</span>;
-    <span style="color:#fff;font-weight:bold">while</span>(i &lt; leftLen &amp;&amp; j &lt; rightLen){
-        <span style="color:#fff;font-weight:bold">if</span> (leftArr[i] &lt;= rightArr[j]) arr[k++] = leftArr[i++];
-        <span style="color:#fff;font-weight:bold">else</span> arr[k++] = rightArr[j++];
+<span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdio.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;string.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#define MAX_SIZE 100
+</span><span style="color:#00f"></span>
+<span style="color:#2b91af">void</span> concatArr(<span style="color:#2b91af">int</span> arr[], <span style="color:#2b91af">int</span> leftArr[], <span style="color:#2b91af">int</span> rightArr[], <span style="color:#2b91af">int</span> leftLen, <span style="color:#2b91af">int</span> rightLen){
+    <span style="color:#2b91af">int</span> i = 0, j = 0, k = 0;
+    <span style="color:#00f">while</span>(i &lt; leftLen &amp;&amp; j &lt; rightLen){
+        <span style="color:#00f">if</span> (leftArr[i] &lt;= rightArr[j]) arr[k++] = leftArr[i++];
+        <span style="color:#00f">else</span> arr[k++] = rightArr[j++];
     }
-    <span style="color:#fff;font-weight:bold">while</span> (i &lt; leftLen) arr[k++] = leftArr[i++];
-    <span style="color:#fff;font-weight:bold">while</span> (j &lt; rightLen) arr[k++] = rightArr[j++];
+    <span style="color:#00f">while</span> (i &lt; leftLen) arr[k++] = leftArr[i++];
+    <span style="color:#00f">while</span> (j &lt; rightLen) arr[k++] = rightArr[j++];
 }
 
-<span style="color:#fff;font-weight:bold">void</span> mergeSort(<span style="color:#fff;font-weight:bold">int</span> arr[], <span style="color:#fff;font-weight:bold">int</span> size){
-    <span style="color:#fff;font-weight:bold">if</span> (size &gt; <span style="color:#ff0;font-weight:bold">1</span>){
-        <span style="color:#fff;font-weight:bold">const</span> <span style="color:#fff;font-weight:bold">int</span> mid = size/<span style="color:#ff0;font-weight:bold">2</span>;
-        <span style="color:#fff;font-weight:bold">const</span> <span style="color:#fff;font-weight:bold">int</span> midplus = size - mid;
-        <span style="color:#fff;font-weight:bold">int</span> leftArr[mid];
-        <span style="color:#fff;font-weight:bold">int</span> rightArr[midplus];
-        memcpy(leftArr, arr, mid*<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">int</span>));  <span style="color:#007f7f">//memcpy是string.h中的函数，复制第二个指针开始第三个参数个字节到第一个指针的内存上覆盖原来的
-</span><span style="color:#007f7f"></span>        memcpy(rightArr, arr + mid, midplus*<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">int</span>));
-        mergeSort(leftArr, mid);        <span style="color:#007f7f">//左递归继续分
-</span><span style="color:#007f7f"></span>        mergeSort(rightArr, midplus);   <span style="color:#007f7f">//右递归继续分
-</span><span style="color:#007f7f"></span>        concatArr(arr, leftArr, rightArr, mid, midplus);  <span style="color:#007f7f">//归并，连接两个有序数组
-</span><span style="color:#007f7f"></span>    }
+<span style="color:#2b91af">void</span> mergeSort(<span style="color:#2b91af">int</span> arr[], <span style="color:#2b91af">int</span> size){
+    <span style="color:#00f">if</span> (size &gt; 1){
+        <span style="color:#00f">const</span> <span style="color:#2b91af">int</span> mid = size/2;
+        <span style="color:#00f">const</span> <span style="color:#2b91af">int</span> midplus = size - mid;
+        <span style="color:#2b91af">int</span> leftArr[mid];
+        <span style="color:#2b91af">int</span> rightArr[midplus];
+        memcpy(leftArr, arr, mid*<span style="color:#00f">sizeof</span>(<span style="color:#2b91af">int</span>));  <span style="color:#008000">//memcpy是string.h中的函数，复制第二个指针开始第三个参数个字节到第一个指针的内存上覆盖原来的
+</span><span style="color:#008000"></span>        memcpy(rightArr, arr + mid, midplus*<span style="color:#00f">sizeof</span>(<span style="color:#2b91af">int</span>));
+        mergeSort(leftArr, mid);        <span style="color:#008000">//左递归继续分
+</span><span style="color:#008000"></span>        mergeSort(rightArr, midplus);   <span style="color:#008000">//右递归继续分
+</span><span style="color:#008000"></span>        concatArr(arr, leftArr, rightArr, mid, midplus);  <span style="color:#008000">//归并，连接两个有序数组
+</span><span style="color:#008000"></span>    }
 }
 
-<span style="color:#fff;font-weight:bold">void</span> printArr(<span style="color:#fff;font-weight:bold">int</span> arr[], <span style="color:#fff;font-weight:bold">int</span> len){
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; len-<span style="color:#ff0;font-weight:bold">1</span>; ++i) printf(<span style="color:#0ff;font-weight:bold">&#34;%d &#34;</span>, arr[i]);
-    printf(<span style="color:#0ff;font-weight:bold">&#34;%d</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#34;</span>, arr[len - <span style="color:#ff0;font-weight:bold">1</span>]);
+<span style="color:#2b91af">void</span> printArr(<span style="color:#2b91af">int</span> arr[], <span style="color:#2b91af">int</span> len){
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt; len-1; ++i) printf(<span style="color:#a31515">&#34;%d &#34;</span>, arr[i]);
+    printf(<span style="color:#a31515">&#34;%d</span><span style="color:#a31515">\n</span><span style="color:#a31515">&#34;</span>, arr[len - 1]);
 }
 
-<span style="color:#fff;font-weight:bold">int</span> main(<span style="color:#fff;font-weight:bold">int</span> argc, <span style="color:#fff;font-weight:bold">char</span> <span style="color:#fff;font-weight:bold">const</span> *argv[]){
-    <span style="color:#fff;font-weight:bold">int</span> size,i = <span style="color:#ff0;font-weight:bold">0</span>;
-    <span style="color:#fff;font-weight:bold">int</span> arr[MAX_SIZE];
-    scanf(<span style="color:#0ff;font-weight:bold">&#34;%d</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#34;</span>, &amp;size);
-    <span style="color:#fff;font-weight:bold">while</span>(scanf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>, arr + i++) != EOF &amp;&amp; getchar() != <span style="color:#0ff;font-weight:bold">&#39;\n&#39;</span>);
+<span style="color:#2b91af">int</span> main(<span style="color:#2b91af">int</span> argc, <span style="color:#2b91af">char</span> <span style="color:#00f">const</span> *argv[]){
+    <span style="color:#2b91af">int</span> size,i = 0;
+    <span style="color:#2b91af">int</span> arr[MAX_SIZE];
+    scanf(<span style="color:#a31515">&#34;%d</span><span style="color:#a31515">\n</span><span style="color:#a31515">&#34;</span>, &amp;size);
+    <span style="color:#00f">while</span>(scanf(<span style="color:#a31515">&#34;%d&#34;</span>, arr + i++) != EOF &amp;&amp; getchar() != <span style="color:#a31515">&#39;\n&#39;</span>);
     mergeSort(arr, size);
     printArr(arr, size);
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+    <span style="color:#00f">return</span> 0;
 }
-<span style="color:#007f7f">/*
-</span><span style="color:#007f7f">输入：第一行为元素个数，第二行为元素，以空格隔开
-</span><span style="color:#007f7f">sample input:
-</span><span style="color:#007f7f">10
-</span><span style="color:#007f7f">3 1 8 2 5 7 3 11 9 6
-</span><span style="color:#007f7f"> */</span>
+<span style="color:#008000">/*
+</span><span style="color:#008000">输入：第一行为元素个数，第二行为元素，以空格隔开
+</span><span style="color:#008000">sample input:
+</span><span style="color:#008000">10
+</span><span style="color:#008000">3 1 8 2 5 7 3 11 9 6
+</span><span style="color:#008000"> */</span>
 </code></pre></div><h3 id="折半插入">折半插入</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">/*实际上就是在原本插入排序的基础上加入了二分查找*/</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">/*实际上就是在原本插入排序的基础上加入了二分查找*/</span>
 
-<span style="color:#fff;font-weight:bold">int</span> binarySearch(<span style="color:#fff;font-weight:bold">int</span> key, <span style="color:#fff;font-weight:bold">int</span> arr[], <span style="color:#fff;font-weight:bold">int</span> len){
-    <span style="color:#fff;font-weight:bold">int</span> index;
-    <span style="color:#fff;font-weight:bold">int</span> left = <span style="color:#ff0;font-weight:bold">0</span>;
-    <span style="color:#fff;font-weight:bold">int</span> right = len - <span style="color:#ff0;font-weight:bold">1</span>;
-    <span style="color:#fff;font-weight:bold">int</span> mid = (left + right) / <span style="color:#ff0;font-weight:bold">2</span> ;
-    <span style="color:#fff;font-weight:bold">while</span>(left &lt;= right &amp;&amp; arr[mid] != key){
-        <span style="color:#fff;font-weight:bold">if</span> (arr[mid] &gt; key){
-            right = mid  - <span style="color:#ff0;font-weight:bold">1</span>;
+<span style="color:#2b91af">int</span> binarySearch(<span style="color:#2b91af">int</span> key, <span style="color:#2b91af">int</span> arr[], <span style="color:#2b91af">int</span> len){
+    <span style="color:#2b91af">int</span> index;
+    <span style="color:#2b91af">int</span> left = 0;
+    <span style="color:#2b91af">int</span> right = len - 1;
+    <span style="color:#2b91af">int</span> mid = (left + right) / 2 ;
+    <span style="color:#00f">while</span>(left &lt;= right &amp;&amp; arr[mid] != key){
+        <span style="color:#00f">if</span> (arr[mid] &gt; key){
+            right = mid  - 1;
         }
-        <span style="color:#fff;font-weight:bold">else</span> {
-            left = mid + <span style="color:#ff0;font-weight:bold">1</span>;
+        <span style="color:#00f">else</span> {
+            left = mid + 1;
         }
-        mid = (left + right) / <span style="color:#ff0;font-weight:bold">2</span>;
+        mid = (left + right) / 2;
     }
     index = mid;
-    <span style="color:#fff;font-weight:bold">if</span> (arr[mid] != key){
-        index = -<span style="color:#ff0;font-weight:bold">1</span>;
+    <span style="color:#00f">if</span> (arr[mid] != key){
+        index = -1;
     }
-    <span style="color:#fff;font-weight:bold">return</span> index;<span style="color:#007f7f">//仍坚持单一出口的原则
-</span><span style="color:#007f7f"></span>}
+    <span style="color:#00f">return</span> index;<span style="color:#008000">//仍坚持单一出口的原则
+</span><span style="color:#008000"></span>}
 
-<span style="color:#fff;font-weight:bold">void</span> binaryInsertSort(<span style="color:#fff;font-weight:bold">int</span> arr[],<span style="color:#fff;font-weight:bold">int</span> len){
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">1</span>; i &lt; len; i++){
-        <span style="color:#fff;font-weight:bold">int</span> temp = arr[i];
-        <span style="color:#fff;font-weight:bold">int</span> left = <span style="color:#ff0;font-weight:bold">0</span>;
-        <span style="color:#fff;font-weight:bold">int</span> right = i - <span style="color:#ff0;font-weight:bold">1</span>;
-            <span style="color:#fff;font-weight:bold">while</span> (left &lt;= right){<span style="color:#007f7f">//这个等于，非常重要当相等时left和right和mid重合，这时候要判断left移动还是right移动
-</span><span style="color:#007f7f"></span>                <span style="color:#fff;font-weight:bold">int</span> mid = (left + right) / <span style="color:#ff0;font-weight:bold">2</span>;
+<span style="color:#2b91af">void</span> binaryInsertSort(<span style="color:#2b91af">int</span> arr[],<span style="color:#2b91af">int</span> len){
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 1; i &lt; len; i++){
+        <span style="color:#2b91af">int</span> temp = arr[i];
+        <span style="color:#2b91af">int</span> left = 0;
+        <span style="color:#2b91af">int</span> right = i - 1;
+            <span style="color:#00f">while</span> (left &lt;= right){<span style="color:#008000">//这个等于，非常重要当相等时left和right和mid重合，这时候要判断left移动还是right移动
+</span><span style="color:#008000"></span>                <span style="color:#2b91af">int</span> mid = (left + right) / 2;
 
-                <span style="color:#007f7f">/*下边这个 = 一定要有，是在相等的时候排到后面一位，确保排序的稳定性
-</span><span style="color:#007f7f">                最后的三个下标重合的时候，如果temp大则从mid的后一位往后开始移，如果temp小的话则就从mid往后开始移
-</span><span style="color:#007f7f">                根据循环发现恰恰left能满足后移的条件，temp大的话left会后移，temp小left就不动，所以后移的条件是&gt;= temp
-</span><span style="color:#007f7f">                */</span>
-                <span style="color:#fff;font-weight:bold">if</span> (temp &gt;= arr[mid]){
-                    left = mid + <span style="color:#ff0;font-weight:bold">1</span>;<span style="color:#007f7f">//只有这边的 + 1和下面的 - 1能够保证最后三个下标能够重合
-</span><span style="color:#007f7f"></span>                }<span style="color:#fff;font-weight:bold">else</span> {
-                    right = mid - <span style="color:#ff0;font-weight:bold">1</span>;
+                <span style="color:#008000">/*下边这个 = 一定要有，是在相等的时候排到后面一位，确保排序的稳定性
+</span><span style="color:#008000">                最后的三个下标重合的时候，如果temp大则从mid的后一位往后开始移，如果temp小的话则就从mid往后开始移
+</span><span style="color:#008000">                根据循环发现恰恰left能满足后移的条件，temp大的话left会后移，temp小left就不动，所以后移的条件是&gt;= temp
+</span><span style="color:#008000">                */</span>
+                <span style="color:#00f">if</span> (temp &gt;= arr[mid]){
+                    left = mid + 1;<span style="color:#008000">//只有这边的 + 1和下面的 - 1能够保证最后三个下标能够重合
+</span><span style="color:#008000"></span>                }<span style="color:#00f">else</span> {
+                    right = mid - 1;
                 }
             }
-        <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> j = i - <span style="color:#ff0;font-weight:bold">1</span>;j &gt;= left;j--){
-                arr[j + <span style="color:#ff0;font-weight:bold">1</span>] = arr[j];
+        <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> j = i - 1;j &gt;= left;j--){
+                arr[j + 1] = arr[j];
         }
         arr[left] = temp;
     }
 }
 </code></pre></div><h3 id="插入排序与希尔排序">插入排序与希尔排序</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">/**插入排序
-</span><span style="color:#007f7f"> * 是以有序数列为基础的，将未排序的元素插入到有序数列的相应位置
-</span><span style="color:#007f7f"> * 从i后面的一个元素开始一个一个往前比较直到0，这个元素位置就正确了
-</span><span style="color:#007f7f"> * 插入排序是稳定的排序，并没有改变相对的位置
-</span><span style="color:#007f7f"> * */</span>
-<span style="color:#fff;font-weight:bold">void</span> insertSort1(<span style="color:#fff;font-weight:bold">int</span> array[],<span style="color:#fff;font-weight:bold">int</span> length){
-    <span style="color:#fff;font-weight:bold">int</span> temp;
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">1</span>;i &lt; length;i++){
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">/**插入排序
+</span><span style="color:#008000"> * 是以有序数列为基础的，将未排序的元素插入到有序数列的相应位置
+</span><span style="color:#008000"> * 从i后面的一个元素开始一个一个往前比较直到0，这个元素位置就正确了
+</span><span style="color:#008000"> * 插入排序是稳定的排序，并没有改变相对的位置
+</span><span style="color:#008000"> * */</span>
+<span style="color:#2b91af">void</span> insertSort1(<span style="color:#2b91af">int</span> array[],<span style="color:#2b91af">int</span> length){
+    <span style="color:#2b91af">int</span> temp;
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 1;i &lt; length;i++){
         temp = array[i];
-        <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> j = i - <span style="color:#ff0;font-weight:bold">1</span>;j &gt;= <span style="color:#ff0;font-weight:bold">0</span>;j--){
-            <span style="color:#fff;font-weight:bold">if</span> (j == <span style="color:#ff0;font-weight:bold">0</span> &amp;&amp; array[j] &gt; temp){ <span style="color:#007f7f">//为插入到下标为0的位置单独设一个
-</span><span style="color:#007f7f"></span>                array[<span style="color:#ff0;font-weight:bold">1</span>] = array[<span style="color:#ff0;font-weight:bold">0</span>];
-                array[<span style="color:#ff0;font-weight:bold">0</span>] = temp;
-                <span style="color:#fff;font-weight:bold">break</span>;
+        <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> j = i - 1;j &gt;= 0;j--){
+            <span style="color:#00f">if</span> (j == 0 &amp;&amp; array[j] &gt; temp){ <span style="color:#008000">//为插入到下标为0的位置单独设一个
+</span><span style="color:#008000"></span>                array[1] = array[0];
+                array[0] = temp;
+                <span style="color:#00f">break</span>;
             }
-            <span style="color:#fff;font-weight:bold">if</span> (array[j] &gt; temp){ 
-                array[j + <span style="color:#ff0;font-weight:bold">1</span>] = array[j];
+            <span style="color:#00f">if</span> (array[j] &gt; temp){ 
+                array[j + 1] = array[j];
             }
-            <span style="color:#fff;font-weight:bold">else</span> {
-                array[j + <span style="color:#ff0;font-weight:bold">1</span>] = temp; <span style="color:#007f7f">//即使相等时也插入到了原来的后面，没有改变相对位置
-</span><span style="color:#007f7f"></span>                <span style="color:#fff;font-weight:bold">break</span>;
+            <span style="color:#00f">else</span> {
+                array[j + 1] = temp; <span style="color:#008000">//即使相等时也插入到了原来的后面，没有改变相对位置
+</span><span style="color:#008000"></span>                <span style="color:#00f">break</span>;
             }
         }
     }
 }
 
-<span style="color:#007f7f">/*简化以上代码*/</span>
-<span style="color:#fff;font-weight:bold">void</span> insertSort2(<span style="color:#fff;font-weight:bold">int</span> array[],<span style="color:#fff;font-weight:bold">int</span> length) {
-    <span style="color:#fff;font-weight:bold">int</span> temp;
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">1</span>; i &lt; length; i++) {
+<span style="color:#008000">/*简化以上代码*/</span>
+<span style="color:#2b91af">void</span> insertSort2(<span style="color:#2b91af">int</span> array[],<span style="color:#2b91af">int</span> length) {
+    <span style="color:#2b91af">int</span> temp;
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 1; i &lt; length; i++) {
         temp = array[i];
-        <span style="color:#fff;font-weight:bold">int</span> j;
-        <span style="color:#fff;font-weight:bold">for</span> (j = i - <span style="color:#ff0;font-weight:bold">1</span>; j &gt;= <span style="color:#ff0;font-weight:bold">0</span> &amp;&amp; array[j] &gt; temp; j--) {
-            array[j + <span style="color:#ff0;font-weight:bold">1</span>] = array[j];
+        <span style="color:#2b91af">int</span> j;
+        <span style="color:#00f">for</span> (j = i - 1; j &gt;= 0 &amp;&amp; array[j] &gt; temp; j--) {
+            array[j + 1] = array[j];
         }
-        <span style="color:#007f7f">//此时因为上面的判断所以应该补上少的那一位，完美地出现了j = -1的情况，修补了插入在初始位置的漏洞
-</span><span style="color:#007f7f"></span>        array[j + <span style="color:#ff0;font-weight:bold">1</span>] = temp;
+        <span style="color:#008000">//此时因为上面的判断所以应该补上少的那一位，完美地出现了j = -1的情况，修补了插入在初始位置的漏洞
+</span><span style="color:#008000"></span>        array[j + 1] = temp;
     }
 }
 
-<span style="color:#007f7f">/**希尔排序：间隔d的元素分成一组，组之间用插入排序，然后d/2不断重复直到d == 1，这时肯定已经排好了
-</span><span style="color:#007f7f"> * 算是不断趋向于线性
-</span><span style="color:#007f7f"> * 希尔排序是不稳定的排序，虽然插入排序稳定，但是再d变小的时候的再重整会打乱相对次序
-</span><span style="color:#007f7f"> * */</span>
-<span style="color:#fff;font-weight:bold">void</span> shellSort1(<span style="color:#fff;font-weight:bold">int</span> array[],<span style="color:#fff;font-weight:bold">int</span> length){
-    <span style="color:#fff;font-weight:bold">int</span> d = length;
-    <span style="color:#fff;font-weight:bold">while</span> ( d != <span style="color:#ff0;font-weight:bold">1</span> ){
-        d = d / <span style="color:#ff0;font-weight:bold">2</span>;
-        <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> x = <span style="color:#ff0;font-weight:bold">0</span>;x &lt; d;x++) {<span style="color:#007f7f">//x的意思其实是组别，每一个d中都有x个组
-</span><span style="color:#007f7f"></span>            <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = x; i &lt; length - d; i += d) {
-                <span style="color:#fff;font-weight:bold">int</span> temp = array[i + d];
-                <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> j = i; j &gt;= <span style="color:#ff0;font-weight:bold">0</span>; j -= d) {
-                    <span style="color:#fff;font-weight:bold">if</span> (j == x &amp;&amp; array[j] &gt; temp){<span style="color:#007f7f">//这边的j = x是从上面的循环中推导出来的，原来的插入排序是j == 0的条件，现在是分组了
-</span><span style="color:#007f7f"></span>                        array[j + d] = array[j];
+<span style="color:#008000">/**希尔排序：间隔d的元素分成一组，组之间用插入排序，然后d/2不断重复直到d == 1，这时肯定已经排好了
+</span><span style="color:#008000"> * 算是不断趋向于线性
+</span><span style="color:#008000"> * 希尔排序是不稳定的排序，虽然插入排序稳定，但是再d变小的时候的再重整会打乱相对次序
+</span><span style="color:#008000"> * */</span>
+<span style="color:#2b91af">void</span> shellSort1(<span style="color:#2b91af">int</span> array[],<span style="color:#2b91af">int</span> length){
+    <span style="color:#2b91af">int</span> d = length;
+    <span style="color:#00f">while</span> ( d != 1 ){
+        d = d / 2;
+        <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> x = 0;x &lt; d;x++) {<span style="color:#008000">//x的意思其实是组别，每一个d中都有x个组
+</span><span style="color:#008000"></span>            <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = x; i &lt; length - d; i += d) {
+                <span style="color:#2b91af">int</span> temp = array[i + d];
+                <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> j = i; j &gt;= 0; j -= d) {
+                    <span style="color:#00f">if</span> (j == x &amp;&amp; array[j] &gt; temp){<span style="color:#008000">//这边的j = x是从上面的循环中推导出来的，原来的插入排序是j == 0的条件，现在是分组了
+</span><span style="color:#008000"></span>                        array[j + d] = array[j];
                         array[j] = temp;
-                        <span style="color:#fff;font-weight:bold">break</span>;
+                        <span style="color:#00f">break</span>;
                     }
-                    <span style="color:#fff;font-weight:bold">if</span> (array[j] &gt; temp) {
+                    <span style="color:#00f">if</span> (array[j] &gt; temp) {
                         array[j + d] = array[j];
-                    } <span style="color:#fff;font-weight:bold">else</span> {
+                    } <span style="color:#00f">else</span> {
                         array[j + d] = temp;
-                        <span style="color:#fff;font-weight:bold">break</span>;
+                        <span style="color:#00f">break</span>;
                     }
                 }
             }
@@ -886,16 +886,16 @@ MinHeap Create( <span style="color:#fff;font-weight:bold">int</span> MaxSize ){
     }
 }
 
-<span style="color:#007f7f">/**根据insertSort2依样画葫芦*/</span>
-<span style="color:#fff;font-weight:bold">void</span> shellSort2(<span style="color:#fff;font-weight:bold">int</span> array[],<span style="color:#fff;font-weight:bold">int</span> length){
-    <span style="color:#fff;font-weight:bold">int</span> d = length;
-    <span style="color:#fff;font-weight:bold">while</span>( d != <span style="color:#ff0;font-weight:bold">1</span> ){
-        d = d / <span style="color:#ff0;font-weight:bold">2</span>;
-        <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> x = <span style="color:#ff0;font-weight:bold">0</span>;x &lt; d;x++){
-            <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = x + d;i &lt; length;i += d){
-                <span style="color:#fff;font-weight:bold">int</span> temp = array[i];
-                <span style="color:#fff;font-weight:bold">int</span> j;
-                <span style="color:#fff;font-weight:bold">for</span> (j = i - d;j &gt;= <span style="color:#ff0;font-weight:bold">0</span> &amp;&amp; array[j] &gt; temp;j -= d){
+<span style="color:#008000">/**根据insertSort2依样画葫芦*/</span>
+<span style="color:#2b91af">void</span> shellSort2(<span style="color:#2b91af">int</span> array[],<span style="color:#2b91af">int</span> length){
+    <span style="color:#2b91af">int</span> d = length;
+    <span style="color:#00f">while</span>( d != 1 ){
+        d = d / 2;
+        <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> x = 0;x &lt; d;x++){
+            <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = x + d;i &lt; length;i += d){
+                <span style="color:#2b91af">int</span> temp = array[i];
+                <span style="color:#2b91af">int</span> j;
+                <span style="color:#00f">for</span> (j = i - d;j &gt;= 0 &amp;&amp; array[j] &gt; temp;j -= d){
                     array[j + d] = array[j];
                 }
                 array[j + d] = temp;
@@ -904,22 +904,22 @@ MinHeap Create( <span style="color:#fff;font-weight:bold">int</span> MaxSize ){
     }
 }
 </code></pre></div><h3 id="计数排序">计数排序</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">/*计数排序*/</span>
-<span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdio.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#define MAX_SIZE 1000
-</span><span style="color:#0f0;font-weight:bold"></span>
-<span style="color:#fff;font-weight:bold">void</span> countSort(<span style="color:#fff;font-weight:bold">int</span> arr[], <span style="color:#fff;font-weight:bold">int</span> length){
-    <span style="color:#fff;font-weight:bold">int</span> max = -<span style="color:#ff0;font-weight:bold">99999</span>, min = <span style="color:#ff0;font-weight:bold">99999</span>;
-    <span style="color:#fff;font-weight:bold">for</span> ( <span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; length; ++i) {
-        <span style="color:#fff;font-weight:bold">if</span> (arr[i] &gt; max) max = arr[i];
-        <span style="color:#fff;font-weight:bold">if</span> (arr[i] &lt; min) min = arr[i];
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">/*计数排序*/</span>
+<span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdio.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#define MAX_SIZE 1000
+</span><span style="color:#00f"></span>
+<span style="color:#2b91af">void</span> countSort(<span style="color:#2b91af">int</span> arr[], <span style="color:#2b91af">int</span> length){
+    <span style="color:#2b91af">int</span> max = -99999, min = 99999;
+    <span style="color:#00f">for</span> ( <span style="color:#2b91af">int</span> i = 0; i &lt; length; ++i) {
+        <span style="color:#00f">if</span> (arr[i] &gt; max) max = arr[i];
+        <span style="color:#00f">if</span> (arr[i] &lt; min) min = arr[i];
     }
-    <span style="color:#fff;font-weight:bold">const</span> <span style="color:#fff;font-weight:bold">int</span> size = max - min + <span style="color:#ff0;font-weight:bold">1</span>;
-    <span style="color:#fff;font-weight:bold">int</span> deck[size];
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; size; ++i) deck[i] = <span style="color:#ff0;font-weight:bold">0</span>;
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; length; ++i) deck[arr[i] - min]++;
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>, j = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; size; ++i){
-        <span style="color:#fff;font-weight:bold">while</span>(deck[i] != <span style="color:#ff0;font-weight:bold">0</span>){
+    <span style="color:#00f">const</span> <span style="color:#2b91af">int</span> size = max - min + 1;
+    <span style="color:#2b91af">int</span> deck[size];
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt; size; ++i) deck[i] = 0;
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt; length; ++i) deck[arr[i] - min]++;
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0, j = 0; i &lt; size; ++i){
+        <span style="color:#00f">while</span>(deck[i] != 0){
             arr[j] = i + min;
             j++;
             deck[i]--;
@@ -927,91 +927,91 @@ MinHeap Create( <span style="color:#fff;font-weight:bold">int</span> MaxSize ){
     }
 }
 
-<span style="color:#fff;font-weight:bold">void</span> printArray(<span style="color:#fff;font-weight:bold">int</span> arr[], <span style="color:#fff;font-weight:bold">int</span> length){
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; length - <span style="color:#ff0;font-weight:bold">1</span>; ++i) printf(<span style="color:#0ff;font-weight:bold">&#34;%d &#34;</span>, arr[i]);
-    printf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>, arr[length - <span style="color:#ff0;font-weight:bold">1</span>]);
+<span style="color:#2b91af">void</span> printArray(<span style="color:#2b91af">int</span> arr[], <span style="color:#2b91af">int</span> length){
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt; length - 1; ++i) printf(<span style="color:#a31515">&#34;%d &#34;</span>, arr[i]);
+    printf(<span style="color:#a31515">&#34;%d&#34;</span>, arr[length - 1]);
 }
 
-<span style="color:#fff;font-weight:bold">int</span> main(<span style="color:#fff;font-weight:bold">int</span> argc, <span style="color:#fff;font-weight:bold">char</span> <span style="color:#fff;font-weight:bold">const</span> *argv[])
+<span style="color:#2b91af">int</span> main(<span style="color:#2b91af">int</span> argc, <span style="color:#2b91af">char</span> <span style="color:#00f">const</span> *argv[])
 {
-    <span style="color:#fff;font-weight:bold">int</span> arr[MAX_SIZE];
-    <span style="color:#fff;font-weight:bold">int</span> tmp = <span style="color:#ff0;font-weight:bold">0</span>;
-    <span style="color:#fff;font-weight:bold">while</span>(scanf(<span style="color:#0ff;font-weight:bold">&#34;%d&#34;</span>, &amp;arr[tmp]) != EOF &amp;&amp; getchar() != <span style="color:#0ff;font-weight:bold">&#39;\n&#39;</span>) tmp++;
-    countSort(arr, tmp + <span style="color:#ff0;font-weight:bold">1</span>);
-    printArray(arr, tmp + <span style="color:#ff0;font-weight:bold">1</span>);
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+    <span style="color:#2b91af">int</span> arr[MAX_SIZE];
+    <span style="color:#2b91af">int</span> tmp = 0;
+    <span style="color:#00f">while</span>(scanf(<span style="color:#a31515">&#34;%d&#34;</span>, &amp;arr[tmp]) != EOF &amp;&amp; getchar() != <span style="color:#a31515">&#39;\n&#39;</span>) tmp++;
+    countSort(arr, tmp + 1);
+    printArray(arr, tmp + 1);
+    <span style="color:#00f">return</span> 0;
 }
-<span style="color:#007f7f">/*
-</span><span style="color:#007f7f">sample input:
-</span><span style="color:#007f7f">12 23 16 17 14 12 13 21 19 22 15 13
-</span><span style="color:#007f7f"> */</span>
+<span style="color:#008000">/*
+</span><span style="color:#008000">sample input:
+</span><span style="color:#008000">12 23 16 17 14 12 13 21 19 22 15 13
+</span><span style="color:#008000"> */</span>
 </code></pre></div><h3 id="桶排序">桶排序</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#007f7f">/* 桶排序
-</span><span style="color:#007f7f"> * 桶排序和计数排序有点像，如果说计数排序分成一个个“点”来通过点计数的话，
-</span><span style="color:#007f7f"> * 那么桶排序就是分成一个个“段”，然后段内再递归调用自己或是使用另一种排序方法
-</span><span style="color:#007f7f"> * 在排序的元素都为整数的情况下，计数排序和桶排序都是行之有效的，
-</span><span style="color:#007f7f"> * 但是如果排序的元素中存在浮点数，计数排序就吃瘪了^_^
-</span><span style="color:#007f7f"> * 所以，这里的代码针对浮点数数组的排序
-</span><span style="color:#007f7f"> * 桶排序适用的情况是元素几乎平均分布的情况，就是说如果每一个桶装一个元素的话，时间复杂度能够到达O(N)
-</span><span style="color:#007f7f"> * 这里，每隔1分一个桶，也就是说分为floor(max) - floor(min) + 1 个区间
-</span><span style="color:#007f7f"> * 第一个桶的区间就是[floor(min), floor(min + 1)),最后一个桶的区间就是 [floor(max), floor(max + 1))
-</span><span style="color:#007f7f"> * 桶内的元素使用链表实现，然后桶内部的排序采用就采用插入排序，比较适合链表的特性
-</span><span style="color:#007f7f"> * 这边是升序排序且稳定的排序
-</span><span style="color:#007f7f"> * */</span>
-<span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdio.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;math.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#include</span> <span style="color:#0f0;font-weight:bold">&lt;stdlib.h&gt;</span><span style="color:#0f0;font-weight:bold">
-</span><span style="color:#0f0;font-weight:bold">#define MAX_SIZE 100
-</span><span style="color:#0f0;font-weight:bold"></span>
-<span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">struct</span> Node *List;
-<span style="color:#fff;font-weight:bold">struct</span> Node{
-    <span style="color:#fff;font-weight:bold">double</span> data;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#008000">/* 桶排序
+</span><span style="color:#008000"> * 桶排序和计数排序有点像，如果说计数排序分成一个个“点”来通过点计数的话，
+</span><span style="color:#008000"> * 那么桶排序就是分成一个个“段”，然后段内再递归调用自己或是使用另一种排序方法
+</span><span style="color:#008000"> * 在排序的元素都为整数的情况下，计数排序和桶排序都是行之有效的，
+</span><span style="color:#008000"> * 但是如果排序的元素中存在浮点数，计数排序就吃瘪了^_^
+</span><span style="color:#008000"> * 所以，这里的代码针对浮点数数组的排序
+</span><span style="color:#008000"> * 桶排序适用的情况是元素几乎平均分布的情况，就是说如果每一个桶装一个元素的话，时间复杂度能够到达O(N)
+</span><span style="color:#008000"> * 这里，每隔1分一个桶，也就是说分为floor(max) - floor(min) + 1 个区间
+</span><span style="color:#008000"> * 第一个桶的区间就是[floor(min), floor(min + 1)),最后一个桶的区间就是 [floor(max), floor(max + 1))
+</span><span style="color:#008000"> * 桶内的元素使用链表实现，然后桶内部的排序采用就采用插入排序，比较适合链表的特性
+</span><span style="color:#008000"> * 这边是升序排序且稳定的排序
+</span><span style="color:#008000"> * */</span>
+<span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdio.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;math.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#include</span> <span style="color:#00f">&lt;stdlib.h&gt;</span><span style="color:#00f">
+</span><span style="color:#00f">#define MAX_SIZE 100
+</span><span style="color:#00f"></span>
+<span style="color:#00f">typedef</span> <span style="color:#00f">struct</span> Node *List;
+<span style="color:#00f">struct</span> Node{
+    <span style="color:#2b91af">double</span> data;
     List next;
 };
 
-<span style="color:#fff;font-weight:bold">void</span> insertElement(List deck[], <span style="color:#fff;font-weight:bold">int</span> index, <span style="color:#fff;font-weight:bold">double</span> arr[], <span style="color:#fff;font-weight:bold">int</span> i){
+<span style="color:#2b91af">void</span> insertElement(List deck[], <span style="color:#2b91af">int</span> index, <span style="color:#2b91af">double</span> arr[], <span style="color:#2b91af">int</span> i){
     List p,q;
-    <span style="color:#fff;font-weight:bold">if</span> (deck[index]-&gt;data &gt; arr[i]){    <span style="color:#007f7f">//插入到第一个之前的情况单独分出来
-</span><span style="color:#007f7f"></span>        p = malloc(<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">struct</span> Node));
+    <span style="color:#00f">if</span> (deck[index]-&gt;data &gt; arr[i]){    <span style="color:#008000">//插入到第一个之前的情况单独分出来
+</span><span style="color:#008000"></span>        p = malloc(<span style="color:#00f">sizeof</span>(<span style="color:#00f">struct</span> Node));
         p-&gt;data = arr[i];
         p-&gt;next = deck[index];
         deck[index] = p;
-    }<span style="color:#fff;font-weight:bold">else</span>{
+    }<span style="color:#00f">else</span>{
         p = deck[index]-&gt;next;
         q = deck[index];
-        <span style="color:#fff;font-weight:bold">while</span>(p != <span style="color:#fff;font-weight:bold">NULL</span> &amp;&amp; p-&gt;data &lt;= arr[i]){ <span style="color:#007f7f">//这边这一个 &lt;= 使之成为稳定排序
-</span><span style="color:#007f7f"></span>            q = p;
+        <span style="color:#00f">while</span>(p != NULL &amp;&amp; p-&gt;data &lt;= arr[i]){ <span style="color:#008000">//这边这一个 &lt;= 使之成为稳定排序
+</span><span style="color:#008000"></span>            q = p;
             p = p-&gt;next;
         }
-        q-&gt;next = malloc(<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">struct</span> Node));
+        q-&gt;next = malloc(<span style="color:#00f">sizeof</span>(<span style="color:#00f">struct</span> Node));
         q-&gt;next-&gt;data = arr[i];
-        q-&gt;next-&gt;next = p;      <span style="color:#007f7f">//插入到最后一个位置和插入到前面的位置合并，p为NULL时就是插入到最后一个位置
-</span><span style="color:#007f7f"></span>    }
+        q-&gt;next-&gt;next = p;      <span style="color:#008000">//插入到最后一个位置和插入到前面的位置合并，p为NULL时就是插入到最后一个位置
+</span><span style="color:#008000"></span>    }
 }
 
-<span style="color:#fff;font-weight:bold">void</span> bucketSort(<span style="color:#fff;font-weight:bold">double</span> arr[], <span style="color:#fff;font-weight:bold">int</span> length){
-    <span style="color:#fff;font-weight:bold">double</span> max = -<span style="color:#ff0;font-weight:bold">99999</span>, min = <span style="color:#ff0;font-weight:bold">99999</span>;
-    <span style="color:#fff;font-weight:bold">for</span> ( <span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; length; ++i) {
-        <span style="color:#fff;font-weight:bold">if</span> (arr[i] &gt; max) max = arr[i];
-        <span style="color:#fff;font-weight:bold">if</span> (arr[i] &lt; min) min = arr[i];
+<span style="color:#2b91af">void</span> bucketSort(<span style="color:#2b91af">double</span> arr[], <span style="color:#2b91af">int</span> length){
+    <span style="color:#2b91af">double</span> max = -99999, min = 99999;
+    <span style="color:#00f">for</span> ( <span style="color:#2b91af">int</span> i = 0; i &lt; length; ++i) {
+        <span style="color:#00f">if</span> (arr[i] &gt; max) max = arr[i];
+        <span style="color:#00f">if</span> (arr[i] &lt; min) min = arr[i];
     }
-    <span style="color:#fff;font-weight:bold">const</span> <span style="color:#fff;font-weight:bold">int</span> size = floor(max) - floor(min) + <span style="color:#ff0;font-weight:bold">1</span>;
-    List deck[size];            <span style="color:#007f7f">//建立结构体指针数组并初始化
-</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; size; ++i) deck[i] = <span style="color:#fff;font-weight:bold">NULL</span>;
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; length; ++i) {
-        <span style="color:#fff;font-weight:bold">int</span> index = floor(arr[i]) - floor(min);
-        <span style="color:#fff;font-weight:bold">if</span> (deck[index] == <span style="color:#fff;font-weight:bold">NULL</span>) {
-            deck[index] = malloc(<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">struct</span> Node));
+    <span style="color:#00f">const</span> <span style="color:#2b91af">int</span> size = floor(max) - floor(min) + 1;
+    List deck[size];            <span style="color:#008000">//建立结构体指针数组并初始化
+</span><span style="color:#008000"></span>    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt; size; ++i) deck[i] = NULL;
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt; length; ++i) {
+        <span style="color:#2b91af">int</span> index = floor(arr[i]) - floor(min);
+        <span style="color:#00f">if</span> (deck[index] == NULL) {
+            deck[index] = malloc(<span style="color:#00f">sizeof</span>(<span style="color:#00f">struct</span> Node));
             deck[index]-&gt;data = arr[i];
-            deck[index]-&gt;next = <span style="color:#fff;font-weight:bold">NULL</span>;
-        }<span style="color:#fff;font-weight:bold">else</span>{
-            <span style="color:#007f7f">//原来不为空就内部排序
-</span><span style="color:#007f7f"></span>            insertElement(deck,index,arr,i);
+            deck[index]-&gt;next = NULL;
+        }<span style="color:#00f">else</span>{
+            <span style="color:#008000">//原来不为空就内部排序
+</span><span style="color:#008000"></span>            insertElement(deck,index,arr,i);
         }
     }
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>, j = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; size; ++i){
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0, j = 0; i &lt; size; ++i){
         List p = deck[i];
-        <span style="color:#fff;font-weight:bold">while</span>(p != <span style="color:#fff;font-weight:bold">NULL</span>){
+        <span style="color:#00f">while</span>(p != NULL){
             arr[j] = p-&gt;data;
             j++;
             p = p-&gt;next;
@@ -1019,26 +1019,26 @@ MinHeap Create( <span style="color:#fff;font-weight:bold">int</span> MaxSize ){
     }
 }
 
-<span style="color:#007f7f">//free我就不free了，写项目的时候要记得free
-</span><span style="color:#007f7f"></span>
-<span style="color:#fff;font-weight:bold">void</span> printArray(<span style="color:#fff;font-weight:bold">double</span> arr[], <span style="color:#fff;font-weight:bold">int</span> length){
-    <span style="color:#fff;font-weight:bold">for</span> (<span style="color:#fff;font-weight:bold">int</span> i = <span style="color:#ff0;font-weight:bold">0</span>; i &lt; length - <span style="color:#ff0;font-weight:bold">1</span>; ++i) printf(<span style="color:#0ff;font-weight:bold">&#34;%.1lf &#34;</span>, arr[i]);
-    printf(<span style="color:#0ff;font-weight:bold">&#34;%.1lf&#34;</span>, arr[length - <span style="color:#ff0;font-weight:bold">1</span>]);
+<span style="color:#008000">//free我就不free了，写项目的时候要记得free
+</span><span style="color:#008000"></span>
+<span style="color:#2b91af">void</span> printArray(<span style="color:#2b91af">double</span> arr[], <span style="color:#2b91af">int</span> length){
+    <span style="color:#00f">for</span> (<span style="color:#2b91af">int</span> i = 0; i &lt; length - 1; ++i) printf(<span style="color:#a31515">&#34;%.1lf &#34;</span>, arr[i]);
+    printf(<span style="color:#a31515">&#34;%.1lf&#34;</span>, arr[length - 1]);
 }
 
-<span style="color:#fff;font-weight:bold">int</span> main(<span style="color:#fff;font-weight:bold">int</span> argc, <span style="color:#fff;font-weight:bold">char</span> <span style="color:#fff;font-weight:bold">const</span> *argv[])
+<span style="color:#2b91af">int</span> main(<span style="color:#2b91af">int</span> argc, <span style="color:#2b91af">char</span> <span style="color:#00f">const</span> *argv[])
 {
-    <span style="color:#fff;font-weight:bold">double</span> arr[MAX_SIZE];
-    <span style="color:#fff;font-weight:bold">int</span> tmp = <span style="color:#ff0;font-weight:bold">0</span>;
-    <span style="color:#fff;font-weight:bold">while</span>(scanf(<span style="color:#0ff;font-weight:bold">&#34;%lf&#34;</span>, &amp;arr[tmp]) != EOF &amp;&amp; getchar() != <span style="color:#0ff;font-weight:bold">&#39;\n&#39;</span>) tmp++;
-    bucketSort(arr, tmp + <span style="color:#ff0;font-weight:bold">1</span>);
-    printArray(arr, tmp + <span style="color:#ff0;font-weight:bold">1</span>);
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+    <span style="color:#2b91af">double</span> arr[MAX_SIZE];
+    <span style="color:#2b91af">int</span> tmp = 0;
+    <span style="color:#00f">while</span>(scanf(<span style="color:#a31515">&#34;%lf&#34;</span>, &amp;arr[tmp]) != EOF &amp;&amp; getchar() != <span style="color:#a31515">&#39;\n&#39;</span>) tmp++;
+    bucketSort(arr, tmp + 1);
+    printArray(arr, tmp + 1);
+    <span style="color:#00f">return</span> 0;
 }
-<span style="color:#007f7f">/*
-</span><span style="color:#007f7f">sample input:
-</span><span style="color:#007f7f">12.1 23 12.3 13.4 13.3 21.7 19.3 22.8 15.4 13.3
-</span><span style="color:#007f7f"> */</span>
+<span style="color:#008000">/*
+</span><span style="color:#008000">sample input:
+</span><span style="color:#008000">12.1 23 12.3 13.4 13.3 21.7 19.3 22.8 15.4 13.3
+</span><span style="color:#008000"> */</span>
 </code></pre></div>
         </div>
         <footer class="article-footer">

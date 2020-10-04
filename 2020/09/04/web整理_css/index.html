@@ -298,173 +298,173 @@
 
         <div class="article-entry" itemprop="articleBody">
             <h4 id="css代码">CSS代码</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#007f7f">/*注意：CSS不能使用双斜杠//注释,无论单行多行只能像这样注释*/</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#008000">/*注意：CSS不能使用双斜杠//注释,无论单行多行只能像这样注释*/</span>
 
-<span style="color:#007f7f">/*通配选择器*/</span>
+<span style="color:#008000">/*通配选择器*/</span>
  * {
 
 }
 
-<span style="color:#007f7f">/*简单选择器*/</span>
-<span style="font-weight:bold">h3</span>{
-	<span style="color:#fff;font-weight:bold">font-family</span>:<span style="color:#0ff;font-weight:bold">&#34;Arial, Helvetica, Futura&#34;</span>;
-	<span style="color:#fff;font-weight:bold">font-size</span>: <span style="color:#ff0;font-weight:bold">36</span><span style="color:#fff;font-weight:bold">px</span>;
-	<span style="color:#fff;font-weight:bold">font-style</span>: <span style="color:#fff;font-weight:bold">italic</span>; <span style="color:#007f7f">/*normal oblique(无用)*/</span>
-	<span style="color:#fff;font-weight:bold">text-align</span>:<span style="color:#fff;font-weight:bold">center</span>;
-	<span style="color:#fff;font-weight:bold">height</span>:<span style="color:#fff;font-weight:bold">auto</span>;
+<span style="color:#008000">/*简单选择器*/</span>
+h3{
+	<span style="color:#00f">font-family</span>:<span style="color:#a31515">&#34;Arial, Helvetica, Futura&#34;</span>;
+	<span style="color:#00f">font-size</span>: 36<span style="color:#2b91af">px</span>;
+	<span style="color:#00f">font-style</span>: <span style="color:#00f">italic</span>; <span style="color:#008000">/*normal oblique(无用)*/</span>
+	<span style="color:#00f">text-align</span>:<span style="color:#00f">center</span>;
+	<span style="color:#00f">height</span>:<span style="color:#00f">auto</span>;
 }
 
-<span style="color:#007f7f">/*类选择器,通过已有的标签创建不同的类*/</span>
-<span style="font-weight:bold">p</span>.normal{
-	<span style="color:#fff;font-weight:bold">font-variant</span>: <span style="color:#fff;font-weight:bold">small</span>-caps; <span style="color:#007f7f">/*normal 小型大写字母*/</span>
+<span style="color:#008000">/*类选择器,通过已有的标签创建不同的类*/</span>
+p.<span style="color:#2b91af">normal</span>{
+	<span style="color:#00f">font-variant</span>: <span style="color:#00f">small</span>-caps; <span style="color:#008000">/*normal 小型大写字母*/</span>
 }
-<span style="font-weight:bold">p</span>.warning{
-	<span style="color:#fff;font-weight:bold">font-weight</span>: <span style="color:#fff;font-weight:bold">bold</span>; <span style="color:#007f7f">/*normal bolder lighter或100，200，……，900*/</span>
-}
-
-<span style="color:#007f7f">/*通用选择器*/</span>
-.emphasize{
-	<span style="color:#007f7f">/*最后一个是字体族，倒数第二是大小，前面俩随便*/</span>
-	<span style="color:#fff;font-weight:bold">font</span>:<span style="color:#fff;font-weight:bold">bold</span> <span style="color:#fff;font-weight:bold">italic</span> <span style="color:#ff0;font-weight:bold">1.1</span><span style="color:#fff;font-weight:bold">em</span> <span style="color:#0ff;font-weight:bold">&#39;Times New Roman&#39;</span> Palatino;
-	<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#FF0000</span>;
+p.<span style="color:#2b91af">warning</span>{
+	<span style="color:#00f">font-weight</span>: <span style="color:#00f">bold</span>; <span style="color:#008000">/*normal bolder lighter或100，200，……，900*/</span>
 }
 
-.container{
-	<span style="color:#fff;font-weight:bold">width</span>: <span style="color:#ff0;font-weight:bold">800</span><span style="color:#fff;font-weight:bold">px</span>;
-	<span style="color:#fff;font-weight:bold">height</span>: <span style="color:#ff0;font-weight:bold">600</span><span style="color:#fff;font-weight:bold">px</span>;
-	<span style="color:#fff;font-weight:bold">background-color</span>: <span style="color:#ff0;font-weight:bold">#FFFFFF</span>;
-	<span style="color:#fff;font-weight:bold">margin-left</span>: <span style="color:#ff0;font-weight:bold">300</span><span style="color:#fff;font-weight:bold">px</span>;
-	<span style="color:#fff;font-weight:bold">padding</span>: <span style="color:#ff0;font-weight:bold">50</span><span style="color:#fff;font-weight:bold">px</span>;
+<span style="color:#008000">/*通用选择器*/</span>
+.<span style="color:#2b91af">emphasize</span>{
+	<span style="color:#008000">/*最后一个是字体族，倒数第二是大小，前面俩随便*/</span>
+	<span style="color:#00f">font</span>:<span style="color:#00f">bold</span> <span style="color:#00f">italic</span> 1.1<span style="color:#2b91af">em</span> <span style="color:#a31515">&#39;Times New Roman&#39;</span> Palatino;
+	<span style="color:#00f">color</span>: #FF0000;
 }
 
-<span style="color:#007f7f">/*id选择器*/</span>
+.<span style="color:#2b91af">container</span>{
+	<span style="color:#00f">width</span>: 800<span style="color:#2b91af">px</span>;
+	<span style="color:#00f">height</span>: 600<span style="color:#2b91af">px</span>;
+	<span style="color:#00f">background-color</span>: #FFFFFF;
+	<span style="color:#00f">margin-left</span>: 300<span style="color:#2b91af">px</span>;
+	<span style="color:#00f">padding</span>: 50<span style="color:#2b91af">px</span>;
+}
+
+<span style="color:#008000">/*id选择器*/</span>
 #ggg{
-	<span style="color:#fff;font-weight:bold">text-decoration</span>: <span style="color:#fff;font-weight:bold">line-through</span>;  <span style="color:#007f7f">/*overline, underline 上划线中划线下划线*/</span>
+	<span style="color:#00f">text-decoration</span>: <span style="color:#00f">line-through</span>;  <span style="color:#008000">/*overline, underline 上划线中划线下划线*/</span>
 
-	<span style="color:#fff;font-weight:bold">letter-spacing</span>: <span style="color:#ff0;font-weight:bold">1</span><span style="color:#fff;font-weight:bold">px</span>; <span style="color:#007f7f">/*-1px nromal 字母间距(tracking)*/</span>
+	<span style="color:#00f">letter-spacing</span>: 1<span style="color:#2b91af">px</span>; <span style="color:#008000">/*-1px nromal 字母间距(tracking)*/</span>
 
-	<span style="color:#fff;font-weight:bold">word-spacing</span>: <span style="color:#ff0;font-weight:bold">5</span><span style="color:#fff;font-weight:bold">px</span>; <span style="color:#007f7f">/*-1px normal 词间距*/</span>
+	<span style="color:#00f">word-spacing</span>: 5<span style="color:#2b91af">px</span>; <span style="color:#008000">/*-1px normal 词间距*/</span>
 
-	<span style="color:#fff;font-weight:bold">line-height</span>:<span style="color:#ff0;font-weight:bold">2</span>; <span style="color:#007f7f">/*24px 0.8em normal 行间距(leading)，数字代表倍数*/</span>
+	<span style="color:#00f">line-height</span>:2; <span style="color:#008000">/*24px 0.8em normal 行间距(leading)，数字代表倍数*/</span>
 }
 
 
-<span style="color:#007f7f">/*上下文选择器：后代选择器，只要是后代就符合*/</span>
-<span style="font-weight:bold">ol</span> <span style="font-weight:bold">ol</span>{
-	<span style="color:#fff;font-weight:bold">list-style-type</span>: <span style="color:#fff;font-weight:bold">upper-alpha</span>; <span style="color:#007f7f">/*=upper-latin lower-roman */</span>
+<span style="color:#008000">/*上下文选择器：后代选择器，只要是后代就符合*/</span>
+ol ol{
+	<span style="color:#00f">list-style-type</span>: <span style="color:#00f">upper-alpha</span>; <span style="color:#008000">/*=upper-latin lower-roman */</span>
 }
-<span style="font-weight:bold">ol</span> <span style="font-weight:bold">ol</span> <span style="font-weight:bold">ol</span>{
-	<span style="color:#fff;font-weight:bold">list-style-type</span>: <span style="color:#fff;font-weight:bold">decimal</span>;
-}
-
-
-<span style="color:#007f7f">/*上下文选择器：子元素选择器，严格按照dom树结构*/</span>
-<span style="font-weight:bold">ul</span> &gt; <span style="font-weight:bold">li</span> &gt; <span style="font-weight:bold">li</span> {
-	<span style="color:#fff;font-weight:bold">list-style-type</span>: <span style="color:#fff;font-weight:bold">square</span>; <span style="color:#007f7f">/*circle空心圆 disc默认实心圆*/</span>
+ol ol ol{
+	<span style="color:#00f">list-style-type</span>: <span style="color:#00f">decimal</span>;
 }
 
 
-<span style="color:#007f7f">/*选择第一个子元素*/</span>
-<span style="font-weight:bold">p</span>:first-child{
-	<span style="color:#fff;font-weight:bold">text-indent</span>: <span style="color:#ff0;font-weight:bold">10</span><span style="color:#fff;font-weight:bold">px</span>; <span style="color:#007f7f">/*2em 首行缩进*/</span>
+<span style="color:#008000">/*上下文选择器：子元素选择器，严格按照dom树结构*/</span>
+ul &gt; li &gt; li {
+	<span style="color:#00f">list-style-type</span>: <span style="color:#00f">square</span>; <span style="color:#008000">/*circle空心圆 disc默认实心圆*/</span>
 }
 
-<span style="color:#007f7f">/*选择最后一个子元素*/</span>
-<span style="font-weight:bold">p</span>:last-child{
+
+<span style="color:#008000">/*选择第一个子元素*/</span>
+p:first-child{
+	<span style="color:#00f">text-indent</span>: 10<span style="color:#2b91af">px</span>; <span style="color:#008000">/*2em 首行缩进*/</span>
+}
+
+<span style="color:#008000">/*选择最后一个子元素*/</span>
+p:last-child{
 
 }
 
-<span style="color:#007f7f">/*选择子元素，且仅存在着这一个子元素*/</span>
-<span style="font-weight:bold">p</span>:only-child{
-	<span style="color:#fff;font-weight:bold">text-align</span>: <span style="color:#fff;font-weight:bold">center</span>; <span style="color:#007f7f">/*justify left(default) right 文本水平方向排列*/</span>
+<span style="color:#008000">/*选择子元素，且仅存在着这一个子元素*/</span>
+p:only-child{
+	<span style="color:#00f">text-align</span>: <span style="color:#00f">center</span>; <span style="color:#008000">/*justify left(default) right 文本水平方向排列*/</span>
 }
 
-<span style="color:#007f7f">/*选择自己：且自己没有子元素*/</span>
-<span style="font-weight:bold">p</span>:empty{
-	<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#777777</span>;
-	<span style="color:#fff;font-weight:bold">background-color</span>: <span style="color:#ff0;font-weight:bold">#FFFFFF</span>;
+<span style="color:#008000">/*选择自己：且自己没有子元素*/</span>
+p:empty{
+	<span style="color:#00f">color</span>: #777777;
+	<span style="color:#00f">background-color</span>: #FFFFFF;
 }
 
-<span style="color:#007f7f">/*伪类：link和visited，hover，focus*/</span>
+<span style="color:#008000">/*伪类：link和visited，hover，focus*/</span>
 
 
 #ggg:hover{
-	<span style="color:#fff;font-weight:bold">background-color</span>: <span style="color:#ff0;font-weight:bold">#FFFFFF</span>;
+	<span style="color:#00f">background-color</span>: #FFFFFF;
 }
 
-<span style="font-weight:bold">a</span>:link {<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#FF0000</span>}     <span style="color:#007f7f">/* 未访问的链接 */</span>
-<span style="font-weight:bold">a</span>:visited {<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#00FF00</span>}  <span style="color:#007f7f">/* 已访问的链接 */</span>
-<span style="font-weight:bold">a</span>:hover {<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#FF00FF</span>}    <span style="color:#007f7f">/* 当有鼠标悬停在链接上 */</span>
-<span style="font-weight:bold">a</span>:active {<span style="color:#fff;font-weight:bold">color</span>: <span style="color:#ff0;font-weight:bold">#0000FF</span>}   <span style="color:#007f7f">/* 被选择的链接 */</span>
+a:link {<span style="color:#00f">color</span>: #FF0000}     <span style="color:#008000">/* 未访问的链接 */</span>
+a:visited {<span style="color:#00f">color</span>: #00FF00}  <span style="color:#008000">/* 已访问的链接 */</span>
+a:hover {<span style="color:#00f">color</span>: #FF00FF}    <span style="color:#008000">/* 当有鼠标悬停在链接上 */</span>
+a:active {<span style="color:#00f">color</span>: #0000FF}   <span style="color:#008000">/* 被选择的链接 */</span>
 
-<span style="color:#007f7f">/*图片悬浮*/</span>
-<span style="font-weight:bold">img</span> {
-	<span style="color:#fff;font-weight:bold">float</span>: <span style="color:#fff;font-weight:bold">right</span>;	<span style="color:#007f7f">/*图片悬浮位置，图片周围围绕文字的text-align要与float的相反才行*/</span>
+<span style="color:#008000">/*图片悬浮*/</span>
+img {
+	<span style="color:#00f">float</span>: <span style="color:#00f">right</span>;	<span style="color:#008000">/*图片悬浮位置，图片周围围绕文字的text-align要与float的相反才行*/</span>
 }
 
-<span style="color:#007f7f">/*盒模型相关参数*/</span>
-<span style="font-weight:bold">td</span>, <span style="font-weight:bold">th</span>{
-	<span style="color:#fff;font-weight:bold">border</span>: <span style="color:#fff;font-weight:bold">thin</span> <span style="color:#fff;font-weight:bold">solid</span> <span style="color:#fff;font-weight:bold">black</span>;  
-	<span style="color:#007f7f">/*宽度(border-width) px
-</span><span style="color:#007f7f">	  样式(border-style) solid dotted dashed double 
-</span><span style="color:#007f7f">	  颜色(border-color)*/</span>
+<span style="color:#008000">/*盒模型相关参数*/</span>
+td, th{
+	<span style="color:#00f">border</span>: <span style="color:#00f">thin</span> <span style="color:#00f">solid</span> <span style="color:#00f">black</span>;  
+	<span style="color:#008000">/*宽度(border-width) px
+</span><span style="color:#008000">	  样式(border-style) solid dotted dashed double 
+</span><span style="color:#008000">	  颜色(border-color)*/</span>
 }
 
-<span style="font-weight:bold">table</span>{
-	<span style="color:#fff;font-weight:bold">border</span>: <span style="color:#fff;font-weight:bold">thin</span> <span style="color:#fff;font-weight:bold">solid</span> <span style="color:#fff;font-weight:bold">black</span>;
-	<span style="color:#fff;font-weight:bold">border-collapse</span>: <span style="color:#fff;font-weight:bold">collapse</span>;
-	<span style="color:#fff;font-weight:bold">border-top-width</span>: <span style="color:#fff;font-weight:bold">medium</span>;
-	<span style="color:#fff;font-weight:bold">border-bottom-style</span>: <span style="color:#fff;font-weight:bold">dashed</span>; 
+table{
+	<span style="color:#00f">border</span>: <span style="color:#00f">thin</span> <span style="color:#00f">solid</span> <span style="color:#00f">black</span>;
+	<span style="color:#00f">border-collapse</span>: <span style="color:#00f">collapse</span>;
+	<span style="color:#00f">border-top-width</span>: <span style="color:#00f">medium</span>;
+	<span style="color:#00f">border-bottom-style</span>: <span style="color:#00f">dashed</span>; 
 }
 
-<span style="font-weight:bold">p</span>.box{
-	<span style="color:#fff;font-weight:bold">margin</span>: <span style="color:#ff0;font-weight:bold">15</span><span style="color:#fff;font-weight:bold">px</span>; 	<span style="color:#007f7f">/*外边距*/</span>
-	<span style="color:#fff;font-weight:bold">padding</span>: <span style="color:#ff0;font-weight:bold">15</span><span style="color:#fff;font-weight:bold">px</span>; 	<span style="color:#007f7f">/*内边距，注意是pad不是ped*/</span>
-	<span style="color:#fff;font-weight:bold">border-style</span>: <span style="color:#fff;font-weight:bold">solid</span>;
-	<span style="color:#fff;font-weight:bold">background</span>: <span style="color:#ff0;font-weight:bold">#C0C0C0</span>;
+p.<span style="color:#2b91af">box</span>{
+	<span style="color:#00f">margin</span>: 15<span style="color:#2b91af">px</span>; 	<span style="color:#008000">/*外边距*/</span>
+	<span style="color:#00f">padding</span>: 15<span style="color:#2b91af">px</span>; 	<span style="color:#008000">/*内边距，注意是pad不是ped*/</span>
+	<span style="color:#00f">border-style</span>: <span style="color:#00f">solid</span>;
+	<span style="color:#00f">background</span>: #C0C0C0;
 }
 
 
-<span style="color:#007f7f">/*背景图片*/</span>
-<span style="font-weight:bold">body</span>{
-	<span style="color:#fff;font-weight:bold">background-image</span>: <span style="color:#fff;font-weight:bold">url</span>(<span style="color:#0ff;font-weight:bold">&#34;../image/background.jpg&#34;</span>);
-	<span style="color:#fff;font-weight:bold">background-size</span>: <span style="color:#ff0;font-weight:bold">1280</span><span style="color:#fff;font-weight:bold">px</span> <span style="color:#ff0;font-weight:bold">720</span><span style="color:#fff;font-weight:bold">px</span>; 
-	<span style="color:#fff;font-weight:bold">background-position</span>: <span style="color:#fff;font-weight:bold">top</span> <span style="color:#fff;font-weight:bold">center</span>;
-	<span style="color:#fff;font-weight:bold">background-repeat</span>: <span style="color:#fff;font-weight:bold">no-repeat</span>; <span style="color:#007f7f">/*repeat(default) repeat-x repeat-y*/</span>
+<span style="color:#008000">/*背景图片*/</span>
+body{
+	<span style="color:#00f">background-image</span>: url(<span style="color:#a31515">&#34;../image/background.jpg&#34;</span>);
+	<span style="color:#00f">background-size</span>: 1280<span style="color:#2b91af">px</span> 720<span style="color:#2b91af">px</span>; 
+	<span style="color:#00f">background-position</span>: <span style="color:#00f">top</span> <span style="color:#00f">center</span>;
+	<span style="color:#00f">background-repeat</span>: <span style="color:#00f">no-repeat</span>; <span style="color:#008000">/*repeat(default) repeat-x repeat-y*/</span>
 }
 </code></pre></div><h4 id="css-对应的-html">CSS 对应的 HTML</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="font-weight:bold">html</span>&gt;
-&lt;<span style="font-weight:bold">head</span>&gt;
-    &lt;<span style="font-weight:bold">title</span>&gt;css test&lt;/<span style="font-weight:bold">title</span>&gt;
-    &lt;<span style="font-weight:bold">meta</span> <span style="color:#007f7f">charset</span>=<span style="color:#0ff;font-weight:bold">&#34;utf-8&#34;</span>&gt;
-    <span style="color:#007f7f">&lt;!-- 外部样式表 --&gt;</span>
-    &lt;<span style="font-weight:bold">link</span> <span style="color:#007f7f">rel</span>=<span style="color:#0ff;font-weight:bold">&#34;stylesheet&#34;</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;text/css&#34;</span> <span style="color:#007f7f">href</span>=<span style="color:#0ff;font-weight:bold">&#34;css/1.css&#34;</span> /&gt;
-    <span style="color:#007f7f">&lt;!-- 文档样式表 --&gt;</span>
-    &lt;<span style="font-weight:bold">style</span> <span style="color:#007f7f">type</span>=<span style="color:#0ff;font-weight:bold">&#34;text/css&#34;</span>&gt;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html&gt;</span>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;css test&lt;/title&gt;
+    &lt;meta charset=<span style="color:#a31515">&#34;utf-8&#34;</span>&gt;
+    <span style="color:#008000">&lt;!-- 外部样式表 --&gt;</span>
+    &lt;link rel=<span style="color:#a31515">&#34;stylesheet&#34;</span> type=<span style="color:#a31515">&#34;text/css&#34;</span> href=<span style="color:#a31515">&#34;css/1.css&#34;</span> /&gt;
+    <span style="color:#008000">&lt;!-- 文档样式表 --&gt;</span>
+    &lt;style type=<span style="color:#a31515">&#34;text/css&#34;</span>&gt;
         
-    &lt;/<span style="font-weight:bold">style</span>&gt;
-&lt;/<span style="font-weight:bold">head</span>&gt;
-&lt;<span style="font-weight:bold">body</span>&gt;
-    &lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">class</span>=<span style="color:#0ff;font-weight:bold">&#34;container&#34;</span>&gt;
-        &lt;<span style="font-weight:bold">p</span>&gt;
-            &lt;<span style="font-weight:bold">span</span> <span style="color:#007f7f">id</span>=<span style="color:#0ff;font-weight:bold">&#34;ggg&#34;</span>&gt;ggg&lt;/<span style="font-weight:bold">span</span>&gt;
-            &lt;<span style="font-weight:bold">br</span> /&gt;
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=<span style="color:#a31515">&#34;container&#34;</span>&gt;
+        &lt;p&gt;
+            &lt;span id=<span style="color:#a31515">&#34;ggg&#34;</span>&gt;ggg&lt;/span&gt;
+            &lt;br /&gt;
             ggg
-        &lt;<span style="font-weight:bold">p</span>&gt;
+        &lt;p&gt;
 
-        &lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">class</span>=<span style="color:#0ff;font-weight:bold">&#34;emphasize&#34;</span>&gt;
-            &lt;<span style="font-weight:bold">p</span>&gt;emphasize!&lt;/<span style="font-weight:bold">p</span>&gt;
-        &lt;/<span style="font-weight:bold">div</span>&gt;
+        &lt;div class=<span style="color:#a31515">&#34;emphasize&#34;</span>&gt;
+            &lt;p&gt;emphasize!&lt;/p&gt;
+        &lt;/div&gt;
 
 
-        &lt;<span style="font-weight:bold">h3</span>&gt;this is doc css&lt;/<span style="font-weight:bold">h3</span>&gt;
-        <span style="color:#007f7f">&lt;!-- 内联样式表 --&gt;</span>
-        &lt;<span style="font-weight:bold">h3</span> <span style="color:#007f7f">style</span>=<span style="color:#0ff;font-weight:bold">&#34;font-family: Arial, Helvetica, Futura&#34;</span>&gt;this is in connect css&lt;/<span style="font-weight:bold">h3</span>&gt;
-        &lt;<span style="font-weight:bold">a</span> <span style="color:#007f7f">href</span>=<span style="color:#0ff;font-weight:bold">&#34;https://richie-leonhardt.github.io&#34;</span>&gt;&amp;gt;&amp;gt;blog&amp;lt;&amp;lt;&lt;/<span style="font-weight:bold">a</span>&gt;
-    &lt;/<span style="font-weight:bold">div</span>&gt;
-&lt;/<span style="font-weight:bold">body</span>&gt;
-&lt;/<span style="font-weight:bold">html</span>&gt;
+        &lt;h3&gt;this is doc css&lt;/h3&gt;
+        <span style="color:#008000">&lt;!-- 内联样式表 --&gt;</span>
+        &lt;h3 style=<span style="color:#a31515">&#34;font-family: Arial, Helvetica, Futura&#34;</span>&gt;this is in connect css&lt;/h3&gt;
+        &lt;a href=<span style="color:#a31515">&#34;https://richie-leonhardt.github.io&#34;</span>&gt;&amp;gt;&amp;gt;blog&amp;lt;&amp;lt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre></div>
         </div>
         <footer class="article-footer">

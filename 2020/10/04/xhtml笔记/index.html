@@ -303,37 +303,37 @@
 <li>只有数组的几个函数会在原基础上操作直接修改：一个reverse，一个sort，四个头尾操作</li>
 <li>其他的字符串、数字、Number或者Math等，都是通过返回值来保存修改后的结果，原来的都没有变</li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">arr = [<span style="color:#ff0;font-weight:bold">1</span>,<span style="color:#ff0;font-weight:bold">2</span>,<span style="color:#ff0;font-weight:bold">3</span>];
-str = <span style="color:#0ff;font-weight:bold">&#39;123&#39;</span>;
-num = <span style="color:#ff0;font-weight:bold">123.45</span>;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">arr = [1,2,3];
+str = <span style="color:#a31515">&#39;123&#39;</span>;
+num = 123.45;
 
-<span style="color:#007f7f">/*变：主要是对数组的操作*/</span>
+<span style="color:#008000">/*变：主要是对数组的操作*/</span>
 arr.reverse();
-arr.sort();			<span style="color:#007f7f">//数字和数组都是在原基础上操作
-</span><span style="color:#007f7f"></span>
-arr.push([<span style="color:#ff0;font-weight:bold">1</span>,<span style="color:#ff0;font-weight:bold">2</span>,<span style="color:#ff0;font-weight:bold">3</span>]);	<span style="color:#007f7f">//这里入栈/入队的是一个数组元素，入栈后是[1,2,3,[1,2,3]]或[1,2,3,Array(3)]
-</span><span style="color:#007f7f"></span>arr.pop();			<span style="color:#007f7f">//出栈
-</span><span style="color:#007f7f"></span>arr.shift();		<span style="color:#007f7f">//出队
-</span><span style="color:#007f7f"></span>arr.unshift(<span style="color:#ff0;font-weight:bold">1</span>,<span style="color:#ff0;font-weight:bold">2</span>,<span style="color:#ff0;font-weight:bold">3</span>);	<span style="color:#007f7f">//队头插入，一般用不到，这样三个参数是顺序插入3个元素
-</span><span style="color:#007f7f"></span>
+arr.sort();			<span style="color:#008000">//数字和数组都是在原基础上操作
+</span><span style="color:#008000"></span>
+arr.push([1,2,3]);	<span style="color:#008000">//这里入栈/入队的是一个数组元素，入栈后是[1,2,3,[1,2,3]]或[1,2,3,Array(3)]
+</span><span style="color:#008000"></span>arr.pop();			<span style="color:#008000">//出栈
+</span><span style="color:#008000"></span>arr.shift();		<span style="color:#008000">//出队
+</span><span style="color:#008000"></span>arr.unshift(1,2,3);	<span style="color:#008000">//队头插入，一般用不到，这样三个参数是顺序插入3个元素
+</span><span style="color:#008000"></span>
 
-<span style="color:#007f7f">/*不变,一定要通过赋值来引用或者直接嵌套着用*/</span>
-sa = arr.join(<span style="color:#0ff;font-weight:bold">&#39; | &#39;</span>);
-ca = arr.concat([<span style="color:#ff0;font-weight:bold">4</span>,<span style="color:#ff0;font-weight:bold">5</span>,<span style="color:#ff0;font-weight:bold">6</span>]);
-ca = arr.slice(<span style="color:#ff0;font-weight:bold">2</span>);
+<span style="color:#008000">/*不变,一定要通过赋值来引用或者直接嵌套着用*/</span>
+sa = arr.join(<span style="color:#a31515">&#39; | &#39;</span>);
+ca = arr.concat([4,5,6]);
+ca = arr.slice(2);
 sa = arr.toString();
 
-<span style="color:#007f7f">/*Number and number all unchanged*/</span>
-ns = <span style="color:#fff;font-weight:bold">Number</span>(str)
+<span style="color:#008000">/*Number and number all unchanged*/</span>
+ns = Number(str)
 sn = num.toString();
-n = num.toFixed(<span style="color:#ff0;font-weight:bold">1</span>);
+n = num.toFixed(1);
 
-<span style="color:#007f7f">/*Math all unchanged*/</span>
-fn = <span style="color:#fff;font-weight:bold">Math</span>.floor(num);
-cn = <span style="color:#fff;font-weight:bold">Math</span>.ceil(num);
-rn = <span style="color:#fff;font-weight:bold">Math</span>.round(num);
-expn = <span style="color:#fff;font-weight:bold">Math</span>.exp(num);
-sinn = <span style="color:#fff;font-weight:bold">Math</span>.sin(num);
+<span style="color:#008000">/*Math all unchanged*/</span>
+fn = Math.floor(num);
+cn = Math.ceil(num);
+rn = Math.round(num);
+expn = Math.exp(num);
+sinn = Math.sin(num);
 </code></pre></div>
         </div>
         <footer class="article-footer">

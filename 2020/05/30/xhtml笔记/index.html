@@ -336,28 +336,28 @@
 </li>
 <li>
 <p>属性不能简写，正确写法：</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">input</span> <span style="color:#007f7f">checked</span>=<span style="color:#0ff;font-weight:bold">&#34;checked&#34;</span> /&gt;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;input checked=<span style="color:#a31515">&#34;checked&#34;</span> /&gt;
 </code></pre></div></li>
 <li>
 <p>用 Id 属性代替 name 属性</p>
 </li>
 <li>
 <p>语言属性，在后面加上xml:lang</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="font-weight:bold">div</span> <span style="color:#007f7f">lang</span>=<span style="color:#0ff;font-weight:bold">&#34;no&#34;</span> <span style="color:#007f7f">xml:lang</span>=<span style="color:#0ff;font-weight:bold">&#34;no&#34;</span>&gt;Heia Norge!&lt;/<span style="font-weight:bold">div</span>&gt;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;div lang=<span style="color:#a31515">&#34;no&#34;</span> xml:lang=<span style="color:#a31515">&#34;no&#34;</span>&gt;Heia Norge!&lt;/div&gt;
 </code></pre></div></li>
 </ul>
 <h3 id="文档类型声明">文档类型声明</h3>
 <p>文档声明模板：</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE Doctype goes here&gt;</span>
-&lt;<span style="font-weight:bold">html</span> <span style="color:#007f7f">xmlns</span>=<span style="color:#0ff;font-weight:bold">&#34;http://www.w3.org/1999/xhtml&#34;</span>&gt;
-&lt;<span style="font-weight:bold">head</span>&gt;
-&lt;<span style="font-weight:bold">title</span>&gt;Title goes here&lt;/<span style="font-weight:bold">title</span>&gt;
-&lt;/<span style="font-weight:bold">head</span>&gt;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE Doctype goes here&gt;</span>
+&lt;html xmlns=<span style="color:#a31515">&#34;http://www.w3.org/1999/xhtml&#34;</span>&gt;
+&lt;head&gt;
+&lt;title&gt;Title goes here&lt;/title&gt;
+&lt;/head&gt;
 
-&lt;<span style="font-weight:bold">body</span>&gt;
-&lt;/<span style="font-weight:bold">body</span>&gt;
+&lt;body&gt;
+&lt;/body&gt;
 
-&lt;/<span style="font-weight:bold">html</span>&gt;
+&lt;/html&gt;
 </code></pre></div><ul>
 <li>**提示：**在 XHTML 文档中必须存在html、head、body元素，而 title 元素必须位于在 head 元素中。</li>
 <li>**提示：**文件类型声明并非 XHTML 文档自身的组成部分。它并不是 XHTML 元素，也没有关闭标签。</li>
@@ -376,19 +376,19 @@
 <p><strong>FRAMESET（框架类型）</strong></p>
 <h4 id="xhtml三种文档类型定义">XHTML三种文档类型定义</h4>
 <h5 id="xhtml-10-strict">XHTML 1.0 Strict</h5>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE html
-</span><span style="color:#0f0;font-weight:bold">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
-</span><span style="color:#0f0;font-weight:bold">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html
+</span><span style="color:#00f">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
+</span><span style="color:#00f">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
 </code></pre></div><p>在此情况下使用：需要干净的标记，避免表现上的混乱。请与层叠样式表配合使用。</p>
 <h5 id="xhtml-10-transitional">XHTML 1.0 Transitional</h5>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE html
-</span><span style="color:#0f0;font-weight:bold">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34;
-</span><span style="color:#0f0;font-weight:bold">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html
+</span><span style="color:#00f">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34;
+</span><span style="color:#00f">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt;</span>
 </code></pre></div><p>在此情况下使用：当需要利用 HTML 在表现上的特性时，并且当需要为那些不支持层叠样式表的浏览器编写 XHTML 时.</p>
 <h5 id="xhtml-10-frameset">XHTML 1.0 Frameset</h5>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#0f0;font-weight:bold">&lt;!DOCTYPE html
-</span><span style="color:#0f0;font-weight:bold">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Frameset//EN&#34;
-</span><span style="color:#0f0;font-weight:bold">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&#34;&gt;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#00f">&lt;!DOCTYPE html
+</span><span style="color:#00f">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Frameset//EN&#34;
+</span><span style="color:#00f">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&#34;&gt;</span>
 </code></pre></div><p>在此的情况下使用：需要使用HTML框架将浏览器窗口分割为两部分或更多框架时。</p>
 </li>
 </ul>

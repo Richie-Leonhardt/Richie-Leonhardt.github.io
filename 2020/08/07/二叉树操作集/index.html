@@ -298,74 +298,74 @@
 
         <div class="article-entry" itemprop="articleBody">
             <h4 id="结点的数据结构">结点的数据结构</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#0f0;font-weight:bold">#define TElem int
-</span><span style="color:#0f0;font-weight:bold"></span><span style="color:#fff;font-weight:bold">typedef</span> <span style="color:#fff;font-weight:bold">struct</span> BiTNode *BiTree;
-<span style="color:#fff;font-weight:bold">struct</span>  BiTNode{
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#00f">#define TElem int
+</span><span style="color:#00f"></span><span style="color:#00f">typedef</span> <span style="color:#00f">struct</span> BiTNode *BiTree;
+<span style="color:#00f">struct</span>  BiTNode{
    TElem data;
    BiTree lchild;
    BiTree rchild;    
 };
 </code></pre></div><h4 id="创建二叉树">创建二叉树</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">BiTree CreatBiTree(BiTree T){
-	<span style="color:#fff;font-weight:bold">char</span> a[<span style="color:#ff0;font-weight:bold">20</span>];
-	scanf(<span style="color:#0ff;font-weight:bold">&#34;%s&#34;</span>,a);
-    <span style="color:#fff;font-weight:bold">if</span>(strcmp(a,<span style="color:#0ff;font-weight:bold">&#34;#&#34;</span>) == <span style="color:#ff0;font-weight:bold">0</span>){
-		T = <span style="color:#fff;font-weight:bold">NULL</span>;
-	}<span style="color:#fff;font-weight:bold">else</span>{
-		<span style="color:#fff;font-weight:bold">int</span> input = <span style="color:#ff0;font-weight:bold">0</span>;
-		<span style="color:#fff;font-weight:bold">int</span> i,j;
-		<span style="color:#fff;font-weight:bold">for</span> (i = <span style="color:#ff0;font-weight:bold">0</span>; a[i] != <span style="color:#0ff;font-weight:bold">&#39;\0&#39;</span> &amp;&amp; i &lt; <span style="color:#ff0;font-weight:bold">20</span>; ++i);				<span style="color:#007f7f">//这边两个for循环是将字符串的数字转换成int类型的
-</span><span style="color:#007f7f"></span>		<span style="color:#fff;font-weight:bold">for</span> (i = i-<span style="color:#ff0;font-weight:bold">1</span>,j = <span style="color:#ff0;font-weight:bold">1</span>; i &gt;= <span style="color:#ff0;font-weight:bold">0</span>; --i,j *= <span style="color:#ff0;font-weight:bold">10</span>){
-			input += ((<span style="color:#fff;font-weight:bold">int</span>)a[i] - <span style="color:#ff0;font-weight:bold">48</span>) * j;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">BiTree CreatBiTree(BiTree T){
+	<span style="color:#2b91af">char</span> a[20];
+	scanf(<span style="color:#a31515">&#34;%s&#34;</span>,a);
+    <span style="color:#00f">if</span>(strcmp(a,<span style="color:#a31515">&#34;#&#34;</span>) == 0){
+		T = NULL;
+	}<span style="color:#00f">else</span>{
+		<span style="color:#2b91af">int</span> input = 0;
+		<span style="color:#2b91af">int</span> i,j;
+		<span style="color:#00f">for</span> (i = 0; a[i] != <span style="color:#a31515">&#39;\0&#39;</span> &amp;&amp; i &lt; 20; ++i);				<span style="color:#008000">//这边两个for循环是将字符串的数字转换成int类型的
+</span><span style="color:#008000"></span>		<span style="color:#00f">for</span> (i = i-1,j = 1; i &gt;= 0; --i,j *= 10){
+			input += ((<span style="color:#2b91af">int</span>)a[i] - 48) * j;
 		}
-		T = (BiTree)malloc(<span style="color:#fff;font-weight:bold">sizeof</span>(<span style="color:#fff;font-weight:bold">struct</span> BiTNode));				<span style="color:#007f7f">//生成根结点
-</span><span style="color:#007f7f"></span>		T-&gt;data = input;
-		T-&gt;lchild = CreatBiTree(T-&gt;lchild);                     <span style="color:#007f7f">//构造左子树
-</span><span style="color:#007f7f"></span>		T-&gt;rchild = CreatBiTree(T-&gt;rchild);                     <span style="color:#007f7f">//构造右子树
-</span><span style="color:#007f7f"></span>    }
-    <span style="color:#fff;font-weight:bold">return</span> T;
+		T = (BiTree)malloc(<span style="color:#00f">sizeof</span>(<span style="color:#00f">struct</span> BiTNode));				<span style="color:#008000">//生成根结点
+</span><span style="color:#008000"></span>		T-&gt;data = input;
+		T-&gt;lchild = CreatBiTree(T-&gt;lchild);                     <span style="color:#008000">//构造左子树
+</span><span style="color:#008000"></span>		T-&gt;rchild = CreatBiTree(T-&gt;rchild);                     <span style="color:#008000">//构造右子树
+</span><span style="color:#008000"></span>    }
+    <span style="color:#00f">return</span> T;
 }
 </code></pre></div><h4 id="前序遍历">前序遍历</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">//前序遍历
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> PreorderTraversal( BiTree T ){
-	<span style="color:#fff;font-weight:bold">if</span> ( T ){
-		printf(<span style="color:#0ff;font-weight:bold">&#34; %d&#34;</span>,T-&gt;data);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">//前序遍历
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> PreorderTraversal( BiTree T ){
+	<span style="color:#00f">if</span> ( T ){
+		printf(<span style="color:#a31515">&#34; %d&#34;</span>,T-&gt;data);
 		PreorderTraversal(T-&gt;lchild);
 		PreorderTraversal(T-&gt;rchild);
 	}
 }
 </code></pre></div><h4 id="中序遍历">中序遍历</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">//中序遍历
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> InorderTraversal( BiTree T ){
-	<span style="color:#fff;font-weight:bold">if</span> ( T ){
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">//中序遍历
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> InorderTraversal( BiTree T ){
+	<span style="color:#00f">if</span> ( T ){
 		InorderTraversal(T-&gt;lchild);
-		printf(<span style="color:#0ff;font-weight:bold">&#34; %d&#34;</span>,T-&gt;data);
+		printf(<span style="color:#a31515">&#34; %d&#34;</span>,T-&gt;data);
 		InorderTraversal(T-&gt;rchild);
 	}
 }
 </code></pre></div><h4 id="后序遍历">后序遍历</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">//后序遍历
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> PostorderTraversal( BiTree T ){
-	<span style="color:#fff;font-weight:bold">if</span> ( T ){
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">//后序遍历
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> PostorderTraversal( BiTree T ){
+	<span style="color:#00f">if</span> ( T ){
 		PostorderTraversal(T-&gt;lchild);
 		PostorderTraversal(T-&gt;rchild);
-		printf(<span style="color:#0ff;font-weight:bold">&#34; %d&#34;</span>,T-&gt;data);
+		printf(<span style="color:#a31515">&#34; %d&#34;</span>,T-&gt;data);
 	}
 }
 </code></pre></div><h4 id="非递归中序遍历">非递归中序遍历</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#007f7f">//非递归中序遍历
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> InorderTraversal_NotRecursive(BiTree T){
-	<span style="color:#fff;font-weight:bold">if</span> ( T ){
-		BiTree stack_arr[<span style="color:#ff0;font-weight:bold">100</span>];
-		<span style="color:#fff;font-weight:bold">int</span> top = -<span style="color:#ff0;font-weight:bold">1</span>;
-		<span style="color:#fff;font-weight:bold">while</span>( top != -<span style="color:#ff0;font-weight:bold">1</span> || T != <span style="color:#fff;font-weight:bold">NULL</span> ){
-			<span style="color:#fff;font-weight:bold">while</span> (T != <span style="color:#fff;font-weight:bold">NULL</span>){
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#008000">//非递归中序遍历
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> InorderTraversal_NotRecursive(BiTree T){
+	<span style="color:#00f">if</span> ( T ){
+		BiTree stack_arr[100];
+		<span style="color:#2b91af">int</span> top = -1;
+		<span style="color:#00f">while</span>( top != -1 || T != NULL ){
+			<span style="color:#00f">while</span> (T != NULL){
 				stack_arr[++top] = T;
 				T = T-&gt;lchild;
 			}
-			<span style="color:#fff;font-weight:bold">if</span> (T == <span style="color:#fff;font-weight:bold">NULL</span>){
+			<span style="color:#00f">if</span> (T == NULL){
 				T = stack_arr[top--];
-				printf(<span style="color:#0ff;font-weight:bold">&#34; %d&#34;</span>,T-&gt;data );
+				printf(<span style="color:#a31515">&#34; %d&#34;</span>,T-&gt;data );
 				T = T-&gt;rchild;
 			}
 		}
@@ -373,18 +373,18 @@
 }
 </code></pre></div><h4 id="前序遍历非递归实现">前序遍历非递归实现</h4>
 <p>只需将printf换一下位置即可, 第一次遇到的时候就输出，然后压入堆栈为后面的做铺垫</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#007f7f">//前序遍历非递归实现
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> PreorderTraversal_NotRecursive(BiTree T){
-	<span style="color:#fff;font-weight:bold">if</span> ( T ){
-		BiTree stack_arr[<span style="color:#ff0;font-weight:bold">100</span>];
-		<span style="color:#fff;font-weight:bold">int</span> top = -<span style="color:#ff0;font-weight:bold">1</span>;
-		<span style="color:#fff;font-weight:bold">while</span>( top != -<span style="color:#ff0;font-weight:bold">1</span> || T != <span style="color:#fff;font-weight:bold">NULL</span> ){
-			<span style="color:#fff;font-weight:bold">while</span> (T != <span style="color:#fff;font-weight:bold">NULL</span>){
-				printf(<span style="color:#0ff;font-weight:bold">&#34; %d&#34;</span>,T-&gt;data );
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#008000">//前序遍历非递归实现
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> PreorderTraversal_NotRecursive(BiTree T){
+	<span style="color:#00f">if</span> ( T ){
+		BiTree stack_arr[100];
+		<span style="color:#2b91af">int</span> top = -1;
+		<span style="color:#00f">while</span>( top != -1 || T != NULL ){
+			<span style="color:#00f">while</span> (T != NULL){
+				printf(<span style="color:#a31515">&#34; %d&#34;</span>,T-&gt;data );
 				stack_arr[++top] = T;
 				T = T-&gt;lchild;
 			}
-			<span style="color:#fff;font-weight:bold">if</span> (T == <span style="color:#fff;font-weight:bold">NULL</span>){
+			<span style="color:#00f">if</span> (T == NULL){
 				T = stack_arr[top--];
 				T = T-&gt;rchild;
 			}
@@ -393,25 +393,25 @@
 }
 </code></pre></div><h4 id="后序遍历的非递归实现">后序遍历的非递归实现</h4>
 <p>这里第三次访问才能输出，所以要记录有没有访问过，这里用上次输出的last来做标记</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#007f7f">//后序遍历的非递归实现
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">void</span> PostorderTraversal_NotRecursive(BiTree T){
-	<span style="color:#fff;font-weight:bold">if</span> ( T ){
-		BiTree stack_arr[<span style="color:#ff0;font-weight:bold">100</span>];
-		<span style="color:#fff;font-weight:bold">int</span> top = -<span style="color:#ff0;font-weight:bold">1</span>;
-		BiTree last;  	<span style="color:#007f7f">//记录最后一个输出值的节点
-</span><span style="color:#007f7f"></span>		<span style="color:#fff;font-weight:bold">while</span>( top != -<span style="color:#ff0;font-weight:bold">1</span> || T != <span style="color:#fff;font-weight:bold">NULL</span> ){
-			<span style="color:#fff;font-weight:bold">while</span> (T != <span style="color:#fff;font-weight:bold">NULL</span>){
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#008000">//后序遍历的非递归实现
+</span><span style="color:#008000"></span><span style="color:#2b91af">void</span> PostorderTraversal_NotRecursive(BiTree T){
+	<span style="color:#00f">if</span> ( T ){
+		BiTree stack_arr[100];
+		<span style="color:#2b91af">int</span> top = -1;
+		BiTree last;  	<span style="color:#008000">//记录最后一个输出值的节点
+</span><span style="color:#008000"></span>		<span style="color:#00f">while</span>( top != -1 || T != NULL ){
+			<span style="color:#00f">while</span> (T != NULL){
 				stack_arr[++top] = T;
-				T = T-&gt;lchild;				<span style="color:#007f7f">//一直往左找，直到T为最左边的NULL
-</span><span style="color:#007f7f"></span>			}
-			<span style="color:#fff;font-weight:bold">if</span> (T == <span style="color:#fff;font-weight:bold">NULL</span>){
+				T = T-&gt;lchild;				<span style="color:#008000">//一直往左找，直到T为最左边的NULL
+</span><span style="color:#008000"></span>			}
+			<span style="color:#00f">if</span> (T == NULL){
 				T = stack_arr[top];
-				<span style="color:#fff;font-weight:bold">if</span> (T-&gt;rchild == last || T-&gt;rchild == <span style="color:#fff;font-weight:bold">NULL</span>){	<span style="color:#007f7f">//如果右子树刚刚输出过或是右子树为空则说明右边的子树输出完了，可以直接将这个根节点输出来了
-</span><span style="color:#007f7f"></span>					printf(<span style="color:#0ff;font-weight:bold">&#34; %d&#34;</span>,T-&gt;data);
+				<span style="color:#00f">if</span> (T-&gt;rchild == last || T-&gt;rchild == NULL){	<span style="color:#008000">//如果右子树刚刚输出过或是右子树为空则说明右边的子树输出完了，可以直接将这个根节点输出来了
+</span><span style="color:#008000"></span>					printf(<span style="color:#a31515">&#34; %d&#34;</span>,T-&gt;data);
 					last = T;
 					top--;
-					T = <span style="color:#fff;font-weight:bold">NULL</span>; 
-				}<span style="color:#fff;font-weight:bold">else</span>{
+					T = NULL; 
+				}<span style="color:#00f">else</span>{
 					T = T-&gt;rchild;
 				}
 			}
@@ -419,24 +419,24 @@
 	}
 }
 </code></pre></div><h4 id="计算叶子结点数目高度">计算叶子结点数目、高度</h4>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#007f7f">//计算二叉树高度
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">int</span> GetHeight( BiTree T ){
-	<span style="color:#fff;font-weight:bold">if</span> (T == <span style="color:#fff;font-weight:bold">NULL</span>){
-		<span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#008000">//计算二叉树高度
+</span><span style="color:#008000"></span><span style="color:#2b91af">int</span> GetHeight( BiTree T ){
+	<span style="color:#00f">if</span> (T == NULL){
+		<span style="color:#00f">return</span> 0;
 	}
-	<span style="color:#fff;font-weight:bold">int</span> a = GetHeight(T-&gt;lchild);
-	<span style="color:#fff;font-weight:bold">int</span> b = GetHeight(T-&gt;rchild);
-	<span style="color:#fff;font-weight:bold">if</span> (a &gt; b){ 
-		<span style="color:#fff;font-weight:bold">return</span> a + <span style="color:#ff0;font-weight:bold">1</span>;
+	<span style="color:#2b91af">int</span> a = GetHeight(T-&gt;lchild);
+	<span style="color:#2b91af">int</span> b = GetHeight(T-&gt;rchild);
+	<span style="color:#00f">if</span> (a &gt; b){ 
+		<span style="color:#00f">return</span> a + 1;
 	}
-	<span style="color:#fff;font-weight:bold">return</span> b + <span style="color:#ff0;font-weight:bold">1</span>;
+	<span style="color:#00f">return</span> b + 1;
 }
 
-<span style="color:#007f7f">//计算二叉树叶子节点数目
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">int</span> GetNumberOfLeaves( BiTree T ){
-	<span style="color:#fff;font-weight:bold">if</span> (T-&gt;lchild == <span style="color:#fff;font-weight:bold">NULL</span> &amp;&amp; T-&gt;rchild == <span style="color:#fff;font-weight:bold">NULL</span>)
-		<span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">1</span>;
-	<span style="color:#fff;font-weight:bold">return</span> ((T-&gt;lchild == <span style="color:#fff;font-weight:bold">NULL</span>) ? <span style="color:#ff0;font-weight:bold">0</span> : GetNumberOfLeaves(T-&gt;lchild) + (T-&gt;rchild == <span style="color:#fff;font-weight:bold">NULL</span>) ? <span style="color:#ff0;font-weight:bold">0</span> : GetNumberOfLeaves(T-&gt;rchild));
+<span style="color:#008000">//计算二叉树叶子节点数目
+</span><span style="color:#008000"></span><span style="color:#2b91af">int</span> GetNumberOfLeaves( BiTree T ){
+	<span style="color:#00f">if</span> (T-&gt;lchild == NULL &amp;&amp; T-&gt;rchild == NULL)
+		<span style="color:#00f">return</span> 1;
+	<span style="color:#00f">return</span> ((T-&gt;lchild == NULL) ? 0 : GetNumberOfLeaves(T-&gt;lchild) + (T-&gt;rchild == NULL) ? 0 : GetNumberOfLeaves(T-&gt;rchild));
 }
 </code></pre></div>
         </div>
