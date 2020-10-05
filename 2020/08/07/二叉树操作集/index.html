@@ -17,57 +17,6 @@
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
-    <style type="text/css">
-         .mui-switch {
-            width: 52px;
-            height: 31px;
-            position: relative;
-            float: right;
-            top:15px;
-            border: 1px solid #dfdfdf;
-            background-color: #fdfdfd;
-            box-shadow: #dfdfdf 0 0 0 0 inset;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-clip: content-box;
-            display: inline-block;
-            -webkit-appearance: none;
-            user-select: none;
-            outline: none; }
-        .mui-switch:before {
-            content: '';
-            width: 29px;
-            height: 29px;
-            position: absolute;
-            top: 0px;
-            left: 0;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-color: #fff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
-        .mui-switch:checked {
-            border-color: #64bd63;
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63; }
-        .mui-switch:checked:before {
-            left: 21px; }
-        .mui-switch.mui-switch-anim {
-            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
-        .mui-switch.mui-switch-anim:before {
-            transition: left 0.3s; }
-        .mui-switch.mui-switch-anim:checked {
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63;
-            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
-        .mui-switch.mui-switch-anim:checked:before {
-            transition: left 0.3s;}
-    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -83,7 +32,7 @@
 <meta itemprop="description" content="二叉树操作集:遍历等">
 <meta itemprop="datePublished" content="2020-08-07T19:24:29+08:00" />
 <meta itemprop="dateModified" content="2020-08-07T19:24:29+08:00" />
-<meta itemprop="wordCount" content="390">
+<meta itemprop="wordCount" content="837">
 
 
 
@@ -112,10 +61,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
     </script>
 </head>
 <body>
@@ -175,10 +121,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
         </script>
         <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
         <div id="search-form-wrap">
@@ -651,7 +594,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-08-07 19:24:29 &#43;0800 CST" itemprop="datePublished">2020-08-07</time>
             &middot;
-            390
+            837
             words
             &middot;
             2
@@ -690,147 +633,331 @@
 
         <div class="article-entry" itemprop="articleBody">
             <h4 id="结点的数据结构">结点的数据结构</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#define TElem int
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> BiTNode <span style="color:#f92672">*</span>BiTree;
-<span style="color:#66d9ef">struct</span>  BiTNode{
-   TElem data;
-   BiTree lchild;
-   BiTree rchild;    
-};
-</code></pre></div><h4 id="创建二叉树">创建二叉树</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">BiTree <span style="color:#a6e22e">CreatBiTree</span>(BiTree T){
-	<span style="color:#66d9ef">char</span> a[<span style="color:#ae81ff">20</span>];
-	scanf(<span style="color:#e6db74">&#34;%s&#34;</span>,a);
-    <span style="color:#66d9ef">if</span>(strcmp(a,<span style="color:#e6db74">&#34;#&#34;</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
-		T <span style="color:#f92672">=</span> NULL;
-	}<span style="color:#66d9ef">else</span>{
-		<span style="color:#66d9ef">int</span> input <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-		<span style="color:#66d9ef">int</span> i,j;
-		<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; a[i] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\0&#39;</span> <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>; <span style="color:#f92672">++</span>i);				<span style="color:#75715e">//这边两个for循环是将字符串的数字转换成int类型的
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; <span style="color:#f92672">--</span>i,j <span style="color:#f92672">*=</span> <span style="color:#ae81ff">10</span>){
-			input <span style="color:#f92672">+=</span> ((<span style="color:#66d9ef">int</span>)a[i] <span style="color:#f92672">-</span> <span style="color:#ae81ff">48</span>) <span style="color:#f92672">*</span> j;
-		}
-		T <span style="color:#f92672">=</span> (BiTree)malloc(<span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">struct</span> BiTNode));				<span style="color:#75715e">//生成根结点
-</span><span style="color:#75715e"></span>		T<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">=</span> input;
-		T<span style="color:#f92672">-&gt;</span>lchild <span style="color:#f92672">=</span> CreatBiTree(T<span style="color:#f92672">-&gt;</span>lchild);                     <span style="color:#75715e">//构造左子树
-</span><span style="color:#75715e"></span>		T<span style="color:#f92672">-&gt;</span>rchild <span style="color:#f92672">=</span> CreatBiTree(T<span style="color:#f92672">-&gt;</span>rchild);                     <span style="color:#75715e">//构造右子树
-</span><span style="color:#75715e"></span>    }
-    <span style="color:#66d9ef">return</span> T;
-}
-</code></pre></div><h4 id="前序遍历">前序遍历</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//前序遍历
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PreorderTraversal</span>( BiTree T ){
-	<span style="color:#66d9ef">if</span> ( T ){
-		printf(<span style="color:#e6db74">&#34; %d&#34;</span>,T<span style="color:#f92672">-&gt;</span>data);
-		PreorderTraversal(T<span style="color:#f92672">-&gt;</span>lchild);
-		PreorderTraversal(T<span style="color:#f92672">-&gt;</span>rchild);
-	}
-}
-</code></pre></div><h4 id="中序遍历">中序遍历</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//中序遍历
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">InorderTraversal</span>( BiTree T ){
-	<span style="color:#66d9ef">if</span> ( T ){
-		InorderTraversal(T<span style="color:#f92672">-&gt;</span>lchild);
-		printf(<span style="color:#e6db74">&#34; %d&#34;</span>,T<span style="color:#f92672">-&gt;</span>data);
-		InorderTraversal(T<span style="color:#f92672">-&gt;</span>rchild);
-	}
-}
-</code></pre></div><h4 id="后序遍历">后序遍历</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//后序遍历
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PostorderTraversal</span>( BiTree T ){
-	<span style="color:#66d9ef">if</span> ( T ){
-		PostorderTraversal(T<span style="color:#f92672">-&gt;</span>lchild);
-		PostorderTraversal(T<span style="color:#f92672">-&gt;</span>rchild);
-		printf(<span style="color:#e6db74">&#34; %d&#34;</span>,T<span style="color:#f92672">-&gt;</span>data);
-	}
-}
-</code></pre></div><h4 id="非递归中序遍历">非递归中序遍历</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#75715e">//非递归中序遍历
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">InorderTraversal_NotRecursive</span>(BiTree T){
-	<span style="color:#66d9ef">if</span> ( T ){
-		BiTree stack_arr[<span style="color:#ae81ff">100</span>];
-		<span style="color:#66d9ef">int</span> top <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-		<span style="color:#66d9ef">while</span>( top <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> T <span style="color:#f92672">!=</span> NULL ){
-			<span style="color:#66d9ef">while</span> (T <span style="color:#f92672">!=</span> NULL){
-				stack_arr[<span style="color:#f92672">++</span>top] <span style="color:#f92672">=</span> T;
-				T <span style="color:#f92672">=</span> T<span style="color:#f92672">-&gt;</span>lchild;
-			}
-			<span style="color:#66d9ef">if</span> (T <span style="color:#f92672">==</span> NULL){
-				T <span style="color:#f92672">=</span> stack_arr[top<span style="color:#f92672">--</span>];
-				printf(<span style="color:#e6db74">&#34; %d&#34;</span>,T<span style="color:#f92672">-&gt;</span>data );
-				T <span style="color:#f92672">=</span> T<span style="color:#f92672">-&gt;</span>rchild;
-			}
-		}
-	}
-}
-</code></pre></div><h4 id="前序遍历非递归实现">前序遍历非递归实现</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define TElem int
+</span><span class="cp"></span><span class="k">typedef</span> <span class="k">struct</span> <span class="n">BiTNode</span> <span class="o">*</span><span class="n">BiTree</span><span class="p">;</span>
+<span class="k">struct</span>  <span class="n">BiTNode</span><span class="p">{</span>
+   <span class="n">TElem</span> <span class="n">data</span><span class="p">;</span>
+   <span class="n">BiTree</span> <span class="n">lchild</span><span class="p">;</span>
+   <span class="n">BiTree</span> <span class="n">rchild</span><span class="p">;</span>    
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="创建二叉树">创建二叉树</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">BiTree</span> <span class="nf">CreatBiTree</span><span class="p">(</span><span class="n">BiTree</span> <span class="n">T</span><span class="p">){</span>
+	<span class="kt">char</span> <span class="n">a</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span><span class="n">a</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s">&#34;#&#34;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+		<span class="n">T</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+		<span class="kt">int</span> <span class="n">input</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">;</span>
+		<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">);</span>				<span class="c1">//这边两个for循环是将字符串的数字转换成int类型的
+</span><span class="c1"></span>		<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">){</span>
+			<span class="n">input</span> <span class="o">+=</span> <span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">48</span><span class="p">)</span> <span class="o">*</span> <span class="n">j</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="n">T</span> <span class="o">=</span> <span class="p">(</span><span class="n">BiTree</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">BiTNode</span><span class="p">));</span>				<span class="c1">//生成根结点
+</span><span class="c1"></span>		<span class="n">T</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">input</span><span class="p">;</span>
+		<span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span> <span class="o">=</span> <span class="n">CreatBiTree</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span><span class="p">);</span>                     <span class="c1">//构造左子树
+</span><span class="c1"></span>		<span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span> <span class="o">=</span> <span class="n">CreatBiTree</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span><span class="p">);</span>                     <span class="c1">//构造右子树
+</span><span class="c1"></span>    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">T</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="前序遍历">前序遍历</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//前序遍历
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">PreorderTraversal</span><span class="p">(</span> <span class="n">BiTree</span> <span class="n">T</span> <span class="p">){</span>
+	<span class="k">if</span> <span class="p">(</span> <span class="n">T</span> <span class="p">){</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34; %d&#34;</span><span class="p">,</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+		<span class="n">PreorderTraversal</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span><span class="p">);</span>
+		<span class="n">PreorderTraversal</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="中序遍历">中序遍历</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//中序遍历
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">InorderTraversal</span><span class="p">(</span> <span class="n">BiTree</span> <span class="n">T</span> <span class="p">){</span>
+	<span class="k">if</span> <span class="p">(</span> <span class="n">T</span> <span class="p">){</span>
+		<span class="n">InorderTraversal</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span><span class="p">);</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34; %d&#34;</span><span class="p">,</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+		<span class="n">InorderTraversal</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="后序遍历">后序遍历</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//后序遍历
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">PostorderTraversal</span><span class="p">(</span> <span class="n">BiTree</span> <span class="n">T</span> <span class="p">){</span>
+	<span class="k">if</span> <span class="p">(</span> <span class="n">T</span> <span class="p">){</span>
+		<span class="n">PostorderTraversal</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span><span class="p">);</span>
+		<span class="n">PostorderTraversal</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span><span class="p">);</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34; %d&#34;</span><span class="p">,</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="非递归中序遍历">非递归中序遍历</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="c1">//非递归中序遍历
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">InorderTraversal_NotRecursive</span><span class="p">(</span><span class="n">BiTree</span> <span class="n">T</span><span class="p">){</span>
+	<span class="k">if</span> <span class="p">(</span> <span class="n">T</span> <span class="p">){</span>
+		<span class="n">BiTree</span> <span class="n">stack_arr</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+		<span class="kt">int</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+		<span class="k">while</span><span class="p">(</span> <span class="n">top</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">T</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="p">){</span>
+			<span class="k">while</span> <span class="p">(</span><span class="n">T</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+				<span class="n">stack_arr</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">;</span>
+				<span class="n">T</span> <span class="o">=</span> <span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">T</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+				<span class="n">T</span> <span class="o">=</span> <span class="n">stack_arr</span><span class="p">[</span><span class="n">top</span><span class="o">--</span><span class="p">];</span>
+				<span class="n">printf</span><span class="p">(</span><span class="s">&#34; %d&#34;</span><span class="p">,</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">data</span> <span class="p">);</span>
+				<span class="n">T</span> <span class="o">=</span> <span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="前序遍历非递归实现">前序遍历非递归实现</h4>
 <p>只需将printf换一下位置即可, 第一次遇到的时候就输出，然后压入堆栈为后面的做铺垫</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#75715e">//前序遍历非递归实现
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PreorderTraversal_NotRecursive</span>(BiTree T){
-	<span style="color:#66d9ef">if</span> ( T ){
-		BiTree stack_arr[<span style="color:#ae81ff">100</span>];
-		<span style="color:#66d9ef">int</span> top <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-		<span style="color:#66d9ef">while</span>( top <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> T <span style="color:#f92672">!=</span> NULL ){
-			<span style="color:#66d9ef">while</span> (T <span style="color:#f92672">!=</span> NULL){
-				printf(<span style="color:#e6db74">&#34; %d&#34;</span>,T<span style="color:#f92672">-&gt;</span>data );
-				stack_arr[<span style="color:#f92672">++</span>top] <span style="color:#f92672">=</span> T;
-				T <span style="color:#f92672">=</span> T<span style="color:#f92672">-&gt;</span>lchild;
-			}
-			<span style="color:#66d9ef">if</span> (T <span style="color:#f92672">==</span> NULL){
-				T <span style="color:#f92672">=</span> stack_arr[top<span style="color:#f92672">--</span>];
-				T <span style="color:#f92672">=</span> T<span style="color:#f92672">-&gt;</span>rchild;
-			}
-		}
-	}
-}
-</code></pre></div><h4 id="后序遍历的非递归实现">后序遍历的非递归实现</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="c1">//前序遍历非递归实现
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">PreorderTraversal_NotRecursive</span><span class="p">(</span><span class="n">BiTree</span> <span class="n">T</span><span class="p">){</span>
+	<span class="k">if</span> <span class="p">(</span> <span class="n">T</span> <span class="p">){</span>
+		<span class="n">BiTree</span> <span class="n">stack_arr</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+		<span class="kt">int</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+		<span class="k">while</span><span class="p">(</span> <span class="n">top</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">T</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="p">){</span>
+			<span class="k">while</span> <span class="p">(</span><span class="n">T</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+				<span class="n">printf</span><span class="p">(</span><span class="s">&#34; %d&#34;</span><span class="p">,</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">data</span> <span class="p">);</span>
+				<span class="n">stack_arr</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">;</span>
+				<span class="n">T</span> <span class="o">=</span> <span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">T</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+				<span class="n">T</span> <span class="o">=</span> <span class="n">stack_arr</span><span class="p">[</span><span class="n">top</span><span class="o">--</span><span class="p">];</span>
+				<span class="n">T</span> <span class="o">=</span> <span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="后序遍历的非递归实现">后序遍历的非递归实现</h4>
 <p>这里第三次访问才能输出，所以要记录有没有访问过，这里用上次输出的last来做标记</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#75715e">//后序遍历的非递归实现
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PostorderTraversal_NotRecursive</span>(BiTree T){
-	<span style="color:#66d9ef">if</span> ( T ){
-		BiTree stack_arr[<span style="color:#ae81ff">100</span>];
-		<span style="color:#66d9ef">int</span> top <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-		BiTree last;  	<span style="color:#75715e">//记录最后一个输出值的节点
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">while</span>( top <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> T <span style="color:#f92672">!=</span> NULL ){
-			<span style="color:#66d9ef">while</span> (T <span style="color:#f92672">!=</span> NULL){
-				stack_arr[<span style="color:#f92672">++</span>top] <span style="color:#f92672">=</span> T;
-				T <span style="color:#f92672">=</span> T<span style="color:#f92672">-&gt;</span>lchild;				<span style="color:#75715e">//一直往左找，直到T为最左边的NULL
-</span><span style="color:#75715e"></span>			}
-			<span style="color:#66d9ef">if</span> (T <span style="color:#f92672">==</span> NULL){
-				T <span style="color:#f92672">=</span> stack_arr[top];
-				<span style="color:#66d9ef">if</span> (T<span style="color:#f92672">-&gt;</span>rchild <span style="color:#f92672">==</span> last <span style="color:#f92672">||</span> T<span style="color:#f92672">-&gt;</span>rchild <span style="color:#f92672">==</span> NULL){	<span style="color:#75715e">//如果右子树刚刚输出过或是右子树为空则说明右边的子树输出完了，可以直接将这个根节点输出来了
-</span><span style="color:#75715e"></span>					printf(<span style="color:#e6db74">&#34; %d&#34;</span>,T<span style="color:#f92672">-&gt;</span>data);
-					last <span style="color:#f92672">=</span> T;
-					top<span style="color:#f92672">--</span>;
-					T <span style="color:#f92672">=</span> NULL; 
-				}<span style="color:#66d9ef">else</span>{
-					T <span style="color:#f92672">=</span> T<span style="color:#f92672">-&gt;</span>rchild;
-				}
-			}
-		}
-	}
-}
-</code></pre></div><h4 id="计算叶子结点数目高度">计算叶子结点数目、高度</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">//计算二叉树高度
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">GetHeight</span>( BiTree T ){
-	<span style="color:#66d9ef">if</span> (T <span style="color:#f92672">==</span> NULL){
-		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-	}
-	<span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> GetHeight(T<span style="color:#f92672">-&gt;</span>lchild);
-	<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> GetHeight(T<span style="color:#f92672">-&gt;</span>rchild);
-	<span style="color:#66d9ef">if</span> (a <span style="color:#f92672">&gt;</span> b){ 
-		<span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-	}
-	<span style="color:#66d9ef">return</span> b <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-}
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="c1">//后序遍历的非递归实现
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">PostorderTraversal_NotRecursive</span><span class="p">(</span><span class="n">BiTree</span> <span class="n">T</span><span class="p">){</span>
+	<span class="k">if</span> <span class="p">(</span> <span class="n">T</span> <span class="p">){</span>
+		<span class="n">BiTree</span> <span class="n">stack_arr</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+		<span class="kt">int</span> <span class="n">top</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+		<span class="n">BiTree</span> <span class="n">last</span><span class="p">;</span>  	<span class="c1">//记录最后一个输出值的节点
+</span><span class="c1"></span>		<span class="k">while</span><span class="p">(</span> <span class="n">top</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">T</span> <span class="o">!=</span> <span class="nb">NULL</span> <span class="p">){</span>
+			<span class="k">while</span> <span class="p">(</span><span class="n">T</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+				<span class="n">stack_arr</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">;</span>
+				<span class="n">T</span> <span class="o">=</span> <span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span><span class="p">;</span>				<span class="c1">//一直往左找，直到T为最左边的NULL
+</span><span class="c1"></span>			<span class="p">}</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">T</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+				<span class="n">T</span> <span class="o">=</span> <span class="n">stack_arr</span><span class="p">[</span><span class="n">top</span><span class="p">];</span>
+				<span class="k">if</span> <span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span> <span class="o">==</span> <span class="n">last</span> <span class="o">||</span> <span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>	<span class="c1">//如果右子树刚刚输出过或是右子树为空则说明右边的子树输出完了，可以直接将这个根节点输出来了
+</span><span class="c1"></span>					<span class="n">printf</span><span class="p">(</span><span class="s">&#34; %d&#34;</span><span class="p">,</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+					<span class="n">last</span> <span class="o">=</span> <span class="n">T</span><span class="p">;</span>
+					<span class="n">top</span><span class="o">--</span><span class="p">;</span>
+					<span class="n">T</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> 
+				<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+					<span class="n">T</span> <span class="o">=</span> <span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span><span class="p">;</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="计算叶子结点数目高度">计算叶子结点数目、高度</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//计算二叉树高度
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">GetHeight</span><span class="p">(</span> <span class="n">BiTree</span> <span class="n">T</span> <span class="p">){</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">T</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">GetHeight</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">GetHeight</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span><span class="p">);</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">){</span> 
+		<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span style="color:#75715e">//计算二叉树叶子节点数目
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">GetNumberOfLeaves</span>( BiTree T ){
-	<span style="color:#66d9ef">if</span> (T<span style="color:#f92672">-&gt;</span>lchild <span style="color:#f92672">==</span> NULL <span style="color:#f92672">&amp;&amp;</span> T<span style="color:#f92672">-&gt;</span>rchild <span style="color:#f92672">==</span> NULL)
-		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
-	<span style="color:#66d9ef">return</span> ((T<span style="color:#f92672">-&gt;</span>lchild <span style="color:#f92672">==</span> NULL) <span style="color:#f92672">?</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">:</span> GetNumberOfLeaves(T<span style="color:#f92672">-&gt;</span>lchild) <span style="color:#f92672">+</span> (T<span style="color:#f92672">-&gt;</span>rchild <span style="color:#f92672">==</span> NULL) <span style="color:#f92672">?</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">:</span> GetNumberOfLeaves(T<span style="color:#f92672">-&gt;</span>rchild));
-}
-</code></pre></div>
+<span class="c1">//计算二叉树叶子节点数目
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">GetNumberOfLeaves</span><span class="p">(</span> <span class="n">BiTree</span> <span class="n">T</span> <span class="p">){</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+		<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="k">return</span> <span class="p">((</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">GetNumberOfLeaves</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">lchild</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">GetNumberOfLeaves</span><span class="p">(</span><span class="n">T</span><span class="o">-&gt;</span><span class="n">rchild</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
         <footer class="article-footer">
     <a data-url="https://richie-leonhardt.github.io/2020/08/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%93%8D%E4%BD%9C%E9%9B%86/" data-id="6c34e58bb7852956f54111d3dd7ae28f" class="article-share-link">
@@ -938,26 +1065,18 @@
 
 
 </article>
-
+<a id="back-to-top" title="回到顶端" href="javascript:;" class="card has-text-centered rise-up fade-in" >
+<img src="/css/images/top.png" height="20px" width="20px" style="display:inline-block;width:20px;height:20px;vertical-align:middle"></a>
 
 
     </section>
 
    	
-    	<aside id="sidebar">
-    
-    
-
-    
-
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-
+    	
     
 	</div>
 </div>
 
-<script src="https://richie-leonhardt.github.io/live2d/autoload.js"></script>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
@@ -969,19 +1088,14 @@
 
 <script src="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.pack.js"></script>
 <script src="https://richie-leonhardt.github.io/js/script.js"></script>
+<script src="https://richie-leonhardt.github.io/js/back-to-top.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 
 <script>hljs.initHighlightingOnLoad();</script>
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 
 

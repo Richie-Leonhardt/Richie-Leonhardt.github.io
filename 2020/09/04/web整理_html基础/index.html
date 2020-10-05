@@ -17,57 +17,6 @@
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
-    <style type="text/css">
-         .mui-switch {
-            width: 52px;
-            height: 31px;
-            position: relative;
-            float: right;
-            top:15px;
-            border: 1px solid #dfdfdf;
-            background-color: #fdfdfd;
-            box-shadow: #dfdfdf 0 0 0 0 inset;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-clip: content-box;
-            display: inline-block;
-            -webkit-appearance: none;
-            user-select: none;
-            outline: none; }
-        .mui-switch:before {
-            content: '';
-            width: 29px;
-            height: 29px;
-            position: absolute;
-            top: 0px;
-            left: 0;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-color: #fff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
-        .mui-switch:checked {
-            border-color: #64bd63;
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63; }
-        .mui-switch:checked:before {
-            left: 21px; }
-        .mui-switch.mui-switch-anim {
-            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
-        .mui-switch.mui-switch-anim:before {
-            transition: left 0.3s; }
-        .mui-switch.mui-switch-anim:checked {
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63;
-            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
-        .mui-switch.mui-switch-anim:checked:before {
-            transition: left 0.3s;}
-    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -83,7 +32,7 @@
 <meta itemprop="description" content="Web练习与知识点整理">
 <meta itemprop="datePublished" content="2020-09-04T16:44:14+08:00" />
 <meta itemprop="dateModified" content="2020-09-04T16:44:14+08:00" />
-<meta itemprop="wordCount" content="446">
+<meta itemprop="wordCount" content="1078">
 
 
 
@@ -112,10 +61,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
     </script>
 </head>
 <body>
@@ -175,10 +121,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
         </script>
         <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
         <div id="search-form-wrap">
@@ -651,7 +594,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-09-04 16:44:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
             &middot;
-            446
+            1078
             words
             &middot;
             3
@@ -710,232 +653,468 @@
 <h4 id="audio-and-video">audio and video</h4>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">title</span>&gt;A form simple&lt;/<span style="color:#f92672">title</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>A form simple<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-&lt;<span style="color:#f92672">body</span>&gt;
-    <span style="color:#75715e">&lt;!-- 页眉 --&gt;</span>
-    &lt;<span style="color:#f92672">hgroup</span>&gt;
-        &lt;<span style="color:#f92672">header</span>&gt;
-            &lt;<span style="color:#f92672">h1</span>&gt;Practice2&lt;/<span style="color:#f92672">h1</span>&gt;
-            &lt;<span style="color:#f92672">h3</span>&gt;form、input、textarea、select、audio and video&lt;/<span style="color:#f92672">h3</span>&gt;
-        &lt;/<span style="color:#f92672">header</span>&gt;
-    &lt;/<span style="color:#f92672">hgroup</span>&gt;
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- 页眉 --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">hgroup</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Practice2<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>form、input、textarea、select、audio and video<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">hgroup</span><span class="p">&gt;</span>
     
-    <span style="color:#75715e">&lt;!-- 主要表单 --&gt;</span>
-    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
-        <span style="color:#75715e">&lt;!-- if no method, default get --&gt;</span>
-        <span style="color:#75715e">&lt;!-- 两个输入框，输入用户名和密码 --&gt;</span>
-        &lt;<span style="color:#f92672">p</span>&gt;<span style="color:#75715e">&lt;!-- input tag need container --&gt;</span>
-            <span style="color:#75715e">&lt;!-- pre使能够保留连续的多个空格和使用等距字体 --&gt;</span>
-            <span style="color:#75715e">&lt;!-- text和password这两个，输入的值都是在value特性里面，可以用value特性事先指定好文本框内容 --&gt;</span>
-            &lt;<span style="color:#f92672">pre</span>&gt;account: &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span> <span style="color:#a6e22e">maxlength</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25&#34;</span> /&gt;&lt;/<span style="color:#f92672">pre</span>&gt;
-            &lt;<span style="color:#f92672">br</span> /&gt;
-            &lt;<span style="color:#f92672">pre</span>&gt;password:&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pw&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pw&#34;</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span> <span style="color:#a6e22e">maxlength</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25&#34;</span> /&gt;&lt;/<span style="color:#f92672">pre</span>&gt;
-        &lt;/<span style="color:#f92672">p</span>&gt;
+    <span class="c">&lt;!-- 主要表单 --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;post&#34;</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- if no method, default get --&gt;</span>
+        <span class="c">&lt;!-- 两个输入框，输入用户名和密码 --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="c">&lt;!-- input tag need container --&gt;</span>
+            <span class="c">&lt;!-- pre使能够保留连续的多个空格和使用等距字体 --&gt;</span>
+            <span class="c">&lt;!-- text和password这两个，输入的值都是在value特性里面，可以用value特性事先指定好文本框内容 --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>account: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;name&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;name&#34;</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;20&#34;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="p">/&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>password:<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;pw&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pw&#34;</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;20&#34;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="p">/&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-        <span style="color:#75715e">&lt;!-- 多选checkbox --&gt;</span>
-        &lt;<span style="color:#f92672">div</span>&gt;
-            &lt;<span style="color:#f92672">p</span>&gt;
+        <span class="c">&lt;!-- 多选checkbox --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
                 choice(this is a checkbox)
-            &lt;/<span style="color:#f92672">p</span>&gt;
-            &lt;<span style="color:#f92672">label</span>&gt; &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25W * 4 $2.39&#34;</span> /&gt;25W * 4 $2.39
-            &lt;/<span style="color:#f92672">label</span>&gt;
-            &lt;<span style="color:#f92672">label</span>&gt;
-                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25W * 8 $4.29&#34;</span> <span style="color:#a6e22e">checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checked&#34;</span> /&gt;
+            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;bulb&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bulb&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;25W * 4 $2.39&#34;</span> <span class="p">/&gt;</span>25W * 4 $2.39
+            <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;bulb&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bulb&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;25W * 8 $4.29&#34;</span> <span class="na">checked</span><span class="o">=</span><span class="s">&#34;checked&#34;</span> <span class="p">/&gt;</span>
                 25W * 8 $4.29
-            &lt;/<span style="color:#f92672">label</span>&gt;
-            &lt;<span style="color:#f92672">label</span>&gt;
-                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;good 25W * 4 $3.95&#34;</span> /&gt;good 25W * 4 $3.95
-            &lt;/<span style="color:#f92672">label</span>&gt;
-            &lt;<span style="color:#f92672">label</span>&gt;
-                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bulb&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;good 25W * 8 $7.49&#34;</span> <span style="color:#a6e22e">checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checked&#34;</span> /&gt;good 25W * 8 $7.49
-            &lt;/<span style="color:#f92672">label</span>&gt;
-        &lt;/<span style="color:#f92672">div</span>&gt;
+            <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;bulb&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bulb&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;good 25W * 4 $3.95&#34;</span> <span class="p">/&gt;</span>good 25W * 4 $3.95
+            <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;bulb&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;bulb&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;good 25W * 8 $7.49&#34;</span> <span class="na">checked</span><span class="o">=</span><span class="s">&#34;checked&#34;</span> <span class="p">/&gt;</span>good 25W * 8 $7.49
+            <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
-        <span style="color:#75715e">&lt;!-- 单选 --&gt;</span>
-        &lt;<span style="color:#f92672">p</span>&gt;payment(this is a radio)&lt;/<span style="color:#f92672">p</span>&gt;
-        &lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Visa&#34;</span> <span style="color:#a6e22e">checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checked&#34;</span>&gt;Visa&lt;/<span style="color:#f92672">label</span>&gt;
-        &lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MasterCard&#34;</span>&gt;MasterCard&lt;/<span style="color:#f92672">label</span>&gt;
-        &lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pay&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Discover&#34;</span>&gt;Discover&lt;/<span style="color:#f92672">label</span>&gt;
+        <span class="c">&lt;!-- 单选 --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>payment(this is a radio)<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;pay&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pay&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Visa&#34;</span> <span class="na">checked</span><span class="o">=</span><span class="s">&#34;checked&#34;</span><span class="p">&gt;</span>Visa<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;pay&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pay&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;MasterCard&#34;</span><span class="p">&gt;</span>MasterCard<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;pay&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pay&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Discover&#34;</span><span class="p">&gt;</span>Discover<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 
-        <span style="color:#75715e">&lt;!-- 单选菜单形式 --&gt;</span>
-        &lt;<span style="color:#f92672">p</span>&gt;
+        <span class="c">&lt;!-- 单选菜单形式 --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
             select one:
-            &lt;<span style="color:#f92672">select</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;choice1&#34;</span>&gt;
-                &lt;<span style="color:#f92672">option</span>&gt;ggg&lt;/<span style="color:#f92672">option</span>&gt;
-                &lt;<span style="color:#f92672">option</span>&gt;hhh&lt;/<span style="color:#f92672">option</span>&gt;
-                &lt;<span style="color:#f92672">option</span>&gt;xxx&lt;/<span style="color:#f92672">option</span>&gt;
-            &lt;/<span style="color:#f92672">select</span>&gt;
-        &lt;/<span style="color:#f92672">p</span>&gt;
+            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;choice1&#34;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>ggg<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>hhh<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>xxx<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-        <span style="color:#75715e">&lt;!-- 多选菜单形式 --&gt;</span>
-        &lt;<span style="color:#f92672">p</span>&gt;
+        <span class="c">&lt;!-- 多选菜单形式 --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
             select one or more:
-            &lt;<span style="color:#f92672">select</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;choice2&#34;</span> <span style="color:#a6e22e">multiple</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;multiple&#34;</span>&gt;
-                <span style="color:#75715e">&lt;!-- multiple choices --&gt;</span>
-                &lt;<span style="color:#f92672">option</span>&gt;ggg&lt;/<span style="color:#f92672">option</span>&gt;
-                &lt;<span style="color:#f92672">option</span>&gt;hhh&lt;/<span style="color:#f92672">option</span>&gt;
-                &lt;<span style="color:#f92672">option</span>&gt;xxx&lt;/<span style="color:#f92672">option</span>&gt;
-            &lt;/<span style="color:#f92672">select</span>&gt;
-        &lt;/<span style="color:#f92672">p</span>&gt;
+            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;choice2&#34;</span> <span class="na">multiple</span><span class="o">=</span><span class="s">&#34;multiple&#34;</span><span class="p">&gt;</span>
+                <span class="c">&lt;!-- multiple choices --&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>ggg<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>hhh<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>xxx<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-        <span style="color:#75715e">&lt;!-- textarea输入文本 --&gt;</span>
-        <span style="color:#75715e">&lt;!-- 如果要在一段文字中限制每行的字符，使用textarea是一个很好的方式 --&gt;</span>
-        &lt;<span style="color:#f92672">p</span>&gt;
-            &lt;<span style="color:#f92672">textarea</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ta1&#34;</span> <span style="color:#a6e22e">rows</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">cols</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span>&gt;default txt here&lt;/<span style="color:#f92672">textarea</span>&gt;
-        &lt;/<span style="color:#f92672">p</span>&gt;
+        <span class="c">&lt;!-- textarea输入文本 --&gt;</span>
+        <span class="c">&lt;!-- 如果要在一段文字中限制每行的字符，使用textarea是一个很好的方式 --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;ta1&#34;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&#34;3&#34;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&#34;20&#34;</span><span class="p">&gt;</span>default txt here<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-        <span style="color:#75715e">&lt;!-- 提交和重置按钮 --&gt;</span>
-        &lt;<span style="color:#f92672">p</span>&gt;
-            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sub&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Submit Form&#34;</span> /&gt;
-            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;reset&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;reset&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Reset Form&#34;</span> /&gt;
-        &lt;/<span style="color:#f92672">p</span>&gt;
-    &lt;/<span style="color:#f92672">form</span>&gt;
+        <span class="c">&lt;!-- 提交和重置按钮 --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sub&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Submit Form&#34;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;reset&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;reset&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Reset Form&#34;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 
-    <span style="color:#75715e">&lt;!-- 添加音乐 --&gt;</span>
-    &lt;<span style="color:#f92672">audio</span> <span style="color:#a6e22e">controls</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;controls&#34;</span>&gt;
-        <span style="color:#75715e">&lt;!-- no autoplay --&gt;</span>
-        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/三亩地 - 寻.mp3&#34;</span> /&gt;
-        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/三亩地 - 寻.wav&#34;</span> /&gt;
-        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/三亩地 - 寻.ogg&#34;</span> /&gt;
+    <span class="c">&lt;!-- 添加音乐 --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="o">=</span><span class="s">&#34;controls&#34;</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- no autoplay --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;audio/三亩地 - 寻.mp3&#34;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;audio/三亩地 - 寻.wav&#34;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;audio/三亩地 - 寻.ogg&#34;</span> <span class="p">/&gt;</span>
         don&#39;t support this audio element
-    &lt;/<span style="color:#f92672">audio</span>&gt;
+    <span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
 
-    <span style="color:#75715e">&lt;!-- 添加视频 --&gt;</span>
-    &lt;<span style="color:#f92672">video</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1280&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;760&#34;</span> <span style="color:#a6e22e">controls</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;controls&#34;</span> <span style="color:#a6e22e">preload</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preload&#34;</span> <span style="color:#a6e22e">autoplay</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;autoplay&#34;</span>&gt;
-        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video/test.mp4&#34;</span> /&gt;
-        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video/test.ogv&#34;</span> /&gt;
-        &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video/test.webm&#34;</span> /&gt;
-    &lt;/<span style="color:#f92672">video</span>&gt;
+    <span class="c">&lt;!-- 添加视频 --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">video</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;1280&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;760&#34;</span> <span class="na">controls</span><span class="o">=</span><span class="s">&#34;controls&#34;</span> <span class="na">preload</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">autoplay</span><span class="o">=</span><span class="s">&#34;autoplay&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;video/test.mp4&#34;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;video/test.ogv&#34;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;video/test.webm&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
 
-    <span style="color:#75715e">&lt;!-- 页脚 --&gt;</span>
-    &lt;<span style="color:#f92672">footer</span>&gt;
-        &amp;copy; Ritchie Leonhardt
-        &lt;<span style="color:#f92672">br</span> /&gt;
+    <span class="c">&lt;!-- 页脚 --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+        <span class="ni">&amp;copy;</span> Ritchie Leonhardt
+        <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
         2020
-    &lt;/<span style="color:#f92672">footer</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h3 id="html基本-tableimg">HTML基本-table、img</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="html基本-tableimg">HTML基本-table、img</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 
-&lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">title</span>&gt;HTML表格测试&lt;/<span style="color:#f92672">title</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML表格测试<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-&lt;<span style="color:#f92672">body</span>&gt;
-    &lt;<span style="color:#f92672">p</span>&gt;
-    &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">datetime</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2020-08-15T17:17+8:00&#34;</span> <span style="color:#a6e22e">pubdata</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pubdata&#34;</span>&gt;publish time&lt;/<span style="color:#f92672">time</span>&gt;
-    &lt;/<span style="color:#f92672">p</span>&gt;
-    <span style="color:#75715e">&lt;!-- 文本块引用 --&gt;</span>
-    &lt;<span style="color:#f92672">blockquote</span>&gt;
-        &lt;<span style="color:#f92672">p</span>&gt;asjdighadgpihapihdsghapihsdglnxczv,mbsogurothllrngbadskvjladsnvasba
-        &lt;/<span style="color:#f92672">p</span>&gt;
-        &lt;<span style="color:#f92672">p</span>&gt;falksdhgalkshdgklhadshgkhkalsdhgklhklasdghlk&lt;/<span style="color:#f92672">p</span>&gt;
-    &lt;/<span style="color:#f92672">blockquote</span>&gt;
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">time</span> <span class="na">datetime</span><span class="o">=</span><span class="s">&#34;2020-08-15T17:17+8:00&#34;</span> <span class="na">pubdata</span><span class="o">=</span><span class="s">&#34;pubdata&#34;</span><span class="p">&gt;</span>publish time<span class="p">&lt;/</span><span class="nt">time</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- 文本块引用 --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>asjdighadgpihapihdsghapihsdglnxczv,mbsogurothllrngbadskvjladsnvasba
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>falksdhgalkshdgklhadshgkhkalsdhgklhklasdghlk<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
 
-    &lt;<span style="color:#f92672">article</span>&gt;
-        &lt;<span style="color:#f92672">p</span>&gt;ajsdigohadsioghasdbzbm,chbiooafhbwnrb,mniipghasdgkhalkdsjflkahdfflcnvm,znc,mvashdflahdsjkg&lt;/<span style="color:#f92672">p</span>&gt;
-    &lt;/<span style="color:#f92672">article</span>&gt;
+    <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>ajsdigohadsioghasdbzbm,chbiooafhbwnrb,mniipghasdgkhalkdsjflkahdfflcnvm,znc,mvashdflahdsjkg<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
 
-    &lt;<span style="color:#f92672">p</span>&gt;pic&lt;/<span style="color:#f92672">p</span>&gt;
-    &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/h5.png&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;can&#39;tShow&#34;</span> /&gt;
-    &lt;<span style="color:#f92672">p</span>&gt;
-        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;career.html#textbox1&#34;</span>&gt;career&lt;/<span style="color:#f92672">a</span>&gt;
-    &lt;/<span style="color:#f92672">p</span>&gt;
-    <span style="color:#75715e">&lt;!-- 一条水平分割线 --&gt;</span>
-    &lt;<span style="color:#f92672">hr</span> /&gt;
-    &lt;<span style="color:#f92672">p</span>&gt;This is a table&lt;/<span style="color:#f92672">p</span>&gt;
-    &lt;<span style="color:#f92672">table</span>&gt;
-        &lt;<span style="color:#f92672">caption</span>&gt;table1&lt;/<span style="color:#f92672">caption</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            <span style="color:#75715e">&lt;!-- 左上角空白 --&gt;</span>
-            &lt;<span style="color:#f92672">td</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;pine&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;maple&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;oak&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;fir&lt;/<span style="color:#f92672">th</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;Average Height&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;11&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;12&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;13&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;14&lt;/<span style="color:#f92672">td</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;Average Width&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;21&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;22&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;23&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;24&lt;/<span style="color:#f92672">td</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;Typical Life Span&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;31&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;32&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;33&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;34&lt;/<span style="color:#f92672">td</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;Leaf Type&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;41&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;42&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;43&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;44&lt;/<span style="color:#f92672">td</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">p</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
-    &lt;/<span style="color:#f92672">table</span>&gt;
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>pic<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;image/h5.png&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;150&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;150&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;can&#39;tShow&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;career.html#textbox1&#34;</span><span class="p">&gt;</span>career<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- 一条水平分割线 --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a table<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>table1<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="c">&lt;!-- 左上角空白 --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>pine<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>maple<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>oak<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>fir<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Average Height<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>11<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>12<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>13<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>14<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Average Width<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>21<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>22<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>23<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>24<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Typical Life Span<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>31<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>32<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>33<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>34<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Leaf Type<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>41<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>42<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>43<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>44<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
    
-    <span style="color:#75715e">&lt;!-- 这边建立表格是按照行来的，在纸上画画就知道怎么建立了，二级表格注意rowspan和colspan不要搞错了 --&gt;</span>
-    &lt;<span style="color:#f92672">table</span>&gt;
-        &lt;<span style="color:#f92672">caption</span>&gt;2 level table&lt;/<span style="color:#f92672">caption</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;MEALS&lt;/<span style="color:#f92672">th</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;breakfast&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;lanch&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;dinner&lt;/<span style="color:#f92672">th</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">th</span> <span style="color:#a6e22e">rowspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;4&#34;</span>&gt;FOODS&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;bread&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;11&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;12&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;13&lt;/<span style="color:#f92672">td</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;course&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;21&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;22&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;23&lt;/<span style="color:#f92672">td</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;vegetable&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;31&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;32&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;33&lt;/<span style="color:#f92672">td</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-        &lt;<span style="color:#f92672">tr</span>&gt;
-            &lt;<span style="color:#f92672">th</span>&gt;dessert&lt;/<span style="color:#f92672">th</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;41&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;42&lt;/<span style="color:#f92672">td</span>&gt;
-            &lt;<span style="color:#f92672">td</span>&gt;43&lt;/<span style="color:#f92672">td</span>&gt;
-        &lt;/<span style="color:#f92672">tr</span>&gt;
-    &lt;/<span style="color:#f92672">table</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div>
+    <span class="c">&lt;!-- 这边建立表格是按照行来的，在纸上画画就知道怎么建立了，二级表格注意rowspan和colspan不要搞错了 --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>2 level table<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>MEALS<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>breakfast<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>lanch<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>dinner<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>FOODS<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>bread<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>11<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>12<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>13<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>course<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>21<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>22<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>23<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>vegetable<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>31<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>32<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>33<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>dessert<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>41<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>42<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>43<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
         <footer class="article-footer">
     <a data-url="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_html%E5%9F%BA%E7%A1%80/" data-id="c386ebcfabce16385516c3db12a1092b" class="article-share-link">
@@ -1043,26 +1222,18 @@
 
 
 </article>
-
+<a id="back-to-top" title="回到顶端" href="javascript:;" class="card has-text-centered rise-up fade-in" >
+<img src="/css/images/top.png" height="20px" width="20px" style="display:inline-block;width:20px;height:20px;vertical-align:middle"></a>
 
 
     </section>
 
    	
-    	<aside id="sidebar">
-    
-    
-
-    
-
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-
+    	
     
 	</div>
 </div>
 
-<script src="https://richie-leonhardt.github.io/live2d/autoload.js"></script>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
@@ -1074,19 +1245,14 @@
 
 <script src="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.pack.js"></script>
 <script src="https://richie-leonhardt.github.io/js/script.js"></script>
+<script src="https://richie-leonhardt.github.io/js/back-to-top.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 
 <script>hljs.initHighlightingOnLoad();</script>
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 
 

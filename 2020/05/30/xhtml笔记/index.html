@@ -17,57 +17,6 @@
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
-    <style type="text/css">
-         .mui-switch {
-            width: 52px;
-            height: 31px;
-            position: relative;
-            float: right;
-            top:15px;
-            border: 1px solid #dfdfdf;
-            background-color: #fdfdfd;
-            box-shadow: #dfdfdf 0 0 0 0 inset;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-clip: content-box;
-            display: inline-block;
-            -webkit-appearance: none;
-            user-select: none;
-            outline: none; }
-        .mui-switch:before {
-            content: '';
-            width: 29px;
-            height: 29px;
-            position: absolute;
-            top: 0px;
-            left: 0;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-color: #fff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
-        .mui-switch:checked {
-            border-color: #64bd63;
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63; }
-        .mui-switch:checked:before {
-            left: 21px; }
-        .mui-switch.mui-switch-anim {
-            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
-        .mui-switch.mui-switch-anim:before {
-            transition: left 0.3s; }
-        .mui-switch.mui-switch-anim:checked {
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63;
-            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
-        .mui-switch.mui-switch-anim:checked:before {
-            transition: left 0.3s;}
-    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -83,7 +32,7 @@
 <meta itemprop="description" content="notes of XHTML">
 <meta itemprop="datePublished" content="2020-05-30T09:52:25+08:00" />
 <meta itemprop="dateModified" content="2020-05-30T09:52:25+08:00" />
-<meta itemprop="wordCount" content="143">
+<meta itemprop="wordCount" content="819">
 
 
 
@@ -112,10 +61,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
     </script>
 </head>
 <body>
@@ -175,10 +121,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
         </script>
         <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
         <div id="search-form-wrap">
@@ -651,10 +594,10 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-05-30 09:52:25 &#43;0800 CST" itemprop="datePublished">2020-05-30</time>
             &middot;
-            143
+            819
             words
             &middot;
-            1
+            2
             minute read
         </div>
         
@@ -728,32 +671,62 @@
 </li>
 <li>
 <p>属性不能简写，正确写法：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">checked</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checked&#34;</span> /&gt;
-</code></pre></div></li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">checked</span><span class="o">=</span><span class="s">&#34;checked&#34;</span> <span class="p">/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p>用 Id 属性代替 name 属性</p>
 </li>
 <li>
 <p>语言属性，在后面加上xml:lang</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no&#34;</span> <span style="color:#a6e22e">xml:lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no&#34;</span>&gt;Heia Norge!&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div></li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;no&#34;</span> <span class="na">xml:lang</span><span class="o">=</span><span class="s">&#34;no&#34;</span><span class="p">&gt;</span>Heia Norge!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ul>
 <h3 id="文档类型声明">文档类型声明</h3>
 <p>文档声明模板：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE Doctype goes here&gt;</span>
-&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">xmlns</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-&lt;<span style="color:#f92672">title</span>&gt;Title goes here&lt;/<span style="color:#f92672">title</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE Doctype goes here&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/1999/xhtml&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Title goes here<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-&lt;<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><ul>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>**提示：**在 XHTML 文档中必须存在html、head、body元素，而 title 元素必须位于在 head 元素中。</li>
 <li>**提示：**文件类型声明并非 XHTML 文档自身的组成部分。它并不是 XHTML 元素，也没有关闭标签。</li>
-<li>**提示：**在 XHTML 中，<!-- raw HTML omitted --> 标签内的 xmlns 属性是必需的。然而，即使当 XHTML 文档中没有这个属性时，w3.org 的验证工具也不会提示错误。这是因为，&ldquo;xmlns=http://www.w3.org/1999/xhtml&rdquo; 是一个固定的值，即使你没有把它包含在代码中，这个值也会被添加到 <!-- raw HTML omitted --> 标签中。</li>
+<li>**提示：**在 XHTML 中，<html> 标签内的 xmlns 属性是必需的。然而，即使当 XHTML 文档中没有这个属性时，w3.org 的验证工具也不会提示错误。这是因为，&ldquo;xmlns=http://www.w3.org/1999/xhtml&rdquo; 是一个固定的值，即使你没有把它包含在代码中，这个值也会被添加到 <html> 标签中。</li>
 </ul>
 <h3 id="xhtml-dtd-定义了强制使用的-html-元素">XHTML DTD 定义了强制使用的 HTML 元素</h3>
 <h4 id="xhtml定义了三种文档类型声明对应三种dtd规定的语法要求">XHTML定义了三种文档类型声明，对应三种DTD规定的语法要求</h4>
@@ -768,20 +741,47 @@
 <p><strong>FRAMESET（框架类型）</strong></p>
 <h4 id="xhtml三种文档类型定义">XHTML三种文档类型定义</h4>
 <h5 id="xhtml-10-strict">XHTML 1.0 Strict</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html
-</span><span style="color:#75715e">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
-</span><span style="color:#75715e">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
-</code></pre></div><p>在此情况下使用：需要干净的标记，避免表现上的混乱。请与层叠样式表配合使用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html
+</span><span class="cp">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
+</span><span class="cp">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在此情况下使用：需要干净的标记，避免表现上的混乱。请与层叠样式表配合使用。</p>
 <h5 id="xhtml-10-transitional">XHTML 1.0 Transitional</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html
-</span><span style="color:#75715e">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34;
-</span><span style="color:#75715e">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt;</span>
-</code></pre></div><p>在此情况下使用：当需要利用 HTML 在表现上的特性时，并且当需要为那些不支持层叠样式表的浏览器编写 XHTML 时.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html
+</span><span class="cp">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34;
+</span><span class="cp">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在此情况下使用：当需要利用 HTML 在表现上的特性时，并且当需要为那些不支持层叠样式表的浏览器编写 XHTML 时.</p>
 <h5 id="xhtml-10-frameset">XHTML 1.0 Frameset</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html
-</span><span style="color:#75715e">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Frameset//EN&#34;
-</span><span style="color:#75715e">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&#34;&gt;</span>
-</code></pre></div><p>在此的情况下使用：需要使用HTML框架将浏览器窗口分割为两部分或更多框架时。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html
+</span><span class="cp">PUBLIC &#34;-//W3C//DTD XHTML 1.0 Frameset//EN&#34;
+</span><span class="cp">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&#34;&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在此的情况下使用：需要使用HTML框架将浏览器窗口分割为两部分或更多框架时。</p>
 </li>
 </ul>
 <p>​	<a href="https://www.w3school.com.cn/tags/html_ref_dtd.asp">三种DTD对应的能用的标签可以点此参考W3school</a></p>
@@ -893,26 +893,18 @@
 
 
 </article>
-
+<a id="back-to-top" title="回到顶端" href="javascript:;" class="card has-text-centered rise-up fade-in" >
+<img src="/css/images/top.png" height="20px" width="20px" style="display:inline-block;width:20px;height:20px;vertical-align:middle"></a>
 
 
     </section>
 
    	
-    	<aside id="sidebar">
-    
-    
-
-    
-
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-
+    	
     
 	</div>
 </div>
 
-<script src="https://richie-leonhardt.github.io/live2d/autoload.js"></script>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
@@ -924,19 +916,14 @@
 
 <script src="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.pack.js"></script>
 <script src="https://richie-leonhardt.github.io/js/script.js"></script>
+<script src="https://richie-leonhardt.github.io/js/back-to-top.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 
 <script>hljs.initHighlightingOnLoad();</script>
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 
 

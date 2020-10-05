@@ -21,6 +21,7 @@
 .hljs-symbol,
 .hljs-name {
   color: #569CD6;
+/*  font-weight: bold;*/
 }
 .hljs-link {
   color: #569CD6;
@@ -58,7 +59,6 @@
 .hljs-comment,
 .hljs-quote {
   color: #57A64A;
-  font-style: italic;
 }
 
 .hljs-doctag {

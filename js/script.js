@@ -33,22 +33,21 @@
     });
 
     // To Top
-    if ($('#sidebar').length) {
-        $(document).on('scroll', function () {
-            if ($(document).width() >= 800) {
-                if(($(this).scrollTop() > toTop) && ($(this).scrollTop() > 0)) {
-                    $('#toTop').fadeIn();
-                    $('#toTop').css('left', $('#sidebar').offset().left);
-                } else {
-                    $('#toTop').fadeOut();
-                }
-            } else {
-                $('#toTop').fadeIn();
-                $('#toTop').css('right', 20);
-            }
-        }).on('click', '#toTop', function () {
-            $('body, html').animate({ scrollTop: 0 }, 600);
-        });
-    }
-
+    // if ($('#main').length) {
+    //     $(document).on('scroll', function () {
+    //         if ($(document).width() >= 800) {
+    //             if(($(this).scrollTop() > toTop) && ($(this).scrollTop() > 0)) {
+    //                 $('#back-to-top').fadeIn();
+    //                 //$('#back-to-top').css('left', $('#main').offset().left);
+    //             } else {
+    //                 $('#back-to-top').fadeOut();
+    //             }
+    //         } else {
+    //             $('#back-to-top').fadeIn();
+    //             $('#back-to-top').css('right', 20);
+    //         }
+    //     }).on('click', '#back-to-top', function () {
+    //         $('body, html').animate({ scrollTop: 0 }, 600);
+    //     });
+    // }
 })(jQuery);

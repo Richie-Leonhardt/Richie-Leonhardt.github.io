@@ -17,57 +17,6 @@
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
-    <style type="text/css">
-         .mui-switch {
-            width: 52px;
-            height: 31px;
-            position: relative;
-            float: right;
-            top:15px;
-            border: 1px solid #dfdfdf;
-            background-color: #fdfdfd;
-            box-shadow: #dfdfdf 0 0 0 0 inset;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-clip: content-box;
-            display: inline-block;
-            -webkit-appearance: none;
-            user-select: none;
-            outline: none; }
-        .mui-switch:before {
-            content: '';
-            width: 29px;
-            height: 29px;
-            position: absolute;
-            top: 0px;
-            left: 0;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-color: #fff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
-        .mui-switch:checked {
-            border-color: #64bd63;
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63; }
-        .mui-switch:checked:before {
-            left: 21px; }
-        .mui-switch.mui-switch-anim {
-            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
-        .mui-switch.mui-switch-anim:before {
-            transition: left 0.3s; }
-        .mui-switch.mui-switch-anim:checked {
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63;
-            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
-        .mui-switch.mui-switch-anim:checked:before {
-            transition: left 0.3s;}
-    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -83,7 +32,7 @@
 <meta itemprop="description" content="notes of JS">
 <meta itemprop="datePublished" content="2020-10-04T09:52:25+08:00" />
 <meta itemprop="dateModified" content="2020-10-04T09:52:25+08:00" />
-<meta itemprop="wordCount" content="71">
+<meta itemprop="wordCount" content="345">
 
 
 
@@ -112,10 +61,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
     </script>
 </head>
 <body>
@@ -175,10 +121,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
         </script>
         <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
         <div id="search-form-wrap">
@@ -651,7 +594,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-10-04 09:52:25 &#43;0800 CST" itemprop="datePublished">2020-10-04</time>
             &middot;
-            71
+            345
             words
             &middot;
             1
@@ -695,38 +638,75 @@
 <li>只有数组的几个函数会在原基础上操作直接修改：一个reverse，一个sort，四个头尾操作</li>
 <li>其他的字符串、数字、Number或者Math等，都是通过返回值来保存修改后的结果，原来的都没有变</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>];
-<span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;123&#39;</span>;
-<span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">123.45</span>;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+<span class="nx">str</span> <span class="o">=</span> <span class="s1">&#39;123&#39;</span><span class="p">;</span>
+<span class="nx">num</span> <span class="o">=</span> <span class="mf">123.45</span><span class="p">;</span>
 
-<span style="color:#75715e">/*变：主要是对数组的操作*/</span>
-<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">reverse</span>();
-<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">sort</span>();			<span style="color:#75715e">//数字和数组都是在原基础上操作
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">push</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]);	<span style="color:#75715e">//这里入栈/入队的是一个数组元素，入栈后是[1,2,3,[1,2,3]]或[1,2,3,Array(3)]
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">pop</span>();			<span style="color:#75715e">//出栈
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">shift</span>();		<span style="color:#75715e">//出队
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">unshift</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>);	<span style="color:#75715e">//队头插入，一般用不到，这样三个参数是顺序插入3个元素
-</span><span style="color:#75715e"></span>
+<span class="cm">/*变：主要是对数组的操作*/</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">reverse</span><span class="p">();</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span>			<span class="c1">//数字和数组都是在原基础上操作
+</span><span class="c1"></span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]);</span>	<span class="c1">//这里入栈/入队的是一个数组元素，入栈后是[1,2,3,[1,2,3]]或[1,2,3,Array(3)]
+</span><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>			<span class="c1">//出栈
+</span><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>		<span class="c1">//出队
+</span><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>	<span class="c1">//队头插入，一般用不到，这样三个参数是顺序插入3个元素
+</span><span class="c1"></span>
 
-<span style="color:#75715e">/*不变,一定要通过赋值来引用或者直接嵌套着用*/</span>
-<span style="color:#a6e22e">sa</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39; | &#39;</span>);
-<span style="color:#a6e22e">ca</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">concat</span>([<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>]);
-<span style="color:#a6e22e">ca</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">2</span>);
-<span style="color:#a6e22e">sa</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">toString</span>();
+<span class="cm">/*不变,一定要通过赋值来引用或者直接嵌套着用*/</span>
+<span class="nx">sa</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; | &#39;</span><span class="p">);</span>
+<span class="nx">ca</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">concat</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]);</span>
+<span class="nx">ca</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="nx">sa</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
 
-<span style="color:#75715e">/*Number and number all unchanged*/</span>
-<span style="color:#a6e22e">ns</span> <span style="color:#f92672">=</span> Number(<span style="color:#a6e22e">str</span>)
-<span style="color:#a6e22e">sn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">num</span>.<span style="color:#a6e22e">toString</span>();
-<span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">num</span>.<span style="color:#a6e22e">toFixed</span>(<span style="color:#ae81ff">1</span>);
+<span class="cm">/*Number and number all unchanged*/</span>
+<span class="nx">ns</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span>
+<span class="nx">sn</span> <span class="o">=</span> <span class="nx">num</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+<span class="nx">n</span> <span class="o">=</span> <span class="nx">num</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
-<span style="color:#75715e">/*Math all unchanged*/</span>
-<span style="color:#a6e22e">fn</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">num</span>);
-<span style="color:#a6e22e">cn</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#a6e22e">num</span>);
-<span style="color:#a6e22e">rn</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">round</span>(<span style="color:#a6e22e">num</span>);
-<span style="color:#a6e22e">expn</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">exp</span>(<span style="color:#a6e22e">num</span>);
-<span style="color:#a6e22e">sinn</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">num</span>);
-</code></pre></div>
+<span class="cm">/*Math all unchanged*/</span>
+<span class="nx">fn</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="nx">cn</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="nx">rn</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="nx">expn</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="nx">sinn</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
         <footer class="article-footer">
     <a data-url="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" data-id="3687a2007a41d54c2ded532a97a2cf09" class="article-share-link">
@@ -827,26 +807,18 @@
 
 
 </article>
-
+<a id="back-to-top" title="回到顶端" href="javascript:;" class="card has-text-centered rise-up fade-in" >
+<img src="/css/images/top.png" height="20px" width="20px" style="display:inline-block;width:20px;height:20px;vertical-align:middle"></a>
 
 
     </section>
 
    	
-    	<aside id="sidebar">
-    
-    
-
-    
-
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-
+    	
     
 	</div>
 </div>
 
-<script src="https://richie-leonhardt.github.io/live2d/autoload.js"></script>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
@@ -858,19 +830,14 @@
 
 <script src="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.pack.js"></script>
 <script src="https://richie-leonhardt.github.io/js/script.js"></script>
+<script src="https://richie-leonhardt.github.io/js/back-to-top.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 
 <script>hljs.initHighlightingOnLoad();</script>
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 
 

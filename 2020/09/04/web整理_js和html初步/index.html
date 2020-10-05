@@ -17,57 +17,6 @@
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
-    <style type="text/css">
-         .mui-switch {
-            width: 52px;
-            height: 31px;
-            position: relative;
-            float: right;
-            top:15px;
-            border: 1px solid #dfdfdf;
-            background-color: #fdfdfd;
-            box-shadow: #dfdfdf 0 0 0 0 inset;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-clip: content-box;
-            display: inline-block;
-            -webkit-appearance: none;
-            user-select: none;
-            outline: none; }
-        .mui-switch:before {
-            content: '';
-            width: 29px;
-            height: 29px;
-            position: absolute;
-            top: 0px;
-            left: 0;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-color: #fff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
-        .mui-switch:checked {
-            border-color: #64bd63;
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63; }
-        .mui-switch:checked:before {
-            left: 21px; }
-        .mui-switch.mui-switch-anim {
-            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
-        .mui-switch.mui-switch-anim:before {
-            transition: left 0.3s; }
-        .mui-switch.mui-switch-anim:checked {
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63;
-            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
-        .mui-switch.mui-switch-anim:checked:before {
-            transition: left 0.3s;}
-    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -83,7 +32,7 @@
 <meta itemprop="description" content="Web练习与知识点整理">
 <meta itemprop="datePublished" content="2020-09-04T16:47:14+08:00" />
 <meta itemprop="dateModified" content="2020-09-04T16:47:14+08:00" />
-<meta itemprop="wordCount" content="680">
+<meta itemprop="wordCount" content="1439">
 
 
 
@@ -112,10 +61,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
     </script>
 </head>
 <body>
@@ -175,10 +121,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
         </script>
         <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
         <div id="search-form-wrap">
@@ -651,10 +594,10 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-09-04 16:47:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
             &middot;
-            680
+            1439
             words
             &middot;
-            4
+            3
             minute read
         </div>
         
@@ -694,278 +637,610 @@
 
         <div class="article-entry" itemprop="articleBody">
             <h3 id="p1">P1</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">title</span>&gt;js test&lt;/<span style="color:#f92672">title</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
-    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;
-    &lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
-&lt;<span style="color:#f92672">body</span>&gt;
-	&lt;<span style="color:#f92672">h4</span>&gt;Cessna single_egnine&lt;/<span style="color:#f92672">h4</span>&gt;
-	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">auction</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
-		<span style="color:#75715e">&lt;!-- 直接将处理的代码或者函数赋值给onclick特性 --&gt;</span>
-		<span style="color:#75715e">&lt;!-- 两种方式： --&gt;</span>
-		<span style="color:#75715e">&lt;!-- &#34;func(parameter)&#34; --&gt;</span>
-		<span style="color:#75715e">&lt;!-- &#34;js代码&#34; --&gt;</span>
-		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice(value)&#34;</span> /&gt;
-		red&lt;/<span style="color:#f92672">label</span>&gt;
-		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice(value)&#34;</span> /&gt;
-		blue&lt;/<span style="color:#f92672">label</span>&gt;
-		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice(value)&#34;</span> /&gt;
-		green&lt;/<span style="color:#f92672">label</span>&gt;
-		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;orange&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice(value)&#34;</span> /&gt;
-		orange&lt;/<span style="color:#f92672">label</span>&gt;
-	&lt;/<span style="color:#f92672">form</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h4 id="p1-js">P1 JS</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">colorChoice</span>(<span style="color:#a6e22e">color</span>){
-	<span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">color</span>){
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;red&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;red&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;orange&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;orange&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;green&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;green&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;blue&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
-	}
-}
-</code></pre></div><h3 id="p2">P2</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">title</span>&gt;js test&lt;/<span style="color:#f92672">title</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
-    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;
-    &lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
-&lt;<span style="color:#f92672">body</span>&gt;
-	&lt;<span style="color:#f92672">h4</span>&gt;Color Select&lt;/<span style="color:#f92672">h4</span>&gt;
-	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">auction</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
-		&lt;<span style="color:#f92672">p</span>&gt;
-			&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span> &gt;
-			red&lt;/<span style="color:#f92672">label</span>&gt;
-			&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span> &gt;
-			blue&lt;/<span style="color:#f92672">label</span>&gt;
-			&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> &gt;
-			green&lt;/<span style="color:#f92672">label</span>&gt;
-			&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;orange&#34;</span> &gt;
-			orange&lt;/<span style="color:#f92672">label</span>&gt;
-		&lt;/<span style="color:#f92672">p</span>&gt;
-	&lt;/<span style="color:#f92672">form</span>&gt;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>js test<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Cessna single_egnine<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;myForm&#34;</span> <span class="na">auction</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+		<span class="c">&lt;!-- 直接将处理的代码或者函数赋值给onclick特性 --&gt;</span>
+		<span class="c">&lt;!-- 两种方式： --&gt;</span>
+		<span class="c">&lt;!-- &#34;func(parameter)&#34; --&gt;</span>
+		<span class="c">&lt;!-- &#34;js代码&#34; --&gt;</span>
+		<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;red&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;colorChoice(value)&#34;</span> <span class="p">/&gt;</span>
+		red<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;blue&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;colorChoice(value)&#34;</span> <span class="p">/&gt;</span>
+		blue<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;green&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;colorChoice(value)&#34;</span> <span class="p">/&gt;</span>
+		green<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;orange&#34;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;colorChoice(value)&#34;</span> <span class="p">/&gt;</span>
+		orange<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="p1-js">P1 JS</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">colorChoice</span><span class="p">(</span><span class="nx">color</span><span class="p">){</span>
+	<span class="k">switch</span><span class="p">(</span><span class="nx">color</span><span class="p">){</span>
+		<span class="k">case</span> <span class="s2">&#34;red&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;red&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="s2">&#34;orange&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;orange&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="s2">&#34;green&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;green&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="s2">&#34;blue&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;blue&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">default</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;error&#34;</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="p2">P2</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>js test<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Color Select<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;myForm&#34;</span> <span class="na">auction</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+			<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;red&#34;</span> <span class="p">&gt;</span>
+			red<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+			<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;blue&#34;</span> <span class="p">&gt;</span>
+			blue<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+			<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;green&#34;</span> <span class="p">&gt;</span>
+			green<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+			<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;orange&#34;</span> <span class="p">&gt;</span>
+			orange<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+		<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
     
-	<span style="color:#75715e">&lt;!-- 注意：注册语句一定要在body中存在，因为在head中不一定执行，Chrome测试 --&gt;</span>
-    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;
-    &lt;/<span style="color:#f92672">script</span>&gt;
+	<span class="c">&lt;!-- 注意：注册语句一定要在body中存在，因为在head中不一定执行，Chrome测试 --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h4 id="p2-js">P2 JS</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">colorChoice</span>(){
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">color</span>;
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dom</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>);
-	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">--</span>) {
-		<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">colorButton</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">checked</span>){
-			<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">colorButton</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span>;
-		}
-	}
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="p2-js">P2 JS</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">colorChoice</span><span class="p">(){</span>
+	<span class="kd">var</span> <span class="nx">color</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">dom</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;myForm&#34;</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">dom</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">dom</span><span class="p">.</span><span class="nx">colorButton</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">checked</span><span class="p">){</span>
+			<span class="nx">color</span> <span class="o">=</span> <span class="nx">dom</span><span class="p">.</span><span class="nx">colorButton</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 
-	<span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">color</span>){
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;red&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;red&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;orange&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;orange&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;green&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;green&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;blue&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
-	}
-}
+	<span class="k">switch</span><span class="p">(</span><span class="nx">color</span><span class="p">){</span>
+		<span class="k">case</span> <span class="s2">&#34;red&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;red&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="s2">&#34;orange&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;orange&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="s2">&#34;green&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;green&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="s2">&#34;blue&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;blue&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">default</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;error&#34;</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
 
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dom</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>);
-<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">elements</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">colorChoice</span>;
-<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">elements</span>[<span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">colorChoice</span>;
-<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">elements</span>[<span style="color:#ae81ff">2</span>].<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">colorChoice</span>;
-<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">elements</span>[<span style="color:#ae81ff">3</span>].<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">colorChoice</span>;
-</code></pre></div><h3 id="p3">P3</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-	&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
-	&lt;<span style="color:#f92672">title</span>&gt;Fruits Sale&lt;/<span style="color:#f92672">title</span>&gt;
-	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
+<span class="kd">var</span> <span class="nx">dom</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;myForm&#34;</span><span class="p">);</span>
+<span class="nx">dom</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">colorChoice</span><span class="p">;</span>
+<span class="nx">dom</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">colorChoice</span><span class="p">;</span>
+<span class="nx">dom</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">colorChoice</span><span class="p">;</span>
+<span class="nx">dom</span><span class="p">.</span><span class="nx">elements</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">colorChoice</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="p3">P3</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span> <span class="p">/&gt;</span>
+	<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Fruits Sale<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-&lt;<span style="color:#f92672">body</span>&gt;
-	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span>&gt;
-			&lt;<span style="color:#f92672">p</span>&gt;select fruits&lt;/<span style="color:#f92672">p</span>&gt;
-			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsCheck&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.59&#34;</span> /&gt;apple 0.59
-			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsCheck&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.49&#34;</span> /&gt;orange 0.49
-			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsCheck&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.39&#34;</span> /&gt;banana 0.39
-			&lt;<span style="color:#f92672">br</span> /&gt;
-			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitButton&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;calculate&#34;</span> /&gt;
-	&lt;/<span style="color:#f92672">form</span>&gt;
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;myForm&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;myForm&#34;</span><span class="p">&gt;</span>
+			<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>select fruits<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+			<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;fruitsCheck&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;0.59&#34;</span> <span class="p">/&gt;</span>apple 0.59
+			<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;fruitsCheck&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;0.49&#34;</span> <span class="p">/&gt;</span>orange 0.49
+			<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;fruitsCheck&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;0.39&#34;</span> <span class="p">/&gt;</span>banana 0.39
+			<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+			<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;submitButton&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;submitButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;calculate&#34;</span> <span class="p">/&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 
-	<span style="color:#75715e">&lt;!-- 一定记住在这里要导入一下js文件 --&gt;</span>
-	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h4 id="p3-js">P3 JS</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">注意多选的checkbox实际上是一个数组</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">数组名即为标签的name</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">countPrice</span>(){
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dom</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>);
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsCheck</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {	<span style="color:#75715e">//这边是dom.fruitsCheck.length而不是dom.fruitsCheck.elements.length	
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsCheck</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">checked</span>){
-			<span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> Number(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsCheck</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span>);	<span style="color:#75715e">//默认+都是转换成字符串的，所以需要转成Number	
-</span><span style="color:#75715e"></span>		}
-	}
-	<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Your total cost is:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sum</span>);
-	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-}
+	<span class="c">&lt;!-- 一定记住在这里要导入一下js文件 --&gt;</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="p3-js">P3 JS</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">注意多选的checkbox实际上是一个数组</span><span class="err">，</span><span class="nx">数组名即为标签的name</span>
+<span class="kd">function</span> <span class="nx">countPrice</span><span class="p">(){</span>
+	<span class="kd">var</span> <span class="nx">dom</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;myForm&#34;</span><span class="p">);</span>
+	<span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsCheck</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>	<span class="c1">//这边是dom.fruitsCheck.length而不是dom.fruitsCheck.elements.length	
+</span><span class="c1"></span>		<span class="k">if</span><span class="p">(</span><span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsCheck</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">checked</span><span class="p">){</span>
+			<span class="nx">sum</span> <span class="o">+=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsCheck</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span><span class="p">);</span>	<span class="c1">//默认+都是转换成字符串的，所以需要转成Number	
+</span><span class="c1"></span>		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Your total cost is:&#39;</span> <span class="o">+</span> <span class="nx">sum</span><span class="p">);</span>
+	<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
 
-document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;submitButton&#34;</span>).<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">countPrice</span>;	<span style="color:#75715e">//注意！这里是不同加括号直接函数名注册的
-</span></code></pre></div><h3 id="p4_5_6">P4_5_6</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE HTML&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-	&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
-	&lt;<span style="color:#f92672">title</span>&gt;Fruits Sale&lt;/<span style="color:#f92672">title</span>&gt;
-	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;submitButton&#34;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">countPrice</span><span class="p">;</span>	<span class="c1">//注意！这里是不同加括号直接函数名注册的
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="p4_5_6">P4_5_6</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span> <span class="p">/&gt;</span>
+	<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Fruits Sale<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-&lt;<span style="color:#f92672">body</span>&gt;
-	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span>&gt;
-			&lt;<span style="color:#f92672">p</span>&gt;select fruits&lt;/<span style="color:#f92672">p</span>&gt;
-			<span style="color:#75715e">&lt;!-- 这边多个name都相同且处于同一级别，就自动构成了一个数组length为3的fruitsNumber[]数组 --&gt;</span>
-			<span style="color:#75715e">&lt;!-- 可以使用document.myForm.fruitsNumber[2]访问第三个文本框 --&gt;</span>
-			<span style="color:#75715e">&lt;!-- 但是实际上用id更稳妥一些 --&gt;</span>
-			apple 0.59 *&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsNumber&#34;</span> <span style="color:#a6e22e">max</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;99&#34;</span> <span style="color:#a6e22e">min</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> /&gt;
-			&lt;<span style="color:#f92672">br</span> /&gt;
-			orange 0.49 *&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsNumber&#34;</span> <span style="color:#a6e22e">max</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;99&#34;</span> <span style="color:#a6e22e">min</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> /&gt;
-			&lt;<span style="color:#f92672">br</span> /&gt;
-			banana 0.39 *&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruitsNumber&#34;</span> <span style="color:#a6e22e">max</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;99&#34;</span> <span style="color:#a6e22e">min</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> /&gt;
-			&lt;<span style="color:#f92672">br</span> /&gt;
-			&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitButton&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submitButton&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;calculate&#34;</span> /&gt;
-	&lt;/<span style="color:#f92672">form</span>&gt;
-	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h4 id="p4_5_6-js">P4_5_6 JS</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">countPrice</span>(){
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dom</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>);
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.59</span>, <span style="color:#ae81ff">0.49</span>, <span style="color:#ae81ff">0.39</span>];
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">errorTag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-	<span style="color:#75715e">//多个name都相同且处于同一级别，构成了一个数组length为3的fruitsNumber[]数组，可以这样使用
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span>;
-		<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">str</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span>){
-			<span style="color:#75715e">//if(str.search(/^[0-9]{1,2}$/) != -1){		//注意，正则表达式这里是不加引号的，否则岂不是成字符串了
-</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span> (Number(<span style="color:#a6e22e">str</span>) <span style="color:#f92672">&gt;=</span> Number(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;min&#34;</span>)) <span style="color:#f92672">&amp;&amp;</span> Number(<span style="color:#a6e22e">str</span>) <span style="color:#f92672">&lt;=</span> Number(<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;max&#34;</span>))){
-				<span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">price</span>[<span style="color:#a6e22e">i</span>];		
-			}<span style="color:#66d9ef">else</span>{
-				<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
-				<span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">focus</span>();	<span style="color:#75715e">//书中并不推荐，并不是所有浏览器普遍适用
-</span><span style="color:#75715e"></span>				<span style="color:#a6e22e">errorTag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-			}
-			<span style="color:#75715e">//}
-</span><span style="color:#75715e"></span>		}
-	}
-	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">errorTag</span>) {
-		<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;input error, please input number between &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;min&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">dom</span>.<span style="color:#a6e22e">fruitsNumber</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;max&#34;</span>));
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-	}
-	<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Your total cost is:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sum</span>);
-	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-}
-document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;submitButton&#34;</span>).<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">countPrice</span>;
-</code></pre></div><h3 id="p7">P7</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-	&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
-	&lt;<span style="color:#f92672">title</span>&gt;user_information&lt;/<span style="color:#f92672">title</span>&gt;
-	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
-&lt;<span style="color:#f92672">body</span>&gt;
-	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myForm&#34;</span>&gt;
-		Name:  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userName&#34;</span> <span style="color:#a6e22e">length</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span> /&gt;
-		&lt;<span style="color:#f92672">br</span> /&gt;
-		Age:   &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userAge&#34;</span> /&gt;
-		&lt;<span style="color:#f92672">br</span> /&gt;
-		Weight:&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userWeight&#34;</span> /&gt;
-		&lt;<span style="color:#f92672">br</span> /&gt;
-		&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sBtn&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sBtn&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> /&gt;
-	&lt;/<span style="color:#f92672">form</span>&gt;
-	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h4 id="p7-js">P7 JS</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkName</span>(){
-	<span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">search</span>(<span style="color:#e6db74">/^[A-Z][a-z]* +[A-Z][a-z]* +[A-Z][a-z]*$/</span>) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>){
-		<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;incorrect name, please input again&#34;</span>);
-		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
-		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">focus</span>(); <span style="color:#75715e">//不推荐用
-</span><span style="color:#75715e"></span>	}
-}
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;myForm&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;myForm&#34;</span><span class="p">&gt;</span>
+			<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>select fruits<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+			<span class="c">&lt;!-- 这边多个name都相同且处于同一级别，就自动构成了一个数组length为3的fruitsNumber[]数组 --&gt;</span>
+			<span class="c">&lt;!-- 可以使用document.myForm.fruitsNumber[2]访问第三个文本框 --&gt;</span>
+			<span class="c">&lt;!-- 但是实际上用id更稳妥一些 --&gt;</span>
+			apple 0.59 *<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;fruitsNumber&#34;</span> <span class="na">max</span><span class="o">=</span><span class="s">&#34;99&#34;</span> <span class="na">min</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="p">/&gt;</span>
+			<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+			orange 0.49 *<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;fruitsNumber&#34;</span> <span class="na">max</span><span class="o">=</span><span class="s">&#34;99&#34;</span> <span class="na">min</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="p">/&gt;</span>
+			<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+			banana 0.39 *<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;fruitsNumber&#34;</span> <span class="na">max</span><span class="o">=</span><span class="s">&#34;99&#34;</span> <span class="na">min</span><span class="o">=</span><span class="s">&#34;5&#34;</span> <span class="p">/&gt;</span>
+			<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+			<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;submitButton&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;submitButton&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;calculate&#34;</span> <span class="p">/&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="p4_5_6-js">P4_5_6 JS</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">countPrice</span><span class="p">(){</span>
+	<span class="kd">var</span> <span class="nx">dom</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;myForm&#34;</span><span class="p">);</span>
+	<span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">price</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.59</span><span class="p">,</span> <span class="mf">0.49</span><span class="p">,</span> <span class="mf">0.39</span><span class="p">];</span>
+	<span class="kd">var</span> <span class="nx">errorTag</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+	<span class="c1">//多个name都相同且处于同一级别，构成了一个数组length为3的fruitsNumber[]数组，可以这样使用
+</span><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsNumber</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsNumber</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">str</span> <span class="o">!=</span> <span class="s2">&#34;&#34;</span><span class="p">){</span>
+			<span class="c1">//if(str.search(/^[0-9]{1,2}$/) != -1){		//注意，正则表达式这里是不加引号的，否则岂不是成字符串了
+</span><span class="c1"></span>			<span class="k">if</span> <span class="p">(</span><span class="nb">Number</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsNumber</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&#34;min&#34;</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsNumber</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&#34;max&#34;</span><span class="p">))){</span>
+				<span class="nx">sum</span> <span class="o">+=</span> <span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsNumber</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span> <span class="o">*</span> <span class="nx">price</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>		
+			<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+				<span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsNumber</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+				<span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsNumber</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">focus</span><span class="p">();</span>	<span class="c1">//书中并不推荐，并不是所有浏览器普遍适用
+</span><span class="c1"></span>				<span class="nx">errorTag</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="c1">//}
+</span><span class="c1"></span>		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">errorTag</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;input error, please input number between &#34;</span> <span class="o">+</span> <span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsNumber</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&#34;min&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34;-&#34;</span> <span class="o">+</span> <span class="nx">dom</span><span class="p">.</span><span class="nx">fruitsNumber</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&#34;max&#34;</span><span class="p">));</span>
+		<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Your total cost is:&#39;</span> <span class="o">+</span> <span class="nx">sum</span><span class="p">);</span>
+	<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;submitButton&#34;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">countPrice</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="p7">P7</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span> <span class="p">/&gt;</span>
+	<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>user_information<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">form</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;myForm&#34;</span><span class="p">&gt;</span>
+		Name:  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;userName&#34;</span> <span class="na">length</span><span class="o">=</span><span class="s">&#34;20&#34;</span> <span class="p">/&gt;</span>
+		<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+		Age:   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;userAge&#34;</span> <span class="p">/&gt;</span>
+		<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+		Weight:<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;userWeight&#34;</span> <span class="p">/&gt;</span>
+		<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+		<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sBtn&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;sBtn&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="p">/&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="p7-js">P7 JS</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">checkName</span><span class="p">(){</span>
+	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">!=</span> <span class="s2">&#34;&#34;</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/^[A-Z][a-z]* +[A-Z][a-z]* +[A-Z][a-z]*$/</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+		<span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;incorrect name, please input again&#34;</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span> <span class="c1">//不推荐用
+</span><span class="c1"></span>	<span class="p">}</span>
+<span class="p">}</span>
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkAge</span>(){
-	<span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">&amp;&amp;</span> Number(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">18</span>){
-		<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;age should greater than 17&#34;</span>);
-		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
-		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">focus</span>(); <span style="color:#75715e">//不推荐用
-</span><span style="color:#75715e"></span>	}
-}
+<span class="kd">function</span> <span class="nx">checkAge</span><span class="p">(){</span>
+	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">!=</span> <span class="s2">&#34;&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">Number</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">){</span>
+		<span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;age should greater than 17&#34;</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span> <span class="c1">//不推荐用
+</span><span class="c1"></span>	<span class="p">}</span>
+<span class="p">}</span>
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">checkWeight</span>(){
-	<span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">&amp;&amp;</span> Number(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span> <span style="color:#f92672">||</span> Number(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">300</span>){
-		<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;incorrect Weight, please input again&#34;</span>);
-		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
-		<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">focus</span>(); <span style="color:#75715e">//不推荐用
-</span><span style="color:#75715e"></span>	}
-}
+<span class="kd">function</span> <span class="nx">checkWeight</span><span class="p">(){</span>
+	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">!=</span> <span class="s2">&#34;&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">Number</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">80</span> <span class="o">||</span> <span class="nb">Number</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">300</span><span class="p">){</span>
+		<span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;incorrect Weight, please input again&#34;</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span> <span class="c1">//不推荐用
+</span><span class="c1"></span>	<span class="p">}</span>
+<span class="p">}</span>
 
-document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;userName&#34;</span>).<span style="color:#a6e22e">onblur</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">checkName</span>;
-document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;userAge&#34;</span>).<span style="color:#a6e22e">onblur</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">checkAge</span>;
-document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;userWeight&#34;</span>).<span style="color:#a6e22e">onblur</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">checkWeight</span>;
-</code></pre></div><h3 id="p8_9">P8_9</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">title</span>&gt;P8_9&lt;/<span style="color:#f92672">title</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
-    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
-&lt;<span style="color:#f92672">body</span>&gt;
-	&lt;<span style="color:#f92672">h4</span>&gt;Cessna single_egnine&lt;/<span style="color:#f92672">h4</span>&gt;
-	&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myForm&#34;</span> <span style="color:#a6e22e">auction</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
-		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span> /&gt;
-		red&lt;/<span style="color:#f92672">label</span>&gt;
-		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span> /&gt;
-		blue&lt;/<span style="color:#f92672">label</span>&gt;
-		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> /&gt;
-		green&lt;/<span style="color:#f92672">label</span>&gt;
-		&lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorChoice&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;orange&#34;</span> /&gt;
-		orange&lt;/<span style="color:#f92672">label</span>&gt;
-	&lt;/<span style="color:#f92672">form</span>&gt;
-	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h4 id="p8_9-js">P8_9 JS</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">colorChoice</span>(<span style="color:#a6e22e">event</span>){
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">color</span>  <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">currentTarget</span>;
-	<span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">color</span>.<span style="color:#a6e22e">value</span>){
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;red&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;red&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;orange&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;orange&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;green&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;green&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;blue&#34;</span>);<span style="color:#66d9ef">break</span>;
-		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;error&#34;</span>);
-	}
-}
-<span style="color:#75715e">//因为colorChoice是一个数组，所以在加监听器的时候也使用数组的形式
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">choice</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;myForm&#34;</span>).<span style="color:#a6e22e">colorChoice</span>;
-<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">choice</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-	<span style="color:#a6e22e">choice</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#a6e22e">colorChoice</span>, <span style="color:#66d9ef">false</span>);
-}
-</code></pre></div>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;userName&#34;</span><span class="p">).</span><span class="nx">onblur</span> <span class="o">=</span> <span class="nx">checkName</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;userAge&#34;</span><span class="p">).</span><span class="nx">onblur</span> <span class="o">=</span> <span class="nx">checkAge</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;userWeight&#34;</span><span class="p">).</span><span class="nx">onblur</span> <span class="o">=</span> <span class="nx">checkWeight</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="p8_9">P8_9</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>P8_9<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Cessna single_egnine<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;myForm&#34;</span> <span class="na">auction</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorChoice&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;red&#34;</span> <span class="p">/&gt;</span>
+		red<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorChoice&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;blue&#34;</span> <span class="p">/&gt;</span>
+		blue<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorChoice&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;green&#34;</span> <span class="p">/&gt;</span>
+		green<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;colorChoice&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;orange&#34;</span> <span class="p">/&gt;</span>
+		orange<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/1.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="p8_9-js">P8_9 JS</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">colorChoice</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+	<span class="kd">var</span> <span class="nx">color</span>  <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">;</span>
+	<span class="k">switch</span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">value</span><span class="p">){</span>
+		<span class="k">case</span> <span class="s2">&#34;red&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;red&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="s2">&#34;orange&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;orange&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="s2">&#34;green&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;green&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="s2">&#34;blue&#34;</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;blue&#34;</span><span class="p">);</span><span class="k">break</span><span class="p">;</span>
+		<span class="k">default</span><span class="o">:</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;error&#34;</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">//因为colorChoice是一个数组，所以在加监听器的时候也使用数组的形式
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">choice</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;myForm&#34;</span><span class="p">).</span><span class="nx">colorChoice</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">choice</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">choice</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="nx">colorChoice</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
         <footer class="article-footer">
     <a data-url="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%92%8Chtml%E5%88%9D%E6%AD%A5/" data-id="e425a22079ef77ecb901e10381f31f12" class="article-share-link">
@@ -1073,26 +1348,18 @@ document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e
 
 
 </article>
-
+<a id="back-to-top" title="回到顶端" href="javascript:;" class="card has-text-centered rise-up fade-in" >
+<img src="/css/images/top.png" height="20px" width="20px" style="display:inline-block;width:20px;height:20px;vertical-align:middle"></a>
 
 
     </section>
 
    	
-    	<aside id="sidebar">
-    
-    
-
-    
-
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-
+    	
     
 	</div>
 </div>
 
-<script src="https://richie-leonhardt.github.io/live2d/autoload.js"></script>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
@@ -1104,19 +1371,14 @@ document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e
 
 <script src="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.pack.js"></script>
 <script src="https://richie-leonhardt.github.io/js/script.js"></script>
+<script src="https://richie-leonhardt.github.io/js/back-to-top.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 
 <script>hljs.initHighlightingOnLoad();</script>
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 
 

@@ -2248,3 +2248,23 @@ ol.toc {
 .highlight .code .selector-id {
   font-weight: bold;
 }
+
+#back-to-top {
+    position: fixed;
+    padding: 8px 0;
+    transition: 0.4s ease opacity, 0.4s ease width, 0.4s ease transform, 0.4s ease border-radius;
+    opacity: 0;
+    line-height: 24px;
+    z-index: 999;
+    outline: none;
+    transform: translateY(120px);
+    background: white;
+    text-align: center !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05), 0 0 1px rgba(0,0,0,.1);
+}
+#back-to-top.fade-in {
+    opacity: 1;
+}
+#back-to-top.rise-up {
+    transform: translateY(0);
+}

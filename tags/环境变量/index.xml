@@ -17,8 +17,7 @@
       <pubDate>Mon, 13 Apr 2020 19:01:26 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/2020/04/13/%E4%BD%BF%E7%94%A8%E6%89%B9%E5%A4%84%E7%90%86%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</guid>
-      <description>设定运行路径为system32以调用注册表编辑器，之后通过修改注册表的方法来修改环境变量，对于学校机房或者网吧每次开机重置系统的情况有奇效。
-@echo off path=c:\windows\system32;%path% ::F:\pathset替换为需要添加的路径即可，如果多个路径的话需要用分号隔开 set PATH=%PATH%;F:\pathset; reg add &amp;quot;HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment&amp;quot; /v &amp;quot;Path&amp;quot; /t REG_EXPAND_SZ /d &amp;quot;%PATH%&amp;quot; /f exit; </description>
+      <description>设定运行路径为system32以调用注册表编辑器，之后通过修改注册表的方法来修改环境变量，对于学校机房或者网吧每次开机重置系统的情况有奇效。</description>
     </item>
     
   </channel>

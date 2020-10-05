@@ -17,57 +17,6 @@
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/font-awesome.min.css">
     <link rel="stylesheet" id = "codecss" href="https://richie-leonhardt.github.io/css/vs2015.css">
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.css">
-    <style type="text/css">
-         .mui-switch {
-            width: 52px;
-            height: 31px;
-            position: relative;
-            float: right;
-            top:15px;
-            border: 1px solid #dfdfdf;
-            background-color: #fdfdfd;
-            box-shadow: #dfdfdf 0 0 0 0 inset;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-clip: content-box;
-            display: inline-block;
-            -webkit-appearance: none;
-            user-select: none;
-            outline: none; }
-        .mui-switch:before {
-            content: '';
-            width: 29px;
-            height: 29px;
-            position: absolute;
-            top: 0px;
-            left: 0;
-            border-radius: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-color: #fff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
-        .mui-switch:checked {
-            border-color: #64bd63;
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63; }
-        .mui-switch:checked:before {
-            left: 21px; }
-        .mui-switch.mui-switch-anim {
-            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
-        .mui-switch.mui-switch-anim:before {
-            transition: left 0.3s; }
-        .mui-switch.mui-switch-anim:checked {
-            box-shadow: #64bd63 0 0 0 16px inset;
-            background-color: #64bd63;
-            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
-        .mui-switch.mui-switch-anim:checked:before {
-            transition: left 0.3s;}
-    </style>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -83,7 +32,7 @@
 <meta itemprop="description" content="Web练习与知识点整理">
 <meta itemprop="datePublished" content="2020-09-04T16:46:14+08:00" />
 <meta itemprop="dateModified" content="2020-09-04T16:46:14+08:00" />
-<meta itemprop="wordCount" content="484">
+<meta itemprop="wordCount" content="1111">
 
 
 
@@ -112,10 +61,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
     </script>
 </head>
 <body>
@@ -175,10 +121,7 @@
               s = s.replace(css1, css0);
               codecss.setAttribute("href", s);
             }
-            event.stopPropagation();
-            event.preventDefault();
           }
-          document.addEventListener("onmousedown", switchCss, false);
         </script>
         <input class="mui-switch mui-switch-anim" type="checkbox" onmousedown="switchCss(event)">
         <div id="search-form-wrap">
@@ -651,7 +594,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-09-04 16:46:14 &#43;0800 CST" itemprop="datePublished">2020-09-04</time>
             &middot;
-            484
+            1111
             words
             &middot;
             3
@@ -693,172 +636,343 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// practice1
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e">// for (var i = 5; i &lt; 16; i++) 
-</span><span style="color:#75715e">// 	 alert(i + &#34; suqare is: &#34; + i** 2);
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">// p2
-</span><span style="color:#75715e">// Fibonacci
-</span><span style="color:#75715e">// javascript中函数形参不需要类型声明var，只需要一个简单的名字就够了
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fib</span>(<span style="color:#75715e">/*var*/</span> <span style="color:#a6e22e">a</span>){ 
-	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">2</span>) { <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;}
-	<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fib</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">fib</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>);
-}
+            <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// practice1
+</span><span class="c1">// 
+</span><span class="c1">// for (var i = 5; i &lt; 16; i++) 
+</span><span class="c1">// 	 alert(i + &#34; suqare is: &#34; + i** 2);
+</span><span class="c1"></span>
+<span class="c1">// p2
+</span><span class="c1">// Fibonacci
+</span><span class="c1">// javascript中函数形参不需要类型声明var，只需要一个简单的名字就够了
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">fib</span><span class="p">(</span><span class="cm">/*var*/</span> <span class="nx">a</span><span class="p">){</span> 
+	<span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">||</span> <span class="nx">a</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;}</span>
+	<span class="k">else</span> <span class="k">return</span> <span class="nx">fib</span><span class="p">(</span><span class="nx">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">fib</span><span class="p">(</span><span class="nx">a</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span style="color:#75715e">// p3
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">// 由于prompt返回的是字符串，所以需要 - 0来转换为数字
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;parameter1:&#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;parameter2:&#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;parameter3:&#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Maxium is: &#34;</span> <span style="color:#f92672">+</span> Math.<span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">p1</span>, <span style="color:#a6e22e">p2</span>, <span style="color:#a6e22e">p3</span>));
+<span class="c1">// p3
+</span><span class="c1">//
+</span><span class="c1">// 由于prompt返回的是字符串，所以需要 - 0来转换为数字
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">p1</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;parameter1:&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">p2</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;parameter2:&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">p3</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;parameter3:&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Maxium is: &#34;</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">,</span> <span class="nx">p3</span><span class="p">));</span>
 
-<span style="color:#75715e">// p4
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">parameter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;sss&#34;</span>,<span style="color:#e6db74">&#34;17&#34;</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;feb&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">feb</span>(<span style="color:#a6e22e">parameter</span>));
+<span class="c1">// p4
+</span><span class="c1">// 
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">parameter</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;sss&#34;</span><span class="p">,</span><span class="s2">&#34;17&#34;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;feb&#34;</span><span class="o">+</span><span class="nx">feb</span><span class="p">(</span><span class="nx">parameter</span><span class="p">));</span>
 
-<span style="color:#75715e">// p5
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e">//匹配的时候注意匹配几次
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;last name, frist name, mid name&#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>);
-<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">search</span>(<span style="color:#e6db74">/^[A-Za-z]+, [A-Za-z]+, [A-Za-z]+$/</span>) <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">15</span>) {
-	<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Vaild name&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">length</span>);
-}<span style="color:#66d9ef">else</span>{
-	<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;InVaild name&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">length</span>);
-}
+<span class="c1">// p5
+</span><span class="c1">// 
+</span><span class="c1">//匹配的时候注意匹配几次
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;last name, frist name, mid name&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">name</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/^[A-Za-z]+, [A-Za-z]+, [A-Za-z]+$/</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">name</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Vaild name&#34;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;InVaild name&#34;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="p">}</span>
 
 
-<span style="color:#75715e">// //p6
-</span><span style="color:#75715e">// //p7
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e">//不带参数的sort方法是升序排字符串
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;Input some numbers:&#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">order</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;order asc/desc&#34;</span>,<span style="color:#e6db74">&#34;desc&#34;</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">word_list</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">text</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">/\s+/</span>); <span style="color:#75715e">//记住这个形式，字符类\s匹配所有空格字符[\r\t\n\f]
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ascending</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>){<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span>;}   <span style="color:#75715e">// &lt; 0是需要调换位置，升序a - b,书本错了
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">descending</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>){<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">a</span>;}
+<span class="c1">// //p6
+</span><span class="c1">// //p7
+</span><span class="c1">// 
+</span><span class="c1">//不带参数的sort方法是升序排字符串
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Input some numbers:&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">order</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;order asc/desc&#34;</span><span class="p">,</span><span class="s2">&#34;desc&#34;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">word_list</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/\s+/</span><span class="p">);</span> <span class="c1">//记住这个形式，字符类\s匹配所有空格字符[\r\t\n\f]
+</span><span class="c1"></span>
+<span class="kd">function</span> <span class="nx">ascending</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">){</span><span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;}</span>   <span class="c1">// &lt; 0是需要调换位置，升序a - b,书本错了
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">descending</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">){</span><span class="k">return</span> <span class="nx">b</span> <span class="o">-</span> <span class="nx">a</span><span class="p">;}</span>
 
-<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">order</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;asc&#34;</span>)
-	<span style="color:#a6e22e">word_list</span>.<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">ascending</span>);	
-<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">order</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;desc&#34;</span>)
-	<span style="color:#a6e22e">word_list</span>.<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">descending</span>);
+<span class="k">if</span> <span class="p">(</span><span class="nx">order</span> <span class="o">===</span> <span class="s2">&#34;asc&#34;</span><span class="p">)</span>
+	<span class="nx">word_list</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">ascending</span><span class="p">);</span>	
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">order</span> <span class="o">===</span> <span class="s2">&#34;desc&#34;</span><span class="p">)</span>
+	<span class="nx">word_list</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">descending</span><span class="p">);</span>
 
-<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">word_list</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;, &#34;</span>));	<span style="color:#75715e">//这里直接省略或者换成toString()的话则默认是用逗号连接所有元素输出
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">// word_list.sort();
-</span><span style="color:#75715e">// word_list.reverse(); //若倒序按字母排序，只需先升序排，排完再倒置数组即可
-</span><span style="color:#75715e"></span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">word_list</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;, &#34;</span><span class="p">));</span>	<span class="c1">//这里直接省略或者换成toString()的话则默认是用逗号连接所有元素输出
+</span><span class="c1"></span>
+<span class="c1">// word_list.sort();
+</span><span class="c1">// word_list.reverse(); //若倒序按字母排序，只需先升序排，排完再倒置数组即可
+</span><span class="c1"></span>
 
-<span style="color:#75715e">// //p8
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e">// //数组的删除操作，老老实实使用传统迭代的方法最快，因为不是数据结构不需考虑时间复杂度
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">no_zeros</span>(<span style="color:#a6e22e">arr</span>){
-	<span style="color:#66d9ef">var</span>	<span style="color:#a6e22e">flag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
-		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) {
-			<span style="color:#75715e">/*for(var j = arr.length - 1; j &gt; i ; j--) 倒过来移动作死啊*/</span>
-			<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>)
-				<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>];
-			<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">--</span>;
-			<span style="color:#a6e22e">i</span><span style="color:#f92672">--</span>;		<span style="color:#75715e">//下一个的值覆盖了这个位置，需要回溯一下
-</span><span style="color:#75715e"></span>			<span style="color:#a6e22e">flag</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-		}
-	}
-	<span style="color:#75715e">/*if (flag) return true;
-</span><span style="color:#75715e">	  else return false; 傻屌写法！*/</span>
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">flag</span>;
-}
-<span style="color:#75715e">// var arr = [1,2,0,1,12,0,0,23,0,234];
-</span><span style="color:#75715e">// no_zeros(arr);
-</span><span style="color:#75715e">// alert(arr);
-</span><span style="color:#75715e"></span>
+<span class="c1">// //p8
+</span><span class="c1">// 
+</span><span class="c1">// //数组的删除操作，老老实实使用传统迭代的方法最快，因为不是数据结构不需考虑时间复杂度
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">no_zeros</span><span class="p">(</span><span class="nx">arr</span><span class="p">){</span>
+	<span class="kd">var</span>	<span class="nx">flag</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="cm">/*for(var j = arr.length - 1; j &gt; i ; j--) 倒过来移动作死啊*/</span>
+			<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span>
+				<span class="nx">arr</span><span class="p">[</span><span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+			<span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="o">--</span><span class="p">;</span>
+			<span class="nx">i</span><span class="o">--</span><span class="p">;</span>		<span class="c1">//下一个的值覆盖了这个位置，需要回溯一下
+</span><span class="c1"></span>			<span class="nx">flag</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="cm">/*if (flag) return true;
+</span><span class="cm">	  else return false; 傻屌写法！*/</span>
+	<span class="k">return</span> <span class="nx">flag</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// var arr = [1,2,0,1,12,0,0,23,0,234];
+</span><span class="c1">// no_zeros(arr);
+</span><span class="c1">// alert(arr);
+</span><span class="c1"></span>
 
-<span style="color:#75715e">// //p9
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">e_names</span>(<span style="color:#a6e22e">names</span>){
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">names</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
-		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">names</span>[<span style="color:#a6e22e">i</span>];
-		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">search</span>(<span style="color:#e6db74">/ie$/</span>) <span style="color:#f92672">!==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">search</span>(<span style="color:#e6db74">/y$/</span>) <span style="color:#f92672">!==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-			<span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span>;
-}
-<span style="color:#75715e">// var names = [&#39;adsf&#39;,&#39;asdfie&#39;,&#39;xvvdy&#39;,&#39;y&#39;,&#39;ie&#39;];
-</span><span style="color:#75715e">// alert(e_names(names));
-</span><span style="color:#75715e"></span>
+<span class="c1">// //p9
+</span><span class="c1">// 
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">e_names</span><span class="p">(</span><span class="nx">names</span><span class="p">){</span>
+	<span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">names</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/ie$/</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="nx">str</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/y$/</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+			<span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">count</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// var names = [&#39;adsf&#39;,&#39;asdfie&#39;,&#39;xvvdy&#39;,&#39;y&#39;,&#39;ie&#39;];
+</span><span class="c1">// alert(e_names(names));
+</span><span class="c1"></span>
 
-<span style="color:#75715e">// //p10
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">first_vowel</span>(<span style="color:#a6e22e">str</span>){
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">search</span>(<span style="color:#e6db74">/[AEIOUaeiou]/</span>);
-}
-<span style="color:#75715e">// var str = &#39;sdfazcbnm&#39;;
-</span><span style="color:#75715e">// alert(first_vowel(str));
-</span><span style="color:#75715e"></span>
+<span class="c1">// //p10
+</span><span class="c1">// 
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">first_vowel</span><span class="p">(</span><span class="nx">str</span><span class="p">){</span>
+	<span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/[AEIOUaeiou]/</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// var str = &#39;sdfazcbnm&#39;;
+</span><span class="c1">// alert(first_vowel(str));
+</span><span class="c1"></span>
 
-<span style="color:#75715e">// //p11
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">counter</span>(<span style="color:#a6e22e">arr</span>){
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">count0</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,
-		<span style="color:#a6e22e">countNegative</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>,
-		<span style="color:#a6e22e">countPositive</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#f92672">++</span><span style="color:#a6e22e">i</span>){
-		<span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">/</span> Math.<span style="color:#a6e22e">abs</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>])){
-			<span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">countPositive</span><span style="color:#f92672">++</span>;<span style="color:#66d9ef">break</span>;
-			<span style="color:#66d9ef">case</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">countNegative</span><span style="color:#f92672">++</span>;<span style="color:#66d9ef">break</span>;
-			<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span><span style="color:#a6e22e">count0</span><span style="color:#f92672">++</span>;	<span style="color:#75715e">//0作为被除数时为NaN，注意这里不能用case Number.NaN，判断NaN唯一方法是isNaN(n)
-</span><span style="color:#75715e"></span>		}
-	}
-	<span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Positive Number:&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">countPositive</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\n0:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">count0</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\nNegative Number&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">countNegative</span> <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>);
-}
-<span style="color:#75715e">// var arr = [1,0,0,0,0,21,2,-21,-2];
-</span><span style="color:#75715e">// counter(arr);
-</span><span style="color:#75715e"></span>
+<span class="c1">// //p11
+</span><span class="c1">// 
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">counter</span><span class="p">(</span><span class="nx">arr</span><span class="p">){</span>
+	<span class="kd">var</span> <span class="nx">count0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+		<span class="nx">countNegative</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+		<span class="nx">countPositive</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">){</span>
+		<span class="k">switch</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">/</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">])){</span>
+			<span class="k">case</span> <span class="mi">1</span><span class="o">:</span><span class="nx">countPositive</span><span class="o">++</span><span class="p">;</span><span class="k">break</span><span class="p">;</span>
+			<span class="k">case</span> <span class="o">-</span><span class="mi">1</span><span class="o">:</span><span class="nx">countNegative</span><span class="o">++</span><span class="p">;</span><span class="k">break</span><span class="p">;</span>
+			<span class="k">default</span><span class="o">:</span><span class="nx">count0</span><span class="o">++</span><span class="p">;</span>	<span class="c1">//0作为被除数时为NaN，注意这里不能用case Number.NaN，判断NaN唯一方法是isNaN(n)
+</span><span class="c1"></span>		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Positive Number:&#34;</span> <span class="o">+</span> <span class="nx">countPositive</span> <span class="o">+</span> <span class="s1">&#39;\n0:&#39;</span> <span class="o">+</span> <span class="nx">count0</span> <span class="o">+</span> <span class="s2">&#34;\nNegative Number&#34;</span> <span class="o">+</span> <span class="nx">countNegative</span> <span class="o">+</span><span class="s2">&#34;\n&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// var arr = [1,0,0,0,0,21,2,-21,-2];
+</span><span class="c1">// counter(arr);
+</span><span class="c1"></span>
 
-<span style="color:#75715e">// //p12
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">tst_name</span>(<span style="color:#a6e22e">str</span>){
-	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">search</span>(<span style="color:#e6db74">/^[A-Z][a-z]*,[A-Z][a-z]* [A-Z]$/</span>) <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-	<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-}
-<span style="color:#75715e">// alert(tst_name(&#34;Abc,Des R&#34;));
-</span><span style="color:#75715e">// alert(tst_name(&#34;Abc,des R&#34;));
-</span><span style="color:#75715e"></span>
+<span class="c1">// //p12
+</span><span class="c1">// 
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">tst_name</span><span class="p">(</span><span class="nx">str</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/^[A-Z][a-z]*,[A-Z][a-z]* [A-Z]$/</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="k">else</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// alert(tst_name(&#34;Abc,Des R&#34;));
+</span><span class="c1">// alert(tst_name(&#34;Abc,des R&#34;));
+</span><span class="c1"></span>
 
-<span style="color:#75715e">// //p13
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">row_averages</span>(<span style="color:#a6e22e">arr</span>){
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">avr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array(<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>);
-	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">length</span>; <span style="color:#f92672">++</span><span style="color:#a6e22e">i</span>){
-		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">length</span>; <span style="color:#f92672">++</span><span style="color:#a6e22e">j</span>){
-			<span style="color:#a6e22e">sum</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>][<span style="color:#a6e22e">j</span>];
-		}
-		<span style="color:#a6e22e">avr</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">length</span>;
-	}
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">avr</span>;
-}
-<span style="color:#75715e">// alert( row_averages([[1,2,3],[4,5,6],[7,8,9]]) );
-</span><span style="color:#75715e"></span>
+<span class="c1">// //p13
+</span><span class="c1">// 
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">row_averages</span><span class="p">(</span><span class="nx">arr</span><span class="p">){</span>
+	<span class="kd">var</span> <span class="nx">avr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">){</span>
+		<span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">j</span><span class="p">){</span>
+			<span class="nx">sum</span> <span class="o">+=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+		<span class="p">}</span>
+		<span class="nx">avr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">sum</span> <span class="o">/</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">avr</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// alert( row_averages([[1,2,3],[4,5,6],[7,8,9]]) );
+</span><span class="c1"></span>
 
-<span style="color:#75715e">// //p14
-</span><span style="color:#75715e">// 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">reverser</span>(<span style="color:#a6e22e">n</span>){
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array();
-	<span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">9</span>){
-		<span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">n</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>);	<span style="color:#75715e">//这边用push方法更好
-</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">n</span> <span style="color:#f92672">/=</span> <span style="color:#ae81ff">10</span>;
-		<span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">n</span>);	<span style="color:#75715e">//注意js中全部数值运算都是double类型的，做除法运算的时候将会有偏差，用Math.floor()消除，且也不会改变原值而是把结果返回来
-</span><span style="color:#75715e"></span>	}
-	<span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">n</span>);	<span style="color:#75715e">//★★★注意：concat函数同C语言不一样，它不会改变原有数组，只会返回一个新的连接的数组
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;\n&#34;</span>));
-}
-<span style="color:#a6e22e">reverser</span>(<span style="color:#ae81ff">12345</span>);
-</code></pre></div>
+<span class="c1">// //p14
+</span><span class="c1">// 
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">reverser</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span>
+	<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+	<span class="k">while</span><span class="p">(</span><span class="nx">n</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">){</span>
+		<span class="nx">arr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">n</span> <span class="o">%</span> <span class="mi">10</span><span class="p">);</span>	<span class="c1">//这边用push方法更好
+</span><span class="c1"></span>		<span class="nx">n</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
+		<span class="nx">n</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>	<span class="c1">//注意js中全部数值运算都是double类型的，做除法运算的时候将会有偏差，用Math.floor()消除，且也不会改变原值而是把结果返回来
+</span><span class="c1"></span>	<span class="p">}</span>
+	<span class="nx">arr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>	<span class="c1">//★★★注意：concat函数同C语言不一样，它不会改变原有数组，只会返回一个新的连接的数组
+</span><span class="c1"></span>	<span class="nx">alert</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;\n&#34;</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="nx">reverser</span><span class="p">(</span><span class="mi">12345</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
         <footer class="article-footer">
     <a data-url="https://richie-leonhardt.github.io/2020/09/04/web%E6%95%B4%E7%90%86_js%E5%9F%BA%E7%A1%80/" data-id="d003a28ba385540da7fa841a8ec05c58" class="article-share-link">
@@ -966,26 +1080,18 @@
 
 
 </article>
-
+<a id="back-to-top" title="回到顶端" href="javascript:;" class="card has-text-centered rise-up fade-in" >
+<img src="/css/images/top.png" height="20px" width="20px" style="display:inline-block;width:20px;height:20px;vertical-align:middle"></a>
 
 
     </section>
 
    	
-    	<aside id="sidebar">
-    
-    
-
-    
-
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-
+    	
     
 	</div>
 </div>
 
-<script src="https://richie-leonhardt.github.io/live2d/autoload.js"></script>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
@@ -997,19 +1103,14 @@
 
 <script src="https://richie-leonhardt.github.io/fancybox/jquery.fancybox.pack.js"></script>
 <script src="https://richie-leonhardt.github.io/js/script.js"></script>
+<script src="https://richie-leonhardt.github.io/js/back-to-top.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 
 <script>hljs.initHighlightingOnLoad();</script>
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 
 
