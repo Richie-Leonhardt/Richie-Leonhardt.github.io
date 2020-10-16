@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>2020年6月阶段反思 &middot; Richie&#39;s Blog</title>
+    <title>KMP算法 &middot; Richie&#39;s Blog</title>
     <meta name="generator" content="Hugo 0.74.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Richie">
     
-      <meta name="description" content="不求一日三省吾身，起码阶段反思不能少，2020-06">
+      <meta name="description" content="KMP算法阐述">
     
     
-    <link rel="canonical" href="https://richie-leonhardt.github.io/2020/06/30/2020%E5%B9%B46%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/"/>
+    <link rel="canonical" href="https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/"/>
     <link rel="icon" href="https://richie-leonhardt.github.io/favicon.ico">
     <link rel="apple-touch-icon" href="https://richie-leonhardt.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
@@ -20,27 +20,27 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="2020年6月阶段反思" />
-<meta property="og:description" content="不求一日三省吾身，起码阶段反思不能少，2020-06" />
+    <meta property="og:title" content="KMP算法" />
+<meta property="og:description" content="KMP算法阐述" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://richie-leonhardt.github.io/2020/06/30/2020%E5%B9%B46%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" />
-<meta property="article:published_time" content="2020-06-30T12:35:36+08:00" />
-<meta property="article:modified_time" content="2020-06-30T12:35:36+08:00" />
+<meta property="og:url" content="https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/" />
+<meta property="article:published_time" content="2020-10-16T07:24:29+08:00" />
+<meta property="article:modified_time" content="2020-10-16T07:24:29+08:00" />
 
     
-    <meta itemprop="name" content="2020年6月阶段反思">
-<meta itemprop="description" content="不求一日三省吾身，起码阶段反思不能少，2020-06">
-<meta itemprop="datePublished" content="2020-06-30T12:35:36+08:00" />
-<meta itemprop="dateModified" content="2020-06-30T12:35:36+08:00" />
-<meta itemprop="wordCount" content="1239">
+    <meta itemprop="name" content="KMP算法">
+<meta itemprop="description" content="KMP算法阐述">
+<meta itemprop="datePublished" content="2020-10-16T07:24:29+08:00" />
+<meta itemprop="dateModified" content="2020-10-16T07:24:29+08:00" />
+<meta itemprop="wordCount" content="890">
 
 
 
-<meta itemprop="keywords" content="reflections," />
+<meta itemprop="keywords" content="algorithms,DS," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="2020年6月阶段反思"/>
-<meta name="twitter:description" content="不求一日三省吾身，起码阶段反思不能少，2020-06"/>
+<meta name="twitter:title" content="KMP算法"/>
+<meta name="twitter:description" content="KMP算法阐述"/>
 
     
 
@@ -593,9 +593,9 @@
         
 
         <header class="article-header">
-    <a href="https://richie-leonhardt.github.io/2020/06/30/2020%E5%B9%B46%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/">
+    <a href="https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/">
     <h1 class="article-title" itemprop="name">
-        2020年6月阶段反思
+        KMP算法
     </h1>
     </a>
     <div class="article-meta">
@@ -603,12 +603,12 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2020-06-30 12:35:36 &#43;0800 CST" itemprop="datePublished">2020-06-30</time>
+            <time datetime="2020-10-16 07:24:29 &#43;0800 CST" itemprop="datePublished">2020-10-16</time>
             &middot;
-            1239
+            890
             words
             &middot;
-            3
+            2
             minute read
         </div>
         
@@ -619,7 +619,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/reflections">reflections</a>
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/algorithms">algorithms</a>
                 
                 
             </div>
@@ -633,7 +633,11 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/reflections">reflections</a>
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/algorithms">algorithms</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/ds">DS</a>
                 
                 
             </div>
@@ -643,83 +647,142 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="6月事件及反思">6月事件及反思</h2>
-<h3 id="学习上">学习上</h3>
-<p>本月的很多时间花在了PS作业，期末复习，建设课程上。</p>
+            <p>严版数据结构教材中字符串下标从1开始，这里全部的下标都是从0开始</p>
+<h4 id="算法函数">算法函数</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">KMP</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[],</span> <span class="kt">char</span> <span class="n">pattern</span><span class="p">[]){</span>
+	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">sLen</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">patternLen</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="o">*</span> <span class="n">next</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">MaxSize</span><span class="p">);</span>
+	<span class="n">getNextVal</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">next</span><span class="p">);</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">sLen</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">patternLen</span><span class="p">){</span>
+		<span class="cm">/*匹配时一共可能出现3种状态*/</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">pattern</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>	<span class="c1">//状态1：匹配，同时往后挪
+</span><span class="c1"></span>			<span class="o">++</span><span class="n">i</span><span class="p">;</span>
+			<span class="o">++</span><span class="n">j</span><span class="p">;</span>
+		<span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>		<span class="c1">//状态2：不匹配且前面有过已经匹配的，调整j
+</span><span class="c1"></span>			<span class="n">j</span> <span class="o">=</span> <span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">++</span><span class="n">j</span><span class="p">;</span>   <span class="c1">//针对nextval中很多-1的情况，直接从0开始比
+</span><span class="c1"></span>		<span class="p">}</span><span class="k">else</span><span class="p">{</span>					<span class="c1">//状态3：从第一个开始的地方不匹配，i往后挪
+</span><span class="c1"></span>			<span class="o">++</span><span class="n">i</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">patternLen</span><span class="p">)</span> <span class="o">?</span> <span class="n">i</span> <span class="o">-</span> <span class="nl">j</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="建立next数组">建立next数组</h4>
 <ul>
-<li>
-<p>时间管理</p>
-<ul>
-<li>没有目标是主要的问题，学习学的太散。</li>
-<li>考前的一段时间内过于放松，一天都没学习，想想不应该跟周围的同学比的，真正要比的是自己和一些看不见的敌人。</li>
-<li>数据结构挺有意思的，可以让我复习到十一二点都不觉得困乏，想学的时候多学点。</li>
-<li>时间的管理，有一种好的思路是番茄钟，1个半小时为一个单位，中间休息一下眼睛，番茄TODO这个软件不错，技能保证学习的效率又能促进提醒自己休息。</li>
+<li>这里字符串都是从0开始存储的，最前面的<code>next[0]</code>设置成<code>-1</code>，如果是从1开始存储的那么<code>next[1]</code>设置成<code>0</code>，所有的<code>next[]</code>值比平常多<code>1</code></li>
+<li><code>next[]</code>数组存的<code>next[j]</code>是最大公共前后缀中的最大公共前缀最后一个元素的后面元素的一个下标</li>
+<li>遇到匹配成功一部分之后突然失配，通过<code>next[]</code>数组直接调整到了下一个位置</li>
 </ul>
-</li>
-<li>
-<p>我不用学数学，又有C语言和数据结构的基础，我的起步比别的同学高，所以时间来不及的可能性比较小，最大的问题是能否充分利用这些时间打磨自己，一点一点进步，查漏补缺，最后无懈可击。</p>
-</li>
-<li>
-<p>英语</p>
-<ul>
-<li>单词共背了1650个，平均每天多背80个，复习150-250个单词，复习时间花的也比较长，说明可能是存在词汇量虚高的现象，应该多看看书来复习。庆幸的是好的习惯已经养成了，坚持下去，一直背单词，再有24天就可以Lv9了。</li>
-<li>真题几乎没做，只有月初的时候做了两题完型，最近的英语复习可以开始做真题了。</li>
-<li>阅读比较难应该慢慢来，边做边查词，找出题人的思路，套解题方法。</li>
-<li>睡前必须复习单词。</li>
-</ul>
-</li>
-<li>
-<p>政治</p>
-<ul>
-<li>作为平时学累了的放松的刷题刷视频，视频已经准备好了，1000题的做题本到了就可以开始刷了。</li>
-</ul>
-</li>
-<li>
-<p>C语言</p>
-<ul>
-<li>先把好久没复习的文件操作、内存之类的再学完。</li>
-<li>之后着重于刷题抓细节查漏补缺，也可以边刷。</li>
-<li>刷题刷到一定程度可以真题搞起来了。</li>
-</ul>
-</li>
-<li>
-<p>Web</p>
-<ul>
-<li>闲的没事的时候看看书看看真题。作为休息时候的读物。</li>
-</ul>
-</li>
-<li>
-<p>数据结构</p>
-<ul>
-<li>有些题虽然难，但是我最后还是能解决。录课、写代码已经给了我不少基础。</li>
-<li>发现中M上北航开的算法课不错，讲的很细。</li>
-<li>冷静分析，找考点，辨陷阱。</li>
-</ul>
-</li>
-</ul>
-<h3 id="工作上">工作上</h3>
-<ul>
-<li>工作可能影响了学习，处理消息也浪费时间，为了解决问题，统一处理消息，留下了电话号码。</li>
-</ul>
-<h3 id="生活上">生活上</h3>
-<ul>
-<li>改掉了嗜睡的毛病，一般定一个30分钟的闹钟，很少睡过一个小时。</li>
-<li>桌子腿给锯掉了高度刚好合适，要迅速果断地改变自己周围的环境嘛。</li>
-<li>现在的学习环境是没问题的，灯光、椅子高度这些因素都已经是最佳，能控制环境安静就控制，不能就先做些简单的，不要让环境影响到自己的学习。</li>
-</ul>
-<h3 id="哲学领悟">哲学领悟</h3>
-<ul>
-<li>平心静气的做事才是最有效最准确的，冷静，精准。</li>
-<li>很多事情不应该夹杂感情的去做，基于经验+逻辑思考，思考无结果则意识直感。</li>
-<li>短暂的快乐不是真正的快乐，抛弃这些无关紧要的东西。</li>
-<li>我所有做的，都是对美好生活的追求。</li>
-</ul>
-<h4 id="最后随便说点什么">最后随便说点什么，</h4>
-<p>终于到了今天，我要认清现实了：之前可以不努力，因为我本身也没有目标，也对这些背诵的东西没有什么兴趣，大学三年，浮浮沉沉，但是我还是遇到使我幸福的C，C++，Java，Python，我没有成绩，没有奖项，几乎什么都没有，还一直被拿来当工具人用。但是现在，对我所活过的，这些生活，不后悔。期末考试的时候，我可以不努力，我也不需要这么高的成绩，挂科，没关系，缺考，没关系，逃课，没关系，我没有拿奖学金评优之类的目标。、、、但是现在，不努力真的不行辣！现在正是拿出自己的全力战斗的时刻，不能退缩，不能懈怠！</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">getNext</span><span class="p">(</span><span class="kt">char</span> <span class="n">pattern</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">next</span><span class="p">[]){</span>
+	<span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">patternLen</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">);</span>
+	<span class="n">next</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 
+	<span class="cm">/*若pattern[next[j - 1] - 1 + 1] == pattern[j - 1]则next[j] = next[j - 1] + 1*/</span>		
+	<span class="cm">/*k记录了next[j - 1] - 1 + 1*/</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">patternLen</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">){</span>	
+
+		<span class="cm">/*一直往前找，直到到了最前面或是找到了前一种状态*/</span>
+		<span class="k">while</span><span class="p">(</span><span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">pattern</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="n">pattern</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="n">k</span> <span class="o">=</span> <span class="n">next</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+		
+		<span class="cm">/*这之后分两种情况：k为-1(此时应该从0开始将next[j]设置为0)或找到的情况，发现两种可以合并起来*/</span>
+		<span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">++</span><span class="n">k</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="优化next数组为nextval数组">优化next数组为nextval数组</h4>
+<ul>
+<li>在<code>j</code>通过<code>next[j]</code>往前跳的时候，如果调到前面的pattern上的字符和后面的一样，那就还需要继续往前跳，所以可以在这个上面做优化，如果<code>pattern[next[j]]</code>跟<code>pattern[j]</code>一样的话，<code>next[j]</code>直接取前面的<code>next[next[j]]</code>，这样就省去了中间那一步无用的比较，减少一次循环</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">getNextVal</span><span class="p">(</span><span class="kt">char</span> <span class="n">pattern</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">nextval</span><span class="p">[]){</span>
+	<span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">patternLen</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">);</span>
+	<span class="n">nextval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">patternLen</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">){</span>	
+		<span class="k">while</span><span class="p">(</span><span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">pattern</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="n">pattern</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="n">k</span> <span class="o">=</span> <span class="n">nextval</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>	
+		<span class="n">nextval</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">++</span><span class="n">k</span><span class="p">;</span>
+		
+		<span class="cm">/*j匹配失败时，当j这个位置与nextval[j]上的字符相同时，也肯定是匹配不了的，
+</span><span class="cm">		 所以就再往前找，去除无用的比较*/</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">pattern</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">pattern</span><span class="p">[</span><span class="n">nextval</span><span class="p">[</span><span class="n">j</span><span class="p">]]){</span>
+			<span class="n">nextval</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">nextval</span><span class="p">[</span><span class="n">nextval</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span> 
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
         <footer class="article-footer">
-    <a data-url="https://richie-leonhardt.github.io/2020/06/30/2020%E5%B9%B46%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/" data-id="83eb512b2d0d5fe668df87a303826609" class="article-share-link">
+    <a data-url="https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/" data-id="bfeebc264ab94bf47c5d0f5749f73021" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -804,21 +867,14 @@
     
 <nav id="article-nav">
     
-    <a href="https://richie-leonhardt.github.io/2020/06/14/reflection20.06.04/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">Reflection20.06.04</div>
+      <div class="article-nav-title">JS语法笔记</div>
     </a>
     
 
-    
-    <a href="https://richie-leonhardt.github.io/2020/07/14/%E6%8E%92%E5%BA%8F%E6%80%BB%E7%BB%93_c%E5%AE%9E%E7%8E%B0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Newer
-      </strong>
-      <div class="article-nav-title">排序总结_C实现</div>
-    </a>
     
 </nav>
 
