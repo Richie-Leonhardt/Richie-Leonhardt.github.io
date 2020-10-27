@@ -6,10 +6,19 @@
     <description>Recent content in web on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 04 Sep 2020 16:48:14 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2020 09:47:14 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Web历年编程题</title>
+      <link>https://richie-leonhardt.github.io/2020/10/16/web%E5%8E%86%E5%B9%B4%E7%BC%96%E7%A8%8B%E9%A2%98/</link>
+      <pubDate>Fri, 16 Oct 2020 09:47:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/10/16/web%E5%8E%86%E5%B9%B4%E7%BC%96%E7%A8%8B%E9%A2%98/</guid>
+      <description>2005 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // &amp;lt;img id=&amp;#34;img1&amp;#34; src=&amp;#34;image/cpp.png&amp;#34; /&amp;gt; function changeImg(){ var dom = document.getElementById(&amp;#34;img1&amp;#34;); dom.setAttribute(&amp;#34;src&amp;#34;, &amp;#34;image/java.png&amp;#34;); } function imgback(){ var dom = document.getElementById(&amp;#34;img1&amp;#34;); dom.setAttribute(&amp;#34;src&amp;#34;, &amp;#34;image/cpp.png&amp;#34;); } //注意这边是onmouseout而不是mouseout，只有</description>
+    </item>
     
     <item>
       <title>Web整理_JS开发动态文档</title>

@@ -6,10 +6,19 @@
     <description>Recent content in algorithm on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 Jul 2020 13:46:02 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2020 07:24:29 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>KMP算法</title>
+      <link>https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Fri, 16 Oct 2020 07:24:29 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/</guid>
+      <description>严版数据结构教材中字符串下标从1开始，这里全部的下标都是从0开始 算法函数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 int KMP(char s[], char pattern[]){ int i = 0, j = 0; int sLen</description>
+    </item>
     
     <item>
       <title>排序总结_C实现</title>

@@ -6,10 +6,19 @@
     <description>Recent content on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 16 Oct 2020 07:24:29 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2020 09:47:14 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Web历年编程题</title>
+      <link>https://richie-leonhardt.github.io/2020/10/16/web%E5%8E%86%E5%B9%B4%E7%BC%96%E7%A8%8B%E9%A2%98/</link>
+      <pubDate>Fri, 16 Oct 2020 09:47:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/2020/10/16/web%E5%8E%86%E5%B9%B4%E7%BC%96%E7%A8%8B%E9%A2%98/</guid>
+      <description>2005 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // &amp;lt;img id=&amp;#34;img1&amp;#34; src=&amp;#34;image/cpp.png&amp;#34; /&amp;gt; function changeImg(){ var dom = document.getElementById(&amp;#34;img1&amp;#34;); dom.setAttribute(&amp;#34;src&amp;#34;, &amp;#34;image/java.png&amp;#34;); } function imgback(){ var dom = document.getElementById(&amp;#34;img1&amp;#34;); dom.setAttribute(&amp;#34;src&amp;#34;, &amp;#34;image/cpp.png&amp;#34;); } //注意这边是onmouseout而不是mouseout，只有</description>
+    </item>
     
     <item>
       <title>KMP算法</title>
@@ -36,15 +45,6 @@
       
       <guid>https://richie-leonhardt.github.io/2020/09/26/2020%E5%B9%B49%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/</guid>
       <description>9月事件及反思 学习上： 时间管理 大部分情况下时间利用的还是比较充分的 有时候打游戏打过头了应该注意 控制看手机的时间 英语 单词照常，没有学新的 注意：</description>
-    </item>
-    
-    <item>
-      <title>大作文模板</title>
-      <link>https://richie-leonhardt.github.io/2020/09/17/%E5%A4%A7%E4%BD%9C%E6%96%87%E6%A8%A1%E6%9D%BF/</link>
-      <pubDate>Thu, 17 Sep 2020 10:26:01 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/2020/09/17/%E5%A4%A7%E4%BD%9C%E6%96%87%E6%A8%A1%E6%9D%BF/</guid>
-      <description>大作文模板 一、 1.描述 (1图1主体2动作) What the photograph/caricature depicts is that sb who looks strikingly adj外表 + adj内在, with sth being/was/were done(with引导的伴随状语+物的被动), 或</description>
     </item>
     
     <item>

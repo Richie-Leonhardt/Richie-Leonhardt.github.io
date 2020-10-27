@@ -3,17 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://richie-leonhardt.github.io/tags/algorithms/</loc>
-    <lastmod>2020-10-16T07:24:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/categories/algorithms/</loc>
-    <lastmod>2020-10-16T07:24:29+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://richie-leonhardt.github.io/categories/</loc>
+    <lastmod>2020-10-16T09:47:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/js/</loc>
+    <lastmod>2020-10-16T09:47:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/post/</loc>
+    <lastmod>2020-10-16T09:47:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/</loc>
+    <lastmod>2020-10-16T09:47:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/</loc>
+    <lastmod>2020-10-16T09:47:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/web/</loc>
+    <lastmod>2020-10-16T09:47:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/categories/web/</loc>
+    <lastmod>2020-10-16T09:47:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/2020/10/16/web%E5%8E%86%E5%B9%B4%E7%BC%96%E7%A8%8B%E9%A2%98/</loc>
+    <lastmod>2020-10-16T09:47:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/tags/algorithm/</loc>
+    <lastmod>2020-10-16T07:24:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://richie-leonhardt.github.io/categories/algorithm/</loc>
     <lastmod>2020-10-16T07:24:29+08:00</lastmod>
   </url>
   
@@ -25,26 +60,6 @@
   <url>
     <loc>https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-10-16T07:24:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/post/</loc>
-    <lastmod>2020-10-16T07:24:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/</loc>
-    <lastmod>2020-10-16T07:24:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/tags/</loc>
-    <lastmod>2020-10-16T07:24:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/tags/js/</loc>
-    <lastmod>2020-10-04T09:52:25+08:00</lastmod>
   </url>
   
   <url>
@@ -73,27 +88,7 @@
   </url>
   
   <url>
-    <loc>https://richie-leonhardt.github.io/2020/09/17/%E5%A4%A7%E4%BD%9C%E6%96%87%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2020-09-17T10:26:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94/</loc>
-    <lastmod>2020-09-17T10:26:01+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://richie-leonhardt.github.io/categories/js/</loc>
-    <lastmod>2020-09-04T16:48:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/tags/web/</loc>
-    <lastmod>2020-09-04T16:48:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/categories/web/</loc>
     <lastmod>2020-09-04T16:48:14+08:00</lastmod>
   </url>
   
@@ -128,6 +123,11 @@
   </url>
   
   <url>
+    <loc>https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94/</loc>
+    <lastmod>2020-08-10T17:10:52+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://richie-leonhardt.github.io/2020/08/10/%E8%80%83%E7%A0%94%E4%B8%AD%E5%AD%A6%E4%B9%A0%E7%8A%B6%E6%80%81%E7%9A%84%E8%B0%83%E6%95%B4%E7%AD%96%E7%95%A5/</loc>
     <lastmod>2020-08-10T17:10:52+08:00</lastmod>
   </url>
@@ -145,16 +145,6 @@
   <url>
     <loc>https://richie-leonhardt.github.io/2020/07/21/2020%E5%B9%B47%E6%9C%88%E9%98%B6%E6%AE%B5%E5%8F%8D%E6%80%9D/</loc>
     <lastmod>2020-07-21T12:35:36+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/tags/algorithm/</loc>
-    <lastmod>2020-07-14T13:46:02+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://richie-leonhardt.github.io/categories/algorithm/</loc>
-    <lastmod>2020-07-14T13:46:02+08:00</lastmod>
   </url>
   
   <url>

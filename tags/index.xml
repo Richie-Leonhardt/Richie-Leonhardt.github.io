@@ -6,17 +6,35 @@
     <description>Recent content in Tags on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 16 Oct 2020 07:24:29 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2020 09:47:14 +0800</lastBuildDate>
     
 	<atom:link href="https://richie-leonhardt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>algorithms</title>
-      <link>https://richie-leonhardt.github.io/tags/algorithms/</link>
+      <title>Js</title>
+      <link>https://richie-leonhardt.github.io/tags/js/</link>
+      <pubDate>Fri, 16 Oct 2020 09:47:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://richie-leonhardt.github.io/tags/web/</link>
+      <pubDate>Fri, 16 Oct 2020 09:47:14 +0800</pubDate>
+      
+      <guid>https://richie-leonhardt.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://richie-leonhardt.github.io/tags/algorithm/</link>
       <pubDate>Fri, 16 Oct 2020 07:24:29 +0800</pubDate>
       
-      <guid>https://richie-leonhardt.github.io/tags/algorithms/</guid>
+      <guid>https://richie-leonhardt.github.io/tags/algorithm/</guid>
       <description></description>
     </item>
     
@@ -26,15 +44,6 @@
       <pubDate>Fri, 16 Oct 2020 07:24:29 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/tags/ds/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Js</title>
-      <link>https://richie-leonhardt.github.io/tags/js/</link>
-      <pubDate>Sun, 04 Oct 2020 09:52:25 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/tags/js/</guid>
       <description></description>
     </item>
     
@@ -50,27 +59,9 @@
     <item>
       <title>考研</title>
       <link>https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94/</link>
-      <pubDate>Thu, 17 Sep 2020 10:26:01 +0800</pubDate>
+      <pubDate>Mon, 10 Aug 2020 17:10:52 +0800</pubDate>
       
       <guid>https://richie-leonhardt.github.io/tags/%E8%80%83%E7%A0%94/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>https://richie-leonhardt.github.io/tags/web/</link>
-      <pubDate>Fri, 04 Sep 2020 16:48:14 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
-      <link>https://richie-leonhardt.github.io/tags/algorithm/</link>
-      <pubDate>Tue, 14 Jul 2020 13:46:02 +0800</pubDate>
-      
-      <guid>https://richie-leonhardt.github.io/tags/algorithm/</guid>
       <description></description>
     </item>
     
