@@ -6,11 +6,7 @@
     <description>Recent content in Data Structure on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 07 Aug 2020 19:24:29 +0800</lastBuildDate>
-    
-	<atom:link href="https://richie-leonhardt.github.io/categories/data-structure/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 07 Aug 2020 19:24:29 +0800</lastBuildDate><atom:link href="https://richie-leonhardt.github.io/categories/data-structure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>二叉树操作集</title>
       <link>https://richie-leonhardt.github.io/2020/08/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%93%8D%E4%BD%9C%E9%9B%86/</link>

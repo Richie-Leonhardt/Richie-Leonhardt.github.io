@@ -5,10 +5,6 @@
     <link>https://richie-leonhardt.github.io/series/</link>
     <description>Recent content in Series on Richie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    
-	<atom:link href="https://richie-leonhardt.github.io/series/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-cn</language><atom:link href="https://richie-leonhardt.github.io/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
