@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>KMP算法 &middot; Richie&#39;s Blog</title>
+    <title>Richie&#39;s Blog</title>
     <meta name="generator" content="Hugo 0.79.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Richie">
     
-      <meta name="description" content="KMP算法阐述">
+      <meta name="description" content="Richie&#39;s Blog">
     
     
-    <link rel="canonical" href="https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/"/>
+      <link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://richie-leonhardt.github.io/index.xml%7d" rel="alternate" type="application/rss+xml" title="Richie&#39;s Blog" />
+      <link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://richie-leonhardt.github.io/index.xml%7d" rel="feed" type="application/rss+xml" title="Richie&#39;s Blog" />
+    
+    <link rel="canonical" href="https://richie-leonhardt.github.io/"/>
     <link rel="icon" href="https://richie-leonhardt.github.io/favicon.ico">
     <link rel="apple-touch-icon" href="https://richie-leonhardt.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://richie-leonhardt.github.io/css/style.css">
@@ -20,27 +23,19 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="KMP算法" />
-<meta property="og:description" content="KMP算法阐述" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/" />
-<meta property="article:published_time" content="2020-10-16T07:24:29+08:00" />
-<meta property="article:modified_time" content="2020-10-16T07:24:29+08:00" />
+    <meta property="og:title" content="Richie&#39;s Blog" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://richie-leonhardt.github.io/" />
+<meta property="og:updated_time" content="2021-02-26T19:46:15+08:00" />
 
     
-    <meta itemprop="name" content="KMP算法">
-<meta itemprop="description" content="KMP算法阐述">
-<meta itemprop="datePublished" content="2020-10-16T07:24:29+08:00" />
-<meta itemprop="dateModified" content="2020-10-16T07:24:29+08:00" />
-<meta itemprop="wordCount" content="897">
-
-
-
-<meta itemprop="keywords" content="algorithm,DS," />
+    <meta itemprop="name" content="Richie&#39;s Blog">
+<meta itemprop="description" content="">
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="KMP算法"/>
-<meta name="twitter:description" content="KMP算法阐述"/>
+<meta name="twitter:title" content="Richie&#39;s Blog"/>
+<meta name="twitter:description" content=""/>
 
     
 
@@ -578,14 +573,17 @@
 
     <section id="main">
     
-    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
+        </a>
 
         <header class="article-header">
-    <a href="https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/">
+    <a href="https://richie-leonhardt.github.io/2020/04/13/about/">
     <h1 class="article-title" itemprop="name">
-        KMP算法
+        About
     </h1>
     </a>
     <div class="article-meta">
@@ -593,309 +591,33 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2020-10-16 07:24:29 &#43;0800 CST" itemprop="datePublished">2020-10-16</time>
+            <time datetime="2020-04-13 12:17:25 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
             &middot;
-            897
+            108
             words
             &middot;
-            2
+            1
             minute read
         </div>
         
         
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://richie-leonhardt.github.io/categories/algorithm">algorithm</a>
-                
-                
-            </div>
-            
-        
 
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/algorithm">algorithm</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://richie-leonhardt.github.io/tags/ds">DS</a>
-                
-                
-            </div>
-            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            
-            
-
-
-
-
-
-
-
-
-
-<div class="toc">
-
-    <div class="page-header"><strong>- CATALOG -</strong></div>
-
-    <div id="page-scrollspy" class="toc-nav">
-
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e7%ae%97%e6%b3%95%e5%87%bd%e6%95%b0">
-                            算法函数
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e5%bb%ba%e7%ab%8bnext%e6%95%b0%e7%bb%84">
-                            建立next数组
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-        
-            
-                
-                
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    <ul class="nav">
-                    
-                    
-                        <li class="nav-item">
-                            <a class="nav-link text-left" href="#%e4%bc%98%e5%8c%96next%e6%95%b0%e7%bb%84%e4%b8%banextval%e6%95%b0%e7%bb%84">
-                            优化next数组为nextval数组
-                            </a>
-                        </li>
-                    
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                    </ul>
-                    
-                
-            
-        
-
-    </div>
-
-</div>
-
-
-
-
-            
-            <p>严版数据结构教材中字符串下标从1开始，这里全部的下标都是从0开始</p>
-<h4 id="算法函数">算法函数</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">KMP</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[],</span> <span class="kt">char</span> <span class="n">pattern</span><span class="p">[]){</span>
-	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-	<span class="kt">int</span> <span class="n">sLen</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-	<span class="kt">int</span> <span class="n">patternLen</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">);</span>
-	<span class="kt">int</span> <span class="o">*</span> <span class="n">next</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">MaxSize</span><span class="p">);</span>
-	<span class="n">getNextVal</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">next</span><span class="p">);</span>
-	<span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">sLen</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">patternLen</span><span class="p">){</span>
-		<span class="cm">/*匹配时一共可能出现3种状态*/</span>
-		<span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">pattern</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>	<span class="c1">//状态1：匹配，同时往后挪
-</span><span class="c1"></span>			<span class="o">++</span><span class="n">i</span><span class="p">;</span>
-			<span class="o">++</span><span class="n">j</span><span class="p">;</span>
-		<span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>		<span class="c1">//状态2：不匹配且前面有过已经匹配的，调整j
-</span><span class="c1"></span>			<span class="n">j</span> <span class="o">=</span> <span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
-			<span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">++</span><span class="n">j</span><span class="p">;</span>   <span class="c1">//针对nextval中很多-1的情况，直接从0开始比
-</span><span class="c1"></span>		<span class="p">}</span><span class="k">else</span><span class="p">{</span>					<span class="c1">//状态3：从第一个开始的地方不匹配，i往后挪
-</span><span class="c1"></span>			<span class="o">++</span><span class="n">i</span><span class="p">;</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-	<span class="k">return</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">patternLen</span><span class="p">)</span> <span class="o">?</span> <span class="n">i</span> <span class="o">-</span> <span class="nl">j</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="建立next数组">建立next数组</h4>
-<ul>
-<li>这里字符串都是从0开始存储的，最前面的<code>next[0]</code>设置成<code>-1</code>，如果是从1开始存储的那么<code>next[1]</code>设置成<code>0</code>，所有的<code>next[]</code>值比平常多<code>1</code></li>
-<li><code>next[]</code>数组存的<code>next[j]</code>是最大公共前后缀中的最大公共前缀最后一个元素的后面元素的一个下标</li>
-<li>遇到匹配成功一部分之后突然失配，通过<code>next[]</code>数组直接调整到了下一个位置</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">getNext</span><span class="p">(</span><span class="kt">char</span> <span class="n">pattern</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">next</span><span class="p">[]){</span>
-	<span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
-	<span class="kt">int</span> <span class="n">patternLen</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">);</span>
-	<span class="n">next</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-
-	<span class="cm">/*若pattern[next[j - 1] - 1 + 1] == pattern[j - 1]则next[j] = next[j - 1] + 1*/</span>		
-	<span class="cm">/*k记录了next[j - 1] - 1 + 1*/</span>
-	<span class="k">for</span><span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">patternLen</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">){</span>	
-
-		<span class="cm">/*一直往前找，直到到了最前面或是找到了前一种状态*/</span>
-		<span class="k">while</span><span class="p">(</span><span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">pattern</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="n">pattern</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="n">k</span> <span class="o">=</span> <span class="n">next</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
-		
-		<span class="cm">/*这之后分两种情况：k为-1(此时应该从0开始将next[j]设置为0)或找到的情况，发现两种可以合并起来*/</span>
-		<span class="n">next</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">++</span><span class="n">k</span><span class="p">;</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="优化next数组为nextval数组">优化next数组为nextval数组</h4>
-<ul>
-<li>在<code>j</code>通过<code>next[j]</code>往前跳的时候，如果调到前面的pattern上的字符和后面的一样，那就还需要继续往前跳，所以可以在这个上面做优化，如果<code>pattern[next[j]]</code>跟<code>pattern[j]</code>一样的话，<code>next[j]</code>直接取前面的<code>next[next[j]]</code>，这样就省去了中间那些同一字符多次重复的比较，减少了循环次数。</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">getNextVal</span><span class="p">(</span><span class="kt">char</span> <span class="n">pattern</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">nextval</span><span class="p">[]){</span>
-	<span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
-	<span class="kt">int</span> <span class="n">patternLen</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">);</span>
-	<span class="n">nextval</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-	<span class="k">for</span><span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">patternLen</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">){</span>	
-		<span class="k">while</span><span class="p">(</span><span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">pattern</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="n">pattern</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="n">k</span> <span class="o">=</span> <span class="n">nextval</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>	
-		<span class="n">nextval</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">++</span><span class="n">k</span><span class="p">;</span>
-		
-		<span class="cm">/*j匹配失败时，当j这个位置与nextval[j]上的字符相同时，也肯定是匹配不了的，
-</span><span class="cm">		 所以就再往前找，去除无用的比较*/</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">pattern</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">pattern</span><span class="p">[</span><span class="n">nextval</span><span class="p">[</span><span class="n">j</span><span class="p">]]){</span>
-			<span class="n">nextval</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">nextval</span><span class="p">[</span><span class="n">nextval</span><span class="p">[</span><span class="n">j</span><span class="p">]];</span> 
-		<span class="p">}</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
+            <p>
+                About me
+            </p>
+            <p class="article-more-link">
+                <a href="https://richie-leonhardt.github.io/2020/04/13/about/">
+                    Read more
+                </a>
+            </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://richie-leonhardt.github.io/2020/10/16/kmp%E7%AE%97%E6%B3%95/" data-id="bfeebc264ab94bf47c5d0f5749f73021" class="article-share-link">
+    <a data-url="https://richie-leonhardt.github.io/2020/04/13/about/" data-id="4f8ede94661089a2bb01b50b2080c5b0" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -976,32 +698,19 @@
 </footer>
 
     </div>
-
-    
-<nav id="article-nav">
-    
-    <a href="https://richie-leonhardt.github.io/2020/10/04/js%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Older
-      </strong>
-      <div class="article-nav-title">JS语法笔记</div>
-    </a>
-    
-
-    
-    <a href="https://richie-leonhardt.github.io/2020/10/16/web%E5%8E%86%E5%B9%B4%E7%BC%96%E7%A8%8B%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Newer
-      </strong>
-      <div class="article-nav-title">Web历年编程题</div>
-    </a>
-    
-</nav>
-
-
 </article>
-<a id="back-to-top" title="回到顶端" href="javascript:;" class="card has-text-centered rise-up fade-in" >
-<img src="/css/images/top.png" height="20px" width="20px" style="display:inline-block;width:20px;height:20px;vertical-align:middle"></a>
+
+
+<nav id="page-nav">
+
+    
+        <a class="extend prev" rel="prev" href="https://richie-leonhardt.github.io/page/3/">
+            « Prev
+        </a>
+    
+    
+
+</nav>
 
 
     </section>
